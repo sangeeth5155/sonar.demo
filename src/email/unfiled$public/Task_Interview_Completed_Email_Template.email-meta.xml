@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>It will be used to send an email alert when the interview is completed</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Task:Interview Completed Email Template</name>
+    <style>freeForm</style>
+    <subject>Interview Completed</subject>
+    <textOnly>Hi {!Task.Contact_Name_Hidden__c},
+
+It was a pleasure connecting with you. Your interview is complete and you may now visit the Make-A-Wish Volunteer Center , to continue your application.
+
+Best wishes,
+
+{!Task.Account_Name__c}
+{!Task.Account_Phone__c}
+{!Task.Account_Email__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

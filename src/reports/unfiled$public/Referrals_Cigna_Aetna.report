@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Lead.ChapterName__c</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>Lead.Relationship_to_child__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Referrer_FirstName__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Referrer_Last_Name__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Referrer_Zip__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Treating_Medical_Professional_First_Name__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Treating_Medical_Professional_Last_Name__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Hospital_Treatment_Facility_Treating__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <column>Lead.Relationship_to_child__c</column>
+            <operator>equals</operator>
+            <value>Medical Professional</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Hospital_Treatment_Facility_Treating__c</column>
+            <operator>contains</operator>
+            <value>Cigna</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Hospital_Treatment_Facility_Treating__c</column>
+            <operator>equals</operator>
+            <value>Aetna</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Referrals - Cigna &amp; Aetna</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-04-03</startDate>
+    </timeFrameFilter>
+</Report>

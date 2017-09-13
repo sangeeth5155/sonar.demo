@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Chapter Role O&amp;T</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Chapter Roles O&amp;T</value>
+    </caseValues>
+    <fields>
+        <label><!-- Chapter Name --></label>
+        <name>Chapter_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Chapter Role --></label>
+        <name>Chapter_Role__c</name>
+        <relationshipLabel><!-- Chapter Roles O&amp;T --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Orientation &amp; Training --></label>
+        <name>Orientation_Training__c</name>
+        <relationshipLabel><!-- Chapter Roles O&amp;T --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Required --></label>
+        <name>Required__c</name>
+    </fields>
+    <fields>
+        <label><!-- Role Name --></label>
+        <name>Role_Name__c</name>
+    </fields>
+    <layouts>
+        <layout>O&amp;T Role Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

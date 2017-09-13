@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Orientation:Registered Email Template</name>
+    <style>freeForm</style>
+    <subject>Successfully Registered for Orientation</subject>
+    <textOnly>Hi {!Volunteer_Orientation_Training__c.Volunteer__c},
+
+Thank you for your interest in volunteering with Make-A-Wish®.
+
+You have successfully registered for {!Volunteer_Orientation_Training__c.Orientation_Training_Hidden__c}. Registration details below:
+
+Orientation Date:  {!Volunteer_Orientation_Training__c.Date__c}
+Start Time:  {!Volunteer_Orientation_Training__c.Start_Time__c}
+End Time:  {!Volunteer_Orientation_Training__c.End_Time__c}
+
+If you need to cancel or change your orientation date, please visit the Make-A-Wish Volunteer Center.
+
+Thanks,
+
+{!Volunteer_Orientation_Training__c.Account_Name__c}
+{!Volunteer_Orientation_Training__c.Account_Phone__c}
+{!Volunteer_Orientation_Training__c.Account_Email__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

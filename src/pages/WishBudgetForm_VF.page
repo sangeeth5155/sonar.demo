@@ -1,0 +1,903 @@
+<apex:page standardController="Wish_Expense__c" extensions="WishBudgetForm_AC" standardStylesheets="false" id="Pge" sidebar="false" showHeader="false" >
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <apex:includeScript value="{!URLFOR($Resource.CumulusStaticResources, '/npsp-slds/modal.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.CumulusStaticResources, '/npsp-slds/npsp-common.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS, '/0_12_2/assets/styles/salesforce-lightning-design-system-vf.min.css')}"/>
+    <!--Sweet Alert ---->
+    <apex:stylesheet value="{!URLFOR($Resource.SweetAlert, 'sweet-alert.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.SweetAlert, 'sweet-alert.js')}"/>
+    <script type="text/javascript" src="/js/functions.js"></script>
+    <style type="text/css">
+            body{font-size:10px !important; width:100%}
+            th {font-size:10px !important}
+            .slds .slds-tabs--path__stage {
+            /* fix weird issue where check icon was not aligning properly */
+            margin-top: 0.5rem;
+            }
+            .slds-tabs--path * {
+            cursor: default !important;
+            }
+            .lookupHoverDetail {
+            /* hide those ugly hover dialogs that come with using apex:outputField with lookups */
+            display: none !important;
+            }
+            .kill-white-space {
+            /* some visualforce elements inject extra tags and linebreaks,
+            causing unwanted spaces to appear in output. this fixes that */
+            display: inline-flex;
+            }
+            .mybutton {
+            display: inline-block;
+            position: relative;
+            margin: 10px;
+            padding: 0 20px;
+            text-align: center;
+            text-decoration: none;
+            font: bold 12px/25px Arial, sans-serif;
+            box-shadow:#000 4px 4px 5px;
+            }
+            .custPopup{
+            background-color: white;
+            border: 1px solid#E5c130;
+            border-radius: 4px;
+            z-index: 9999;
+            left: 50%;
+            padding:10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup 
+            displays in the center of the screen. First set the width. Then set 
+            margin-left to negative half of what the width is. You can add 
+            the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: -250px;
+            top:100px;
+            }
+            .popupBackground{
+            background-color:black;
+            opacity: 0.20;
+            filter: alpha(opacity = 20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+            }
+            .dupHasRes { table-layout: fixed; }
+            table td  th{ overflow: hidden; padding:3px; font-size: 10px;}
+            table { border-collapse: collapse; }
+             th, td{
+              border-right: solid 1px #d8dde6; 
+              border-left: solid 1px #d8dde6;
+            }
+            .hoverTable tr.overAllStatusRow{font-weight:700;background-color:#ddb929}.whiteHead,td.whiteHead{color:#fff!important;padding-left:10px}.hoverTable tr.dataRow:hover{background-color:#e3f3ff}.hoverTable #overAllStatusRow:hover{background-color:#ddb929}.Approved{background-color:#a1f78d}.Rejected{background-color:#fb8a8c}.Removed{background-color: #c0bebc}.Pending{background-color:#ffd74b}.approval_btn{-webkit-border-radius:4;-moz-border-radius:4;border-radius:4px;font-family:Arial;color:#fff!important;font-size:10.8px;background:#ddb929;padding:5px 10px;margin-left:5px;text-decoration:none}.approval_btn:hover{background:#ebca44;background-image:-webkit-linear-gradient(top,#ebca44,#d1ad1b);background-image:-moz-linear-gradient(top,#ebca44,#d1ad1b);background-image:-ms-linear-gradient(top,#ebca44,#d1ad1b);background-image:-o-linear-gradient(top,#ebca44,#d1ad1b);background-image:linear-gradient(to bottom,#ebca44,#d1ad1b);text-decoration:none}.hoverTable tr#headerRow,.hoverTable tr#headerRow:hover{background:#f2f3f3;border-color:#e0e3e5}.hoverTable tr#headerRow td{padding:11px 0}
+            
+            .tdBudget{
+                background: rgba(184,209,252,.5);
+              
+            }
+            .tdProjected
+            {
+                 background: rgba(251,199,44,.2);
+            }
+            .disable_a_href{
+                pointer-events: none;
+            }
+    </style>
+     <style type="text/css">
+        .custPopup{
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding:10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup 
+            displays in the center of the screen. First set the width. Then set 
+            margin-left to negative half of what the width is. You can add 
+            the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: -250px;
+            top:100px;
+        }
+        .popupBackground{
+            background-color:black;
+            opacity: 0.20;
+            filter: alpha(opacity = 20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+        .myCustomMessage .message {
+            background: none  !important;
+            border: none !important;
+            color: Red;
+            font-size:16px
+        }
+    </style>
+    <style type="text/css">
+         @page 
+        {
+            margin-top: 0.1mm;
+            size: 457mm 329mm;                
+        }
+         @media print {            
+             table#tabid{
+                width:70%;
+                height:50%;
+    
+            }           
+    }
+body{margin: 0px 0px 0px 0px;}
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var userident = document.getElementById("Pge:newExpense:userInfo").value;
+            var typeExpand= document.getElementById("Pge:newExpense:WEtypeExpand").value;
+            var isSubmitted= document.getElementById("Pge:newExpense:isSubmitted").value;
+            if(isSubmitted == 'false'){
+                alert("This budget is currently pending approval and no changes can be made. The submitter can recall the approval request if changes need to be made.");
+            }
+            if(userident !=null ){
+                if(userident == 'true'){
+                    $("#wishexpense").find("input, select, button, textarea").attr("disabled",true);
+                    $("#wishexpense").find(".addExpenseClass").addClass("disable_a_href");
+                    <!-- $("#wishexpense").find("a").addClass("disable_a_href"); -->
+                }
+                else{
+                    $("#wishexpense").find("input, select, button, textarea").attr("disabled",false);
+                    <!-- $("#wishexpense").find("a").removeClass("disable_a_href"); -->
+                }
+            }
+            
+            if(typeExpand !=null ){
+               $('.' + typeExpand).toggle(1000);
+            }
+        });
+        
+        function WETypeexpand(type){
+            alert(type);
+        }
+        
+        function toggleexpense(type1)
+        {
+            //alert(type1);
+            $('.' + type1).toggle();
+        }
+        function setAccountno(descId, deptId, accId, bCashId, bInkindId, pCashId, pInkindId, aCashId, aInkindId) {
+           
+            var selectedDesc;
+            var desc= document.getElementById(descId).value;
+            var dept= document.getElementById(deptId);
+            var acc= document.getElementById(accId);
+            var bcash= document.getElementById(bCashId);
+            var binkind= document.getElementById(bInkindId);
+            var pcash= document.getElementById(pCashId);
+            var pinkind= document.getElementById(pInkindId);
+            var acash= document.getElementById(aCashId);
+            var ainkind= document.getElementById(aInkindId);
+            if(desc != "--None--"){
+              if(desc == 'Direct Wish Cash Expense'){
+                   selectedDesc= '7000';
+                   if(bcash !=null){
+                       bcash.readOnly =false;
+                       bcash.value='';
+                   }
+                    if(binkind !=null){
+                       binkind.readOnly =true;
+                       binkind.value='';
+                   }
+                   if(pcash !=null){
+                       pcash.readOnly =false;
+                       pcash.value='';
+                   }
+                   if(acash !=null){
+                       acash.readOnly =false;
+                       acash.value='';
+                   }
+                   
+                   if(pinkind !=null){
+                       pinkind.readOnly =true;
+                       pinkind.value='';
+                   }
+                   
+                   if(ainkind !=null){
+                       ainkind.readOnly =true;
+                       ainkind.value='';
+                   }
+                }
+                else if(desc == 'Direct Wish In-Kind Goods'){
+                   selectedDesc= '7300';
+                   if(binkind !=null){
+                       binkind.readOnly =false;
+                       binkind.value='';
+                   }
+                   if(pinkind !=null){
+                       pinkind.readOnly =false;
+                       pinkind.value='';
+                   }
+                   
+                   if(ainkind !=null){
+                       ainkind.readOnly =false;
+                       ainkind.value='';
+                   }
+                   
+                   if(bcash !=null){
+                       bcash.readOnly =true;
+                       bcash.value='';
+                   }
+                   if(pcash !=null){
+                       pcash.readOnly =true;
+                       pcash.value='';
+
+                   }
+                   if(acash !=null){
+                       acash.readOnly =true;
+                       acash.value='';
+
+                   } 
+                }
+                else if(desc == 'Direct Wish In-kind Service'){
+                   selectedDesc= '7350';
+                   if(binkind !=null){
+                       binkind.readOnly =false;
+                       binkind.value='';
+                   }
+                   if(pinkind !=null){
+                       pinkind.readOnly =false;
+                       pinkind.value='';
+                   }
+                   
+                   if(ainkind !=null){
+                       ainkind.readOnly =false;
+                       ainkind.value='';
+                   }
+                   
+                   if(bcash !=null){
+                       bcash.readOnly =true;
+                       bcash.value='';
+                   }
+                   if(pcash !=null){
+                       pcash.readOnly =true;
+                       pcash.value='';
+
+                   }
+                   if(acash !=null){
+                       acash.readOnly =true;
+                       acash.value='';
+
+                   }                
+                }
+                if(dept.value != "--None--")
+                {
+                     var accountNumber = '01-' + selectedDesc+ '-' + dept.value + '-00'; 
+                     acc.value = accountNumber;
+                     acc.readOnly = false;
+                }
+                else{
+                    acc.value = '';
+                    acc.readOnly = true;
+                }
+            }
+            else{
+               dept.value="--None--";
+               acc.readOnly = true;
+               acc.value= '';
+               if(bcash !=null){
+                   bcash.readOnly =true;
+                   bcash.value='';
+               }
+               if(binkind!=null){
+                   binkind.readOnly =true;
+                   binkind.value='';
+                  
+               }
+               if(pcash !=null){
+                   pcash.value='';
+                   pcash.readOnly =true;
+               }
+               
+               if(pinkind !=null){
+                   pinkind.value='';
+                   pinkind.readOnly =true;
+               }
+               
+               if( acash!=null){
+                   acash.readOnly =true;
+                   acash.value='';
+               }
+               
+               
+               if(ainkind !=null){
+                   ainkind.readOnly =true;
+                   ainkind.value='';
+               }
+               
+               
+               
+            }
+        }
+    </script>
+    <apex:outputPanel styleClass="myCustomMessage">
+       <apex:pageMessages />
+    </apex:outputPanel>
+    
+    <div class="slds">
+        <div id="wishexpense1" class="slds-card slds-m-horizontal--large " >
+            <div style="float:left;width: 40%" >Wish Child Name : {!childName } </div>
+            <div style="float:left;width: 60%" >Chapter Name : {!wishChapterName }  </div>
+            <br />
+            <div style="float:left;width: 40%" >Number of wish participants : {!NoOfWishParts }  </div>
+            <div style="float:left;width: 40%" >Anticipated Start Date :
+                <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                        <apex:param value="{! AntWishDate}"/>
+                </apex:outputText>   </div>
+            <div  >Wish Type : {! wishType}  </div>
+            
+        </div>
+    </div>
+    <br />
+    <div class="slds">  
+        <apex:form id="newExpense">
+        <body>
+            <apex:inputhidden id="userInfo" value="{!UserIdentiy}"/>
+            <apex:inputhidden id="isSubmitted" value="{!approvalBtnVisibility}"/>
+            <apex:inputhidden id="WEtypeExpand" value="{!WEtypeExpand}"/>
+            <div id="wishexpense" class="slds-card slds-m-horizontal--large slds-card--empty font-size-x-small"  style="Overflow:auto;font-size:12px !important">
+                <div class="slds-card__header slds-grid ">
+                    <div class="col-lg-2">
+                        <apex:selectList id="WishExpenceType" value="{!newExpenseType}" size="1"  styleClass="form-control col-lg-2 new-expType">
+                            <apex:selectOptions value="{!WishExpenceTypes}"/>
+                        </apex:selectList>
+                    </div> 
+                    <div style="float:left">
+                        <apex:commandButton styleclass="btn btn-info btn-sm" action="{!addExpenseType}" value="Add New Expense Type" onclick=" return validateNewExpenseType();"/>
+                    </div>         
+                </div>
+                <div class="slds-card__body">
+                    <apex:pageBlock mode="detail" id="rform" >
+                        <!--<table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal dupHasRes font-size-x-small">-->
+                        <table class="slds-table slds-table--bordered .slds-table--col-bordered slds-table--cell-buffer font-size-x-small table table-striped">
+                            <tr>
+                                <th class="slds-text-heading--label" scope="col"  colspan="7"></th >
+                                <th class="slds-text-heading--label slds-text-align--center tdBudget" scope="col"  Style="width:80px"  colspan="2">Budget</th >
+                                <th class="slds-text-heading--label slds-text-align--center tdProjected" scope="col"  Style="width:80px" colspan="2">Projected</th >
+                                <th class="slds-text-heading--label slds-text-align--center" scope="col"  Style="width:40px"></th >
+                                <th class="slds-text-heading--label slds-text-align--center tdBudget" scope="col"  Style="width:80px" colspan="2">Actual</th >
+                                <th class="slds-text-heading--label slds-text-align--center tdProjected" scope="col"  Style="width:80px" colspan="2">FE Posted</th >
+                                <th class="slds-text-heading--label slds-text-align--center" scope="col"  Style="width:40px"></th >
+                                <th class="slds-text-heading--label slds-text-align--center" scope="col"  Style="width:40px"></th >
+                            </tr>
+                            <tr>
+                                <th class="slds-text-heading--label" scope="col" style="width:200px" >Transaction Code</th >
+                                <th class="slds-text-heading--label " scope="col" Style="width:175px">Account Desc</th >
+                                <th class="slds-text-heading--label slds-cell-wrap" scope="col" Style="width:40px">Dept/Div</th >
+                                <th class="slds-text-heading--label " scope="col" Style="width:90px">Account#</th >
+                                <th class="slds-text-heading--label" scope="col" Style="width:60px">Post Date</th >
+                                <th class="slds-text-heading--label slds-cell-wrap" scope="col" Style="width:60px">Transaction#</th >
+                                <th class="slds-text-heading--label slds-cell-wrap" scope="col" Style="width:100px">Journal Ref</th >
+                                <th class="slds-text-heading--label  tdBudget" scope="col" Style="width:40px">Cash</th >
+                                <th class="slds-text-heading--label tdBudget" scope="col" Style="width:40px">In Kind</th >
+                                <th class="slds-text-heading--label slds-cell-wrap tdProjected" scope="col" Style="width:40px">Cash</th >
+                                <th class="slds-text-heading--label tdProjected" scope="col" Style="width:40px">In Kind</th >
+                                <th class="slds-text-heading--label" scope="col" Style="width:40px">Diff(B-P)%</th >
+                                <th class="slds-text-heading--label slds-cell-wrap tdBudget tdBudget" scope="col" Style="width:40px">Cash</th >
+                                <th class="slds-text-heading--label tdBudget" scope="col" Style="width:40px">In Kind</th >
+                                <th class="slds-text-heading--label slds-cell-wrap tdProjected" scope="col" Style="width:40px">Cash</th >
+                                <th class="slds-text-heading--label tdProjected"  scope="col" Style="width:40px">In Kind</th >
+                                <th class="slds-text-heading--label" scope="col" Style="width:40px">$ Diff(FE P - A)</th >
+                                <th class="slds-text-heading--label slds-cell-wrap" scope="col" Style="width:40px"></th >
+                            </tr>
+                            <!-- <apex:actionFunction name="deleteRecord" action="{!RemoveWrapper}" rerender="Block">
+                                <apex:param name="p1" assignTo="{!transCodeid}" value="transCodeid" />
+                                <apex:param name="p2" assignTo="{!expenseTypekey}" value="expenseTypekey" />
+                            </apex:actionFunction>  --> 
+                            <apex:variable value="{!0}" var="cnt"/>
+                            <apex:variable value="{!0}" var="cntTemp"/> 
+                            <apex:repeat value="{!wishExpenseTypes}" var="expenseType"> 
+                                <tr id="{!cntTemp}"  data-toggle="collapse" data-target=".{!cntTemp}collapsed">
+                                    <td  align="left" colspan="7" >
+                                       <!-- <apex:commandLink styleClass="addExpenseClass" action="{!addExpense}"><apex:image value="https://cdn4.iconfinder.com/data/icons/meBaze-Freebies/512/add.png" style="height:20px"/>
+                                            <apex:param name="expenseType" value="{!expenseType}" assignTo="{!expenseType}"/>
+                                            <apex:param name="typeExpand" value="{!cntTemp}collapsed" assignTo="{!WEtypeExpand}"/>
+                                        </apex:commandLink>  
+                                        <a   class="accordion-toggle" data-toggle="collapse" href="#expenseBlock{!cntTemp}" >{!expenseType}</a> -->
+                                        <a   class="accordion-toggle" data-toggle="collapse" href="#expenseBlock{!cntTemp}" onclick="toggleexpense('{!cntTemp}collapsed');" >{!expenseType}</a>
+                                        
+                                    </td>
+                                    
+                                    <apex:outputpanel rendered="{!(SumExpensewrappers[expenseType]) != null}" >
+                                        <td class="slds-text-align--right tdBudget" Style="width:40px"><b>${!SumExpensewrappers[expenseType].sumbudgetCash}</b></td>
+                                        <td class="slds-text-align--right tdBudget" Style="width:40px"><b>${!SumExpensewrappers[expenseType].sumbudgetInKind}</b></td>
+                                        <td class="slds-text-align--right tdProjected" Style="width:40px"><b>${!SumExpensewrappers[expenseType].sumprojectedCash}</b></td>
+                                        <td class="slds-text-align--right tdProjected" Style="width:40px"><b>${!SumExpensewrappers[expenseType].sumprojectedInkind}</b></td>
+                                        <td class="slds-text-align--right" Style="width:40px"><b>{!SumExpensewrappers[expenseType].sumBtoPDiff}%</b></td>
+                                        <td class="slds-text-align--right tdBudget" Style="width:40px"><b>${!SumExpensewrappers[expenseType].sumactualCash}</b></td>
+                                        <td class="slds-text-align--right tdBudget" Style="width:40px"><b>${!SumExpensewrappers[expenseType].sumactualInKind}</b></td>
+                                        <td class="slds-text-align--right tdProjected" Style="width:40px"><b>${!SumExpensewrappers[expenseType].sumFEPostedCash}</b></td>
+                                        <td class="slds-text-align--right tdProjected" Style="width:40px"><b>${!SumExpensewrappers[expenseType].sumFEPostedInKind}</b></td>
+                                        <td class="slds-text-align--right" Style="width:40px"><b>${!SumExpensewrappers[expenseType].sumAtoFEPDiff}</b></td>
+                                        <td  Style="width:40px"><b></b></td>
+                                    </apex:outputpanel>
+                                </tr>  
+                                <apex:repeat value="{!wishExpensewrap[expenseType]}" var="expense" id="Block">
+                                    <tr Class="collapse  budgets {!cntTemp}collapsed">
+                                        <apex:outputPanel rendered="{!expense.RecordType.Name == 'Finance'}">
+                                            <td><apex:OutPuttext value="{!expense.Wish_Expense_Transaction_Code__r.Name }" style="width:200px" /></td>
+                                            <td class="slds-cell-wrap slds-text-align--right" style="width:60px;"><apex:OutPuttext value="{!expense.Account_Description__c }" style="width:175px" /></td>
+                                            <td class="slds-cell-wrap slds-text-align--right" style="width:60px;"><apex:OutPuttext value="{!expense.Department_Division__c}" style="width:40px" /></td>
+                                            <td class="slds-cell-wrap slds-text-align--right" style="width:90px;"><apex:OutPuttext id="AccountNumber" value="{!expense.Account_Number__c}"/></td>
+                                            <td class="slds-cell-wrap"><apex:OutPuttext value="{0,date,short}" style="width:60px"><apex:param value="{!expense.Post_Date__c}"/></apex:OutPuttext></td>
+                                            <td class="slds-cell-wrap"><apex:OutPuttext value="{!expense.Transaction__c}" style="width:60px" /></td>
+                                            <td class="slds-cell-wrap"><apex:OutPuttext value="{!expense.Journal_Reference__c}" style="width:100px" /></td>
+                                            <td class="slds-cell-wrap slds-text-align--right tdBudget" style="width:40px"><apex:outputField value="{!expense.Budget_Cash__c}"/></td>
+                                            <td class="slds-cell-wrap slds-text-align--right tdBudget" style="width:40px"><apex:outputField value="{!expense.Budget_In_Kind__c}"/></td>
+                                            <td class="slds-cell-wrap slds-text-align--right tdProjected" style="width:40px"><apex:outputField value="{!expense.Projected_Cash__c}" /></td>
+                                            <td class="slds-cell-wrap slds-text-align--right tdProjected" style="width:40px"><apex:outputField value="{!expense.Projected_In_Kind__c}" /></td>
+                                            <td class="slds-cell-wrap slds-text-align--right" style="width:40px"><apex:OutPuttext value="" style="width:40px"/></td>
+                                            <td class="slds-cell-wrap slds-text-align--right tdBudget" style="width:40px"><apex:outputField value="{!expense.Actual_Cash__c}" /></td>
+                                            <td class="slds-text-align--right tdBudget" style="width:40px"><apex:outputField value="{!expense.Actual_In_Kind__c}" /></td>    
+                                            <td class="slds-text-align--right tdProjected" style="width:40px"><apex:outputField value="{!expense.FE_Posted_Cash__c}"  /></td>
+                                            <td class="slds-text-align--right tdProjected" style="width:40px" ><apex:outputField value="{!expense.FE_Posted_In_Kind__c}" /></td>
+                                            <td class="slds-cell-wrap slds-text-align--right" style="width:40px"><apex:outputtext value="" style="width:40px"/></td>
+                                            <td class="slds-cell-wrap" style="width:40px"><apex:OutPutText value="" /></td>
+                                        </apex:outputPanel>
+                                        
+                                        <apex:outputPanel rendered="{!expense.RecordType.Name != 'Finance'}">
+                                            <!-- Transaction Cod -->
+                                            <apex:outputPanel rendered="{!If(((isbudgetApprovalExist == true && expense.Budget_Approval_Status__c != 'Submitted') || expense.Projected_Approval_Status__c == 'Approved'),true,false)}">
+                                                <td>
+                                                    <apex:OutPuttext value="{!expense.Wish_Expense_Transaction_Code__r.Name }" style="width:200px" />
+                                                </td>
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!If(((expense.Budget_Approval_Status__c == '' || expense.Budget_Approval_Status__c == 'Submitted')),true,false)}">
+                                                <td align="left">
+                                                    <apex:selectList id="TransacationCode" value="{!expense.Wish_Expense_Transaction_Code__c }" size="1" required="true" style="width:100%">
+                                                        <apex:selectOptions value="{!TransCodeOptionsMap[expenseType]}"/>
+                                                    </apex:selectList>
+                                                </td>
+                                            </apex:outputPanel>
+                                            
+                                            <!-- Account Description -->
+                                            <apex:outputPanel rendered="{!If(((isbudgetApprovalExist == true && expense.Budget_Approval_Status__c != 'Submitted') || expense.Projected_Approval_Status__c == 'Approved'),true,false)}">
+                                                <td class="slds-cell-wrap slds-text-align--right" style="width:60px;">
+                                                    <apex:OutPuttext value="{!expense.Account_Description__c }" style="width:175px" />
+                                                </td>    
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!If(((expense.Budget_Approval_Status__c == '' || expense.Budget_Approval_Status__c == 'Submitted')),true,false)}">
+                                                <td>
+                                                     <apex:selectList id="AccountDescs" styleClass="AccountDesc" value="{!expense.Account_Description__c}" size="1"  required="true" style="width:175px" onchange="setAccountno('{!$Component.AccountDescs}','{!$Component.DeptDivision}','{!$Component.AccountNumberNew}','{!$Component.BCash1}','{!$Component.BInkind1}','{!$Component.PCash1}','{!$Component.PInkind1}','{!$Component.ACash1}','{!$Component.AInkind1}');" >
+                                                        <apex:selectOptions value="{!AccountDescs}"/>
+                                                    </apex:selectList>
+                                                </td>   
+                                            </apex:outputPanel>
+                                            
+                                            <!-- Deptartment/Division -->
+                                            <apex:outputPanel rendered="{!If(((isbudgetApprovalExist == true && expense.Budget_Approval_Status__c != 'Submitted') || expense.Projected_Approval_Status__c == 'Approved'),true,false)}">
+                                                   <td class="slds-cell-wrap slds-text-align--right" style="width:60px;">
+                                                     <apex:OutPuttext value="{!expense.Department_Division__c}" style="width:40px" />
+                                                 </td>
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!If(((expense.Budget_Approval_Status__c == '' || expense.Budget_Approval_Status__c == 'Submitted')),true,false)}">
+                                                <td>
+                                                   <apex:selectList id="DeptDivision" value="{!expense.Department_Division__c}" size="1" required="true" style="width:40x" onchange="setAccountno('{!$Component.AccountDescs}','{!$Component.DeptDivision}','{!$Component.AccountNumberNew}','{!$Component.BCash1}','{!$Component.BInkind1}','{!$Component.PCash1}','{!$Component.PInkind1}','{!$Component.ACash1}','{!$Component.AInkind1}')" >
+                                                            <apex:selectOptions value="{!DeptDivisions}"/>
+                                                    </apex:selectList>
+                                                </td>       
+                                            </apex:outputPanel>
+                                            
+                                            <!-- Account Number -->
+                                            <apex:outputPanel rendered="{!If(((isbudgetApprovalExist == true && expense.Budget_Approval_Status__c != 'Submitted') || expense.Projected_Approval_Status__c == 'Approved'),true,false)}">
+                                                <td class="slds-cell-wrap slds-text-align--right" style="width:90px;">
+                                                     <apex:OutPutField id="AccountNumber1" value="{!expense.Account_Number__c}"/>
+                                                </td>       
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!If(((expense.Budget_Approval_Status__c == '' || expense.Budget_Approval_Status__c == 'Submitted')),true,false)}">
+                                                <td >
+                                                      <apex:inputtext id="AccountNumberNew" value="{!expense.Account_Number__c}" style="width:90px" styleClass="AccountNo"/>
+                                                </td>       
+                                            </apex:outputPanel>
+                                            
+                                             <!-- Post Date  -->
+                                            <td class="slds-cell-wrap"><apex:OutPuttext value="{0,date,short}" style="width:60px"><apex:param value="{!expense.Post_Date__c}"/></apex:OutPuttext></td>
+                                            
+                                            <!-- Transaction Number -->
+                                            <td class="slds-cell-wrap"><apex:OutPuttext value="{!expense.Transaction__c}" style="width:60px" /></td>       
+                                            
+                                            <!-- Journal Reference -->
+                                            <td class="slds-cell-wrap"><apex:OutPuttext value="{!expense.Journal_Reference__c}" style="width:100px" /></td>
+                                            
+                                            <!-- Budget Cash -->
+                                            <apex:outputPanel rendered="{!If(isbudgetApprovalExist == false,true,false)}">
+                                                <td class="slds-text-align--right tdBudget" style="width:100%">
+                                                    <apex:inputtext styleClass="Cash" id="BCash1" value="{!expense.Budget_Cash__c}" onfocus="this.select();"/>
+                                                </td>        
+                                            </apex:outputPanel>
+                                             <apex:outputPanel rendered="{!If(isbudgetApprovalExist == true,true,false)}">
+                                                <td class="slds-cell-wrap slds-text-align--right tdBudget" style="width:40px"><apex:outputField value="{!expense.Budget_Cash__c}"/></td>
+                                            </apex:outputPanel>
+                                            
+                                            <!-- Budget Inkind -->
+                                            <apex:outputPanel rendered="{!If(isbudgetApprovalExist == false,true,false)}">
+                                                 <td class="slds-text-align--right tdBudget" style="width:40px">
+                                                     <apex:inputtext styleClass="Inkind" id="BInkind1" value="{!expense.Budget_In_Kind__c}" onfocus="this.select();" />
+                                                </td>        
+                                            </apex:outputPanel>
+                                             <apex:outputPanel rendered="{!If(isbudgetApprovalExist == true,true,false)}">
+                                                <td class="slds-cell-wrap slds-text-align--right tdBudget" style="width:40px"><apex:outputField value="{!expense.Budget_In_Kind__c}"/></td>
+                                            </apex:outputPanel>
+                                            
+                                             <!-- Projected Cash -->
+                                             
+                                            <apex:outputPanel rendered="{!If((isbudgetApprovalExist == true && expense.Budget_Approval_Status__c == 'Submitted'),true,false)}">
+                                                <td class="slds-text-align--right tdProjected" style="width:40px">
+                                                    <apex:inputtext styleClass="Cash" id="PCash1" value="{!expense.Projected_Cash__c}"  onfocus="this.select();"/>
+                                                </td>       
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!If((isbudgetApprovalExist == false ),true,false)}">
+                                                <td class="slds-cell-wrap slds-text-align--right tdProjected" style="width:40px">
+                                                   <apex:outputPanel >
+                                                            <apex:outputField value="{!expense.Projected_Cash__c}" />
+                                                    </apex:outputPanel>
+                                                </td>       
+                                            </apex:outputPanel>
+                                             <apex:outputPanel rendered="{!If((expense.Budget_Approval_Status__c == 'Approved' ),true,false)}">
+                                                <td class="slds-cell-wrap slds-text-align--right tdProjected" style="width:40px">
+                                                    <apex:outputPanel rendered="{!If(expense.Account_Description__c  == 'Direct Wish Cash Expense',true,false)}">
+                                                        <apex:actionRegion >
+                                                            <apex:outputField value="{!expense.Projected_Cash__c}">
+                                                                <apex:inlineEditSupport event="onClick" showOnEdit="saveButton,cancelButton" />
+                                                            </apex:outputField>
+                                                        </apex:actionRegion>
+                                                    </apex:outputPanel>
+                                                    <apex:outputPanel rendered="{!If(expense.Account_Description__c  != 'Direct Wish Cash Expense',true,false)}">
+                                                            <apex:outputField value="{!expense.Projected_Cash__c}" />
+                                                    </apex:outputPanel>
+                                                </td>       
+                                            </apex:outputPanel>
+                                            
+                                             <!-- Projected Inkind -->
+                                             <apex:outputPanel rendered="{!If((isbudgetApprovalExist == true && expense.Budget_Approval_Status__c == 'Submitted'),true,false)}">
+                                                <td class="slds-text-align--right tdProjected" style="width:40px">
+                                                    <apex:inputtext styleClass="Inkind" id="PInkind1" value="{!expense.Projected_In_Kind__c}"  onfocus="this.select();"/>
+                                                </td>       
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!If((isbudgetApprovalExist == false ),true,false)}">
+                                                 <td class="slds-cell-wrap slds-text-align--right tdProjected" style="width:40px">
+                                                    <apex:outputPanel >
+                                                         <apex:outputField value="{!expense.Projected_In_Kind__c}" />  
+                                                    </apex:outputPanel>
+                                                 </td>       
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!If((expense.Budget_Approval_Status__c == 'Approved'),true,false)}">
+                                                 <td class="slds-cell-wrap slds-text-align--right tdProjected" style="width:40px">
+                                                    <apex:outputPanel rendered="{!If(expense.Account_Description__c  != 'Direct Wish Cash Expense',true,false)}">
+                                                        <apex:actionRegion >
+                                                            <apex:outputField value="{!expense.Projected_In_Kind__c}">
+                                                                <apex:inlineEditSupport event="onClick" showOnEdit="saveButton,cancelButton" />
+                                                            </apex:outputField>
+                                                        </apex:actionRegion>
+                                                    </apex:outputPanel>
+                                                    <apex:outputPanel rendered="{!If(expense.Account_Description__c  == 'Direct Wish Cash Expense',true,false)}">
+                                                         <apex:outputField value="{!expense.Projected_In_Kind__c}" />                                                          
+                                                    </apex:outputPanel>
+                                                 </td>       
+                                            </apex:outputPanel>
+                                           
+                                            
+                                            <!-- Diff(B-P)  -->
+                                            <td class="slds-cell-wrap slds-text-align--right" style="width:40px"><apex:OutPuttext value="" style="width:40px"/></td>
+                                            
+                                             <!-- Actual Cash -->
+                                            <apex:outputPanel rendered="{!If(expense.Budget_Approval_Status__c != 'Approved',true,false)}">
+                                                <td class="slds-text-align--right tdBudget" style="width:40px">
+                                                    <apex:inputtext styleClass="Cash" id="ACash1" value="{!expense.Actual_Cash__c}"  onfocus="this.select();"/>
+                                                </td>       
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!If(expense.Budget_Approval_Status__c == 'Approved',true,false)}">
+                                                <td class="slds-cell-wrap slds-text-align--right tdBudget" style="width:40px">
+                                                    <apex:outputPanel rendered="{!If(expense.Account_Description__c  == 'Direct Wish Cash Expense',true,false)}">
+                                                        <apex:actionRegion >
+                                                            <apex:outputField value="{!expense.Actual_Cash__c}">
+                                                                <apex:inlineEditSupport event="onClick" showOnEdit="saveButton,cancelButton" />
+                                                            </apex:outputField>
+                                                        </apex:actionRegion>
+                                                    </apex:outputPanel>
+                                                     <apex:outputPanel rendered="{!If(expense.Account_Description__c  != 'Direct Wish Cash Expense',true,false)}">
+                                                            <apex:outputField value="{!expense.Actual_Cash__c}" />
+                                                    </apex:outputPanel>
+                                                 </td>       
+                                            </apex:outputPanel> 
+                                            
+                                            <!-- Actual Inkind -->
+                                            <apex:outputPanel rendered="{!If(expense.Budget_Approval_Status__c != 'Approved',true,false)}">
+                                                <td class="slds-text-align--right tdBudget" style="width:40px">
+                                                   <apex:inputtext styleClass="Inkind" id="AInkind1" value="{!expense.Actual_In_Kind__c}"  onfocus="this.select();"/>
+                                                </td>       
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!If(expense.Budget_Approval_Status__c == 'Approved',true,false)}">
+                                                <td class="slds-cell-wrap slds-text-align--right tdBudget" style="width:40px">
+                                                     <apex:outputPanel rendered="{!If(expense.Account_Description__c  != 'Direct Wish Cash Expense',true,false)}">
+                                                        <apex:actionRegion >
+                                                            <apex:outputField value="{!expense.Actual_In_Kind__c}">
+                                                                <apex:inlineEditSupport event="onClick" showOnEdit="saveButton,cancelButton" />
+                                                            </apex:outputField>
+                                                        </apex:actionRegion>
+                                                     </apex:outputPanel>
+                                                      <apex:outputPanel rendered="{!If(expense.Account_Description__c  == 'Direct Wish Cash Expense',true,false)}">
+                                                            <apex:OutPutText value="{!expense.Actual_In_Kind__c}" />
+                                                    </apex:outputPanel>
+                                                 </td>       
+                                            </apex:outputPanel>
+                                            
+                                            
+                                             <!-- FePosted Cash -->
+                                            <td class="slds-cell-wrap slds-text-align--right tdProjected" style="width:40px"><apex:OutPuttext value="${!expense.FE_Posted_Cash__c}" /></td>
+                                            
+                                             <!-- FePosted Inkind -->
+                                            <td class="slds-cell-wrap slds-text-align--right tdProjected" style="width:40px"><apex:OutPuttext value="${!expense.FE_Posted_In_Kind__c}" /></td>
+                                            
+                                             <!-- Diff (P-A) -->
+                                            <td class="slds-cell-wrap slds-text-align--right" style="width:40px">
+                                                <apex:OutPuttext value="" style="width:40px"/>
+                                            </td>
+                                            
+                                             <!-- Delete -->
+                                            <apex:outputPanel rendered="{!If((expense.Budget_Approval_Status__c == 'Approved' && expense.Projected_Approval_Status__c == 'Approved'),true,false)}">
+                                                <td class="slds-cell-wrap" style="width:40px">
+                                                    <apex:OutPutText value="" />
+                                                </td>     
+                                            </apex:outputPanel>
+                                            <apex:outputPanel rendered="{!If((expense.Budget_Approval_Status__c != 'Approved' && expense.Projected_Approval_Status__c != 'Approved'),true,false)}">
+                                                <td class="slds-text-align--center" style="width:40px">
+                                                    <div>
+                                                        <apex:commandbutton value="Delete" action="{!removeExpense}" reRender="none" styleclass="btn btn-info btn-xs" rendered="{!If(expense.RecordType.Name!= 'Finance',true,false)}">
+                                                            <apex:param name="index" value="{!cnt}"/>
+                                                            <apex:param name="expenType" value="{!expenseType}"/>
+                                                        </apex:commandbutton>
+                                                    </div>
+                                                </td>       
+                                            </apex:outputPanel>
+                                                
+                                        </apex:outputPanel> 
+                                    </tr> 
+                                    <apex:variable var="cnt" value="{!cnt+1}"/>
+                                </apex:repeat>
+                                <tr Class="collapse  budgets {!cntTemp}collapsed">
+                                    <td colspan="18">
+                                        <apex:commandbutton styleClass="addExpenseClass" action="{!addExpense}" style="height:20px" reRender="newExpense" image="https://cdn4.iconfinder.com/data/icons/meBaze-Freebies/512/add.png">
+                                            <apex:param name="expenseType" value="{!expenseType}" assignTo="{!expenseType}" />
+                                            <apex:param name="typeExpand" value="{!cntTemp}collapsed" assignTo="{!WEtypeExpand}"/>
+                                        </apex:commandbutton>
+                                    </td>
+                                </tr> 
+                                <apex:variable var="cnt" value="{!0}"/>
+                                <apex:variable var="cntTemp" value="{!cntTemp+1}"/>
+                            </apex:repeat>
+                            <tr>
+                                <td colspan="7" class="slds-text-align--right" >
+                                   <b> Total </b>
+                                </td>
+                                <apex:outputpanel rendered="{!TotalExpensewrappers != null}" >
+                                    <td class="slds-text-align--right tdBudget" Style="width:40px"><b>${!TotalExpensewrappers.sumbudgetCash}</b></td>
+                                    <td class="slds-text-align--right tdBudget" Style="width:40px"><b>${!TotalExpensewrappers.sumbudgetInKind}</b></td>
+                                    <td class="slds-text-align--right tdProjected" Style="width:40px"><b>${!TotalExpensewrappers.sumprojectedCash}</b></td>
+                                    <td class="slds-text-align--right tdProjected"  Style="width:40px"><b>${!TotalExpensewrappers.sumprojectedInkind}</b></td>
+                                    <td class="slds-text-align--right" Style="width:40px">{!TotalExpensewrappers.sumBtoPDiff}%</td>
+                                    <td class="slds-text-align--right tdBudget" Style="width:40px"><b>${!TotalExpensewrappers.sumactualCash}</b></td>
+                                    <td class="slds-text-align--right tdBudget" Style="width:40px"><b>${!TotalExpensewrappers.sumactualInKind}</b></td>
+                                    <td class="slds-text-align--right tdProjected" Style="width:40px"><b>${!TotalExpensewrappers.sumFEPostedCash}</b></td>
+                                    <td class="slds-text-align--right tdProjected" Style="width:40px"><b>${!TotalExpensewrappers.sumFEPostedInKind}</b></td>
+                                    <td class="slds-text-align--right" Style="width:40px">${!TotalExpensewrappers.sumAtoFEPDiff}</td>
+                                    <td Style="width:40px"></td>                                     
+                               </apex:outputpanel>
+                            </tr> 
+                        </table>
+                        <div style="float: left; vertical-align: middle; ">Budget Notes: </div>
+                        <div style="float: left;width: 600px;vertical-align: top;" ><apex:inputTextarea rows="3" value="{!budgetNotes}" style="width:600px"/> </div>
+                        <div class="pull-right" style="margin-right: 2%;margin-top: 2%; margin-bottom:1%">
+                            <apex:commandButton value="Print" onclick="window.print();" styleclass="btn btn-info" />
+                        </div>
+                        <div class="approval-Section">
+                            <apex:outputPanel rendered="{!approvalBtnVisibility}">
+                                
+                                <div class="pull-right" style="margin-right: 2%;margin-top: 2%; margin-bottom:1%">
+                                    <input type="button" value="Submit For Approval"  class="btn btn-info" onclick="validateApprover();"/> 
+                                </div>
+                                <div class="pull-right" style="margin-right: 2%;margin-top: 2%; margin-bottom:1%">
+                                    <apex:selectList size="1" value="{!approverId}" multiselect="false" styleClass="form-control col-lg-2 appr-Id">
+                                        <apex:selectOptions value="{!UserListForApproval}"/>
+                                    </apex:selectList> 
+                                </div>
+                            </apex:outputPanel>
+                        </div>
+                        <div class="pull-right" style="margin-right: 2%;margin-top: 2%; margin-bottom:1%">
+                            <apex:commandButton value="Save" action="{!SaveExpenses}" styleclass="btn btn-info" />
+                        </div>
+                        <apex:actionFunction name="submitForApproval" action="{!submitForApproval}" rerender="none" oncomplete="decisionWindow();"/>
+                        <apex:actionFunction name="ReloadPage" action="{!ReloadPage}" rerender="none" />
+                        
+                         
+                                                
+                    </apex:pageBlock>  
+                </div>
+            </div>
+            </body>
+        </apex:form>
+        
+        <div style="padding:20px !important">
+            <apex:pageBlock title="Budget Approval History" id="ApprovalPageBlock">
+                <div class="pbBody" style="font-size: 11px !important">
+                    <table class="slds-table slds-table--bordered slds-table--striped slds-table--cell-buffer" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr class="dataRow" id="headerRow">
+                                <td class="slds-cell-wrap"></td>
+                                <td class="slds-cell-wrap"></td>                  
+                                <td class="slds-cell-wrap" colspan="3">
+                                    <apex:outputLink rendered="{! !aSW.isSubmitForApproval}" styleclass="btn btn-info btn-sm" title="Recall Budget Approval Request" target="_parent" value="{!aSW.recallApprovalProcessLink}">
+                                        Recall Budget Approval Request
+                                    </apex:outputLink>
+                                    
+                                </td>
+                                <td class="slds-cell-wrap"></td>
+                                <td class="slds-cell-wrap"></td>                                                        
+                            </tr>
+                            <tr class="headerRow">
+                                <th>Action</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Assigned To</th>
+                                <th>Comments</th>
+                                <th>Actual Approver</th>
+                                <th>Overall Status</th>
+                            </tr>                   
+                            <apex:repeat value="{!aSW.approvals}" var="s">
+                            <tr class="overAllStatusRow dataRow" id="overAllStatusRow">
+                                    <td colspan="6" class="dataCell">
+                                        {!IF(AND(s['listOfSteps'][0].stepstatus != 'Started', s['listOfSteps'][0].ProcessNode.Name != NULL),IF( s['listOfSteps'][0].stepstatus !='Removed','Step : '+s['listOfSteps'][0].ProcessNode.Name + IF(s['listOfSteps'][0].stepstatus=='Pending',' (Pending for first approval) ',''),'Approval Request Recalled'), 'Approval Request Submitted')}
+                                    </td>
+                                    <td class="dataCell {!s['listOfSteps'][0].stepstatus}">
+                                        {!IF(AND(s['listOfSteps'][0].stepstatus != 'Started',s['listOfSteps'][0].stepstatus != 'NoResponse'),IF( s['listOfSteps'][0].stepstatus !='Removed',s['listOfSteps'][0].stepstatus,'Recalled'), '')}
+                                    </td>
+                            </tr>
+                            <apex:repeat var="step" value="{!s.listOfSteps}">
+                            <tr class="dataRow">
+                                <td class="slds-cell-wrap">
+                                    <apex:outputText rendered="{!step.stepstatus == 'Pending'}">
+                                        <a href="{!s.workItemReassignLink}" target="_parent">Reassign</a> | <a href="{!s.workItemApproveOrRejectLink}" target="_parent"> Approve / Reject</a>
+                                    </apex:outputText>
+                                </td>
+                                <!--<td class="slds-cell-wrap">
+                                    <apex:outputText value=" {0,date,MM/dd/YYYY hh:mm a}">
+                                        <apex:param value="{!step.CreatedDate}"/>
+                                    </apex:outputText> 
+                                </td>-->
+                                <td class="slds-cell-wrap">
+                                    <apex:outputText value=" {!step.CreatedDate}">
+                                    </apex:outputText> 
+                                </td>
+                                <td class="slds-cell-wrap">{!IF(step.Stepstatus!='NoResponse',step.Stepstatus,'')}</td>
+                                <td class="slds-cell-wrap"><a href="/{!step.OriginalActorID}" target='_parent'>{!step.OriginalActor.Name}</a></td>
+                                <td class="slds-cell-wrap">{!step.comments}</td>
+                                <td class="slds-cell-wrap"><a href="/{!step.ActorId}" target='_parent'>{!step.Actor.Name}</a></td>
+                                <td></td>
+                            </tr>
+                            </apex:repeat>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                </div>
+            </apex:pageBlock>
+        </div>
+    </div>
+    
+   
+    <script>
+    function validateNewExpenseType() {
+        if($('.new-expType').val() == '') {
+            alert('Please Select Expense Type');
+            return false;
+        } else {
+            return true;
+        }
+    }
+    
+    function validateApprover() {
+        if($('.appr-Id').val() == '') {
+            alert('Please Select Approver');
+        } else {
+            submitForApproval();
+        }
+    }
+    
+    function winClose()
+    {
+        self.close();
+    }
+    
+    function decisionWindow() {
+        swal({
+            title: "",
+            text: "Your request has been submitted successfully.",
+            showCancelButton: true,
+            confirmButtonColor: "#747678",
+            cancelButtonText: "Close Window",  
+            confirmButtonText: "Go Back",
+            closeOnConfirm: true,
+            closeOnCancel: true
+        },
+             function(isConfirm) {
+                 if (isConfirm) {
+                     //location.reload(true);
+                     ReloadPage();
+                 } else {
+                     window.top.close();
+                 }
+             });
+    }
+    
+    window.onload=function()
+    {
+        var rows = document.getElementsByTagName('tr');
+        for (var i=0; i<rows.length; i++) 
+        {
+            var cols = rows[i].getElementsByTagName('td')[1];
+            var acctrls= rows[i].getElementsByClassName("AccountNo");
+            if(acctrls.length>0){
+                 for (j = 0; j < acctrls.length; j++) {
+                    if(acctrls[j].value.length  > 0 & acctrls[j] !=null ){ 
+                       acctrls[j].readOnly=false;
+                    }
+                    else{
+                       acctrls[j].readOnly=true;
+                    }
+                }
+             }
+             var accDesctrls= rows[i].getElementsByClassName("AccountDesc");
+             var cashctrls= rows[i].getElementsByClassName("Cash");
+             var inkindctrls= rows[i].getElementsByClassName("Inkind");
+             
+             if(accDesctrls.length>0){
+                 for (k = 0; k < accDesctrls.length; k++) {
+                    if(accDesctrls[k].value == 'Direct Wish Cash Expense'){
+                        for(x=0;x<cashctrls.length;x++){
+                            cashctrls[x].readOnly=false; 
+                        }
+                        for(y=0;y<inkindctrls.length;y++){
+                            inkindctrls[y].readOnly=true;
+                        } 
+                    }
+                    else if(accDesctrls[k].value == 'Direct Wish In-Kind Goods' ||  accDesctrls[k].value == 'Direct Wish In-Kind Service'){
+                        for(x=0;x<cashctrls.length;x++){
+                            cashctrls[x].readOnly=true; 
+                        }
+                        for(y=0;y<inkindctrls.length;y++){
+                            inkindctrls[y].readOnly=false;
+                        } 
+                    }
+                    else {
+                        for(x=0;x<cashctrls.length;x++){
+                            cashctrls[x].readOnly=true;
+                        }
+                        for(y=0;y<inkindctrls.length;y++){
+                            inkindctrls[y].readOnly=true;
+                        } 
+                    }
+                 }
+             }
+        }
+    };
+
+    
+    </script>
+    
+
+</apex:page>

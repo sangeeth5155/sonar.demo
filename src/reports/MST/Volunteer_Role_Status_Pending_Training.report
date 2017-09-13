@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Volunteer_Roles__c.Role_Name__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Roles__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Roles__c.Chapter_Role__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Volunteer_Roles__c.Role_Name__c</column>
+            <operator>notEqual</operator>
+            <value>Celebrity Host,Fundraising volunteer,medical outreach volunteer,Speaker&apos;s Bureau,Special Events,All Roles,Wish Granter Mentor,Wish Granter,Airport Greeter,Board Member</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_ID</column>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Volunteer Role Status Pending Training</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Volunteer_Roles__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Volunteer_Roles__c.End_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

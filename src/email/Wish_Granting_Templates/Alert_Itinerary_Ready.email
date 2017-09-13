@@ -1,0 +1,10 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt;"><span style="font-size:12.0pt;line-height:107%;font-family:&quot;Century Gothic&quot;,sans-serif">Hello Wish Granters,<br><span style="font-size: 12pt;"><br>The
+itinerary and packet for {!Contact.First_Last_Initial__c}’s
+wish is complete and ready for you to pick up at the Make-A-Wish office. Please
+let me know when you will be stopping by so we can have it set aside for you.<br></span></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>We
+look forward to seeing you when you stop by to pick up the packet!<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>Thank you,<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>{!User.Name}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!User.Title}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Case.Hidden_Chapter_Name__c}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Case.Hidden_Chapter_Phone__c}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Case.Hidden_Chapter_Email__c}</span></p>]]></td>
+</tr>
+</table>

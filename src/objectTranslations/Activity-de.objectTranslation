@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account Email --></label>
+        <name>Account_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Phone --></label>
+        <name>Account_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Availability Time Other1 --></label>
+        <name>Availability_Time_Other1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Availability Time Other2 --></label>
+        <name>Availability_Time_Other2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Availability Time Other3 --></label>
+        <name>Availability_Time_Other3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Available Date1 --></label>
+        <name>Available_Date1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Available Date2 --></label>
+        <name>Available_Date2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Available Date3 --></label>
+        <name>Available_Date3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Available Time1 --></label>
+        <name>Available_Time1__c</name>
+        <picklistValues>
+            <masterLabel>11:00AM - 2:00PM</masterLabel>
+            <translation><!-- 11:00AM - 2:00PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2:00PM - 5:00PM</masterLabel>
+            <translation><!-- 2:00PM - 5:00PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8:00AM - 11:00AM</masterLabel>
+            <translation><!-- 8:00AM - 11:00AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Preference</masterLabel>
+            <translation><!-- No Preference --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Available Time2 --></label>
+        <name>Available_Time2__c</name>
+        <picklistValues>
+            <masterLabel>11:00AM - 2:00PM</masterLabel>
+            <translation><!-- 11:00AM - 2:00PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2:00PM - 5:00PM</masterLabel>
+            <translation><!-- 2:00PM - 5:00PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8:00AM - 11:00AM</masterLabel>
+            <translation><!-- 8:00AM - 11:00AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Preference</masterLabel>
+            <translation><!-- No Preference --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Available Time3 --></label>
+        <name>Available_Time3__c</name>
+        <picklistValues>
+            <masterLabel>11:00AM - 2:00PM</masterLabel>
+            <translation><!-- 11:00AM - 2:00PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2:00PM - 5:00PM</masterLabel>
+            <translation><!-- 2:00PM - 5:00PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8:00AM - 11:00AM</masterLabel>
+            <translation><!-- 8:00AM - 11:00AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Preference</masterLabel>
+            <translation><!-- No Preference --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Chapter Name --></label>
+        <name>Chapter_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Confirmed Date --></label>
+        <name>Confirmed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Confirmed Time --></label>
+        <name>Confirmed_Time__c</name>
+        <picklistValues>
+            <masterLabel>10:00 AM</masterLabel>
+            <translation><!-- 10:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:30 AM</masterLabel>
+            <translation><!-- 10:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:00 AM</masterLabel>
+            <translation><!-- 11:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:30 AM</masterLabel>
+            <translation><!-- 11:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00 PM</masterLabel>
+            <translation><!-- 12:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:30 PM</masterLabel>
+            <translation><!-- 12:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1:00 PM</masterLabel>
+            <translation><!-- 1:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1:30 PM</masterLabel>
+            <translation><!-- 1:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2:00 PM</masterLabel>
+            <translation><!-- 2:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2:30 PM</masterLabel>
+            <translation><!-- 2:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3:00 PM</masterLabel>
+            <translation><!-- 3:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3:30 PM</masterLabel>
+            <translation><!-- 3:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4:00 PM</masterLabel>
+            <translation><!-- 4:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4:30 PM</masterLabel>
+            <translation><!-- 4:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5:00 PM</masterLabel>
+            <translation><!-- 5:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5:30 PM</masterLabel>
+            <translation><!-- 5:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6:00 PM</masterLabel>
+            <translation><!-- 6:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6:30 PM</masterLabel>
+            <translation><!-- 6:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7:00 AM</masterLabel>
+            <translation><!-- 7:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7:00 PM</masterLabel>
+            <translation><!-- 7:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7:30 AM</masterLabel>
+            <translation><!-- 7:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7:30 PM</masterLabel>
+            <translation><!-- 7:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8:00 AM</masterLabel>
+            <translation><!-- 8:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8:00 PM</masterLabel>
+            <translation><!-- 8:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8:30 AM</masterLabel>
+            <translation><!-- 8:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8:30 PM</masterLabel>
+            <translation><!-- 8:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9:00 AM</masterLabel>
+            <translation><!-- 9:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9:00 PM</masterLabel>
+            <translation><!-- 9:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9:30 AM</masterLabel>
+            <translation><!-- 9:30 AM --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contact Name Hidden --></label>
+        <name>Contact_Name_Hidden__c</name>
+    </fields>
+    <fields>
+        <label><!-- DB Activity Type --></label>
+        <name>DB_Activity_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migrated Record --></label>
+        <name>Migrated_Record__c</name>
+    </fields>
+    <fields>
+        <name>Priority</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Normal</masterLabel>
+            <translation><!-- Normal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Recurring Frequency --></label>
+        <name>Recurring_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sort Order --></label>
+        <name>Sort_Order__c</name>
+    </fields>
+    <fields>
+        <name>Status</name>
+        <picklistValues>
+            <masterLabel>Abandoned</masterLabel>
+            <translation><!-- Abandoned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deferred</masterLabel>
+            <translation><!-- Deferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rescheduled</masterLabel>
+            <translation><!-- Rescheduled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled</masterLabel>
+            <translation><!-- Scheduled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting on someone else</masterLabel>
+            <translation><!-- Waiting on someone else --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- System Generated Task --></label>
+        <name>SystemGeneratedTask__c</name>
+    </fields>
+    <fields>
+        <label><!-- TaskVolunteerRole --></label>
+        <name>TaskVolunteerRole__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Owner Name --></label>
+        <name>Task_Owner_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Type --></label>
+        <name>Task_Type__c</name>
+        <picklistValues>
+            <masterLabel>Wish Determination</masterLabel>
+            <translation><!-- Wish Determination --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Granting</masterLabel>
+            <translation><!-- Wish Granting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Planning</masterLabel>
+            <translation><!-- Wish Planning --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Venue --></label>
+        <name>Venue__c</name>
+    </fields>
+    <fields>
+        <label><!-- isRecurrenceTask --></label>
+        <name>isRecurrenceTask__c</name>
+    </fields>
+    <fields>
+        <label><!-- isRecurring --></label>
+        <name>isRecurring__c</name>
+    </fields>
+    <fields>
+        <label><!-- Engagement Plan Task --></label>
+        <name>npsp__Engagement_Plan_Task__c</name>
+        <relationshipLabel><!-- Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Engagement Plan --></label>
+        <name>npsp__Engagement_Plan__c</name>
+        <relationshipLabel><!-- Tasks --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

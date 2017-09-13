@@ -1,0 +1,57 @@
+<apex:page standardController="Task" showHeader="false" extensions="VolunteerTaskTransfer_AC" sidebar="false" standardStylesheets="false">
+    <apex:includeScript value="{!URLFOR($Resource.prospective_assets, 'web/js/jquery.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.prospective_assets, 'web/js/bootstrap.min.js')}"/>
+    <apex:stylesheet value="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"/>
+    <style>
+        html, body, .container {
+        height: 100%;
+        }
+        .container {
+        display: table;
+        vertical-align: middle;
+        }
+        
+    </style>
+    <apex:form >
+        <apex:outputPanel rendered="{!Assigners.size > 1}">
+        <div class="container" Style="margin-top:14%">
+            <div class="vertical-center-row">
+                <div align="center">
+                    <div class="bs-example">
+                        <form>
+                            <div class="form-group">
+                                <label for="inputEmail">Assign task to volunteer:</label>
+                                <apex:selectList value="{!assignerId}"  multiselect="false" size="1" styleClass="form-control asigners">
+                                    <apex:selectOptions value="{!Assigners}"/>
+                                </apex:selectlist>
+                            </div>
+                            <apex:commandButton action="{!transferTask}" value="Assign" onComplete="ChangeParent();" styleClass="col-xs-5 col-sm-5 closedTask btn-primary btn btn-sm cancel" reRender="LoadPage"/>
+                            <input type="button" class="col-xs-5 col-sm-5 closedTask btn-primary btn cancel btn-sm col-xs-offset-2" value="Cancel" onClick="window.close();"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </apex:outputPanel>
+        
+        
+        <apex:outputPanel rendered="{!Assigners.size == 1}">
+            <div class="vertical-center-row">
+                <div align="center" style="padding-top: 25%;">
+                    Sorry, this task cannot be transferred at this time as the other wish granter is not available.
+                </div>
+            </div>
+        </apex:outputPanel>
+        
+            <apex:outputPanel id="LoadPage">
+                <script>
+                function ChangeParent() {
+                    window.opener.location.href = '{!communityBaseUrl}';
+                    window.close();
+                }
+                </script>
+            </apex:outputPanel>
+            
+            
+    </apex:form>
+</apex:page>

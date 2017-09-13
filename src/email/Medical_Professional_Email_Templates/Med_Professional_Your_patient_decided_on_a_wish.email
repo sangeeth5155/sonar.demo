@@ -1,0 +1,29 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div style="text-align: left;"><p class="MsoNormal" style="margin-bottom:12.0pt;line-height:normal;background:
+white"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">Hello&nbsp;{!Case.Qualifying_Medical_Professional_Name__c},<o:p></o:p></span></p><p class="MsoNormal" style="font-size: 12pt; margin-bottom: 12pt; line-height: normal; background: white;">
+
+</p><p class="MsoNormal" style="margin-bottom:12.0pt;line-height:normal;background:
+white"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">We are excited your patient has chosen their wish!&nbsp; If you
+have any questions, concerns or comments we would love to hear from you.<br>
+<br>
+Wish Child Name:&nbsp;{!Contact.Name}<br>
+Primary Diagnosis:&nbsp;{!Contact.Diagnosis__c}<br>
+Wish: &nbsp;{!Case.Wish_Type__c}<br>
+<br>
+Thanks to the support of you and other medical professionals around the
+country, we continue to come closer each year to our vision of making every
+eligible child’s wish come true.<br>
+<br>
+Thank you for taking the time to help us&nbsp;<i>share the power of a wish</i><sup>®</sup>.&nbsp;<br>
+<br>
+Warmly,<br>
+<br>
+{!User.Name}<br>
+{!User.Title}<br>
+{!Case.Hidden_Chapter_Name__c}<br>
+{!User.Email}<br>
+{!User.Phone}<o:p></o:p></span></p></div>]]></td>
+</tr>
+</table>

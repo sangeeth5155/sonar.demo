@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- DB Competitor --></label>
+        <name>DB_Competitor__c</name>
+        <picklistValues>
+            <masterLabel>Competitor A</masterLabel>
+            <translation><!-- Competitor A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competitor B</masterLabel>
+            <translation><!-- Competitor B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competitor C</masterLabel>
+            <translation><!-- Competitor C --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>LeadSource</name>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fax</masterLabel>
+            <translation><!-- Fax --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online</masterLabel>
+            <translation><!-- Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone</masterLabel>
+            <translation><!-- Phone --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>StageName</name>
+        <picklistValues>
+            <masterLabel>Application Submitted</masterLabel>
+            <translation><!-- Application Submitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awarded</masterLabel>
+            <translation><!-- Awarded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Lost</masterLabel>
+            <translation><!-- Closed Lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Won</masterLabel>
+            <translation><!-- Closed Won --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cultivating</masterLabel>
+            <translation><!-- Cultivating --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In-Kind Not Yet Received</masterLabel>
+            <translation><!-- In-Kind Not Yet Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In-Kind Received</masterLabel>
+            <translation><!-- In-Kind Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LOI Submitted</masterLabel>
+            <translation><!-- LOI Submitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pledged</masterLabel>
+            <translation><!-- Pledged --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Posted</masterLabel>
+            <translation><!-- Posted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospecting</masterLabel>
+            <translation><!-- Prospecting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Withdrawn</masterLabel>
+            <translation><!-- Withdrawn --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Type</name>
+        <picklistValues>
+            <masterLabel>Existing Funding</masterLabel>
+            <translation><!-- Existing Funding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Funding</masterLabel>
+            <translation><!-- New Funding --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>数式: この支援から取消支払金額と受取支払金額を差し引いた金額。</help>
+        <label><!-- Remaining Balance --></label>
+        <name>npe01__Amount_Outstanding__c</name>
+    </fields>
+    <fields>
+        <help>この支援で取消または回収不可とマークされた支払の合計値。</help>
+        <label><!-- Payment Writeoff Amount --></label>
+        <name>npe01__Amount_Written_Off__c</name>
+    </fields>
+    <fields>
+        <help>個人の役割の作成で個人 ID を渡すための非表示項目。</help>
+        <label><!-- Contact Id for Role --></label>
+        <name>npe01__Contact_Id_for_Role__c</name>
+    </fields>
+    <fields>
+        <help>支払が有効な場合にオンにすると、この支援の新しい支払は自動的に作成されません。</help>
+        <label><!-- Do Not Automatically Create Payment --></label>
+        <name>npe01__Do_Not_Automatically_Create_Payment__c</name>
+    </fields>
+    <fields>
+        <help>数式: 関連団体が個人として定義されているかどうか (SYSTEMIsIndividual__c)</help>
+        <label><!-- Is Opp From Individual --></label>
+        <name>npe01__Is_Opp_From_Individual__c</name>
+    </fields>
+    <fields>
+        <help>最終会員レベル項目の個人または団体に基づいて値を決定します。</help>
+        <label><!-- Member Level --></label>
+        <name>npe01__Member_Level__c</name>
+        <picklistValues>
+            <masterLabel>Bronze</masterLabel>
+            <translation>ブロンズ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation>ゴールド</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation>シルバー</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>会員期間が終了する日付</help>
+        <label><!-- Membership End Date --></label>
+        <name>npe01__Membership_End_Date__c</name>
+    </fields>
+    <fields>
+        <help>これは、更新、新規会員、または退会後に復帰した会員です。</help>
+        <label><!-- Membership Origin --></label>
+        <name>npe01__Membership_Origin__c</name>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation>新規</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reacquire</masterLabel>
+            <translation>再取得</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation>更新</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>会員期間が開始する日付</help>
+        <label><!-- Membership Start Date --></label>
+        <name>npe01__Membership_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help>この「支援」に対する「支払」データの件数です。</help>
+        <label><!-- Number of Payments --></label>
+        <name>npe01__Number_of_Payments__c</name>
+    </fields>
+    <fields>
+        <help>この「支援」に対する「支払」データの中で、既に支払われた金額です</help>
+        <label><!-- Payment Amount Received --></label>
+        <name>npe01__Payments_Made__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recurring Donation --></label>
+        <name>npe03__Recurring_Donation__c</name>
+        <relationshipLabel><!-- Donations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>最新の支援を見つけるために積み上げ集計中に使用される連結項目。</help>
+        <label><!-- Combined Rollup Fieldset --></label>
+        <name>npo02__CombinedRollupFieldset__c</name>
+    </fields>
+    <fields>
+        <help><!-- Controls if Household contact roles are created for Opportunities.  DEPRECATED.  Replaced by custom settings. --></help>
+        <label><!-- _SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR --></label>
+        <name>npo02__systemHouseholdContactRoleProcessor__c</name>
+        <picklistValues>
+            <masterLabel>All Opportunities</masterLabel>
+            <translation>すべての支援</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Opportunities</masterLabel>
+            <translation>支援なし</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>受領確認の日付。</help>
+        <label><!-- Acknowledgment Date --></label>
+        <name>npsp__Acknowledgment_Date__c</name>
+    </fields>
+    <fields>
+        <help>この支援の受領確認の状況。</help>
+        <label><!-- Acknowledgment Status --></label>
+        <name>npsp__Acknowledgment_Status__c</name>
+        <picklistValues>
+            <masterLabel>Acknowledged</masterLabel>
+            <translation>承認済み</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do Not Acknowledge</masterLabel>
+            <translation>承認しない</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Acknowledgment Not Sent</masterLabel>
+            <translation>メール受領確認未送信</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Acknowledgment Now</masterLabel>
+            <translation>今すぐメール受領確認</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>To Be Acknowledged</masterLabel>
+            <translation>承認予定</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>団体が設定する支援完了日 (支援が最初に作成された日、または支援が成立した日) に対して、支援者が支援について具体的に質問された日付。</help>
+        <label><!-- Ask Date --></label>
+        <name>npsp__Ask_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Batch --></label>
+        <name>npsp__Batch__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>支援の質問が成功しなかった理由に関するメモ。</help>
+        <label><!-- Closed Lost Reason --></label>
+        <name>npsp__Closed_Lost_Reason__c</name>
+    </fields>
+    <fields>
+        <help>現物支援の公正な時価。</help>
+        <label><!-- Fair Market Value --></label>
+        <name>npsp__Fair_Market_Value__c</name>
+    </fields>
+    <fields>
+        <help>この支援の質問種別を分類します。</help>
+        <label><!-- Gift Strategy --></label>
+        <name>npsp__Gift_Strategy__c</name>
+        <picklistValues>
+            <masterLabel>New Donor</masterLabel>
+            <translation>新規支援者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation>更新</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upgrade</masterLabel>
+            <translation>アップグレード</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>助成金提供団体から送信されたドキュメントまたは契約による、助成金の開始日付。</help>
+        <label><!-- Grant Contract Date --></label>
+        <name>npsp__Grant_Contract_Date__c</name>
+    </fields>
+    <fields>
+        <help>助成金提供団体から割り当てられることがある一意の番号を追跡します。</help>
+        <label><!-- Grant Contract Number --></label>
+        <name>npsp__Grant_Contract_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grant Period End Date --></label>
+        <name>npsp__Grant_Period_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grant Period Start Date --></label>
+        <name>npsp__Grant_Period_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help>助成金の資金調達領域を説明します。ここには任意の内容を入力できます。たとえば、助成金が適用されるプログラムの名前を入力できます。</help>
+        <label><!-- Program Areas --></label>
+        <name>npsp__Grant_Program_Area_s__c</name>
+    </fields>
+    <fields>
+        <help>助成金提供団体の Web サイトにある助成金の要件を指し示す URL。</help>
+        <label><!-- Grant Requirements Website --></label>
+        <name>npsp__Grant_Requirements_Website__c</name>
+    </fields>
+    <fields>
+        <help>この支援の名誉会員の既存の個人レコード。</help>
+        <label><!-- Honoree Contact --></label>
+        <name>npsp__Honoree_Contact__c</name>
+        <relationshipLabel><!-- Opportunities (Honoree Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>支援者によって指定される名誉会員名。この項目が空白のままで [名誉会員個人] 項目に値がある場合、その値がこの項目に自動的に入力されます。</help>
+        <label><!-- Honoree Name --></label>
+        <name>npsp__Honoree_Name__c</name>
+    </fields>
+    <fields>
+        <help>現物支援のリッチテキストの説明 (写真を含む) を保持します。</help>
+        <label><!-- In-Kind Description --></label>
+        <name>npsp__In_Kind_Description__c</name>
+    </fields>
+    <fields>
+        <help>支援者がこの現物支援の適正な市場価格を入力している場合はオンにします。</help>
+        <label><!-- In-Kind Donor Declared Value --></label>
+        <name>npsp__In_Kind_Donor_Declared_Value__c</name>
+    </fields>
+    <fields>
+        <help>現物支援の種別。</help>
+        <label><!-- In-Kind Type --></label>
+        <name>npsp__In_Kind_Type__c</name>
+        <picklistValues>
+            <masterLabel>Goods</masterLabel>
+            <translation>商品</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services</masterLabel>
+            <translation>サービス</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>選択されている場合、助成金が以前の助成金の更新であることを示します。</help>
+        <label><!-- Is Grant Renewal --></label>
+        <name>npsp__Is_Grant_Renewal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Matching Gift Account --></label>
+        <name>npsp__Matching_Gift_Account__c</name>
+        <relationshipLabel><!-- Matched Gifts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Matching Gift Employer --></label>
+        <name>npsp__Matching_Gift_Employer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Matching Gift Status --></label>
+        <name>npsp__Matching_Gift_Status__c</name>
+        <picklistValues>
+            <masterLabel>Potential</masterLabel>
+            <translation>可能性</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received</masterLabel>
+            <translation>受信済み</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation>送信済み</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Matching Gift --></label>
+        <name>npsp__Matching_Gift__c</name>
+        <relationshipLabel><!-- Matched Gifts --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>NPSP では、次の助成金期日レコードに基づいてこの項目が自動的に更新されます。</help>
+        <label><!-- Next Deliverable Date --></label>
+        <name>npsp__Next_Grant_Deadline_Due_Date__c</name>
+    </fields>
+    <fields>
+        <help>通知受信者のパーソナライズされたメッセージ。</help>
+        <label><!-- Notification Message --></label>
+        <name>npsp__Notification_Message__c</name>
+    </fields>
+    <fields>
+        <help>通知受信者の通知方法。</help>
+        <label><!-- Notification Preference --></label>
+        <name>npsp__Notification_Preference__c</name>
+        <picklistValues>
+            <masterLabel>Do Not Notify</masterLabel>
+            <translation>通知しない</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation>メール</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone</masterLabel>
+            <translation>電話</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Postal Mail</masterLabel>
+            <translation>郵便</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>この支援について通知される個人の既存の連絡先レコード。</help>
+        <label><!-- Notification Recipient Contact --></label>
+        <name>npsp__Notification_Recipient_Contact__c</name>
+        <relationshipLabel><!-- Opportunities (Notification Recipient) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>通知受信者の連絡先情報 (支援者によって提供される)。</help>
+        <label><!-- Notification Recipient Information --></label>
+        <name>npsp__Notification_Recipient_Information__c</name>
+    </fields>
+    <fields>
+        <help>この支援について通知される個人の名前 (支援者によって提供される)。この項目が空白のままで、[通知受信者の連絡先] 項目に値が指定されている場合、この項目にその値が自動的に入力されます。</help>
+        <label><!-- Notification Recipient Name --></label>
+        <name>npsp__Notification_Recipient_Name__c</name>
+    </fields>
+    <fields>
+        <help>この助成金が以前の助成金の更新である場合、この項目を使用してこのレコードを以前のレコードに関連付けます。</help>
+        <label><!-- Previous Grant/Gift Opportunity --></label>
+        <name>npsp__Previous_Grant_Opportunity__c</name>
+        <relationshipLabel><!-- Related Grants/Gifts --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この支援の主個人や主キャンペーンソースのキャンペーンメンバーを作成するときに使用する状況。デフォルト (成立した支援ではレスポンスありの状況、他の支援ではレスポンスなしの状況) に設定するには、空白のままにします。</help>
+        <label><!-- Primary Contact Campaign Member Status --></label>
+        <name>npsp__Primary_Contact_Campaign_Member_Status__c</name>
+    </fields>
+    <fields>
+        <help>この支援の主個人。主個人の役割は、この項目との同期が保たれます。個人の支援の場合、これはこの支援の帰属を意味します。</help>
+        <label><!-- Primary Contact --></label>
+        <name>npsp__Primary_Contact__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この支援者がこの支援の資格があると認定された日付。</help>
+        <label><!-- Qualified Date --></label>
+        <name>npsp__Qualified_Date__c</name>
+    </fields>
+    <fields>
+        <help>支援の命名規則に含まれる各支払の名前。無期限の継続支援では括弧内に回数が表示され、規定回数が設定されている継続支援では回数/総数が表示されます。</help>
+        <label><!-- Recurring Donation Installment Name --></label>
+        <name>npsp__Recurring_Donation_Installment_Name__c</name>
+    </fields>
+    <fields>
+        <help>この支援でスケジュールされている継続支援の回数。</help>
+        <label><!-- Recurring Donation Installment Number --></label>
+        <name>npsp__Recurring_Donation_Installment_Number__c</name>
+    </fields>
+    <fields>
+        <help>要求している金額。この金額は、最終的に獲得する金額と異なる可能性があります。</help>
+        <label><!-- Requested Amount --></label>
+        <name>npsp__Requested_Amount__c</name>
+    </fields>
+    <fields>
+        <help>支援が個人に敬意を表して行われるのか、個人を追悼して行われるのかを示します。</help>
+        <label><!-- Tribute Type --></label>
+        <name>npsp__Tribute_Type__c</name>
+        <picklistValues>
+            <masterLabel>Honor</masterLabel>
+            <translation>名誉</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Memorial</masterLabel>
+            <translation>追悼</translation>
+        </picklistValues>
+    </fields>
+    <recordTypes>
+        <label><!-- Donation --></label>
+        <name>Donation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Grant --></label>
+        <name>Grant</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- In-Kind Gift --></label>
+        <name>In_Kind_Gift</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Major Gift --></label>
+        <name>MajorGift</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Matching Gift --></label>
+        <name>Matching_Gift</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Membership --></label>
+        <name>Membership</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- LOOP --></label>
+        <name>Loop__LOOP</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- LOOP_Merge --></label>
+        <name>Loop__LOOP_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- LOOPlus --></label>
+        <name>Loop__LOOPlus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_LOOP_Merge --></label>
+        <name>Loop__Mass_LOOP_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_LOOPlus --></label>
+        <name>Loop__Mass_LOOPlus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Verify_with_DNB --></label>
+        <name>dsfs__Verify_with_DNB</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_Matching_Donation --></label>
+        <name>npe01__Add_Matching_Donation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Matching_Donation --></label>
+        <name>npe01__Matching_Donation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Contact_Donation --></label>
+        <name>npe01__New_Contact_Donation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Organization_Donation --></label>
+        <name>npe01__New_Organization_Donation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Email_Acknowledgment --></label>
+        <name>npsp__Email_Acknowledgment</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Email_Acknowledgments --></label>
+        <name>npsp__Email_Acknowledgments</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Find_Matched_Gifts --></label>
+        <name>npsp__Find_Matched_Gifts</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Manage_Soft_Credits --></label>
+        <name>npsp__Manage_Soft_Credits</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Refresh_Name --></label>
+        <name>npsp__Refresh_Name</name>
+    </webLinks>
+</CustomObjectTranslation>

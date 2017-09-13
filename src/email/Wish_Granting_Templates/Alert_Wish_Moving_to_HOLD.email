@@ -1,0 +1,13 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt;"><span style="font-size:12.0pt;line-height:107%;font-family:&quot;Century Gothic&quot;,sans-serif">Hello Wish Granters,<br><span style="font-size: 12pt;"><br>{!Contact.First_Last_Initial__c}’s
+wish has recently been moved to a HOLD status.&nbsp;&nbsp;
+We will not be moving forward in the wish process until this wish is
+reactivated. We will be in touch with you at that time to discuss next steps.
+Should you hear from the wish family during this time, please contact the
+chapter.<br></span></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>We
+encourage you to review the volunteer opportunities posted on the </span><a href="https://make-a-wish.force.com/communitieslogin" style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">Make-A-Wish
+Volunteer Center</a><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"> and sign up for another wish child or event!<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>Thank you,<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>{!User.Name}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!User.Title}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Case.Hidden_Chapter_Name__c}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Case.Hidden_Chapter_Phone__c}</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Case.Hidden_Chapter_Email__c}</span></p>]]></td>
+</tr>
+</table>

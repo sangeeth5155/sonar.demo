@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Volunteer_Opportunity__c$Name</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Opportunity__c$Volunteer_Role_Name__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Opportunity__c$Wish__c.Status</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Volunteer_Opportunity__c$Migrated_Record__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Volunteer_Opportunity__c$Volunteer_Role_Name__c</column>
+            <operator>equals</operator>
+            <value>Wish Granter</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Volunteer_Opportunity__c$Wish__c.Status</column>
+            <operator>equals</operator>
+            <value>Qualified,Ready to Assign</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Volunteer_Opportunity__c$Wish__c.CaseNumber</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Volunteer Opportunity Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Wish_Related_Volunteer_Opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Volunteer_Opportunity__c$Date_Time__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

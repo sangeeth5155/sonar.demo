@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>It holds the chapter name and its corresponding role name.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Chapter_Name__c</fullName>
+        <description>This will hold the value of Zip Code.</description>
+        <externalId>false</externalId>
+        <label>Chapter Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Role_Name__c</fullName>
+        <description>It holds the Chapter&apos;s Role Name</description>
+        <externalId>false</externalId>
+        <label>Role Name</label>
+        <length>250</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Chapter Vs Role</label>
+    <visibility>Public</visibility>
+</CustomObject>

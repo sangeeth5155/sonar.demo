@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Condition Description</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Condition Description</value>
+    </caseValues>
+    <fields>
+        <label><!-- Code To Use --></label>
+        <name>Code_To_Use__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group1 --></label>
+        <name>Group1__c</name>
+    </fields>
+    <fields>
+        <label><!-- MAW Name --></label>
+        <name>MAW_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- This would appear when the smart search does not match with the condition description. --></help>
+        <label><!-- Not Listed --></label>
+        <name>Not_Listed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Treatment Subspecialty --></label>
+        <name>Treatment_Subspecialty__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden isEligible --></label>
+        <name>isEligible__c</name>
+    </fields>
+    <layouts>
+        <layout>Condition Description Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Background Check</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Background Checks</value>
+    </caseValues>
+    <fields>
+        <label><!-- Hidden Account Email --></label>
+        <name>Account_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Account Name --></label>
+        <name>Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Account Phone --></label>
+        <name>Account_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current --></label>
+        <name>Current__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Completed --></label>
+        <name>Date_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Requested --></label>
+        <name>Date_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expiration Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Mulesoft --></label>
+        <name>From_Mulesoft__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Background Expire --></label>
+        <name>HiddenBackgroundExpire__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Background Rejected --></label>
+        <name>Hidden_Background_Rejected__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Volunteer Contact Email --></label>
+        <name>Hidden_Volunteer_Contact_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import Id --></label>
+        <name>Import_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migrated Record --></label>
+        <name>Migrated_Record__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Date Completed --></label>
+        <name>RE_Date_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Date Requested --></label>
+        <name>RE_Date_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Import Id --></label>
+        <name>RE_Import_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requested By --></label>
+        <name>Requested_By__c</name>
+        <relationshipLabel><!-- Background Checks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Are you residing in US for past 7 years? --></label>
+        <name>Resided_in_US_for_past_7_years__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved w/ Conditions</masterLabel>
+            <translation><!-- Approved w/ Conditions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Volunteer --></label>
+        <lookupFilter>
+            <errorMessage><!-- The value should be volunteer contact --></errorMessage>
+        </lookupFilter>
+        <name>Volunteer__c</name>
+        <relationshipLabel><!-- Background Checks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Hidden Volunteer is Inactive --></label>
+        <name>Volunteer_is_Inactive__c</name>
+    </fields>
+    <layouts>
+        <layout>Background check Layout</layout>
+        <sections>
+            <label><!-- Attachments --></label>
+            <section>Attachments</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <sharingReasons>
+        <label><!-- Chapter_Staff --></label>
+        <name>Chapter_Staff</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please enter the value for Date Completed. --></errorMessage>
+        <name>BC_Date_Of_Completed_validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the value for status --></errorMessage>
+        <name>BC_Status_validation</name>
+    </validationRules>
+    <workflowTasks>
+        <name>BC_ET_Background_Check_Completed</name>
+        <subject><!-- BC ET : Background Check Completed --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>BC_ET_Background_Check_Expired_7_Days</name>
+        <subject><!-- BC ET : Background Check Expired (7 Days) --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>BC_ET_Background_Check_Expiring_16_Days</name>
+        <subject><!-- BC ET : Background Check Expiring (16 Days) --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>BC_ET_Background_Check_Expiring_23_Days</name>
+        <subject><!-- BC ET : Background Check Expiring (23 Days) --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>BC_ET_Background_Check_Expiring_2_Days</name>
+        <subject><!-- BC ET : Background Check Expiring (2 Days) --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>BC_ET_Background_Check_Expiring_30_Days</name>
+        <subject><!-- BC ET : Background Check Expiring (30 Days) --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>BC_ET_Background_Check_Expiring_9_Days</name>
+        <subject><!-- BC ET : Background Check Expiring (9 Days) --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

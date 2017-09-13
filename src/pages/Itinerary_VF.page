@@ -1,0 +1,12 @@
+<apex:page standardController="Case" extensions="ShoppingSpree_AC" sidebar="false" action="{!updateCaseTeamMember}">
+<apex:form >
+
+                                          <div style="margin-left:40%; font-size: 40px; color:blue; margin-top: 2%;">ITINERARY ITEMS</div>
+                                          
+  
+  <div style="margin-left:10%; font-size: 20px; margin-top: 2%;"><apex:outputLink target="_blank" value="{!ShoppingSpree }">Shopping Spree </apex:outputLink></div>
+
+</apex:form>
+  
+
+</apex:page>

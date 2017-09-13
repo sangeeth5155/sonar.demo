@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>It will be used to send an email alert when the training is completed</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Training:Completed Email Template</name>
+    <style>freeForm</style>
+    <subject>Training Completed</subject>
+    <textOnly>Hi {!Volunteer_Orientation_Training__c.Volunteer__c},
+
+You have successfully completed {!Volunteer_Orientation_Training__c.Orientation_Training_Hidden__c}. Please log in to the Make-A-Wish Volunteer Center to complete any additional required role-specific training.
+
+If this was your final required training, we are excited to welcome you as a Make-A-Wish® volunteer. Please log in to the Make-A-Wish Volunteer Center where you can stay informed about everything happening at our chapter. You’ll find:
+
+
+New volunteer opportunities
+Information about the wish-granting process
+Helpful tips
+Ways to get even more involved in helping kids with life-threatening medical conditions
+
+
+As always, please feel free to contact the chapter at the number below with any questions, comments, concerns or ideas.
+
+Thanks,
+
+{!Volunteer_Orientation_Training__c.Account_Name__c}
+{!Volunteer_Orientation_Training__c.Account_Phone__c}
+{!Volunteer_Orientation_Training__c.Account_Email__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

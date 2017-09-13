@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Time sheet</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Time sheet</value>
+    </caseValues>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Mulesoft --></label>
+        <name>From_Mulesoft__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hours Hidden --></label>
+        <name>Hours_Hidden__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter two digits on decimal place. --></help>
+        <label><!-- Hours spent --></label>
+        <name>Hours_spent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migrated Record --></label>
+        <name>Migrated_Record__c</name>
+    </fields>
+    <fields>
+        <label><!-- Volunteer Opportunity --></label>
+        <name>Volunteer_Opportunity__c</name>
+        <relationshipLabel><!-- Time sheet --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Year --></label>
+        <name>Year__c</name>
+    </fields>
+    <layouts>
+        <layout>Time sheet Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- The Date should not be future date. --></errorMessage>
+        <name>Date_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Hours should be with in 24 hours. --></errorMessage>
+        <name>Time_Validation</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- New_Time_Sheet --></label>
+        <name>New_Time_Sheet</name>
+    </webLinks>
+</CustomObjectTranslation>

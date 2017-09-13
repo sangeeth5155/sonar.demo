@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>It will be used to send an email when background check is expired</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Bc:Expired Email Template</name>
+    <style>freeForm</style>
+    <subject>Background Check Expired</subject>
+    <textOnly>Hi {!Background_check__c.Volunteer__c},
+
+Thank you so much for your dedication to Make-A-Wish®. Our records indicate that your criminal background check has expired. If you are still interested in volunteering with Make-A-Wish, please log in to the Make-A-Wish Volunteer Center to initiate your background check. If the required information has not been completed by {!Background_check__c.Date__c + 7}, we will mark you as “INACTIVE” and any current assignments will be re-assigned to an active volunteer.
+
+We are grateful for your continued support of our mission and the children we serve!
+
+Thanks,
+
+{!Background_check__c.Account_Name__c}
+{!Background_check__c.Account_Phone__c}
+{!Background_check__c.Account_Email__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

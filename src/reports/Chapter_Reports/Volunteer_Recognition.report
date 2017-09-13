@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Awards_Recognition__c$Volunteer_Contact__c</field>
+    </columns>
+    <columns>
+        <field>Awards_Recognition__c$Volunteer_Contact__c.Phone</field>
+    </columns>
+    <columns>
+        <field>Awards_Recognition__c$Volunteer_Contact__c.Email</field>
+    </columns>
+    <columns>
+        <field>Awards_Recognition__c$Award_Name__c</field>
+    </columns>
+    <columns>
+        <field>Awards_Recognition__c$Date_Field__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Awards_Recognition__c$Volunteer_Contact__c.Hidden_Status__c</column>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Awards_Recognition__c$Volunteer_Contact__c.Contact_Account_Name__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Volunteer Recognition</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Volunteer_Recognition__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Awards_Recognition__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>TYPE</field>
+    </columns>
+    <columns>
+        <field>RATING</field>
+    </columns>
+    <columns>
+        <field>DUE_DATE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>ADDRESS1_STATE_CODE</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <operator>equals</operator>
+            <value>Account.HH_Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT.NAME</column>
+            <operator>equals</operator>
+            <value>Valeria Leon-Risemberg &amp; Family Household,Sudharsan Kumaravel  &amp;  Family Household,Stephanie Munoz &amp; Family Household,Nicholas Miller &amp; Family Household,Michael Hernandez &amp; Family Household,Michael Garcia &amp; Family Household,Mia Martinez &amp; Family Household,Mayra Martinez &amp; Family Household,Luis Rodriguez &amp; Family Household,Leslie Rodriguez &amp; Family Household,Justin West &amp; Family Household,Juan Rodriguez &amp; Family Household,Joshua Morris &amp; Family Household,Jose Ramirez &amp; Family Household,Jose Garcia &amp; Family Household,Jordan Rodriguez &amp; Family Household,Jazmin Romero &amp; Family Household,Evan Johnson &amp; Family Household,Erika Rodriguez &amp; Family Household,Daniel Felix &amp; Family Household,Cameron Ward &amp; Family Household,Ashley Robinson &amp; Family Household,Anthony Acosta &amp; Family Household</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <aggregateType>RowCount</aggregateType>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortByName>RowCount</sortByName>
+        <sortOrder>Desc</sortOrder>
+        <sortType>Aggregate</sortType>
+    </groupingsDown>
+    <name>Multiple Household accounts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

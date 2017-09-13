@@ -1,0 +1,22 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt;"><span style="font-size:12.0pt;line-height:107%;font-family:&quot;Century Gothic&quot;,sans-serif">Hello Wish Granters,<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt"><span style="font-size:12.0pt;line-height:107%;font-family:&quot;Century Gothic&quot;,sans-serif">{!Contact.First_Last_Initial__c}’s
+wish to <span style="color:#C00000">&lt;INSERT WISH DESCRIPTION&gt; </span>has
+been fully approved!&nbsp;&nbsp; Please contact the
+family and share this exciting news with them! Please visit the <a href="https://make-a-wish.force.com/communitieslogin">Make-A-Wish Volunteer
+Center</a> to see the next steps and tasks assigned to you! <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt"><span style="font-size:12.0pt;line-height:107%;font-family:&quot;Century Gothic&quot;,sans-serif">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">Thank you,<br>
+<br>
+{!User.Name}<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;">
+
+
+
+
+
+</p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">{!User.Title}<br>{!Case.Hidden_Chapter_Name__c}<br>
+{!Case.Hidden_Chapter_Phone__c}<br>
+{!Case.Hidden_Chapter_Email__c}<o:p></o:p></span></p>]]></td>
+</tr>
+</table>

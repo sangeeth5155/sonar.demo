@@ -1,0 +1,73 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div style="text-align: left;"><p class="MsoNormal" style="background: white; line-height: normal; margin-bottom: 12pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif;"><br></span></p><p class="MsoNormal" style="background: white; line-height: normal; margin-bottom: 12pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">Password:
+{!Lead.Part_A_Form_Password__c}</span></p><p class="MsoNormal" style="background: white; line-height: normal; margin-bottom: 12pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif;">Please
+review the&nbsp;<span style="color: black; mso-themecolor: text1;"><a href="http://wish.force.com/DiagnosisVerification_VF?leadId={!Lead.Id}">Diagnosis Verification</a></span>&nbsp;form
+and submit.<o:p></o:p></span></p><p class="MsoNormal" style="background: white; line-height: normal; margin-bottom: 0pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif;">Dear Healthcare Professional:</span></p><p class="MsoNormal" style="background: white; line-height: normal; margin-bottom: 0pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif;">Life changing moments start with you!&nbsp;<o:p></o:p></span></p><ul type="disc">
+ <li class="MsoNormal" style="background: white; line-height: normal;"><span style="font-family: &quot;Century Gothic&quot;,sans-serif; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: Arial;">Copy
+     the password<o:p></o:p></span></li>
+ <li class="MsoNormal" style="background: white; line-height: normal;"><span style="font-family: &quot;Century Gothic&quot;,sans-serif; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: Arial;">Click
+     the link above<o:p></o:p></span></li>
+ <li class="MsoNormal" style="background: white; line-height: normal;"><span style="font-family: &quot;Century Gothic&quot;,sans-serif; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: Arial;">Paste
+     the password into the secured site<o:p></o:p></span></li>
+ <li class="MsoNormal" style="background: white; line-height: normal;"><span style="font-family: &quot;Century Gothic&quot;,sans-serif; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: Arial;">Complete
+     the form to the best of your knowledge and submit<o:p></o:p></span></li>
+</ul><p class="MsoNormal" style="background: white; line-height: normal; margin-bottom: 0pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif;">This online process:<o:p></o:p></span></p><ul type="disc">
+ <li class="MsoNormal" style="background: white; line-height: normal;"><span style="font-family: &quot;Century Gothic&quot;,sans-serif; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: Arial;">Cut
+     and paste directly from the electronic medical record<o:p></o:p></span></li>
+ <li class="MsoNormal" style="background: white; line-height: normal;"><span style="font-family: &quot;Century Gothic&quot;,sans-serif; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: Arial;">Saves
+     you time<o:p></o:p></span></li>
+ <li class="MsoNormal" style="background: white; line-height: normal;"><span style="font-family: &quot;Century Gothic&quot;,sans-serif; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: Arial;">Streamlined
+     correspondence via email<o:p></o:p></span></li>
+ <li class="MsoNormal" style="background: white; line-height: normal;"><span style="font-family: &quot;Century Gothic&quot;,sans-serif; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: Arial;">Can
+     designate who receives emails<o:p></o:p></span></li>
+ <li class="MsoNormal" style="background: white; line-height: normal;"><span style="font-family: &quot;Century Gothic&quot;,sans-serif; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: Arial;">Electronic
+     signature<o:p></o:p></span></li>
+ <li class="MsoNormal" style="background: white; line-height: normal;"><span style="font-family: &quot;Century Gothic&quot;,sans-serif; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: Arial;">Specific
+     questions upfront decreases phone calls and follow up later<o:p></o:p></span></li>
+</ul><p class="MsoNormal" style="background: white; line-height: normal; margin-bottom: 0pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif;">&nbsp;</span><span style="font-family: &quot;Century Gothic&quot;, sans-serif;">The medical team is an essential part of the
+wish experience.&nbsp; When it all comes together, children experience
+improvements in their mental outlook, quality of life and improved outlook on
+their perceptions of medical treatment (Shoshani, 2016).<o:p></o:p></span></p><p class="MsoNormal" style="background: white; line-height: 13.8pt; margin-bottom: 0pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif;">&nbsp;</span></p><p class="MsoNormal" style="background: white; line-height: 13.8pt; margin-bottom: 0pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif;">&nbsp;</span><span style="font-family: &quot;Century Gothic&quot;, sans-serif;">Many thanks to you,<o:p></o:p></span></p><p class="MsoNormal" style="background: white; line-height: normal; margin-bottom: 12pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif;"><br>
+{!User.Name}<br>
+{!User.Title}<br>
+{!Lead.ChapterName__c}<br>
+{!User.Email}<br>
+{!User.Phone}<o:p></o:p></span></p><p class="MsoNormal" style="background: white; line-height: normal; margin-bottom: 12pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif;">&nbsp;</span></p><p class="MsoNormal" style="background: white; line-height: 13.8pt; margin-bottom: 0pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 8pt;">Shoshani, A. Mifano, K. Czamanski-Cohen, J.
+(2015). The effects of the Make a Wish intervention on psychiatric symptoms and
+health-related quality of life of children with cancer: a randomized controlled
+trial. Quality of Life Research, 25(5), 1209-1218. doi
+10.1007/s11136-015-1148-7<o:p></o:p></span></p><p class="MsoNormal" style="line-height: normal; font-size: 12pt; margin-bottom: 12pt;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="MsoNormal"><span style="font-family: &quot;Century Gothic&quot;, sans-serif;">&nbsp;</span></p></div>]]></td>
+</tr>
+</table>

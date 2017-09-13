@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account Email --></label>
+        <name>Account_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Phone --></label>
+        <name>Account_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Chapter Name --></label>
+        <name>Chapter_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created from Portal --></label>
+        <name>Created_from_Portal__c</name>
+    </fields>
+    <fields>
+        <label><!-- DB Region --></label>
+        <name>DB_Region__c</name>
+        <picklistValues>
+            <masterLabel>APAC</masterLabel>
+            <translation><!-- APAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMEA</masterLabel>
+            <translation><!-- EMEA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LA</masterLabel>
+            <translation><!-- LA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- From Mulesoft --></label>
+        <name>From_Mulesoft__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Role Name Id --></label>
+        <name>Hidden_Role_Name_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- I am over 18 years old --></label>
+        <name>I_am_over_18_years_old__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inactive Date --></label>
+        <name>Inactive_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Inactive --></label>
+        <name>Is_Inactive__c</name>
+    </fields>
+    <fields>
+        <label><!-- LMS Id --></label>
+        <name>LMS_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- LMS Login --></label>
+        <name>LMS_Login__c</name>
+    </fields>
+    <fields>
+        <label><!-- LMS User Code --></label>
+        <name>LMS_User_Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- Checking this box will allow this user to run DDPs on a staging environment when testing is available. --></help>
+        <label><!-- DDP Tester --></label>
+        <name>Loop__LOOPlus_Tester__c</name>
+    </fields>
+    <fields>
+        <label><!-- DocuSign Password --></label>
+        <name>Loop__dsPassword__c</name>
+    </fields>
+    <fields>
+        <label><!-- DocuSign API UserName --></label>
+        <name>Loop__dsToken__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migrated User --></label>
+        <name>Migrated_User__c</name>
+    </fields>
+    <fields>
+        <label><!-- Month Of Inactive --></label>
+        <name>Month_Of_Inactive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Today Date --></label>
+        <name>Today_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- User License --></label>
+        <name>User_License__c</name>
+    </fields>
+    <fields>
+        <label><!-- Volunteer Active --></label>
+        <name>Volunteer_Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year of Inactive --></label>
+        <name>Year_of_Inactive__c</name>
+    </fields>
+    <fields>
+        <label><!-- DSProSFMembershipStatus --></label>
+        <name>dsfs__DSProSFMembershipStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- DSProSFPassword --></label>
+        <name>dsfs__DSProSFPassword__c</name>
+    </fields>
+    <fields>
+        <label><!-- DSProSFUsername --></label>
+        <name>dsfs__DSProSFUsername__c</name>
+    </fields>
+    <layouts>
+        <layout>User Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>User Profile Layout</layout>
+        <layoutType>UserAlt</layoutType>
+        <sections>
+            <label><!-- About --></label>
+            <section>About</section>
+        </sections>
+        <sections>
+            <label><!-- Background --></label>
+            <section>Background</section>
+        </sections>
+        <sections>
+            <label><!-- Contact --></label>
+            <section>Contact</section>
+        </sections>
+    </layouts>
+    <webLinks>
+        <label><!-- Change_DS_Cred --></label>
+        <name>Loop__Change_DS_Cred</name>
+    </webLinks>
+</CustomObjectTranslation>

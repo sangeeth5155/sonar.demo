@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <label>Staff</label>
+            <name>Staff</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Event Volunteer</label>
+                <name>Event_Volunteer</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Speaker&apos;s Bureau</label>
+                <name>Speaker_s_Bureau</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Celebrity Host</label>
+                <name>Celebrity_Host</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Wish Granter</label>
+                <name>Wish_Granter</name>
+            </dataCategory>
+            <label>All Volunteer Roles</label>
+            <name>All_Roles</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Role</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

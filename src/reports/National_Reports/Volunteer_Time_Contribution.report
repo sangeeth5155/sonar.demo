@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Time_sheet__c$Hours_spent__c</field>
+    </columns>
+    <columns>
+        <field>Time_sheet__c$Volunteer_Opportunity__c.Volunteer_Name__c.Contact_Account_Name__c</field>
+    </columns>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Time_sheet__c$Year__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Time_sheet__c$Volunteer_Opportunity__c.Volunteer_Name__c.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Volunteer Time Contribution</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Volunteer_Time_Sheet__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Time_sheet__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,61 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false">
+     <noscript>For full functionality and the best experience possible of this site it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com/" target="_blank">instructions how to enable JavaScript in your web browser</a>.</noscript>
+      <style>
+      .custMenu{margin:1px;border:solid 1px #2184cc;float: left;width: 23%;color: #ffffff;font-size: small; background: #c7c7c7;;padding: 6px;text-align: center;user-select: none;}
+      .activeClass{background:#2184cc !important;color:#000000 !important;border:solid 1px #2184cc !important;}
+      </style>
+      <script>
+     
+       var locurl = window.location.href;
+       console.log(locurl);
+       var y = locurl.split('id=')[1];
+       var pageName= ["WishChildForm_VF", "WishFamilyForm_VF", "WishInformationForm_VF"];
+       window.onload = function(){
+           for (var i = 0; i < pageName.length; i++) {
+              if(locurl.indexOf(pageName[i]) >= 0)
+                  document.getElementById(pageName[i]).className='custMenu activeClass';
+           }
+       }
+       
+       function redir(v){                  
+           var b = locurl.split('=')[1];         
+           window.location='/apex/'+v+'?id='+b;
+       }
+       
+      </script>
+    <header role="main-header" class="container">
+        <div class="row">
+            <nav class="col-xs-3 col-xs-offset-9 pre-nav" role="top_menubar">
+                <!--<apex:outputLink value="/secur/logout.jsp">Log Out</apex:outputLink>-->
+            </nav>
+        </div>
+        
+        <div class="row">
+            <apex:outputLink styleClass="center-block maw-logo" value=""><span class="sr-only" aria-label="Make-A-Wish">Make-A-Wish&reg;</span></apex:outputLink>    
+        </div>
+        
+      
+        <nav class="navbar">
+             <div class='custMenu' id='WishChildForm_VF' onclick=''>Wish Child Form</div>
+             <div class='custMenu' id='WishFamilyForm_VF' onclick=''>Wish Family Form</div>
+             <div class='custMenu' id='WishInformationForm_VF' onclick=''>Wish Information Form</div>
+             <!-- redir("WishChildForm_VF"); redir("WishFamilyForm_VF");redir("WishInformationForm_VF");-->
+             <!--<span style="color:white;margin:0 15% 0 40%;font-size: x-large;">{!LEFT(LEFT($CurrentPage.Name,LEN($CurrentPage.Name)-3),4)} {!LEFT(RIGHT($CurrentPage.Name,LEN($CurrentPage.Name)-4),LEN(RIGHT($CurrentPage.Name,LEN($CurrentPage.Name)-4))-7)} {!Right(LEFT($CurrentPage.Name,LEN($CurrentPage.Name)-3),4)}</span>
+             <!-- <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                &#9776;
+                </button>
+                <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar">
+                    <ul class="active-user-main">
+                        <li><a href="/VolunteerAssignmentOpportunities_VF">Volunteer Opportunities</a></li>
+                        <li><a href="/MyAssignment_VF">My Assignment</a></li>
+                    </ul>
+                    <ul class="active-user-subnav">
+                        <li><a href="/VolunteerProfile_VF">Profile</a></li>
+                        <li><a href="/_ui/knowledge/ui/KnowledgeHome">Resources</a></li>
+                        <li><a href="/_ui/core/chatter/ui/ChatterPage">Chatter</a></li>     
+                    </ul>
+                </div>-->
+        </nav>
+        <div style='clear:both'></div> 
+    </header>
+</apex:page>

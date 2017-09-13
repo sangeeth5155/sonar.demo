@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Whenever chapter name updates, it will send an email to Lead Owenr.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Lead: Email Notification for Lead Owner</name>
+    <style>none</style>
+    <subject>Chapter has been changed.</subject>
+    <type>text</type>
+</EmailTemplate>

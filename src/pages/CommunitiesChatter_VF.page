@@ -1,0 +1,12 @@
+<apex:page >
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var popUp = window.open('/servlet/networks/switch?networkId=0DB36000000CbeW', 'toolbar=yes, scrollbars=yes, resizable=yes, width=100%, height=100%');
+        if ((popUp == null || typeof(popUp) == 'undefined')) {
+            alert('Please select the radio option "Always allow pop-ups for this domain", in the URL bar then click on the Chatter tab again.');
+        } else {
+            popUp.focus();
+        }
+    });
+    </script>
+</apex:page>

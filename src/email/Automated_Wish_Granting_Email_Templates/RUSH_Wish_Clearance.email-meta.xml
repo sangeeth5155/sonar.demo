@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>RUSH Wish Clearance</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>RUSH Wish Clearance</name>
+    <style>freeForm</style>
+    <subject>RUSH Wish Clearance Form</subject>
+    <textOnly>{!Contact.Hidden_Medical_Physician__c}
+
+
+We are considering this wish a RUSH and need to expedite the process. Please review and complete the attached Wish Clearance Form and let us know if this wish is appropriate and safe for your patient.
+
+
+Thanks to the support of you and other medical professionals around the country, we continue to come closer each year to our vision of making every eligible child’s wish come true. Thank you for taking the time to help us share the power of a wish®.
+
+
+Thank You,
+
+
+Make-A-Wish®</textOnly>
+    <type>html</type>
+</EmailTemplate>

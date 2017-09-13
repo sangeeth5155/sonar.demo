@@ -1,0 +1,412 @@
+<apex:page id="communitiesSelfRegPage" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" docType="html-5.0" controller="CommunitiesSelfRegController" title="Make-A-Wish Communities | Sign Up">
+    <head>
+        <apex:include pageName="prospective_head" id="phead" />
+    </head>
+    <apex:define name="body">
+        <body class="vcp vcpsignup">
+            <apex:include pageName="prospective_header" id="pheader" />
+
+            <main role="main" class="container">
+                <div class="row">
+                    <h1 class="col-md-12">Volunteer Sign Up</h1>
+                </div>
+                <div class="row">
+                    <section class="col-md-8">
+                        <apex:form id="theForm" styleClass="portal form-vcp-signup" forceSSL="true" >
+                            <!--<apex:pagemessages ></apex:pagemessages>-->
+                            <apex:messages />
+                            <apex:outputPanel rendered="{!showErrorMsg}" styleclass="alert alert-danger fade in col-sm-12">
+                                <apex:outputText escape="false" value="{!errorMessage}"/>
+                            </apex:outputPanel>
+                            <fieldset>
+                                <legend>Your Information<span>We value your privacy and will not share your personal information.</span></legend>
+                                <div class="form-group row fullname">
+                                    <div class="col-sm-3"><label for="communitiesSelfRegPage:theForm:firstname" class="firstname" aria-labelledby="first_name">Name</label></div>
+                                    <div class="col-sm-5">
+                                        <apex:inputText styleClass="form-control name-group f-firstname" maxlength="40" id="firstname" html-placeholder="First Name" required="true" value="{!firstName}" />
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <label for="communitiesSelfRegPage:theForm:middleinitial" class="sr-only" aria-label="Middle Name">Middle Initial</label>
+                                        <input type="text" class="form-control" maxlength="1" id="middleinitial" placeholder="M.I." />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-3">
+                                        <label for="communitiesSelfRegPage:theForm:lastname" class="sr-only" aria-label="last_name">Last Name</label>
+                                    </div>
+                                    <div class="col-sm-6 lastname">
+                                        <apex:inputText styleClass="form-control name-group f-lastname" maxlength="40" id="lastname" html-placeholder="Last Name" required="true" value="{!lastName}" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-3"><label for="communitiesSelfRegPage:theForm:phonenumber" aria-labelledby="phone_number">Phone Number</label></div>
+                                    <div class="col-sm-6">
+                                        <apex:inputText styleClass="form-control f-phone" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" id="phonenumber" html-placeholder="(000) 000-0000" value="{!phone}" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-3"><label for="communitiesSelfRegPage:theForm:emailaddress" aria-labelledby="email address">Email Address</label></div>
+                                    <div class="col-sm-6">
+                                        <apex:inputText styleClass="form-control f-emailaddress" maxlength="50" id="emailaddress" html-placeholder="your_email@domain.com" required="true" value="{!email}" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-3"><label for="confirmemail" aria-labelledby="confirm email address">Confirm Email Address</label></div>
+                                    <div class="col-sm-6">
+                                        <input type="email" class="form-control f-confirmemail" maxlength="50" id="confirmemail" name="confirmemail" placeholder="your_email@domain.com" required="required" />
+                                        <small class="text-muted">Please confirm your email address</small>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-3"><label for="communitiesSelfRegPage:theForm:City" aria-labelledby="city">City</label></div>
+                                    <div class="col-sm-6">
+                                        <apex:inputText styleClass="form-control f-city" maxlength="50" id="city" html-placeholder="City" value="{!city}" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-3"><label for="communitiesSelfRegPage:theForm:state" aria-labelledby="state">State</label></div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <apex:selectList styleClass="form-control col-xs-12 col-sm-12 c-select f-state" id="state" size="1" multiselect="false" value="{!state}">
+                                            <apex:selectOptions value="{!States}"/>
+                                        </apex:selectList>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-3"><label for="communitiesSelfRegPage:theForm:postalcode" aria-labelledby="Your postal code">Postal Code</label></div>
+                                    <div class="col-sm-6">
+                                        <apex:inputText styleClass="form-control f-postalcode numbers-only" maxlength="5" id="postalcode" html-placeholder="00000" required="true" value="{!zipcode}" />
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Create a Username and Password</legend>
+                                <div class="form-group row">
+                                    <div class="col-sm-3"><label for="username" aria-label="username">Username</label></div>
+                                    <div class="col-sm-6">
+                                        <apex:inputText styleClass="form-control f-username" maxlength="40" id="username" html-placeholder="your_email@domain.com" required="true" value="{!userName}" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-3"><label for="communitiesSelfRegPage:theForm:password" aria-label="Create a Password">Password</label></div>
+                                    <div class="col-sm-6">
+                                        <apex:inputSecret styleClass="form-control f-password" maxlength="50" id="password" html-placeholder="Minimum of 8 characters containing 1 letter and 1 number" required="true" value="{!password}" />
+                                        <meter max="4" id="password-strength-meter"></meter>
+                                        <p id="password-strength-text" class="text-muted"></p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-3"><label for="communitiesSelfRegPage:theForm:confirmpassword" aria-label="Confirm Password">Confirm Password</label></div>
+                                    <div class="col-sm-6">
+                                        <apex:inputSecret styleClass="form-control f-confirmpassword" maxlength="50" id="confirmpassword" html-placeholder="Please re-type your password" required="true" value="{!confirmPassword}" />
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Age Confirmation</legend>
+                                <label class="c-input c-checkbox" for="communitiesSelfRegPage:theForm:over18" aria-label="Over 18">
+                                    <apex:inputcheckbox id="over18" styleClass="f-over18" value="{!isOver18YearsOld}" />
+                                    <span class="c-indicator"></span>
+                                    I am 18 years of age or over.
+                                </label>
+                            </fieldset>
+                            <fieldset class="fs">
+                                <legend>Form Security</legend>
+                                <div class="form-group row">
+                                    <!-- <label for="form-security" class="sr-only" aria-label="form-security">Form Security</label> -->
+                                    <div class="col-sm-6">
+                                        <label class="c-input c-checkbox" for="6Lci5yITAAAAAJPB5cxQOi7CFAS6d4W5W8okrnAt">
+                                            <input type="checkbox" id="6Lci5yITAAAAAJPB5cxQOi7CFAS6d4W5W8okrnAt" name="6Lci5yITAAAAAJPB5cxQOi7CFAS6d4W5W8okrnAt" />
+                                            <span class="c-indicator"></span>
+                                            If you are human, <strong>do not</strong> check this.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-3"><label for="2-6Lci5yITAAAAAJPB5cxQOi7CFAS6d4W5W8okrnAt">Security Input</label></div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control 2-6Lci5yITAAAAAJPB5cxQOi7CFAS6d4W5W8okrnAt" maxlength="50" name="88hE!joP" id="2-6Lci5yITAAAAAJPB5cxQOi7CFAS6d4W5W8okrnAt" placeholder="If you see this, you might be a bot" value="88hE!joP" />
+                                    <small class="text-muted">Do not change this field</small>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="footer">
+                                <apex:commandbutton styleClass="col-xs-12 col-sm-12 col-md-4 col-md-push-8 btn-md" id="submit_signup" value="Sign Up" action="{!registerUser}" />
+                                <span class="col-xs-12 col-sm-12 col-md-8 col-md-pull-4">Already a Volunteer?&nbsp;<apex:outputLink value="CommunitiesLogin">Log In</apex:outputLink></span>
+                            </fieldset>
+                        </apex:form>
+                    </section>
+
+                    <aside class="col-md-4 page-info" role="page-info">
+                        <h2 aria-labelledby="Volunteering">Volunteering</h2>
+                        <p><apex:outputText value="{!signUpNotes}" escape="false"/></p>
+                    </aside>
+                </div>
+            </main>
+
+            <apex:include pageName="prospective_footer" id="pfooter" />
+            <script>
+            //set page title
+            (function ($, root, undefined) {
+                $('head').prepend("<title>Make-A-Wish® Communities | Sign Up</title>");
+            })(jQuery);
+            </script>
+            <!-- chosen select -->
+            <script src="{!URLFOR($Resource.prospective_assets,'web/js/chosen.jquery.min.js')}"></script>
+            <!-- masked input -->
+            <script src="{!URLFOR($Resource.prospective_assets,'web/js/jq.maskedinput.min.js')}"></script>
+            <!-- validate forms -->
+            <script src="{!URLFOR($Resource.prospective_assets,'web/js/jquery.validate.min.js')}"></script>
+            <!-- validate form (additional methods) -->
+            <script src="{!URLFOR($Resource.prospective_assets,'web/js/additional-methods.min.js')}"></script>
+
+            <script>
+            // hide form security from bots (suck it bots)
+            $('.fs').hide();
+            // form validation
+            $.validator.setDefaults({
+                submitHandler: function () {
+                    // honeypot check
+                    if($('#6Lci5yITAAAAAJPB5cxQOi7CFAS6d4W5W8okrnAt').is(':checked') == true || $('#2-6Lci5yITAAAAAJPB5cxQOi7CFAS6d4W5W8okrnAt').val() !== '88hE!joP') {
+                        //alert("Hidden inputs were triggered. Form will not submit. Get out of here you dirty bot!");
+                        onsubmit: false
+                    } else {
+                        //alert("Dev message: Hidden inputs were NOT triggered. Form will now submit. This message will be removed before production deployment.");
+                        form.submit();
+                    }
+                },
+                // required for chosen.js
+                ignore: ":hidden:not(.c-select)"
+            });
+
+            $.validator.addMethod("oneletterdigit", function (value) {
+                    return /[a-z].*[0-9]|[0-9].*[a-z]/i.test(value);
+            }, 'Your input must contain at least 1 letter and 1 number');
+
+            $( document ).ready(function() {
+                $(".f-password").attr('autocomplete','new-password');
+
+
+                $( ".form-vcp-signup" ).validate({
+                    rules: {
+                        "communitiesSelfRegPage:theForm:firstname": {
+                            //require_from_group: [1, ".name-group"],
+                            required: true,
+                            minlength: 2,
+                            maxlength: 40
+                        },
+                        "communitiesSelfRegPage:theForm:lastname": {
+                            //require_from_group: [2, ".name-group"],
+                            required: true,
+                            minlength: 2,
+                            maxlength: 40
+                        },
+                        "communitiesSelfRegPage:theForm:middleinitial": {
+                            required: false,
+                            minlength: 1,
+                            maxlength: 1
+                        },
+                        "communitiesSelfRegPage:theForm:phonenumber": {
+                            required: true,
+                            phoneUS: true,
+                            minlength: 10,
+                            maxlength: 14
+                        },
+                        "communitiesSelfRegPage:theForm:emailaddress": {
+                            required: true,
+                            email: true
+                        },
+                        confirmemail: {
+                            required: true,
+                            email: true,
+                            equalTo: ".f-emailaddress"
+                        },
+                        "communitiesSelfRegPage:theForm:city": {
+                            required: true,
+                            minlength: 3,
+                            maxlength: 22
+                        },
+                        "communitiesSelfRegPage:theForm:state": {
+                            required: true
+                        },
+                        "communitiesSelfRegPage:theForm:postalcode": {
+                            required: true,
+                            digits: true,
+                            minlength: 5,
+                            maxlength: 9
+                        },
+                        "communitiesSelfRegPage:theForm:username": {
+                            required: true,
+                            email: true
+                        },
+                        "communitiesSelfRegPage:theForm:password": {
+                            required: true,
+                            oneletterdigit: true,
+                            minlength: 8,
+                            maxlength: 50
+                        },
+                        "communitiesSelfRegPage:theForm:confirmpassword": {
+                            required: true,
+                            equalTo: ".f-password"
+                        },
+                        "communitiesSelfRegPage:theForm:over18": "required"
+                    },
+                    messages: {
+                        "communitiesSelfRegPage:theForm:firstname": {
+                            //require_from_group: "Oops! Both first name and last name must be entered",
+                            required: "Oops! Please enter a first name",
+                            minlength: "Oops! Your first name must have more than 2 letters",
+                            maxlength: "We're sorry, you've reached the maximum allowed characters"
+                        },
+                        "communitiesSelfRegPage:theForm:lastname": {
+                            //require_from_group: "Oops! Both first name and last name must be entered",
+                            required: "Oops! Please enter a last name",
+                            minlength: "Oops! Your last name must have more than 2 letters",
+                            maxlength: "We're sorry, you've reached the maximum allowed characters"
+                        },
+                        "communitiesSelfRegPage:theForm:middleinitial": {
+                            minlength: "Oops! Your middle name must have 1 letter",
+                            maxlength: "We're sorry, you've reached the maximum allowed characters"
+                        },
+                        "communitiesSelfRegPage:theForm:phonenumber": {
+                            required: "Oops! Please enter a phone number",
+                            phoneUS: "Oops! Must be a valid US number",
+                            number: "Only numbers are accepted",
+                            minlength: "Opps! Please enter at least 10 digits",
+                            maxlength: "We're sorry, you've reached the maximum allowed characters"
+                        },
+                        "communitiesSelfRegPage:theForm:emailaddress": {
+                            required: "Oops! Please enter a valid email address",
+                            email: "Oops! You've entered an invalid email address"
+                        },
+                        confirmemail: {
+                            required: "Please confirm your email by re-typing it in the field above",
+                            email: "Oops! You've entered an invalid email address",
+                            equalTo: "The email you've entered does not match"
+                        },
+                        "communitiesSelfRegPage:theForm:city": {
+                            required: "Oops! Please enter a US city",
+                            minlength: "Oops! Please enter at least 3 characters",
+                            maxlength: "We're sorry, you've reached the maximum allowed characters"
+                        },
+                        "communitiesSelfRegPage:theForm:state": {
+                            required: "Oops! Please select a State"
+                        },
+                        "communitiesSelfRegPage:theForm:postalcode": {
+                            required: "Oops! Please enter a valid US postal code",
+                            digits: "Oops! Please only enter digits",
+                            minlength: "Oops! Please enter a minimum of 5 digits",
+                            maxlength: "We're sorry, you've reached the maximum allowed characters"
+                        },
+                        "communitiesSelfRegPage:theForm:username": {
+                            required: "Oops! Please create a username",
+                            minlength: "Oops! Please enter a minimum of 5 letters or numbers",
+                            maxlength: "We're sorry, you've reached the maximum allowed characters"
+                        },
+                        "communitiesSelfRegPage:theForm:password": {
+                            required: "Oops! Please create a password",
+                            oneletterdigit: "Oops! Your password must contain at least 1 letter and 1 number",
+                            minlength: "Oops! Your password must have a minimum of 8 characters",
+                            maxlength: "We're sorry, you've reached the maximum allowed characters"
+                        },
+                        "communitiesSelfRegPage:theForm:confirmpassword": {
+                            required: "Oops! Please confirm your password by re-typing it in the field above",
+                            equalTo: "Oops! The password you've entered does not match"
+                        },
+                        "communitiesSelfRegPage:theForm:over18": "Thank you for your interest in volunteering with Make-A-Wish. Most volunteer opportunities are designed for individuals over the age of 18. If you are under the age of 18, please contact your local chapter to discuss what, if any, opportunities we currently have available."
+                    },
+                    errorElement: "em",
+                    errorPlacement: function ( error, element ) {
+                        // Add the `help-block` class to the error element
+                        error.addClass( "help-block" );
+                        // Add `has-feedback` class to the parent div.form-group in order to add icons to inputs
+                        element.parents( ".col-sm-6" ).addClass( "has-feedback" );
+
+                        if ( element.prop( "type" ) === "checkbox" ) {
+                            error.insertAfter( element.parent( "label" ) );
+                        } else if ( element.hasClass("c-select") ){
+                            var selectParent = $( element ).parents(".col-sm-6").children(".chosen-container-single");
+                            error.insertAfter( selectParent );
+                        } else {
+                            error.insertAfter( element );
+                        }
+                    },
+                    highlight: function ( element, errorClass, validClass ) {
+                        var elementParents = $( element ).parents( ".col-sm-6, .col-sm-5" );
+                        $(elementParents).addClass( "has-error" ).removeClass( "has-success" ).prev( "label" ).css('color','red');
+                        $(elementParents).children( "input, select" ).css('border','1px solid red');
+                        $(elementParents).children(".chosen-container-single").children( ".chosen-single" ).css('border','1px solid red')
+                        // $( element ).next( "span" ).addClass( "fa-times" ).removeClass( "fa-check" );
+                    },
+                    unhighlight: function ( element, errorClass, validClass ) {
+                        var elementParents = $( element ).parents( ".col-sm-6, .col-sm-5, .col-sm-1" );
+                        $(elementParents).removeClass( "has-error" ).prev( "label" ).css('color','');
+                        $(elementParents).children( "input, select" ).css('border','');
+                        $(elementParents).children( ".help-block" ).remove();
+                    }
+                });
+
+                // chosen.js - state select
+                $("select.c-select").prepend('<option disabled="disabled" selected="selected">Please select a State</option>');
+                $(".c-select").chosen({no_results_text: "State not found", placeholder_text_single: "Please Select a State", width:"100%"});
+
+                $('.f-state').on('change', function() {
+                    var stateParents = $( this ).parents(".col-sm-6");
+                    $(stateParents).removeClass( "has-error" ).prev( "label" ).css('color','');
+                    $(stateParents).children(".chosen-container-single").children( ".chosen-single" ).css('border','');
+                    $(stateParents).children( ".help-block" ).remove();
+                });
+                // format phone fields
+                $(".f-phone").mask("(999) 999-9999");
+                // inputs: numbers only
+                $(".numbers-only").keydown(function (e) {
+                    // Allow: backspace, delete, tab, escape, enter and .
+                    if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+                        // Allow: Ctrl+A
+                        (e.keyCode == 65 && e.ctrlKey === true) ||
+                        // Allow: Ctrl+C
+                        (e.keyCode == 67 && e.ctrlKey === true) ||
+                        // Allow: Ctrl+X
+                        (e.keyCode == 88 && e.ctrlKey === true) ||
+                        // Allow: home, end, left, right
+                        (e.keyCode >= 35 && e.keyCode <= 39)) {
+                        // let it happen, don't do anything
+                        return;
+                    }
+                    // Ensure that it is a number and stop the keypress
+                    if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                        e.preventDefault();
+                    }
+                });
+            });
+            </script>
+            <!-- zxcvbn -->
+            <script>window.jQuery || document.write('<script src="{!URLFOR($Resource.prospective_assets,"web/js/zxcvbn.js")}"><\/script>')</script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.3.0/zxcvbn.js"></script>
+            <script>
+            var strength = {0: "Weakest - Please enter more characters.", 1: "Weak - A little bit better.", 2: "Okay - You're on the right track.", 3: "Good - This is solid.", 4: "Terrific!"}
+            var password = document.getElementById('communitiesSelfRegPage\:theForm\:password');
+            var meter = document.getElementById('password-strength-meter');
+            var text = document.getElementById('password-strength-text');
+
+            password.addEventListener('input', function() {
+                var val = password.value;
+                var result = zxcvbn(val);
+
+                // Update the password strength meter
+                meter.value = result.score;
+
+                // Update the text indicator
+                if (val !== "") {
+                    text.innerHTML = "<strong>Strength:</strong> " + strength[result.score];
+                } else {
+                    text.innerHTML = "";
+                }
+            });
+            </script>
+        </body>
+    </apex:define>
+</apex:page>

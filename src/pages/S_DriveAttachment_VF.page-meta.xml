@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>37.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>This page is used as inline vf page in an In-Kind Donation &amp; Reimbursement page layout</description>
+    <label>S_DriveAttachment_VF</label>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>28</minorNumber>
+        <namespace>cg</namespace>
+    </packageVersions>
+</ApexPage>

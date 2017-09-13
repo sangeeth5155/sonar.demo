@@ -1,0 +1,8 @@
+<apex:page standardController="Background_check__c" tabStyle="Background_check__c">
+ <cg:AttachmentComponent title="Background check Files"
+ inline="true"
+ enableAttachFromSDriveFolders="false" 
+ customObjectName="Background_check__c"
+ customObjectFileName="Background_Check_File__c"
+ objectId="{!Background_check__c.Id}" />
+</apex:page>

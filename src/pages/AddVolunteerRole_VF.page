@@ -1,0 +1,239 @@
+<!--------------------------------------------------------------------------------------------------
+CreatedBy: Kanagaraj 
+Author   : MST Solutions
+CreatedDate : 05/27/2016
+Description : This VF page is placed as a Inline VF page of Non Wish & Event page layout. Here  chapter staff will enter
+the roles and number of members in that role needed for that event. Once entered the value and hit [Save] button
+It would create n number of Volunteer Opportunity records for that event.
+---------------------------------------------------------------------------------------------------->
+<apex:page StandardController="Non_Wish_Events__c" extensions="AddVolunteerRole_AC">
+    <style>
+        .tetable{
+        width: 100%;
+        }
+        .tetable td{width:29%;border:0px;}
+        .tetable1{
+        width: 100%;
+        }
+       
+    </style>
+    <apex:form id="ref">
+    <!----------------------------- New Row for Capturing volunteer opportunity count -------------->
+        <apex:pageBlock id="membAdd" > 
+            <apex:pageMessages id="showmsg"/>  
+            <apex:outputPanel id="qq">
+                <apex:outputPanel rendered="{!isnew}">
+                    <apex:pageBlockTable value="{!addNewVolunteerRoleList}" var="memb">
+                  <!--  <apex:column headerValue="Name" style="width:10%;text-align:right;">
+                            <apex:outputField value="{!memb.Event_Name__c}"/>
+                        </apex:column>-->
+                        <apex:column headerValue="Chapter Role">
+                            <apex:inputField value="{!memb.Chapter_Role__c}"/>
+                        </apex:column> 
+                        <apex:column headerValue="Description" >
+                            <apex:inputField value="{!memb.Description__c}"/>
+                        </apex:column>
+                          <apex:column headerValue="Date" >
+                            <apex:inputField value="{!memb.Hidden_Date__c}"/>
+                        </apex:column>
+                       <apex:column headerValue="Start Time" >
+                            <apex:inputField value="{!memb.Start_Time__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="End Time" >
+                            <apex:inputField value="{!memb.End_Time__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Location" >
+                            <apex:inputField value="{!memb.Hidden_Location__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="#Needed">
+                            <apex:inputField style="width:100%;text-align:left;" value="{!memb.Volunteer_Need__c}"/>
+                        </apex:column>
+                          
+                    </apex:pageBlockTable> 
+                    <br/>
+                </apex:outputPanel>  
+            </apex:outputPanel>
+            
+      <!------------------ It will display Additional Row for capturing Volunteer opportunity Count ---->
+       <apex:outputpanel id="test">
+            <apex:outputPanel rendered="{!inputmode}" >
+                <table class='tetable list'>
+                    <tr class='headerRow'>
+                       <!-- <th> Name </th> -->
+                       <th>Chapter Role</th> 
+                        <th>Role Name</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Location</th>
+                        <th>#Needed</th>
+                        <th>#Registered</th></tr>
+                    <apex:repeat value="{!volunteercountList}" var="memb">
+                        <tr>
+                          <!--  <td><apex:outPutField style="width:10%;text-align:right;" value="{!memb.Event_Name__c}"/></td> -->
+                            <td><apex:outPutField style="width:90%;text-align:right;" value="{!memb.Chapter_Role__c}"/></td> 
+                            <td><apex:outputField value="{!memb.Hidden_Chapter_Name__c}"/></td>
+                            <td><apex:outPutField value="{!memb.Description__c}"/></td>
+                            <td><apex:outPutField value="{!memb.Date__c}"/></td>
+                            <td><apex:outPutField value="{!memb.Start_Time__c}"/></td>
+                            <td><apex:outPutField value="{!memb.End_Time__c}"/></td>
+                            <td><apex:outPutField value="{!memb.Location__c}"/></td>
+                            <td><apex:outPutField value="{!memb.Volunteer_Needed__c}"/></td>
+                            <td><apex:outPutField value="{!memb.Registered__c}"/></td>
+                            
+                        </tr>
+                    </apex:repeat>
+                
+                    <apex:repeat value="{!addNewVolunteerRoleList}" var="memb1">
+                        <tr>
+                         
+                         <!--  <td> <apex:outputField style="width:10%;text-align:right;" value="{!memb1.Event_Name__c}"/></td>-->
+                            <td><apex:inputField style="width:70%;text-align:right;" value="{!memb1.Chapter_Role__c}"/></td>
+                            <td></td>
+                            <td><apex:inputField value="{!memb1.Description__c}"/></td>
+                             <td><apex:inputField value="{!memb1.Hidden_Date__c}"/></td>
+                             <td><apex:inputField value="{!memb1.Start_Time__c}"/></td>
+                             <td><apex:inputField value="{!memb1.End_Time__c}"/></td>
+                             <td><apex:inputField value="{!memb1.Hidden_Location__c}"/></td>
+                            <td><apex:inputField style="width:100%;text-align:left;" value="{!memb1.Volunteer_Need__c}"/></td>
+                            
+                           
+                        </tr>
+                    </apex:repeat>
+                </table>
+            </apex:outputPanel>
+            </apex:outputPanel>
+         <!---------- Output Mode of the Record --------------------------------------->   
+            <apex:outputPanel id="ss">
+           
+                <apex:outputPanel rendered="{!((outputmode) && (isActiveVolunteer == false))}">
+                    <table class='tetable1 list'>
+                        <tr class='headerRow'>
+                           <!--  <th> Name </th>
+                            <th>Chapter Role</th> -->
+                            <th>Role Name</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                            <th>Location</th>
+                            <th>#Needed</th>
+                            <th>#Registered</th>
+                            </tr>
+                        <apex:repeat value="{!volunteercountList}" var="memb">
+                            <tr>
+                              <!--  <td> <apex:outputField value="{!memb.Event_Name__c}"/></td>
+                                <td><apex:outPutField value="{!memb.Chapter_Role__c}"/></td> -->
+                                <td><apex:outputField value="{!memb.Hidden_Chapter_Name__c}"/></td> 
+                               <td><apex:outputField value="{!memb.Description__c}"/></td>
+                               <td><apex:outPutField value="{!memb.Date__c}"/></td>
+                               <td><apex:outPutField value="{!memb.Start_Time__c}"/></td>
+                               <td><apex:outPutField value="{!memb.End_Time__c}"/></td>
+                               <td><apex:outPutField value="{!memb.Location__c}"/></td>
+                                <td><apex:outPutField value="{!memb.Volunteer_Needed__c}"/></td>
+                                <td><apex:outPutField value="{!memb.Registered__c}"/></td>
+                                
+                                  <!--  <apex:commandLink value="Register" action="{!register}" > 
+                                        <apex:param name="recId" value="{!memb.Chapter_Role__c}" assignTo="{!ChapterRoleId}"/>
+                                    </apex:commandLink> -->
+                                
+                            </tr>
+                        </apex:repeat>
+                    </table>
+                    <br/>
+                </apex:outputPanel>
+              
+                 <apex:outputPanel rendered="{!((outputmode) && (isActiveVolunteer == True))}">
+                    <table class='tetable1 list'>
+                        <tr class='headerRow'>
+                           <!-- <th>Name</th>
+                            <th>Chapter Role</th> -->
+                            <th>Role Name</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                            <th>Location</th>
+                            <th># Needed</th>
+                            <th># Registered</th>
+                            
+                            <th></th></tr>
+                        <apex:repeat value="{!volunteerCountWrapList}" var="memb">
+                            <tr>
+                           
+                               <!-- <td><apex:outPutText value="{!memb.eventName }"/></td>
+                                <td><apex:outPutText value="{!memb.chapterRole}"/></td> -->
+                                <td><apex:outPutText value="{!memb.roleName}"/></td>
+                               <td><apex:outPutText value="{!memb.voldescription }"/></td>
+                              <!-- <td><apex:outPutText value="{!memb.Voldate}"/></td>-->
+                              <td>
+                                <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                <apex:param value="{!memb.Voldate}"/>
+                                </apex:outputText>
+                               </td>
+                               <td><apex:outPutText value="{!memb.volStartTime}"/></td>
+                               
+                               <td><apex:outPutText value="{!memb.volendTime}"/></td>
+                               <td><apex:outPutText value="{!memb.vollocation}"/></td>
+                                <td><apex:outPutText value="{!memb.volunteerNeeded}"/></td>
+                                <td><apex:outPutText value="{!memb.volunteerRegistration}"/></td>
+                                <td>
+                                    <apex:commandLink value="Register" action="{!register}">
+                                        <apex:param name="recId" value="{!memb.recordId}" assignTo="{!ChapterRoleId}"/>
+                                        <apex:param name="vcId" value="{!memb.volunteerCountId}" assignTo="{!CountId }"/>
+                                    </apex:commandLink>
+                                </td>
+                            </tr>
+                        </apex:repeat>
+                    </table>
+                    <br/>
+                </apex:outputPanel>
+            </apex:outputPanel>
+             <!--------------------------- Edit Mode -------------------------->
+            <apex:outputPanel >
+                <apex:outputPanel rendered="{!isEdit}">
+                    <apex:pageBlockTable value="{!volunteerCountToUpdateList}" var="memb">
+                        <apex:column headerValue="Chapter Role">
+                            <apex:inPutField value="{!memb.Chapter_Role__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Description">
+                            <apex:inPutField value="{!memb.Description__c}"/>
+                        </apex:column>
+                         <apex:column headerValue="Date">
+                            <apex:inPutField value="{!memb.Date__c}"/>
+                        </apex:column>
+                         <apex:column headerValue="Start Time" >
+                            <apex:inputField value="{!memb.Start_Time__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="End Time" >
+                            <apex:inputField value="{!memb.End_Time__c}"/>
+                        </apex:column>
+                         <apex:column headerValue="Location">
+                            <apex:inPutField style="width:100%;text-align:left;" value="{!memb.Location__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="# Needed">
+                            <apex:inPutField style="width:100%;text-align:left;" value="{!memb.Volunteer_Needed__c}"/>
+                        </apex:column>
+                    </apex:pageBlockTable> 
+                    <br/>
+                </apex:outputPanel>     
+            </apex:outputPanel>
+            <apex:outputPanel id="button">
+            <center><apex:commandButton value="Add Role" action="{!addRow}" rendered="{!((inputmode = true || outputmode = true || isnew = true) && isReferesh = false ) && (isCommunity != true)}"/> 
+                <apex:commandButton value="Save Role" action="{!SaveRec}"  rendered="{!(isEdit = true || inputmode = true || addNewVolunteerRoleList.size > 0 && isReferesh = false) && (isCommunity != true) }" rerender="redirectPanel,showmsg,button"/>
+                <apex:commandButton value="Edit Role" action="{!EditRec}" rendered="{!outputmode = true && isCommunity != true && isReferesh = false }"/>
+                <apex:commandButton value="Cancel"  onclick="window.top.location='/{!nonWishEvent.id}'; return false" rendered="{!(isEdit = true || inputmode = true || addNewVolunteerRoleList.size > 0 && isReferesh = false) && (isCommunity != true)}"/>
+                <apex:commandButton value="OK"  onclick="window.top.location='/{!nonWishEvent.id}'; return false" rendered="{!isReferesh = true }"/></center> 
+        </apex:outputPanel>
+        </apex:pageBlock>
+        <apex:outputPanel id="redirectPanel" >
+            <apex:outputText rendered="{!shouldRedirect}">
+                <script type="text/javascript">
+                    window.top.location.href = '{!redirectUrl}';
+                </script>
+            </apex:outputText>
+        </apex:outputPanel>
+    </apex:form> 
+   
+</apex:page>

@@ -1,0 +1,17 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt;"><span style="font-size:12.0pt;line-height:107%;font-family:&quot;Century Gothic&quot;,sans-serif">Hello Wish Granters,<br><span style="font-size: 12pt; line-height: 107%;"><br>{!Contact.First_Last_Initial__c}</span><span style="font-size: 12pt; line-height: 107%;">’s wish was
+successfully completed on {!Case.End_Date__c} and we would love for you to contact
+the family to get their reaction to the wish and capture any relevant
+information or quotes that they may offer. All receipts related to a wish cost
+that you want to have reimbursed or to donate as an in-kind donation should be
+received to our office within two weeks of this email. Please visit the <a href="https://make-a-wish.force.com/communitieslogin">Make-A-Wish
+Volunteer Center</a> to see the final steps for this wish and the tasks assigned to
+you.<br></span></span><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;"><br>Thank
+you for taking the time to help make {!Contact.First_Last_Initial__c}’s wish
+come true!</span><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">&nbsp;&nbsp; </span><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">We encourage you to review
+the volunteer opportunities posted in the Volunteer Center and sign up for
+another wish child or event!<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>Thank you,<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>{!User.Name}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!User.Title}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Case.Hidden_Chapter_Name__c}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Case.Hidden_Chapter_Phone__c}</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Case.Hidden_Chapter_Email__c}</span></p>]]></td>
+</tr>
+</table>

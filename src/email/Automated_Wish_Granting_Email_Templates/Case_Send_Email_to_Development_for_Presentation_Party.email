@@ -1,0 +1,51 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Century Gothic&quot;,sans-serif">The presentation party for {!Case.Hidden_Wish_Child_Full_Name__c} has been scheduled and t</span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">heir wish will be celebrated soon.</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><b><u>Details</u></b></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><b>Presentation Date:</b> &nbsp;{!Case.Presentation_Date__c}</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><b>Start Date</b>: {!Case.Start_Date__c}</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><b>Time: </b>&nbsp;</span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Case.Time__c}.</span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">&nbsp;</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><b>Location: </b>&nbsp;{!Case.Name_of_Location__c}</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><b>Address:</b></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Case.Location_Address__c}&nbsp;</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Century Gothic&quot;,sans-serif"><br></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Century Gothic&quot;,sans-serif">Please let me know if you have any questions.<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Century Gothic&quot;,sans-serif">&nbsp;</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;">
+
+
+
+
+
+</p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Century Gothic&quot;,sans-serif">Wish Coordinator: &nbsp;{!Case.OwnerFullName}<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">&nbsp;</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">Thanks,<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">&nbsp;</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">{!User.Name}</span><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;"><font face="Century Gothic, sans-serif">{!Case.Hidden_Chapter_Name__c}</font><br></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">{!Case.Hidden_Chapter_Phone__c}</span><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;"><o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">{!Case.Hidden_Chapter_Email__c}</span><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;"><o:p></o:p></span></p>]]></td>
+</tr>
+</table>

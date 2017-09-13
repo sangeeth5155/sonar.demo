@@ -1,0 +1,34 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif; background-color: rgb(255, 255, 255);">Hi </span><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif; background-color: rgb(255, 255, 255);">Wish Granters,<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">&nbsp;</span></p>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif">Thank
+you for volunteering for&nbsp;</span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; background-color: rgb(255, 255, 255);">{!Case.Contact}</span><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif">’s wish. According to the wish
+child’s record, the date for the initial interview has taken place. However, we
+have not received the completed wish paperwork packet in the system. Please
+take a moment to finalize the paperwork and submit it via the <a href="https://make-a-wish.force.com/communitieslogin">Wish &amp;
+Volunteer Center</a> at your earliest convenience. <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif">&nbsp;</span></p>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif">If
+you are experiencing difficulties submitting the paperwork, please let me know.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif">Thanks,<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif">&nbsp;</span></p>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size: 12pt; background-color: rgb(255, 255, 255); font-family: &quot;Century Gothic&quot;, sans-serif;">{!Case.OwnerFullName}<br></span><span style="font-size: 12pt; background-color: rgb(255, 255, 255); font-family: &quot;Century Gothic&quot;, sans-serif;">{!Case.OwnerTitle}<br></span><span style="font-size: 12pt; background-color: rgb(255, 255, 255); font-family: &quot;Century Gothic&quot;, sans-serif;">{!Case.Hidden_Chapter_Name__c}<br></span><span style="font-size: 12pt; background-color: rgb(255, 255, 255); font-family: &quot;Century Gothic&quot;, sans-serif;">{!Case.OwnerPhone}<br></span><span style="font-size: 12pt; background-color: rgb(255, 255, 255); font-family: &quot;Century Gothic&quot;, sans-serif;">{!Case.OwnerEmail}</span></p>]]></td>
+</tr>
+</table>

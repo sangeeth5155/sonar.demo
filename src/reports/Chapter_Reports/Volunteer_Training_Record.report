@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$Contact_Account_Name__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Phone</field>
+    </columns>
+    <columns>
+        <field>Contact$Email</field>
+    </columns>
+    <columns>
+        <field>Contact.Volunteer_Orientation_Trainings__r$Class_Offering__c.Course_Name__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Volunteer_Orientation_Trainings__r$Registered_Date__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Volunteer_Orientation_Trainings__r$Completed_Date__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Volunteer_Orientation_Trainings__r$Date_Cancelled__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <column>Contact$RecordType</column>
+            <operator>equals</operator>
+            <value>Contact.Volunteer_Contact</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$Hidden_Status__c</column>
+            <operator>equals</operator>
+            <value>Active,Pending</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Volunteer Training Record</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Volunteer_Training_Record__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Contact$B_C_Expiration_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

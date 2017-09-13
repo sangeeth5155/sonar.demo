@@ -1,0 +1,405 @@
+<apex:page id="ReferralForm" renderAs="{!renderpdf}" controller="WishReferralFormOut_AC" applyHtmlTag="true" showHeader="false" applyBodyTag="false" sidebar="false" standardStylesheets="false" cache="false">
+    
+    
+    <head>
+        <style>
+            @page {
+            size: letter;
+            
+            @bottom-center {
+            content: "Page " counter(page) " of " counter(pages);
+            }
+            }
+            .page-break {
+            display:block;
+            page-break-after:always;
+            }
+            body {
+            font-family: Arial Unicode MS;
+            }
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed, 
+            figure, figcaption, footer, header, hgroup, 
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            }
+            /* HTML5 display-role reset for older browsers */
+            article, aside, details, figcaption, figure, 
+            footer, header, hgroup, menu, nav, section {
+            display: block;
+            }
+            .hlf-ltd{width:60%}
+            body {
+            line-height: 1;
+            }
+            
+            ol, ul {
+            list-style: none;
+            }
+            blockquote, q {
+            quotes: none;
+            }
+            blockquote:before, blockquote:after,
+            q:before, q:after {
+            content: '';
+            content: none;
+            }
+            table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            }
+            /* DivTable.com */
+            .divTable{
+            display: table;
+            width: 100%;
+            }
+            
+            .divTableRow {
+            display: table-row;
+            }
+            .divTableHeading {
+            display: table-header-group;
+            }
+            .divTableCell, .divTableHead {
+            display: table-cell;
+            padding:10px 0px 10px 10px;
+            width:50%;
+            }
+            .divTableHeading {
+            display: table-header-group;
+            font-weight: bold;
+            }
+            .divTableFoot {
+            display: table-footer-group;
+            font-weight: bold;
+            }
+            .hdr-bld{padding-left:1.5%; font-weight:bold}
+            .divTableBody {
+            display: table-row-group;
+            }
+        </style>
+    </head>
+    
+    <apex:stylesheet value="{!URLFOR($Resource.prospective_assets, 'web/css/chosen.min.css')}"/>
+    <apex:includeScript value="https://code.jquery.com/jquery-2.2.4.min.js" />
+    <script>
+    // prepend meta/link tags before VF head output
+    $('head').prepend('<meta http-equiv="x-ua-compatible" content="ie=edge" /><meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>Wish Referral Form | Make-A-Wish \u00AE</title><meta name="HandheldFriendly" content="True" /><meta name="MobileOptimized" content="480" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" /><meta http-equiv="cleartype" content="on" />');
+    $('head').append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous"><link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css"/><link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.prospective_assets, "web/css/core.css")}" media="all">');
+    function printMyPartialPage(){
+        var printButton = document.getElementById("ReferralForm:frm:content:Print");
+        var pdfButton = document.getElementById("ReferralForm:frm:content:exportPDF");         
+        printButton.style.visibility = 'hidden';
+        pdfButton.style.visibility = 'hidden';       
+        window.print();        
+        printButton.style.visibility = 'visible';
+        pdfButton.style.visibility = 'visible';
+        
+    }
+    </script>
+    
+    <body>
+        <apex:form id="frm" styleClass="portal inquiry" style="width:95%; margin:0px auto">
+            <apex:pagemessages id="msg"/>
+            <apex:outputPanel id="credentialDetails">
+                <div style="font-size:20px;text-align: center" > Make-A-Wish® Online Wish Referral  </div> <br/>
+                <apex:pageBlock rendered="{!!login}" >
+                    <legend>Login</legend>
+                    <div class="form-group row">
+                        <div class="col-sm-2"><label>Password</label></div>
+                        <div class="col-sm-2">
+                            <apex:inputText styleClass="form-control password" maxlength="10" id="loginpassword" html-placeholder="password" required="true" value="{!password}"/>
+                        </div>
+                        <apex:commandButton id="submit_password" value="View Form" action="{!submit}" />
+                    </div>
+                </apex:pageBlock>
+            </apex:outputPanel>
+            <apex:outputpanel id="details">
+                <apex:pageblock id="content" rendered="{!login}">
+                    <div style="padding:30px">
+                        
+                        <div> The following information was submitted via Make-A-Wish's online referral site. </div>
+                        <br/>
+                        
+                        
+                        <div class="divTable">
+                            <div class="divTableBody">
+                                
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Relationship to Child:</div>
+                                    <div class="divTableCell">{!currLead.Relationship_to_child__c}</div>
+                                </div>
+                                
+                                <apex:outputPanel layout="none" rendered="{!IF(currLead.Medical_Provider_Category__c != null , TRUE, FALSE)}">
+                                    <div class="divTableRow">
+                                        <div class="divTableCell">Medical Provider Category:</div>
+                                        <div class="divTableCell">{!currLead.Medical_Provider_Category__c}</div>
+                                    </div>
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel layout="none" rendered="{!IF(currLead.Other_Medical_Provider_Category__c != null , TRUE, FALSE)}">
+                                    <div class="divTableRow">
+                                        <div class="divTableCell">Other Medical Provider Category:</div>
+                                        <div class="divTableCell">{!currLead.Other_Medical_Provider_Category__c}</div>
+                                    </div>
+                                </apex:outputPanel>
+                                
+                                <hr style="width:200%"/>
+                                
+                                <div class="divTableRow">
+                                    <b class="hdr-bld">Referrer Information</b>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Date Submitted:</div>
+                                    <div class="divTableCell"><apex:outputText value="{0,date,MM'/'dd'/'yyyy}"> <apex:param value="{!currLead.CreatedDate}" /> </apex:outputText></div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Name:</div>
+                                    <div class="divTableCell">{!currLead.Referrer_FirstName__c } {!currLead.Referrer_Last_Name__c}</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Phone:</div>
+                                    <div class="divTableCell">{!currLead.Referrer_Phone__c }</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Email:</div>
+                                    <div class="divTableCell">{!currLead.Referrer_Email__c }</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">City:</div>
+                                    <div class="divTableCell">{!currLead.Referrer_City__c }</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Postal:</div>
+                                    <div class="divTableCell">{!currLead.Referrer_Zip__c }</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div style="padding-left:1.5%; width:200%">Yes, I have discussed a referral to Make-A-Wish with this family/child and have received their permission to share the following information.</div>
+                                </div>
+                                <hr style="width:200%"/>
+                                
+                                <div class="divTableRow">
+                                    <b class="hdr-bld">Child Information</b>
+                                </div>
+                                
+                                
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Name:</div>
+                                    <div class="divTableCell">{!currLead.FirstName } {!currLead.Child_Middle_Initial__c} {!currLead.LastName}</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Gender:</div>
+                                    <div class="divTableCell">{!currLead.Gender__c }</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">DOB:</div>
+                                    <div class="divTableCell"><apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                        <apex:param value="{!currLead.DOB__c }" />
+                                        </apex:outputText></div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Has this child ever received a prior wish from Make-A-Wish or any other wish granting organization</div>
+                                    <div class="divTableCell">{!currLead.Has_this_child_ever_received_prior_wish__c}</div>
+                                </div>
+                                
+                                <hr style="width:200%"/>
+                                
+                                <div class="divTableRow">
+                                    <b class="hdr-bld">Family Information</b>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Relationship to Child:</div>
+                                    <div class="divTableCell">{!currLead.Parent_Relationship_to_Child__c}</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Name:</div>
+                                    <div class="divTableCell">{!currLead.Parent_First_Name__c } {!currLead.Parent_Last_Name__c}</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Address:</div>
+                                    <div class="divTableCell">{!currLead.Street }</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">City:</div>
+                                    <div class="divTableCell">{!currLead.City }</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">State:</div>
+                                    <div class="divTableCell">{!currLead.State }</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Postal Code:</div>
+                                    <div class="divTableCell">{!currLead.PostalCode }</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Email Address :</div>
+                                    <div class="divTableCell">{!currLead.Email }</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Primary Number:</div>
+                                    <div class="divTableCell">{!currLead.Phone }</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">What is the family's primary spoken language?</div>
+                                    <div class="divTableCell">{!currLead.What_is_the_family_s_primary_spoken_lang__c }</div>
+                                </div>
+                                <hr style="width:200%"/>
+                                
+                                <apex:outputPanel layout="none" rendered="{!if(currLead.Additional_Parent_First_Name__c!=null, True, false)}">
+                                    <div class="divTableRow">
+                                        <b class="hdr-bld">Parent or Guardian 2</b>
+                                    </div>
+                                    <div class="divTableRow">
+                                        <div class="divTableCell">Relationship to Child:</div>
+                                        <div class="divTableCell">{!currLead.Additional_Parent_Relationship_to_Child__c }</div>
+                                    </div>
+                                    <div class="divTableRow">
+                                        <div class="divTableCell">Name:</div>
+                                        <div class="divTableCell">{!currLead.Additional_Parent_First_Name__c} {!currLead.Additional_Parent_Last_Name__c}</div>
+                                    </div>
+                                    <div class="divTableRow">
+                                        <div class="divTableCell">Address:</div>
+                                        <div class="divTableCell">{!currLead.Additional_Parent_Street__c}</div>
+                                    </div>
+                                    <div class="divTableRow">
+                                        <div class="divTableCell">City:</div>
+                                        <div class="divTableCell">{!currLead.Additional_Parent_City__c}</div>
+                                    </div>
+                                    <div class="divTableRow">
+                                        <div class="divTableCell">State:</div>
+                                        <div class="divTableCell">{!currLead.Additional_Parent_State__c}</div>
+                                    </div>
+                                    <div class="divTableRow">
+                                        <div class="divTableCell">Postal Code:</div>
+                                        <div class="divTableCell">{!currLead.Additional_Parent_Postal_Code__c}</div>
+                                    </div>
+                                    <div class="divTableRow">
+                                        <div class="divTableCell">Email Address :</div>
+                                        <div class="divTableCell">{!currLead.Additional_Parent_Email__c}</div>
+                                    </div>
+                                    <div class="divTableRow">
+                                        <div class="divTableCell">Primary Number:</div>
+                                        <div class="divTableCell">{!currLead.Additional_Parent_Phone__c}</div>
+                                    </div>
+                                    <hr style="width:200%"/>
+                                </apex:outputPanel> 
+                                
+                                <apex:outputPanel layout="none" rendered="{!if(currLead.of_Siblings__c != null, True, false)}">
+                                    <div class="divTableRow">
+                                        <div class="divTableCell">Number of Sibilings:</div>
+                                        <div class="divTableCell">{!currLead.of_Siblings__c }</div>
+                                    </div>
+                                    
+                                </apex:outputPanel>
+                                <apex:outputPanel layout="none" rendered="{!if(sibList.size !=0, True, false)}">
+                                    <div class="divTableRow">
+                                        <b class="hdr-bld">Sibiling Details</b>
+                                    </div>
+                                </apex:outputPanel> 
+                                <apex:outputPanel layout="none" rendered="{!if(sibList.size !=0, True, false)}">
+                                    <apex:repeat value="{!sibList}" var="sb">
+                                        <div class="divTableRow">
+                                            <div class="divTableCell">First Name:</div>
+                                            <div class="divTableCell"><apex:outputtext value="{!sb.firstName}" escape="false" /></div>
+                                        </div>
+                                        <div class="divTableRow">
+                                            <div class="divTableCell">Last Name:</div>
+                                            <div class="divTableCell"><apex:outputtext value="{!sb.lastName}" escape="false" /></div>
+                                        </div>
+                                        <div class="divTableRow">
+                                            <div class="divTableCell">Age:</div>
+                                            <div class="divTableCell">{!sb.age}</div>
+                                        </div>
+                                    </apex:repeat>
+                                    <hr style="width:200%"/>
+                                </apex:outputPanel>
+                              
+                                <div class="divTableRow">
+                                    <b style="padding-left:1.5%; font-weight:bold">Medical Information</b>
+                                </div>
+                                
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Primary Diagnosis:</div>
+                                    <div class="divTableCell">{!currLead.PD_Condition_Description__c }</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">ICD Code:</div>
+                                    <div class="divTableCell">{!currLead.PD_ICD_Code__c }</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Is there a medical reason why we need to move quickly?</div>
+                                    <div class="divTableCell">{!currLead.Any_medical_reason_for_moving_quickly__c }</div>
+                                </div>
+                                
+                                <hr style="width:200%"/>
+                                
+                                <div class="divTableRow">
+                                    <b class="hdr-bld">Physician Information</b>
+                                </div>
+                                
+                                
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Name:</div>
+                                    <div class="divTableCell">{!currLead.Treating_Medical_Professional_First_Name__c} {!currLead.Treating_Medical_Professional_Last_Name__c}</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Email:</div>
+                                    <div class="divTableCell">{!currLead.Treating_Medical_Professional_Email__c  }</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Phone:</div>
+                                    <div class="divTableCell">{!currLead.Treating_Medical_Professional_Phone__c }</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Hospital or Treatment Facility:</div>
+                                    <div class="divTableCell">{!currLead.Hospital_Treatment_Facility_Treating__c }</div>
+                                </div>
+                                
+                                <div class="divTableRow">
+                                    <b class="hdr-bld">Best Physician Information</b>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Name:</div>
+                                    <div class="divTableCell">{!currLead.Best_Contact_for_Physician_First_Name__c} {!currLead.Best_Contact_for_Physician_Last_Name__c}</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Email:</div>
+                                    <div class="divTableCell">{!currLead.Best_contact_for_Physician_Email__c} </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <br/>
+                        <hr/>
+                        <br/>
+                        <div> The information contained herein is being provided to the Make-A-Wish Foundation for the sole purpose of determining whether the identified child is medically eligible for a wish. 
+                            Such information is strictly confidential and may not be shared with anyone other than authorized Make-A-Wish representatives. </div>
+                    </div>  
+                    <div class="form-group row" style="float: right;">
+                        <br/>
+                        <div style="margin: 10px;float: left;"> <apex:commandButton id="Print" value="Print" reRender="dummy" onclick="printMyPartialPage();" /> </div>
+                        <div style="margin: 10px;float: left;"> <apex:commandButton id="exportPDF" value="Export PDF" action="{!exportPDF}" /> </div>
+                        <div style="margin: 10px;float: left;"> <apex:commandButton id="exportCSV" value="Export CSV" action="/apex/WishReferralFormOutCSV_VF" /> </div>
+                        <br/>
+                    </div>                  
+                </apex:pageBlock>        
+            </apex:outputpanel>
+            
+        </apex:form>
+    </body>
+</apex:page>

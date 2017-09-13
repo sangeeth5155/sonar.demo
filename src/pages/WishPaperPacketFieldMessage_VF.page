@@ -1,0 +1,11 @@
+<apex:page standardController="Case">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css"/>
+        <link rel="stylesheet" href="{!URLFOR($Resource.wishcloudstyles, 'wishcloudstyles/core.css')}" />
+<style>
+        .progressbar { content: "Since Start"; position: absolute; font-size: 1.5rem; font-size: .8vw; top: 42%; right: 6%; border-top: 1px solid #fff; padding-top: 1%; }
+</style>
+
+<h1 style="color: #205081"><font size="4">Fields below are populated from Wish Paperwork Packet. If fields need to be updated, please update Wish Paperwork Packet.
+</font></h1>
+</apex:page>

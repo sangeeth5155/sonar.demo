@@ -1,0 +1,12 @@
+<apex:page standardController="Contact" tabStyle="Contact">
+    <cg:AttachmentComponent title="Contact Files"
+    customObjectName="Contact" customObjectFileName="ContactFile__c"
+    fileNamespacePrefix="cg__"
+    relationshipName="Contact__r"
+    legacyIdSupport="true"
+    objectId="{!Contact.Id}"
+    privateEnabled="true"
+    inline="true"
+    enableAttachFromSDriveFolders="false"
+    defaultEmailAddress="" />
+</apex:page>

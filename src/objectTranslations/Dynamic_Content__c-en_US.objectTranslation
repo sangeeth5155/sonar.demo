@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Dynamic Content</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Dynamic Contents</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Application Overview --></label>
+        <name>Application_Overview__c</name>
+    </fields>
+    <fields>
+        <label><!-- Chapter Name --></label>
+        <lookupFilter>
+            <errorMessage><!-- Accounts related to Dynamic Content need to be a chapter name --></errorMessage>
+        </lookupFilter>
+        <name>Chapter_Name__c</name>
+        <relationshipLabel><!-- Dynamic Contents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Chapter --></label>
+        <name>Chapter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Feature Quote --></label>
+        <name>Feature_Quote__c</name>
+    </fields>
+    <fields>
+        <help><!-- Optimized image size width: 1140px by height: 450px (height can vary) --></help>
+        <label><!-- Featured Image --></label>
+        <name>Featured_Image__c</name>
+    </fields>
+    <fields>
+        <help><!-- Optimized image size- width: 342px by height: 314px --></help>
+        <label><!-- Heading Image 1 --></label>
+        <name>Heading_Highlight_Image_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- Optimized image size- width: 342px by height: 314px --></help>
+        <label><!-- Heading Image 2 --></label>
+        <name>Heading_Highlight_Image_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Optimized image size- width: 342px by height: 314px --></help>
+        <label><!-- Heading Image 3 --></label>
+        <name>Heading_Highlight_Image_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Heading Text 1 --></label>
+        <name>Heading_Highlight_Text_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Heading Text 2 --></label>
+        <name>Heading_Highlight_Text_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Heading Text 3 --></label>
+        <name>Heading_Highlight_Text_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Heading Title 1 --></label>
+        <name>Heading_Highlight_Title_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Heading Title 2 --></label>
+        <name>Heading_Highlight_Title_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Heading Title 3 --></label>
+        <name>Heading_Highlight_Title_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Heading Text --></label>
+        <name>Heading_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Heading Title --></label>
+        <name>Heading_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- How do I Become a Volunteer --></label>
+        <name>How_do_I_Become_a_Volunteer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interview Additional Info --></label>
+        <name>Interview_Additional_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- Orientation Additional Info --></label>
+        <name>Orientation_Add_l_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sign Up Page --></label>
+        <name>Sign_Up_Page__c</name>
+    </fields>
+    <fields>
+        <label><!-- Training Additional Info --></label>
+        <name>Training_Additional_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- Volunteer Process --></label>
+        <name>Volunteer_Process__c</name>
+    </fields>
+    <fields>
+        <label><!-- WelcomePage --></label>
+        <name>WelcomePage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Welcome Message --></label>
+        <name>Welcome_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Welcome Text --></label>
+        <name>Welcome_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Why Need Background Check --></label>
+        <name>Why_Need_Background_Check__c</name>
+    </fields>
+    <layouts>
+        <layout>Active Volunteer</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Heading 1 --></label>
+            <section>Heading 1</section>
+        </sections>
+        <sections>
+            <label><!-- Heading 2 --></label>
+            <section>Heading 2</section>
+        </sections>
+        <sections>
+            <label><!-- Heading 3 --></label>
+            <section>Heading 3</section>
+        </sections>
+        <sections>
+            <label><!-- Welcome Section --></label>
+            <section>Welcome Section</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Dynamic Content Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>National</layout>
+        <sections>
+            <label><!-- Application Page --></label>
+            <section>Application Page</section>
+        </sections>
+        <sections>
+            <label><!-- Background Check --></label>
+            <section>Background Check</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Interview Page --></label>
+            <section>Interview Page</section>
+        </sections>
+        <sections>
+            <label><!-- Orientation Page --></label>
+            <section>Orientation Page</section>
+        </sections>
+        <sections>
+            <label><!-- Sign Up Page --></label>
+            <section>Sign Up Page</section>
+        </sections>
+        <sections>
+            <label><!-- Training Page --></label>
+            <section>Training Page</section>
+        </sections>
+        <sections>
+            <label><!-- Welcome Page --></label>
+            <section>Welcome Page</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Prospective Volunteer</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Welcome Page --></label>
+            <section>Welcome Page</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Chapter Active --></label>
+        <name>Chapter_Active</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Chapter Prospective --></label>
+        <name>Chapter_Prospective</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- National --></label>
+        <name>National</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

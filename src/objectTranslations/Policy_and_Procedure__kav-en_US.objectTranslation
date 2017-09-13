@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Policy &amp; Procedure</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Policies &amp; Procedures</value>
+    </caseValues>
+    <fields>
+        <label><!-- Attachment --></label>
+        <name>Attachment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Role --></label>
+        <name>Role__c</name>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation><!-- All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Celebrity Host</masterLabel>
+            <translation><!-- Celebrity Host --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Event Volunteers</masterLabel>
+            <translation><!-- Event Volunteers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Speaker&apos;s Bureau</masterLabel>
+            <translation><!-- Speaker&apos;s Bureau --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Granter</masterLabel>
+            <translation><!-- Wish Granter --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

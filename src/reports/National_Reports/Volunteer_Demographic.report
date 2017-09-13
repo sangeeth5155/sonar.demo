@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>npe5__Affiliation__c$npe5__Contact__c.Name</field>
+    </columns>
+    <columns>
+        <field>npe5__Affiliation__c$npe5__Contact__c.Current_Age__c</field>
+    </columns>
+    <columns>
+        <field>npe5__Affiliation__c$npe5__Contact__c.Gender__c</field>
+    </columns>
+    <columns>
+        <field>npe5__Affiliation__c$npe5__Contact__c.Race_Ethnicity__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Volunteer Demographic</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Affiliations_with_Volunteers__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>npe5__Affiliation__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <label>Arizona</label>
+            <name>Arizona</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Alaska Washington</label>
+            <name>Alaska_Washington</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Greater Pennsylvania</label>
+            <name>Greater_Pennsylvania</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Philadelphia</label>
+            <name>Philadelphia</name>
+        </dataCategory>
+        <dataCategory>
+            <label>South Dakota</label>
+            <name>South_Dakota</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Utah</label>
+            <name>Utah</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Ohio, Kentucky, Indiana</label>
+            <name>Ohio_Kentucky_Indiana</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <description>This category will be used to hold chapter specific resources.</description>
+    <label>Chapter Specific</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

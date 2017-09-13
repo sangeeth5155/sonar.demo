@@ -1,0 +1,110 @@
+<!--*****************************************************************************************************************
+Author          : MST Solutions
+CreatedBy       : Chandrasekar Nallusamy
+Date            : 5/23/2016
+Description     : 
+This BackgroundCheck_Vf page referred BackgroundCheck_AC controller. Volunteer will submit their details for Background 
+verification. When Volunteer submits Background check, It will create Background check record as well
+as Background check task for the chatper staff.
+
+======================================================================================================================
+
+UX Design & 
+Front-End Dev   : Jason Nguyen
+Last Modified   : 07/11/2016
+
+*******************************************************************************************************************-->
+<apex:page id="communitiesSelfRegPage" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" docType="html-5.0" controller="BackgroundCheck_AC" title="Make-A-Wish Communities | Background Check">
+    <head>
+        <apex:include pageName="prospective_head" id="phead" />       
+    </head>
+    <style>
+    .messageCell h4{color:#066cb6};
+    </style>
+    <body class="vcp vcpactivelogin">
+        <apex:include pageName="prospective_header" id="pheader" />
+        
+        <main role="main" class="container">
+            <div class="row">
+                <h1 class="col-md-12">Background Check</h1>
+            </div>
+          <!--  <nav class="row">
+                <ul class="step">
+                    <li><a href="/apex/VolunteerOrientation_VF?bgRequired={!bgTabPermission}&trainingRequired={!trainingTabVisible}">Orientation</a></li>
+                    <li><a href="/apex/Application_VF?bgRequired={!bgTabPermission}&trainingRequired={!trainingTabVisible}">Application</a></li>
+                    <li><a href="/apex/VolunteerInterview_VF?bgRequired={!bgTabPermission}&trainingRequired={!trainingTabVisible}">Interview</a></li>
+                    <li class="current"><a href="">Background Check</a></li>
+                   <apex:outputpanel rendered="{!trainingTabVisible==True}">
+                    <li><a href="/apex/VolunteerTraining_VF?bgRequired={!bgTabPermission}&trainingRequired={!trainingTabVisible}">Training</a></li>
+                   </apex:outputpanel>
+                </ul>
+            </nav> -->
+            
+            <div class="row">
+                <section class="col-md-8">
+                    <apex:form id="pagId">
+                        
+                        <div class="messages">
+                            <apex:pageMessages id="showmsg"/>
+                        </div>
+                        
+                         <apex:outputpanel rendered="{!isBGFinished==true}">
+                            <fieldset style="min-height:350px;">
+                                <p><apex:outputText value="Thank you for requesting your background check." /></p>
+                                <p><apex:outputText value="You will receive an email from First Advantage, our background check provider, with specific details on how to complete the criminal background check process." /></p>
+                                <p><apex:outputText value="Background checks can take several weeks to process. Once completed and reviewed by chapter staff, you will receive an email to confirm you are approved to complete your required volunteer training. If you have any questions, please contact the chapter office. Chapter contact information can be found on the home page." /></p>
+                            </fieldset>
+                        </apex:outputpanel>
+                        
+                         <fieldset> 
+                            <legend>Duration of residency in the United States
+                                <apex:outputPanel rendered="{!isBGFinished==false}">
+                                    <span>Please complete the question below.</span>
+                                </apex:outputPanel>
+                            </legend>
+                            
+                            <div class="form-group row">
+                                <label for="residency" class="col-sm-8">I have resided in the United States for the last seven years.</label>
+                                
+                                <apex:outputPanel rendered="{!isBGFinished==false}">
+                                    <div class="col-sm-4" style="min-height:18rem;">
+                                      <apex:selectList styleClass="form-control col-xs-12 col-sm-12 c-select residency" id="residency" size="1" value="{!areYouinUS7Yrs}" rendered="{!isBGFinished==false}"> 
+                                          <apex:selectOptions value="{!ResidedValues}" />
+                                      </apex:selectList>
+                                    </div>
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!isBGFinished==true}">
+                                    <div class="col-xs-3 col-sm-2">
+                                        <span class="text-muted">Answered:</span>
+                                    </div>
+                                    <div class="col-xs-3 col-sm-2">
+                                        <apex:outputText styleClass="form-control residency text-muted" title="You've answered Yes" value="{!residingInPast7Years}" rendered="{!isBGFinished==true}" />    
+                                    </div>
+                                </apex:outputPanel>
+                                
+                            </div>
+                        </fieldset>
+                       
+                        
+                        <apex:outputPanel rendered="{!isBGFinished==false}">
+                            <fieldset>
+                                <apex:commandbutton styleClass="col-xs-12 col-sm-12 col-md-4 col-md-push-8 btn-md" value="Submit" id="subId"  action="{!saveRec}" rendered="{!isBGFinished==false}"/>
+                            </fieldset>
+                        </apex:outputPanel>
+                    </apex:form>
+                </section>
+                <aside class="col-md-4 page-info" role="page-info">
+                    <h2 aria-labelledby="Volunteering">Why do I need a background check?</h2>
+                    <p><apex:outputText value="{!whyNeedBGCheck}" escape="false"/></p>
+                </aside>
+            </div>
+        </main>
+        
+        <apex:include pageName="prospective_footer" id="pfooter" />
+        <script>
+        $('select.residency option:first').remove(); // remove first 
+        $("select.residency").prepend('<option disabled="disabled" selected="selected">Please select</option>');
+        </script>
+    </body>
+</apex:page>

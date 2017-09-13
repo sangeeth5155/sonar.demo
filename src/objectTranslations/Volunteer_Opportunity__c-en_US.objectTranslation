@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Volunteer Opportunity</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Volunteer Opportunities</value>
+    </caseValues>
+    <fields>
+        <label><!-- About Me --></label>
+        <name>About_Me__c</name>
+    </fields>
+    <fields>
+        <label><!-- Age --></label>
+        <name>Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approval Status --></label>
+        <name>Approval_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initiated</masterLabel>
+            <translation><!-- Initiated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Assigned</masterLabel>
+            <translation><!-- Not Assigned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejection Notification</masterLabel>
+            <translation><!-- Rejection Notification --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Chapter Name --></label>
+        <name>Chapter_Name__c</name>
+        <relationshipLabel><!-- Volunteer Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Chapter Role --></label>
+        <name>Chapter_Role_Opportunity__c</name>
+        <relationshipLabel><!-- Volunteer Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date/Time --></label>
+        <name>Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Time --></label>
+        <name>End_Time__c</name>
+        <picklistValues>
+            <masterLabel>10:00 AM</masterLabel>
+            <translation><!-- 10:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:00 PM</masterLabel>
+            <translation><!-- 10:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:30 AM</masterLabel>
+            <translation><!-- 10:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:30 PM</masterLabel>
+            <translation><!-- 10:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:00 AM</masterLabel>
+            <translation><!-- 11:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:00 PM</masterLabel>
+            <translation><!-- 11:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:30 AM</masterLabel>
+            <translation><!-- 11:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:30 PM</masterLabel>
+            <translation><!-- 11:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00 AM</masterLabel>
+            <translation><!-- 12:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00 PM</masterLabel>
+            <translation><!-- 12:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:30 AM</masterLabel>
+            <translation><!-- 12:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:30 PM</masterLabel>
+            <translation><!-- 12:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1:00 AM</masterLabel>
+            <translation><!-- 1:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1:00 PM</masterLabel>
+            <translation><!-- 1:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1:30 AM</masterLabel>
+            <translation><!-- 1:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1:30 PM</masterLabel>
+            <translation><!-- 1:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2:00 AM</masterLabel>
+            <translation><!-- 2:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2:00 PM</masterLabel>
+            <translation><!-- 2:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2:30 AM</masterLabel>
+            <translation><!-- 2:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2:30 PM</masterLabel>
+            <translation><!-- 2:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3:00 AM</masterLabel>
+            <translation><!-- 3:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3:00 PM</masterLabel>
+            <translation><!-- 3:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3:30 AM</masterLabel>
+            <translation><!-- 3:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3:30 PM</masterLabel>
+            <translation><!-- 3:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4:00 AM</masterLabel>
+            <translation><!-- 4:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4:00 PM</masterLabel>
+            <translation><!-- 4:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4:30 AM</masterLabel>
+            <translation><!-- 4:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4:30 PM</masterLabel>
+            <translation><!-- 4:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5:00 AM</masterLabel>
+            <translation><!-- 5:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5:00 PM</masterLabel>
+            <translation><!-- 5:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5:30 AM</masterLabel>
+            <translation><!-- 5:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5:30 PM</masterLabel>
+            <translation><!-- 5:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6:00 AM</masterLabel>
+            <translation><!-- 6:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6:00 PM</masterLabel>
+            <translation><!-- 6:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6:30 AM</masterLabel>
+            <translation><!-- 6:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6:30 PM</masterLabel>
+            <translation><!-- 6:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7:00 AM</masterLabel>
+            <translation><!-- 7:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7:00 PM</masterLabel>
+            <translation><!-- 7:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7:30 AM</masterLabel>
+            <translation><!-- 7:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7:30 PM</masterLabel>
+            <translation><!-- 7:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8:00 AM</masterLabel>
+            <translation><!-- 8:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8:00 PM</masterLabel>
+            <translation><!-- 8:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8:30 AM</masterLabel>
+            <translation><!-- 8:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8:30 PM</masterLabel>
+            <translation><!-- 8:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9:00 AM</masterLabel>
+            <translation><!-- 9:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9:00 PM</masterLabel>
+            <translation><!-- 9:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9:30 AM</masterLabel>
+            <translation><!-- 9:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9:30 PM</masterLabel>
+            <translation><!-- 9:30 PM --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Event Date --></label>
+        <name>Event_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Description --></label>
+        <name>Event_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Non-WIsh/Event Name --></label>
+        <name>Event_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event URL --></label>
+        <name>Event_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event --></label>
+        <name>Event__c</name>
+        <relationshipLabel><!-- Volunteer Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- First + L.I. --></label>
+        <name>First_L_I__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Mulesoft --></label>
+        <name>From_Mulesoft__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gender --></label>
+        <name>Gender__c</name>
+    </fields>
+    <fields>
+        <label><!-- HiddenVolunteer Count Description --></label>
+        <name>HiddenVolunteer_Count_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Chapter Email --></label>
+        <name>Hidden_Chapter_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Chapter Name --></label>
+        <name>Hidden_Chapter_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Chapter Phone --></label>
+        <name>Hidden_Chapter_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Chapter Role Name --></label>
+        <name>Hidden_Chapter_Role_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Non Wish Event  Date --></label>
+        <name>Hidden_Non_Wish_Event_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Non Wish Event Name --></label>
+        <name>Hidden_Non_Wish_Event_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Hidden_VolunteerCount_Desc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Volunteer Contact Email --></label>
+        <name>Hidden_Volunteer_Contact_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Volunteer Contact Name --></label>
+        <name>Hidden_Volunteer_Contact_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hobbies --></label>
+        <name>Hobbies__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Inactivated or Rejected Date --></label>
+        <name>Inactivated_or_Rejected_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inactive --></label>
+        <name>Inactive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Non-Viewable --></label>
+        <name>Is_Non_Viewable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Language --></label>
+        <name>Language__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Diagnosis --></label>
+        <name>Medical_Condition__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migrated Record --></label>
+        <name>Migrated_Record__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>NWE_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>NWE_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Day of The Week --></label>
+        <name>NWE_Day_of_The_Week__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Time --></label>
+        <name>NWE_End_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Non Wish/ Event Title --></label>
+        <name>NWE_Non_Wish_Event_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Time --></label>
+        <name>NWE_Start_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Volunteer Opportunity Notes --></label>
+        <name>NWE_Volunteer_Opportunity_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip --></label>
+        <name>NWE_Zip__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Non - Verbal --></label>
+        <name>Non_Verbal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>Non_Wish_Event__c</name>
+        <relationshipLabel><!-- Volunteer Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- RE Created Date --></label>
+        <name>RE_Created_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Import Id --></label>
+        <name>RE_Import_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Last Modified Date --></label>
+        <name>RE_Last_Modified_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Role --></label>
+        <name>RE_Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Volunteer Notes --></label>
+        <name>RE_Volunteer_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Volunteer Opportunity Id --></label>
+        <name>RE_Volunteer_Opportunity_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason Inactive --></label>
+        <name>Reason_Inactive__c</name>
+        <picklistValues>
+            <masterLabel>Deceased</masterLabel>
+            <translation><!-- Deceased --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactivated</masterLabel>
+            <translation><!-- Inactivated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moved</masterLabel>
+            <translation><!-- Moved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-responsive</masterLabel>
+            <translation><!-- Non-responsive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Approved</masterLabel>
+            <translation><!-- Not Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requested</masterLabel>
+            <translation><!-- Requested --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Required Forms for Volunteers --></label>
+        <name>Required_Forms_for_Volunteers__c</name>
+        <picklistValues>
+            <masterLabel>Annual Conflict of Interest &amp; Ethics Assurance Statement Fact Sheet</masterLabel>
+            <translation><!-- Annual Conflict of Interest &amp; Ethics Assurance Statement Fact Sheet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Associates Database: How to Guide</masterLabel>
+            <translation><!-- Associates Database: How to Guide --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>First Advantage Fact Sheet</masterLabel>
+            <translation><!-- First Advantage Fact Sheet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single Day Event Volunteers Fact Sheet</masterLabel>
+            <translation><!-- Single Day Event Volunteers Fact Sheet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Volunteer Application Fact Sheet</masterLabel>
+            <translation><!-- Volunteer Application Fact Sheet --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Role --></label>
+        <name>Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Time --></label>
+        <name>Start_Time__c</name>
+        <picklistValues>
+            <masterLabel>10:00 AM</masterLabel>
+            <translation><!-- 10:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:00 PM</masterLabel>
+            <translation><!-- 10:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:30 AM</masterLabel>
+            <translation><!-- 10:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:30 PM</masterLabel>
+            <translation><!-- 10:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:00 AM</masterLabel>
+            <translation><!-- 11:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:00 PM</masterLabel>
+            <translation><!-- 11:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:30 AM</masterLabel>
+            <translation><!-- 11:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:30 PM</masterLabel>
+            <translation><!-- 11:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00 AM</masterLabel>
+            <translation><!-- 12:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00 PM</masterLabel>
+            <translation><!-- 12:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:30 AM</masterLabel>
+            <translation><!-- 12:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:30 PM</masterLabel>
+            <translation><!-- 12:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1:00 AM</masterLabel>
+            <translation><!-- 1:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1:00 PM</masterLabel>
+            <translation><!-- 1:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1:30 AM</masterLabel>
+            <translation><!-- 1:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1:30 PM</masterLabel>
+            <translation><!-- 1:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2:00 AM</masterLabel>
+            <translation><!-- 2:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2:00 PM</masterLabel>
+            <translation><!-- 2:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2:30 AM</masterLabel>
+            <translation><!-- 2:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2:30 PM</masterLabel>
+            <translation><!-- 2:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3:00 AM</masterLabel>
+            <translation><!-- 3:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3:00 PM</masterLabel>
+            <translation><!-- 3:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3:30 AM</masterLabel>
+            <translation><!-- 3:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3:30 PM</masterLabel>
+            <translation><!-- 3:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4:00 AM</masterLabel>
+            <translation><!-- 4:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4:00 PM</masterLabel>
+            <translation><!-- 4:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4:30 AM</masterLabel>
+            <translation><!-- 4:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4:30 PM</masterLabel>
+            <translation><!-- 4:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5:00 AM</masterLabel>
+            <translation><!-- 5:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5:00 PM</masterLabel>
+            <translation><!-- 5:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5:30 AM</masterLabel>
+            <translation><!-- 5:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5:30 PM</masterLabel>
+            <translation><!-- 5:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6:00 AM</masterLabel>
+            <translation><!-- 6:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6:00 PM</masterLabel>
+            <translation><!-- 6:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6:30 AM</masterLabel>
+            <translation><!-- 6:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6:30 PM</masterLabel>
+            <translation><!-- 6:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7:00 AM</masterLabel>
+            <translation><!-- 7:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7:00 PM</masterLabel>
+            <translation><!-- 7:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7:30 AM</masterLabel>
+            <translation><!-- 7:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7:30 PM</masterLabel>
+            <translation><!-- 7:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8:00 AM</masterLabel>
+            <translation><!-- 8:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8:00 PM</masterLabel>
+            <translation><!-- 8:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8:30 AM</masterLabel>
+            <translation><!-- 8:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8:30 PM</masterLabel>
+            <translation><!-- 8:30 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9:00 AM</masterLabel>
+            <translation><!-- 9:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9:00 PM</masterLabel>
+            <translation><!-- 9:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9:30 AM</masterLabel>
+            <translation><!-- 9:30 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9:30 PM</masterLabel>
+            <translation><!-- 9:30 PM --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Out of Compliance</masterLabel>
+            <translation><!-- Out of Compliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Hours --></label>
+        <name>Total_Hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Volunteer Contact --></label>
+        <name>Volunteer_Contact__c</name>
+        <relationshipLabel><!-- Volunteer Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Volunteer Name --></label>
+        <name>Volunteer_Name__c</name>
+        <relationshipLabel><!-- Volunteer Opportunities (Volunteer Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Volunteer Notes --></label>
+        <name>Volunteer_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Volunteer Opportunity Id Hidden --></label>
+        <name>Volunteer_Opportunity_Id_Hidden__c</name>
+    </fields>
+    <fields>
+        <label><!-- Volunteer Role Name --></label>
+        <name>Volunteer_Role_Name__c</name>
+        <picklistValues>
+            <masterLabel>Advisory Committee, non-voting Board Member</masterLabel>
+            <translation><!-- Advisory Committee, non-voting Board Member --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Airport Greeter</masterLabel>
+            <translation><!-- Airport Greeter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Board Member</masterLabel>
+            <translation><!-- Board Member --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Celebrity Host</masterLabel>
+            <translation><!-- Celebrity Host --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fundraising Volunteer</masterLabel>
+            <translation><!-- Fundraising Volunteer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical Advisor</masterLabel>
+            <translation><!-- Medical Advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical Outreach Volunteer</masterLabel>
+            <translation><!-- Medical Outreach Volunteer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office Volunteer</masterLabel>
+            <translation><!-- Office Volunteer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regional Champion</masterLabel>
+            <translation><!-- Regional Champion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single Day Event Volunteer</masterLabel>
+            <translation><!-- Single Day Event Volunteer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Speaker&apos;s Bureau</masterLabel>
+            <translation><!-- Speaker&apos;s Bureau --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special Events - Committee Member</masterLabel>
+            <translation><!-- Special Events - Committee Member --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special Events - Day of Volunteer</masterLabel>
+            <translation><!-- Special Events - Day of Volunteer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Translator &amp; Interpreter</masterLabel>
+            <translation><!-- Translator &amp; Interpreter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Volunteer Manager</masterLabel>
+            <translation><!-- Volunteer Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Assist Phone Greeter</masterLabel>
+            <translation><!-- Wish Assist Phone Greeter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Assist Volunteer</masterLabel>
+            <translation><!-- Wish Assist Volunteer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Coordinator</masterLabel>
+            <translation><!-- Wish Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Granter</masterLabel>
+            <translation><!-- Wish Granter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Granter Mentor</masterLabel>
+            <translation><!-- Wish Granter Mentor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Waiting Since --></label>
+        <name>Waiting_Since__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish Child --></label>
+        <name>Wish_Child__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish --></label>
+        <name>Wish__c</name>
+        <relationshipLabel><!-- Volunteer Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Zip --></label>
+        <name>Zip__c</name>
+    </fields>
+    <layouts>
+        <layout>Non Wish &amp; Event</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Non-Wish &amp; Event Details --></label>
+            <section>Non-Wish &amp; Event Details</section>
+        </sections>
+        <sections>
+            <label><!-- Volunteer Details --></label>
+            <section>Volunteer Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Non Wish &amp; Event for Volunteers</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Non-Wish &amp; Event Details --></label>
+            <section>Non-Wish &amp; Event Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Registered Non Wish Volunteer</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Non-Wish &amp; Event Details --></label>
+            <section>Non-Wish &amp; Event Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Registered Wish Volunteer</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Volunteer Details --></label>
+            <section>Volunteer Details</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Child Details --></label>
+            <section>Wish Child Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Volunteer Opportunity Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Volunteer Role Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Wish</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Volunteer Details --></label>
+            <section>Volunteer Details</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Child Details --></label>
+            <section>Wish Child Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Wish for Volunteer</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Volunteer Details --></label>
+            <section>Volunteer Details</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Child Details --></label>
+            <section>Wish Child Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Non Wish &amp; Event --></label>
+        <name>Non_Wish_Event</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Volunteer Registered Non Wish --></label>
+        <name>Volunteer_Registered_Non_Wish</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Volunteer Registered Wish --></label>
+        <name>Volunteer_Registered_Wish</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Wish --></label>
+        <name>Wish</name>
+    </recordTypes>
+    <sharingReasons>
+        <label><!-- Grant Edit Access to assigned Volunteer --></label>
+        <name>Grant_Edit_Access_to_assigned_Volunteer</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You cannot create volunteer opportunity for closed wish. --></errorMessage>
+        <name>Vol_Opp_Do_Not_Create_for_Closed_Wish</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the value for Reason Inactive --></errorMessage>
+        <name>Volunteer_Opp_Reason_Inactive</name>
+    </validationRules>
+    <workflowTasks>
+        <name>VO_ET_Volunteer_Opportunity_Approved_NW</name>
+        <subject><!-- VO ET : Volunteer Opportunity Approved (NW) --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>VO_ET_Volunteer_Opportunity_Not_Approved</name>
+        <subject><!-- VO ET : Volunteer Opportunity Not Approved --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>VO_ET_Volunteer_Opportunity_Not_Approved_NW</name>
+        <subject><!-- VO ET : Volunteer Opportunity Not Approved (NW) --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>VO_ET_Volunteer_Opportunity_Wish_Approved</name>
+        <subject><!-- VO ET : Volunteer Opportunity Wish Approved --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

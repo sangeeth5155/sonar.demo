@@ -1,0 +1,5 @@
+Hi  {!Task.Task_Owner_Name__c},
+
+A new interview task has been assigned to you. Please find the below link for more details.
+
+https://na30.salesforce.com/{!Task.Id}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used to notify Volunteer &amp; Program staff of a rush wish.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Case: Rush Wish Ready to Assign</name>
+    <style>freeForm</style>
+    <subject>Rush Wish Notification</subject>
+    <textOnly>Hi {!Contact.OwnerFullName}</textOnly>
+    <type>html</type>
+</EmailTemplate>

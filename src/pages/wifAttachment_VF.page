@@ -1,0 +1,89 @@
+<apex:page controller="wifAttachment_AC" sidebar="false" showHeader="false" docType="html-5.0" standardStylesheets="false" cache="false">
+    <apex:include pageName="prospective_head" id="phead"/>
+    <apex:outputPanel rendered="{!isSaved}">
+        <script>
+        window.onload=function () {
+            
+            parent.loader();
+        }
+        </script>
+    </apex:outputPanel>
+    <style>
+        table {
+        font-family: arial, helvetica, sans-serif;
+        font-size:.7rem;
+        }
+        input.upload {font-family:arial; font-size:.7rem; border:1px solid #ccc; border-right:none; padding:1.1rem 1rem 1.4rem}
+        .att-form {border:none;}
+        .att-form table {margin-top:1rem}
+        th:nth-child(1), tr > td:nth-child(1) {width:40%}
+        th:nth-child(2), tr > td:nth-child(2) {width:60%}
+        tr:last-child.fadein-alert {-webkit-animation: fadein-alert .5s forwards; -moz-animation: fadein-alert .5s forwards; -o-animation: fadein-alert .5s forwards; animation: fadein-alert .5s forwards}
+        .fadein {-webkit-animation: fadein .5s forwards; -moz-animation: fadein .5s forwards; -o-animation: fadein .5s forwards; animation: fadein .5s forwards}
+        /* fadein-alert keyframes */
+        @-moz-keyframes fadein-alert    {from {opacity:0; background: #ffbe00} to {opacity:1; background: transparent}}
+        @-webkit-keyframes fadein-alert {from {opacity:0; background: #ffbe00} to {opacity:1; background: transparent}}
+        @-o-keyframes fadein-alert      {from {opacity:0; background: #ffbe00} to {opacity:1; background: transparent}}
+        @keyframes fadein-alert         {from {opacity:0; background: #ffbe00} to {opacity:1; background: transparent}}
+        /* fadein keyframes */
+        @-moz-keyframes fadein    {from {opacity:0; margin-top:-1rem} to {opacity:1; margin-top:0rem}}
+        @-webkit-keyframes fadein {from {opacity:0; margin-top:-1rem} to {opacity:1; margin-top:0rem}}
+        @-o-keyframes fadein      {from {opacity:0; margin-top:-1rem} to {opacity:1; margin-top:0rem}}
+        @keyframes fadein         {from {opacity:0; margin-top:-1rem} to {opacity:1; margin-top:0rem}}
+        /* desktop */
+        @media (min-width: 48em) {
+        input.upload {padding-bttom:1.1rem}
+        th:nth-child(1), tr > td:nth-child(1) {width:25%}
+        th:nth-child(2), tr > td:nth-child(2) {width:75%}
+        }
+    </style>
+    <apex:form id="attForm" styleClass="att-form fadein">
+        <div class="form-group row">
+            <div class="col-xs-12 col-md-6">
+                <apex:inputFile value="{!newAttachment.body}" filename="{!newAttachment.Name}" styleClass="upload col-xs-8 col-sm-9"/>
+                <apex:commandButton value="Upload" action="{!save}"  styleClass="col-xs-4 col-sm-3 btn-md"  />
+            </div>
+        </div>
+        <apex:actionRegion >
+            <script>
+            
+              parent.resizeIframe(obj).querySelectorAll('wifupload');
+            
+            </script>
+            <apex:outputPanel id="refreshBlck" rendered="{!If(Attachments.size != 0, true, false)}">
+                <table class="table table-maw table-hover">
+                    <thead class="thead-default">
+                        <tr>
+                            <th>Action</th>
+                            <th>File Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <apex:repeat value="{!Attachments}" var="attachment">
+                            <tr>
+                                <td><a href="{!attachment.File_Path__c}" target="_blank">Download</a> |&nbsp;
+                                    <apex:commandLink value="Delete" action="{!RemoveAttachment}"  rerender="refreshBlck">
+                                        <apex:param name="deleteFile" value="{!attachment.Id}" assignTo="{!attachmentId}"/>
+                                    </apex:commandLink>
+                                </td>
+                                <td>{!attachment.cg__File_Name__c} </td>
+                            </tr>
+                        </apex:repeat>
+                    </tbody>
+                </table>
+            </apex:outputPanel>
+        </apex:actionRegion>
+    </apex:form>
+    <script src="{!URLFOR($Resource.wff_assets, 'wff_assets/js/jquery-2.2.4.min.js')}"></script>
+    <script src="{!URLFOR($Resource.wff_assets, 'wff_assets/js/tether-1.3.7.min.js')}"></script>
+    <script src="{!URLFOR($Resource.wff_assets, 'wff_assets/js/bootstrap-4.0.0-alpha.2.min.js')}"></script>
+    <!-- bootstrap css fallback (appends to head) -->
+        <script>$.each(document.styleSheets, function(i,sheet){ if(sheet.href=='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css') {var rules = sheet.rules ? sheet.rules : sheet.cssRules; if (rules.length == 0) { $('<link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.prospective_assets, "css/lib/bootstrap.min.css")}" />').appendTo('head');} } });</script>
+    <script>
+    (function ($, root, undefined) {
+        // prepend meta/link tags before VF head output
+        $('head').prepend('<meta http-equiv="x-ua-compatible" content="ie=edge" /><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta name="HandheldFriendly" content="True" /><meta name="MobileOptimized" content="480" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" /><meta http-equiv="cleartype" content="on" />');
+        $('style').before('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous" /><link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.prospective_assets, 'web/css/core.css')}" media="all">');
+    })(jQuery);
+    </script>
+</apex:page>

@@ -1,0 +1,24 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Century Gothic&quot;,sans-serif;color:#333333">Hi&nbsp;{!Background_check__c.Volunteer__c},<br></span><span style="font-size:12.0pt;line-height:107%;
+font-family:&quot;Century Gothic&quot;,sans-serif;color:#333333"><br>Thank you so much for
+your dedication to&nbsp;</span><span style="font-size: 12pt; line-height: 107%; font-family: &quot;Century Gothic&quot;, sans-serif;">Make-A-Wish<sup>®</sup></span><span style="font-size:12.0pt;line-height:107%;font-family:&quot;Century Gothic&quot;,sans-serif;
+color:#333333">. Our records indicate&nbsp;that your criminal background
+check has expired. If you are still interested in volunteering with
+Make-A-Wish,&nbsp;please log in to the&nbsp;</span><span style="font-size:12.0pt;line-height:107%;font-family:&quot;Century Gothic&quot;,sans-serif;
+color:blue"><a href="https://make-a-wish.force.com/">Make-A-Wish Volunteer Center</a></span><span style="font-size: 12pt; line-height: 107%; font-family: &quot;Century Gothic&quot;, sans-serif;">&nbsp;</span><span style="font-size:12.0pt;line-height:
+107%;font-family:&quot;Century Gothic&quot;,sans-serif;color:#333333">to
+initiate your background check. If the required information has not been
+completed by {!Background_check__c.Date__c + 7}, we will mark you as “<b>INACTIVE”&nbsp;</b>and
+any current assignments will be re-assigned to an active volunteer.<br><br>We are grateful for your continued support of our mission and
+the children we serve!<br><br>Thanks,<br><br>{!Background_check__c.Account_Name__c}<br>{!Background_check__c.Account_Phone__c}<br></span><span style="color: rgb(51, 51, 51); font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt; background-color: white;">{!Background_check__c.Account_Email__c}</span></p><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><div><div id="_com_1" class="msocomtxt" language="JavaScript">
+
+<!--[if !supportAnnotations]--></div>
+
+<!--[endif]--></div>
+
+</div>]]></td>
+</tr>
+</table>

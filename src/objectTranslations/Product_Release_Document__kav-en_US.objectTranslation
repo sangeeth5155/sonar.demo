@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Product Release Document</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Product Release Documents</value>
+    </caseValues>
+    <fields>
+        <label><!-- Attacment --></label>
+        <name>Attacment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Document Type --></label>
+        <name>Document_Type__c</name>
+        <picklistValues>
+            <masterLabel>Meeting Notes</masterLabel>
+            <translation><!-- Meeting Notes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Process Definition</masterLabel>
+            <translation><!-- Process Definition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Road Map</masterLabel>
+            <translation><!-- Product Road Map --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Release Notes</masterLabel>
+            <translation><!-- Release Notes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Subject --></label>
+        <name>Subject__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

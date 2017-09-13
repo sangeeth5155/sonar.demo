@@ -1,0 +1,13 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Century Gothic, sans-serif">Hi&nbsp;</font></span><font face="Century Gothic, sans-serif">{!Contact.FirstName}</font><span style="color: rgb(0, 0, 0); font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">,<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>Thank you for completing your
+volunteer application. We are thrilled to have you as part of the Make-A-Wish
+family!<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>The next step to becoming a
+Make-A-Wish volunteer is to attend a screening interview with a member of our Volunteer
+Screening Team. &nbsp;Screening interviews are typically scheduled the second
+Saturday of each month.<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>To RSVP for a screening interview, please click here
+and choose an available date:<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><a href="http://www.signupgenius.com/go/30e0e4ba9aa2ba1f58-20171">VOLUNTEER SCREENING INTERVIEW RSVP</a><br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>Thank you for your interest in
+becoming a volunteer!&nbsp; We hope to see you soon!<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>Best wishes,<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>{!User.Name}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif;">{!User.Account_Name__c}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif;">{!User.Title}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif;">{!User.Phone}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif;">{!User.Email}</span></p>]]></td>
+</tr>
+</table>

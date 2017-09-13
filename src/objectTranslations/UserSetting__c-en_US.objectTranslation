@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Update Abandoned Wishes</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Update Abandoned Wishes</value>
+    </caseValues>
+    <fields>
+        <label><!-- Abandon the Granted case --></label>
+        <name>Abandon_the_Granted_case__c</name>
+    </fields>
+    <fields>
+        <label><!-- All Closed Cases except Abandoned --></label>
+        <name>All_Closed_Cases_except_Abandoned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Edit Abandoned Cases --></label>
+        <name>Edit_Abandoned_Cases__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

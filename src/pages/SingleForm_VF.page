@@ -1,0 +1,17 @@
+<apex:page sidebar="false" applyBodyTag="false" cache="false" standardController="case" extensions="SingleParent_AC">
+
+  
+  <apex:form id="singleForm">
+  <apex:messages />
+  <apex:pageBlock title="Single Parent Form">
+      <apex:pageBlockSection >
+     The form will send to following users {!name}
+     </apex:pageBlockSection>
+  </apex:pageBlock>
+  <center>
+    <apex:commandButton value="Send Now" action="{!CallouttoDocusign}"/>
+    <apex:commandButton value="Cancel" action="{!Cancel}" />
+  </center>
+  </apex:form>
+ 
+</apex:page>

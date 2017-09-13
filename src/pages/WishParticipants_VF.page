@@ -1,0 +1,37 @@
+<apex:page standardController="Case" extensions="WishParticipants_AC" tabStyle="Case" cache="false" standardStylesheets="false">
+    <apex:form >
+        <apex:outputPanel rendered="{!ParticipantsConList.Size > 0}">
+            <table style="width:100%" cellpadding="3%">
+                <tr style="height:30%" borderwidth="10%">
+                    <th></th>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Last Name</th>
+                    <th>Date of Birth</th>
+                    <th>Relationship</th>
+                    <th>Age</th>
+                    <th>Guardian</th>
+                    <th>Medical Needs</th>
+                    <th>Non-Comped</th>
+                </tr>
+                <apex:repeat value="{!ParticipantsConList}" var="Participant">
+                    <tr>
+                        <td><a href="/{!Participant.npe4__RelatedContact__c}" target="_blank">View</a></td>
+                        <td>{!Participant.npe4__RelatedContact__r.FirstName}</td>
+                        <td>{!Participant.npe4__RelatedContact__r.Middle_Name__c}</td>
+                        <td>{!Participant.npe4__RelatedContact__r.LastName}</td>
+                        <td><apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                                                    <apex:param value="{!Participant.npe4__RelatedContact__r.Birthdate}"/>
+                                                                </apex:outputText></td>
+                        <td>{!Participant.npe4__Type__c}</td>
+                        <td>{!Participant.npe4__RelatedContact__r.Current_Age__c}</td>
+                        <td>{!Participant.Parent_Legal_Guardian__c}</td>
+                        <td>{!Participant.Medical_Needs__c}</td>
+                        <td>{!Participant.Non_Comped__c }</td>
+                    </tr>
+                </apex:repeat>
+            </table>       
+        </apex:outputPanel>
+        
+    </apex:form>
+</apex:page>

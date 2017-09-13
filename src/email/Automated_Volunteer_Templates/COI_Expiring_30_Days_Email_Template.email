@@ -1,0 +1,32 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Century Gothic&quot;,sans-serif;color:#333333">Hi&nbsp;{!Conflict_Of_Interest__c.Volunteer_Contact__c},</span><span style="font-size: 12pt; line-height: 107%; font-family: &quot;Century Gothic&quot;, sans-serif;"><br>
+<br>
+</span><span style="font-size:12.0pt;line-height:107%;
+font-family:&quot;Century Gothic&quot;,sans-serif;color:#333333">Our records indicate it
+is time for you to renew your&nbsp;Annual Conflict of Interest and Ethics
+Statement.&nbsp;In order to keep your "<b>ACTIVE"&nbsp;</b>volunteer
+status, please log in to the&nbsp;</span><span style="font-size:12.0pt;
+line-height:107%;font-family:&quot;Century Gothic&quot;,sans-serif;color:blue"><a href="https://make-a-wish.force.com/">Make-A-Wish Volunteer Center</a></span><span style="font-size:12.0pt;line-height:107%;font-family:&quot;Century Gothic&quot;,sans-serif;
+color:#333333">&nbsp;to electronically sign the form.<br>
+<br>
+Please ensure that you have completed the form by
+{!Conflict_Of_Interest__c.Expiration_Date__c}&nbsp;. After this date, your
+access to the Volunteer Center will be disabled and you will no longer be able
+to access your current assignments, future opportunities or valuable resources.
+If you prefer to be put on “<b>INACTIVE”</b>&nbsp;status now, please email our team and we are happy to make this adjustment on your
+behalf.<br>
+<br>
+Thank you so much for your attention to this important
+matter. We are grateful for your continued support of our mission and the
+children we serve! Because of you, wishes come true!<br>
+<br>
+Thanks,<br>
+<br>
+{!Conflict_Of_Interest__c.Account_Name__c}<br>
+{!Conflict_Of_Interest__c.Account_Phone__c}<br>
+{!Conflict_Of_Interest__c.Account_Email__c}</span><span style="font-size:12.0pt;line-height:107%"><o:p></o:p></span></p>]]></td>
+</tr>
+</table>

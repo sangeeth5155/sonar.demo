@@ -1,0 +1,12 @@
+<apex:page standardController="Case" extensions="cg.CaseEmailExtension" tabStyle="Case">
+    <cg:AttachmentComponent title="Case Files"
+    customObjectName="Case" customObjectFileName="CaseFile__c"
+    fileNamespacePrefix="cg__"
+    relationshipName="Case__r"
+    legacyIdSupport="true"
+    objectId="{!Case.Id}"
+    privateEnabled="true"
+    inline="true"
+    enableAttachFromSDriveFolders="false"
+    defaultEmailAddress="{!defaultCaseEmail}"/>
+</apex:page>

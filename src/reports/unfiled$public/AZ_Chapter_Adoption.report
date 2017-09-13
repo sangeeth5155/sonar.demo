@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>TITLE</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>PROFILE</field>
+    </columns>
+    <columns>
+        <field>PHONE</field>
+    </columns>
+    <columns>
+        <field>ROLE</field>
+    </columns>
+    <columns>
+        <field>LOGIN_DATETIME</field>
+    </columns>
+    <columns>
+        <field>LOGIN_DATE</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>ACTIVE</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>PROFILE</column>
+            <operator>notEqual</operator>
+            <value>Prospective Volunteer (Login),Active Volunteer (Login)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ROLE</column>
+            <operator>equals</operator>
+            <value>Arizona - Chapter</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EMAIL</column>
+            <operator>notEqual</operator>
+            <value>mawoffshore@gmail.com</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>PROFILE</column>
+            <operator>notEqual</operator>
+            <value>System Administrator</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FULL_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>AZ Chapter Adoption</name>
+    <params>
+        <name>active</name>
+        <value>active</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>User</reportType>
+    <showDetails>false</showDetails>
+    <sortColumn>LOGIN_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>LOGIN_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-04-10</startDate>
+    </timeFrameFilter>
+</Report>

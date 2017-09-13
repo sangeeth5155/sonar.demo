@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>CaseNumber</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>adhoc</type>
+            </approver>
+        </assignedApprover>
+        <description>This process is used to assign the record for approval for the selected users from the wish budget form</description>
+        <label>Assign approval to users</label>
+        <name>Assign_approval_to_users</name>
+    </approvalStep>
+    <description>This approval process is used to submit the wish for approval once the budget form is filled</description>
+    <emailTemplate>Automated_Wish_Granting_Email_Templates/Case_Budget_Approval_Template</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <field>Case.RecordType</field>
+            <operation>equals</operation>
+            <value>Wish</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Budget_is_approved</name>
+            <type>Task</type>
+        </action>
+        <action>
+            <name>Case_Budget_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Budget_needs_to_be_revised</name>
+            <type>Task</type>
+        </action>
+        <action>
+            <name>Case_Budget_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Case_Budget_Submitted</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Case_ET_Budget_Approval_Request</name>
+            <type>Task</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Case:Budget Approval Form</label>
+    <recallActions>
+        <action>
+            <name>Case_Budget_Recalled</name>
+            <type>FieldUpdate</type>
+        </action>
+    </recallActions>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

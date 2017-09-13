@@ -1,0 +1,31 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false">
+     <noscript>For full functionality and the best experience possible of this site it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com/" target="_blank">instructions how to enable JavaScript in your web browser</a>.</noscript>
+    <header role="main-header" class="container">
+        <div class="row">
+            <nav class="col-xs-3 col-xs-offset-9 pre-nav" role="top_menubar">
+                <apex:outputLink value="/secur/logout.jsp">Log Out</apex:outputLink>
+            </nav>
+        </div>
+
+        <div class="row">
+            <apex:outputLink styleClass="center-block maw-logo" value="VolunteerLanding_VF"><span class="sr-only" aria-label="Make-A-Wish">Make-A-Wish&reg;</span></apex:outputLink>
+        </div>
+        <nav class="navbar navbar-dark sub-nav">
+            <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                &#9776;
+            </button>
+            <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar">
+                <ul class="active-user-main">
+                    <li><a href="/VolunteerAssignmentOpportunities_VF">Volunteer Opportunities</a></li>
+                    <li><a href="/MyAssignment_VF">My Assignments</a></li>
+                    <li><a href="/VolunteerActivities_VF">My Tasks</a></li>
+                </ul>
+                <ul class="active-user-subnav">
+                    <li><a href="/VolunteerProfile_VF">Profile</a></li>
+                    <li><a href="/_ui/knowledge/ui/KnowledgeHome">Help</a></li>
+                    <li><a href="/_ui/core/chatter/ui/ChatterPage">Chatter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</apex:page>

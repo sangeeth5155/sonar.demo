@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>It will be used to send an email to Medical Professional for reviewing Diagnosis Verification Form.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Diagnosis Verification Form Email Template Best Physician</name>
+    <style>freeForm</style>
+    <subject>**Signature Required**  Make-A-Wish Medical History Inquiry for {!Lead.FirstName} {!Lead.Hidden_Wish_Child_Last_Initial__c}.</subject>
+    <textOnly>Hi {!Lead.Treating_Medical_Professional_First_Name__c},
+
+Please Review the Diagnosis Verification and submit.
+
+Password : {!Lead.Part_A_Form_Password__c}
+
+Thanks
+Make A Wish America</textOnly>
+    <type>html</type>
+</EmailTemplate>

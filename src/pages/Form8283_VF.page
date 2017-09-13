@@ -1,0 +1,13 @@
+<apex:page standardController="In_Kind_Donation_Reimbursement__c" tabStyle="In_Kind_Donation_Reimbursement__c" >
+ 
+  <apex:outputPanel rendered="{!In_Kind_Donation_Reimbursement__c.Documentation__c =='Will Attach' || In_Kind_Donation_Reimbursement__c.Documentation__c =='Attached' }">
+   <h1 style="color: #205081"><font size="5">You Can Submit this record for approval by clicking Submit for approval button on top of the page</font></h1>
+
+  </apex:outputPanel>
+  
+   <apex:outputPanel rendered="{!OR(In_Kind_Donation_Reimbursement__c.Documentation__c =='Not Available', In_Kind_Donation_Reimbursement__c.Documentation__c =='')}">
+  <br/>    <h1 style="color: #205081"><font size="5">Please Attach all In-kind related receipts or documentation below or select Documentation as 'Not Available' above. Form 8283 can also be attached if provided by donor.</font></h1>
+
+  </apex:outputPanel>
+  
+ </apex:page>

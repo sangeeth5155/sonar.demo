@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Integration User Settings</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Integration User Settings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Rest URL --></label>
+        <name>Rest_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- URL --></label>
+        <name>URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- client secret --></label>
+        <name>client_secret__c</name>
+    </fields>
+    <fields>
+        <label><!-- grant type password client id --></label>
+        <name>grant_type_password_client_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- password --></label>
+        <name>password__c</name>
+    </fields>
+    <fields>
+        <label><!-- username --></label>
+        <name>username__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

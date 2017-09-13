@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used when the lead is converted and &quot; Is We Need To Expedite The Process &quot; from lead is marked as true.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Contact:Rush Wish Reminder &amp; Alerts</name>
+    <style>freeForm</style>
+    <subject>Rush Wish Notification</subject>
+    <textOnly>Hi {!Contact.OwnerFullName}</textOnly>
+    <type>html</type>
+</EmailTemplate>

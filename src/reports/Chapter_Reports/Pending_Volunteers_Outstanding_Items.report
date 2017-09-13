@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>npe5__Affiliation__c$npe5__Contact__c</field>
+    </columns>
+    <columns>
+        <field>npe5__Affiliation__c$npe5__Contact__c.Onboarding_Status__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>npe5__Affiliation__c$npe5__Status__c</column>
+            <operator>equals</operator>
+            <value>Prospective</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Pending Volunteers Outstanding Items</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Affiliations_with_Volunteers__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>npe5__Affiliation__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

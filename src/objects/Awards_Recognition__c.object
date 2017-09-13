@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Award_Name__c</fullName>
+        <description>This Field describe Award Name</description>
+        <externalId>false</externalId>
+        <label>Award Name</label>
+        <picklist>
+            <controllingField>Award_Type__c</controllingField>
+            <picklistValues>
+                <fullName>Airport Greeter of the Year</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Behind the Scenes Award</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Estrella Award</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Helping Hand Award</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Make-A-Wish Value Awards</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mentor of the Year</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Peer on the Spot Recognition</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rising Star Award</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Volunteer of the Month</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Volunteer of the Year</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wish Granter of the Month</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wish Granter of the Year</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wishmaker Award</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completion of Training</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Task Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1st Assignment</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Task Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5th Assignment</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Task Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10th Assignment</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Task Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15th Assignment</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Task Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>20th Assignment</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Task Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>25th Assignment</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Task Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>50th Assignment</fullName>
+                <default>false</default>
+                <controllingFieldValues>Chapter Task Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Collegiate Recognition</fullName>
+                <default>false</default>
+                <controllingFieldValues>Community Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Daily Points of Light Award</fullName>
+                <default>false</default>
+                <controllingFieldValues>Community Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hometown Award</fullName>
+                <default>false</default>
+                <controllingFieldValues>Community Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Make-A-Wish America Volunteer of the Year</fullName>
+                <default>false</default>
+                <controllingFieldValues>Community Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>State Commission on Volunteerism Award</fullName>
+                <default>false</default>
+                <controllingFieldValues>Community Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Presidential Service Award – Bronze</fullName>
+                <default>false</default>
+                <controllingFieldValues>Community Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Presidential Service Award – Gold</fullName>
+                <default>false</default>
+                <controllingFieldValues>Community Recognition</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Presidential Service Award – Silver</fullName>
+                <default>false</default>
+                <controllingFieldValues>Community Recognition</controllingFieldValues>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Award_Type__c</fullName>
+        <description>This describe field type of Award</description>
+        <externalId>false</externalId>
+        <label>Award Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Chapter Recognition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Community Recognition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chapter Task Recognition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Chapter_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This describes the Chapter Name</description>
+        <externalId>false</externalId>
+        <label>Chapter Name</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>Chapter</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Awards &amp; Recognitions</relationshipLabel>
+        <relationshipName>Awards_Recognitions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Comment__c</fullName>
+        <description>General comment given by user</description>
+        <externalId>false</externalId>
+        <label>Comment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Date_Field__c</fullName>
+        <description>This Date field referred for date of award given.</description>
+        <externalId>false</externalId>
+        <label>Date Field</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External id  fields</description>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Import_Id__c</fullName>
+        <description>It describe the import id for the records</description>
+        <externalId>false</externalId>
+        <label>Import Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Migrated_Record__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>It indicates records are migrated one or not.</description>
+        <externalId>false</externalId>
+        <label>Migrated Record</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RE_Award_Name__c</fullName>
+        <description>AWARD_CODE</description>
+        <externalId>false</externalId>
+        <label>RE Award Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RE_Awards_Recognition_Name__c</fullName>
+        <description>AWARD_CODE</description>
+        <externalId>false</externalId>
+        <label>RE Awards &amp; Recognition Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RE_Comment__c</fullName>
+        <description>COMMENTS</description>
+        <externalId>false</externalId>
+        <label>RE Comment</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RE_Date_Field__c</fullName>
+        <description>DATE_AWARD</description>
+        <externalId>false</externalId>
+        <label>RE Date Field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RE_Import_ID__c</fullName>
+        <description>ID, IMPORT_ID</description>
+        <externalId>false</externalId>
+        <label>RE Import ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Volunteer_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This look field used for the getting volunteer contact</description>
+        <externalId>false</externalId>
+        <label>Volunteer Contact</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>Volunteer Contact</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Awards &amp; Recognitions</relationshipLabel>
+        <relationshipName>Awards_Recognitions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Awards &amp; Recognition</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Award_Name__c</columns>
+        <columns>Award_Type__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>AW-{0000}</displayFormat>
+        <label>Awards &amp; Recognition Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Awards &amp; Recognitions</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Read</sharingModel>
+</CustomObject>

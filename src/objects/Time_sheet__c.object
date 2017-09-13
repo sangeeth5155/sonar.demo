@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object is used to track the time spent by the volunteer contact to close the wish or Non Wish &amp; Event</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Date__c</fullName>
+        <description>This field is used to track the date value of when volunteer is entered.</description>
+        <externalId>false</externalId>
+        <label>Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>This field is used to store the value of description entered by the volunteer.</description>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>From_Mulesoft__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>From Mulesoft</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Hours_Hidden__c</fullName>
+        <description>This field is used as hidden field to store the hours value.</description>
+        <externalId>false</externalId>
+        <label>Hours Hidden</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hours_spent__c</fullName>
+        <description>This field is used to track how many hours the volunteer have spent for the volunteer opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter two digits on decimal place.</inlineHelpText>
+        <label>Hours spent</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Migrated_Record__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Migrated Record</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Volunteer_Opportunity__c</fullName>
+        <description>This field is used to store the volunteer opportunity records.</description>
+        <externalId>false</externalId>
+        <label>Volunteer Opportunity</label>
+        <referenceTo>Volunteer_Opportunity__c</referenceTo>
+        <relationshipLabel>Time sheet</relationshipLabel>
+        <relationshipName>Time_sheet</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(YEAR(Date__c ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Year</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Time sheet</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Date__c</columns>
+        <columns>Hours_Hidden__c</columns>
+        <columns>Hours_spent__c</columns>
+        <columns>Volunteer_Opportunity__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>T-{0000}</displayFormat>
+        <label>ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Time sheet</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Volunteer_Opportunity__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Hours_spent__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Date__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Date_Validation</fullName>
+        <active>true</active>
+        <description>Date Validation is used to restrict enter the date from the future date.</description>
+        <errorConditionFormula>Date__c &gt;  TODAY()&amp;&amp; ($Profile.Name  != &apos;Integration&apos;)</errorConditionFormula>
+        <errorDisplayField>Date__c</errorDisplayField>
+        <errorMessage>The Date should not be future date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Time_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>Hours_spent__c &gt; 24 &amp;&amp;  $Profile.Name  != &apos;Integration&apos;</errorConditionFormula>
+        <errorMessage>Hours should be with in 24 hours.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_Time_Sheet</fullName>
+        <availability>online</availability>
+        <description>It is placed on the Active Volunteer Profile instead of directing this page to detail page, it will redirect to parent volunteer opportunity detail page once hit [Save] button.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Time Sheet</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/a11/e?retURL=%2F{!Volunteer_Opportunity__c.Id}&amp;saveURL=%2F{!Volunteer_Opportunity__c.Id}&amp;CF00N3600000OtMjl={!Volunteer_Opportunity__c.Volunteer_Opportunity_Id_Hidden__c}&amp;CF00N3600000OtMjl_lkid={!Volunteer_Opportunity__c.Id}&amp;retURL={!Volunteer_Opportunity__c.Id}</url>
+    </webLinks>
+</CustomObject>

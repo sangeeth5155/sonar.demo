@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Volunteer Orientation &amp; Training</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Volunteer Orientation &amp; Trainings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Hidden Account Email --></label>
+        <name>Account_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Account Name --></label>
+        <name>Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hiddent Account Phone --></label>
+        <name>Account_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Class Offering --></label>
+        <name>Class_Offering__c</name>
+        <relationshipLabel><!-- Volunteer Orientation &amp; Trainings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Completed Date --></label>
+        <name>Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Cancelled --></label>
+        <name>Date_Cancelled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Time --></label>
+        <name>End_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Mulesoft --></label>
+        <name>From_Mulesoft__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Completed Date --></label>
+        <name>Hidden_Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden O&amp;T Id --></label>
+        <name>Hidden_O_T_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- LMS Enrollment Id --></label>
+        <name>LMS_Enrollment_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migrated Record --></label>
+        <name>Migrated_Record__c</name>
+    </fields>
+    <fields>
+        <label><!-- Orientation &amp; Training --></label>
+        <name>Orientation_Training_Hidden__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Completed Date --></label>
+        <name>RE_Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Date --></label>
+        <name>RE_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE End Time --></label>
+        <name>RE_End_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE ID --></label>
+        <name>RE_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Import Id --></label>
+        <name>RE_Import_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Start Time --></label>
+        <name>RE_Start_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registered Date --></label>
+        <name>Registered_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Time --></label>
+        <name>Start_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Orientation</masterLabel>
+            <translation><!-- Orientation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Training</masterLabel>
+            <translation><!-- Training --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- VolunteerHidden Email --></label>
+        <name>VolunteerHidden_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Volunteer Attendance --></label>
+        <name>Volunteer_Attendance__c</name>
+        <picklistValues>
+            <masterLabel>Chapter Cancelled</masterLabel>
+            <translation><!-- Chapter Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Show</masterLabel>
+            <translation><!-- No Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Registered</masterLabel>
+            <translation><!-- Registered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Volunteer Cancelled</masterLabel>
+            <translation><!-- Volunteer Cancelled --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Volunteer --></label>
+        <name>Volunteer__c</name>
+        <relationshipLabel><!-- Volunteer Orientation &amp; Trainings --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Volunteer Orientation &amp; Training Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- There is no available seats for this training --></errorMessage>
+        <name>Restrict_no_available_seats</name>
+    </validationRules>
+    <workflowTasks>
+        <name>O_T_ET_Orientation_Cancelled</name>
+        <subject><!-- O&amp;T ET : Orientation Cancelled --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>O_T_ET_Orientation_Completed</name>
+        <subject><!-- O&amp;T ET : Orientation Completed --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>O_T_ET_Successfully_Registered_for_Orientation</name>
+        <subject><!-- O&amp;T ET : Successfully Registered for Orientation --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>O_T_ET_Successfully_Registered_for_Orientation_VSF</name>
+        <subject><!-- O&amp;T ET : Successfully Registered for Orientation(VSF) --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>O_T_ET_Successfully_Registered_for_Training</name>
+        <subject><!-- O&amp;T ET : Successfully Registered for Training --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>O_T_ET_Successfully_Registered_for_Training_VSF</name>
+        <subject><!-- O&amp;T ET : Successfully Registered for Training (VSF) --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>O_T_ET_Training_Cancelled</name>
+        <subject><!-- O&amp;T ET : Training Cancelled --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>O_T_ET_Training_Completed</name>
+        <subject><!-- O&amp;T ET : Training Completed --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

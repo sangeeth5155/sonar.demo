@@ -1,0 +1,101 @@
+  <style>
+    /* Custom MAWA styles */
+    body {font-size:80%;}
+    body > span main {margin-bottom:em; margin-bottom:5rem;}
+    .container{background:none; width:auto;}
+    body > span header {height:auto;}
+    body > span header ul li {margin-left:auto;}
+    .vcpactivelogin .table-maw td {vertical-align:middle;}
+	.calendarHeader {display:none !important}
+    main {overflow-x:auto; min-height:40rem}
+    #contentWrapper {min-width:100%}
+
+    /* remove sidebar */
+    .detailPage #sidebarCell, .detailPage #sidebarDiv .sidebarModule, .detailPage #sidebarDiv .nestedModule,
+    /* remove header content */
+    h2.pageDescription, .Custom55Tab .pbTitle /* in-kind title*/, .bRelatedList .Custom25Block .relatedListIcon, .allTabTab .Custom25Block .relatedListIcon
+    {display:none}
+    .bRelatedList .Custom25Block .pbTitle h3 {margin:0}
+    .vcpactivelogin form h3 {font-family:inherit;}
+
+    /* resources */
+    .knowledgeTab .dispatcher li.dispatcherItem a {height:auto}
+    .knowledgeTab .kb-center {width:60rem}
+    .zen .filterItem a.filterItemMenu {min-height:2.5rem}
+    #filters_kbOneTab.filters {margin-bottom:.5rem}
+    .filtersContainer, .filterToggleBar a {display:none}
+    .knowledgeTab .dispatcher li.dispatcherItem a {line-height:1rem}
+
+    /* chatter */
+    .zen .zen-highlightBtn {
+      font-family: "FuturaStd-Bold",helvetica,arial, sans-serif;
+      background: #0076d2;
+      background: -moz-linear-gradient(top, #0076d2 0%, #005ea5 100%);
+      background: -webkit-linear-gradient(top, #0076d2 0%, #005ea5 100%);
+      background: linear-gradient(to bottom, #0076d2 0%, #005ea5 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0076d2', endColorstr='#005ea5',GradientType=0 )
+    }
+    .publishercontainer.defaultState #publishersharebutton:hover,
+    .publishercontainer.defaultState #publishersharebutton:active,
+    .publishercontainer.defaultState #publishersharebutton:focus,
+    .publishercontainer.defaultState #publishersharebutton.onHover {
+      background: #0089e9;
+      background: -moz-linear-gradient(top, #0089e9 0%, #006bb6 100%);
+      background: -webkit-linear-gradient(top, #0089e9 0%, #006bb6 100%);
+      background: linear-gradient(to bottom, #0089e9 0%, #006bb6 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0089e9', endColorstr='#006bb6',GradientType=0 )
+    }
+    /* chatter right sidebar*/
+    .chatterTab .recommend .recBox .recElement img, .chatterTab .zen img.chatter-followIcon, .rightContent .recElement .thumbnail {display:none;} /* remove images */
+    .chatterTab .recommend .recBox .zen .zen-mediaExt {display:inline} /* follow link */
+    .rightContent .recommend .recBox .recElement .recInfo {padding-left:0}
+
+    .chatterTab .zen img.chatter-followIcon, .groupmembership .nonmember img,
+    .userProfilePage .leftContent .guestBadge, .userProfilePage .leftContent .guestGroupBadge {background: none}
+
+    .influenceBoxHeader h3 {font-size: inherit}
+    .Custom20Tab .tertiaryPalette {background-color:#006bb6; border-color:#006bb6}
+
+    @media (min-width: 34em){
+      body>span footer figure p, body #contentWrapper>span footer figure p {padding:inherit; padding-top:0}
+    }
+    @media (max-width: 34em){
+        body>#contentWrapper>span header .active-user-main li {margin-left:0}
+    }
+
+  </style>
+    <noscript>For full functionality and the best experience possible of this site it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com/" target="_blank">instructions how to enable JavaScript in your web browser</a>.</noscript>
+    <span>
+      <header role="main-header" class="container">
+          <div class="row">
+              <nav class="col-xs-3 col-xs-offset-9 pre-nav" role="top_menubar">
+                  <a href="/secur/logout.jsp">Log Out</a>
+              </nav>
+          </div>
+
+          <div class="row">
+              <a href="/VolunteerLanding_VF" class="center-block maw-logo"><span class="sr-only" aria-label="Make-A-Wish">Make-A-Wish&reg;</span></a>
+          </div>
+          <nav class="navbar navbar-dark sub-nav">
+              <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">&#9776;</button>
+              <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar">
+                  <ul class="active-user-main">
+                    <li><a href="/VolunteerAssignmentOpportunities_VF">Volunteer Opportunities</a></li>
+                    <li><a href="/MyAssignment_VF" >My Assignments</a></li>
+                    <li><a href="/VolunteerActivities_VF">My Tasks</a></li>
+                  </ul>
+                  <ul class="active-user-subnav">
+                      <li><a href="/VolunteerProfile_VF">Profile</a></li>
+                      <li><a href="/_ui/knowledge/ui/KnowledgeHome">Help</a></li>
+                      <li><a href="/_ui/core/chatter/ui/ChatterPage">Chatter</a> </li>
+                  </ul>
+              </div>
+          </nav>
+      </header>
+    </span>
+
+    <!-- Content Start -->
+    <span>
+      <main role="main" class="container">
+        <div class="row">
+            <section class="col-md-12">

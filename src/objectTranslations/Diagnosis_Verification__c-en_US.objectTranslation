@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Diagnosis Verification</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Diagnosis Verification</value>
+    </caseValues>
+    <fields>
+        <label><!-- Block --></label>
+        <name>Block__c</name>
+    </fields>
+    <fields>
+        <label><!-- Condition Description --></label>
+        <name>Condition_Description__c</name>
+        <relationshipLabel><!-- Diagnosis Verification --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Diagnosis Verification --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Epilepsy Value --></label>
+        <name>Epilepsy_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Eternal Id --></label>
+        <name>Eternal_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group1 --></label>
+        <name>Group1__c</name>
+    </fields>
+    <fields>
+        <label><!-- ICD Code --></label>
+        <name>ICD_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>Lead__c</name>
+        <relationshipLabel><!-- Diagnosis Verification --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Medical Question Answer --></label>
+        <name>Medical_Question_Answer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medical Question --></label>
+        <name>Medical_Question__c</name>
+        <relationshipLabel><!-- Diagnosis Verification --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden PCD-ICD --></label>
+        <name>PCD_ICD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Diagnosis --></label>
+        <name>Primary_Diagnosis__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason for Need --></label>
+        <name>Reason_for_Need__c</name>
+    </fields>
+    <fields>
+        <label><!-- Short Description --></label>
+        <name>Short_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden isEligible --></label>
+        <name>isEligible__c</name>
+    </fields>
+    <layouts>
+        <layout>Diagnosis Verification Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

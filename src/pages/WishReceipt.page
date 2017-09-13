@@ -1,0 +1,49 @@
+<!--/***************************************************************************************************
+Author      : MST Solutions
+Description : This vf page used to download and send for signature of the wish receipt
+***************************************************************************************************** -->
+<apex:page standardController="Case" extensions="WishRelatedLinks_AC" standardStylesheets="false">
+    <style>
+        table { border-collapse: collapse; width: 100%; margin-left:10%; margin-top:5%}
+        th, td { text-align: left; padding: 5px; }
+        tr:nth-child(even){background-color: #f2f2f2}
+        th { background-color: #DFDFDF; color: white;}
+        .tbl td, th { border: 1px solid #CCC; }
+        .align-btn {width: 16%;padding: 15px 0px 10px 0px;}
+        .content-area {padding-top:5%}
+        .btn-style{background-image:none !important;}
+        .error-msg {width:68.5%;list-style-type: none;margin-left:9.6%; margin-top:5%; color:#a94442; background-color:#f2dede; border-color:#ebccd1; border-radius:5px;padding:10px;margin-bottom:-25px}
+    </style>
+    <apex:form id="frm">
+        
+        <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"/>     
+       
+        
+        <table style="width:70%; font-size:12px" cellpadding="10" class="tbl">
+            <apex:messages styleClass="error-msg"/>
+            <tr style="width:100%">
+                <th align="center" colspan="3" style="padding:10px"><div style="font-size: 16px; color: #333;font-family: 'Times New Roman', Times, serif;">Please select Recipient</div></th>
+            </tr>
+            <tr>
+                <td style="width:28px">Action</td>
+                <td>Name</td>
+                <td>Email</td>
+            </tr>
+            <apex:repeat value="{!wrapperList}" var="recList">
+                <tr>
+                    <td><apex:inputCheckbox value="{!recList.selected}"/></td>
+                    <td>{!recList.rel.npe4__RelatedContact__r.Name}</td>
+                    <td>{!recList.rel.npe4__RelatedContact__r.Email}</td>
+                </tr>
+            </apex:repeat>
+            <tr style="width:100%">
+                <td align="center" colspan="3">
+                    <div style="background-color: #f2f2f2; color: white;font-size: 12px;float: right">
+                    <apex:commandButton action="{!downLoadWishReceipt}" value="Download" styleclass="btn-style"/>
+                    <apex:commandButton disabled="{!wraaperSize}" action="{!updateWishChildContact}" value="Send for Signature" styleclass="btn-style" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </apex:form>                 
+</apex:page>

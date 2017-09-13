@@ -1,0 +1,19 @@
+<apex:page standardController="Lead" tabStyle="Lead" showHeader="false"  sidebar="false" > 
+    <cg:FileComponent customObjectName="Lead"  
+        customObjectFileName="Background_Check_File__c" 
+        objectId="{!Lead.Id}" 
+        relationshipName="Parent__r"  
+        objectNamespacePrefix=""  
+        fileNamespacePrefix=""  
+        enableFolders="true"  
+        enableEmail="true"  
+        enableCopyURL="true"  
+        enableDelete="true"  
+        enableDownload="true"  
+        privateEnabled="true"  
+        orderBy="File_Name__c"  
+        order="asc"  
+        loadingSize="100"  
+        title="Lead Files"  
+        defaultEmailAddress=""  />
+</apex:page>

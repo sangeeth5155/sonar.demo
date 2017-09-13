@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>In-Kind Donation &amp; Reimbursement</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>In-Kind Donation &amp; Reimbursement</value>
+    </caseValues>
+    <fields>
+        <label><!-- Acknowledge --></label>
+        <name>Acknowledge__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Line1 --></label>
+        <name>Address_Line1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Line 1 --></label>
+        <name>Address_Line_1_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Adjustment Comments --></label>
+        <name>Adjustment_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount 2 --></label>
+        <name>Ammount_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount 1 --></label>
+        <name>Amount_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount 3 --></label>
+        <name>Amount_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount 4 --></label>
+        <name>Amount_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount 5 --></label>
+        <name>Amount_5__c</name>
+    </fields>
+    <fields>
+        <help><!-- If this is a business donor, appeal should begin with CORP 
+If this is a volunteer donor, appeal should begin with DRPS --></help>
+        <label><!-- Appeal --></label>
+        <name>Appeal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approved By --></label>
+        <name>Approved_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approved Date --></label>
+        <name>Approved_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attachments --></label>
+        <name>Attachments__c</name>
+        <picklistValues>
+            <masterLabel>No- Not Available</masterLabel>
+            <translation><!-- No- Not Available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes- Attached</masterLabel>
+            <translation><!-- Yes- Attached --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>Campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Contact --></label>
+        <name>Company_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+        <picklistValues>
+            <masterLabel>United States</masterLabel>
+            <translation><!-- United States --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Date of Gift --></label>
+        <name>Date_of_Gift__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of Submission --></label>
+        <name>Date_of_Submission__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of request --></label>
+        <name>Date_of_request__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description 1 --></label>
+        <name>Description_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description 2 --></label>
+        <name>Description_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description 3 --></label>
+        <name>Description_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description 4 --></label>
+        <name>Description_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description 5 --></label>
+        <name>Description_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Documentation --></label>
+        <name>Documentation__c</name>
+        <picklistValues>
+            <masterLabel>Not Available</masterLabel>
+            <translation><!-- Not Available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Will Attach</masterLabel>
+            <translation><!-- Will Attach --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- A brief description of what the donation entailed --></help>
+        <label><!-- Donation Description --></label>
+        <name>DonationDsc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expense1 Description --></label>
+        <name>Expense1_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expense2 description --></label>
+        <name>Expense2_description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expense3 Description --></label>
+        <name>Expense3_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expense4 Description --></label>
+        <name>Expense4_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expense5 Description --></label>
+        <name>Expense5_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Export File Name --></label>
+        <name>Export_File_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fund ID --></label>
+        <name>Fund_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- If this is a business donor, gift subtype should begin with CORP 
+If this is a volunteer donor, gift subtype should begin with DRPS --></help>
+        <label><!-- Gift Subtype --></label>
+        <name>Gift_Subtype__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gift Type --></label>
+        <name>Gift_Type__c</name>
+        <picklistValues>
+            <masterLabel>Goods</masterLabel>
+            <translation><!-- Goods --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services</masterLabel>
+            <translation><!-- Services --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Gift Value --></label>
+        <name>Gift_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden IsSubmitted for Approval --></label>
+        <name>HiddenIsSubmittedforApproval__c</name>
+    </fields>
+    <fields>
+        <help><!-- If donation made by a business, please add business name here. If this is a personal donation please add your name below in the &apos;Volunteer Donor&apos; field. --></help>
+        <label><!-- Business Donor --></label>
+        <lookupFilter>
+            <errorMessage><!-- Please check that you have spelled the In Kind Donor name correctly and clicked the lookup magnifying glass to select from the approved list. If no match was found, please create new In Kind Donor account prior to submitting this form. --></errorMessage>
+        </lookupFilter>
+        <name>In_Kind_Donor_Name__c</name>
+        <relationshipLabel><!-- In-Kind Donation &amp; Reimbursement --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Letter Code --></label>
+        <name>Letter_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>Login_Users_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street --></label>
+        <name>Login_users_Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip --></label>
+        <name>Login_users_Zip__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select if you would like check to be payed to you, address details can be edited once saved --></help>
+        <label><!-- Make check payable to me --></label>
+        <name>Make_check_payable_to_me__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migrated Record --></label>
+        <name>Migrated_Record__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pay Method --></label>
+        <name>Pay_Method__c</name>
+        <picklistValues>
+            <masterLabel>Credit Card</masterLabel>
+            <translation><!-- Credit Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Debit Card</masterLabel>
+            <translation><!-- Debit Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net Banking</masterLabel>
+            <translation><!-- Net Banking --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason for Gift Value Change --></label>
+        <name>Reason_for_Gift_Value_Change__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region Code --></label>
+        <name>Region_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State_del__c</name>
+        <picklistValues>
+            <masterLabel>Alabama</masterLabel>
+            <translation><!-- Alabama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alaska</masterLabel>
+            <translation><!-- Alaska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arizona</masterLabel>
+            <translation><!-- Arizona --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arkansas</masterLabel>
+            <translation><!-- Arkansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California</masterLabel>
+            <translation><!-- California --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colorado</masterLabel>
+            <translation><!-- Colorado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connecticut</masterLabel>
+            <translation><!-- Connecticut --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delaware</masterLabel>
+            <translation><!-- Delaware --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>District of Columbia</masterLabel>
+            <translation><!-- District of Columbia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida</masterLabel>
+            <translation><!-- Florida --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia</masterLabel>
+            <translation><!-- Georgia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hawaii</masterLabel>
+            <translation><!-- Hawaii --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Idaho</masterLabel>
+            <translation><!-- Idaho --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illinois</masterLabel>
+            <translation><!-- Illinois --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indiana</masterLabel>
+            <translation><!-- Indiana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iowa</masterLabel>
+            <translation><!-- Iowa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kansas</masterLabel>
+            <translation><!-- Kansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kentucky</masterLabel>
+            <translation><!-- Kentucky --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louisiana</masterLabel>
+            <translation><!-- Louisiana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maine</masterLabel>
+            <translation><!-- Maine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maryland</masterLabel>
+            <translation><!-- Maryland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massachusetts</masterLabel>
+            <translation><!-- Massachusetts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michigan</masterLabel>
+            <translation><!-- Michigan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minnesota</masterLabel>
+            <translation><!-- Minnesota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mississippi</masterLabel>
+            <translation><!-- Mississippi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missouri</masterLabel>
+            <translation><!-- Missouri --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Montana</masterLabel>
+            <translation><!-- Montana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nebraska</masterLabel>
+            <translation><!-- Nebraska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nevada</masterLabel>
+            <translation><!-- Nevada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Hampshire</masterLabel>
+            <translation><!-- New Hampshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey</masterLabel>
+            <translation><!-- New Jersey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Mexico</masterLabel>
+            <translation><!-- New Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York</masterLabel>
+            <translation><!-- New York --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina</masterLabel>
+            <translation><!-- North Carolina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Dakota</masterLabel>
+            <translation><!-- North Dakota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio</masterLabel>
+            <translation><!-- Ohio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oklahoma</masterLabel>
+            <translation><!-- Oklahoma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oregon</masterLabel>
+            <translation><!-- Oregon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania</masterLabel>
+            <translation><!-- Pennsylvania --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rhode Island</masterLabel>
+            <translation><!-- Rhode Island --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Carolina</masterLabel>
+            <translation><!-- South Carolina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Dakota</masterLabel>
+            <translation><!-- South Dakota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennessee</masterLabel>
+            <translation><!-- Tennessee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas</masterLabel>
+            <translation><!-- Texas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utah</masterLabel>
+            <translation><!-- Utah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vermont</masterLabel>
+            <translation><!-- Vermont --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virginia</masterLabel>
+            <translation><!-- Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Washington</masterLabel>
+            <translation><!-- Washington --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Virginia</masterLabel>
+            <translation><!-- West Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wisconsin</masterLabel>
+            <translation><!-- Wisconsin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wyoming</masterLabel>
+            <translation><!-- Wyoming --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Street Name --></label>
+        <name>Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Reimbursement Amount --></label>
+        <name>Total_Reimbursement_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish Expense Transaction Code --></label>
+        <name>Transaction_Code__c</name>
+        <relationshipLabel><!-- In-Kind Donation &amp; Reimbursement --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Unique Wish Identifier --></label>
+        <name>Unique_Wish_Identifier__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor 1 --></label>
+        <name>Vendor_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor 2 --></label>
+        <name>Vendor_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor 3 --></label>
+        <name>Vendor_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor 4 --></label>
+        <name>Vendor_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor 5 --></label>
+        <name>Vendor_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Volunteer Name --></label>
+        <name>Volunteer_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish --></label>
+        <name>Wish__c</name>
+        <relationshipLabel><!-- In-Kind Donation &amp; Reimbursement --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Wish child Name --></label>
+        <name>Wish_child_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip --></label>
+        <name>Zip__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip --></label>
+        <name>Zip_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>login_users_State__c</name>
+        <picklistValues>
+            <masterLabel>Alabama</masterLabel>
+            <translation><!-- Alabama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alaska</masterLabel>
+            <translation><!-- Alaska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>American Samoa</masterLabel>
+            <translation><!-- American Samoa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arizona</masterLabel>
+            <translation><!-- Arizona --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arkansas</masterLabel>
+            <translation><!-- Arkansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Armed Forces Americas</masterLabel>
+            <translation><!-- Armed Forces Americas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Armed Forces Europe</masterLabel>
+            <translation><!-- Armed Forces Europe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Armed Forces Pacific</masterLabel>
+            <translation><!-- Armed Forces Pacific --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California</masterLabel>
+            <translation><!-- California --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colorado</masterLabel>
+            <translation><!-- Colorado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connecticut</masterLabel>
+            <translation><!-- Connecticut --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delaware</masterLabel>
+            <translation><!-- Delaware --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>District of Columbia</masterLabel>
+            <translation><!-- District of Columbia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Federated Micronesia</masterLabel>
+            <translation><!-- Federated Micronesia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida</masterLabel>
+            <translation><!-- Florida --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia</masterLabel>
+            <translation><!-- Georgia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guam</masterLabel>
+            <translation><!-- Guam --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hawaii</masterLabel>
+            <translation><!-- Hawaii --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Idaho</masterLabel>
+            <translation><!-- Idaho --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illinois</masterLabel>
+            <translation><!-- Illinois --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indiana</masterLabel>
+            <translation><!-- Indiana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iowa</masterLabel>
+            <translation><!-- Iowa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kansas</masterLabel>
+            <translation><!-- Kansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kentucky</masterLabel>
+            <translation><!-- Kentucky --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louisiana</masterLabel>
+            <translation><!-- Louisiana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maine</masterLabel>
+            <translation><!-- Maine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marshall Islands</masterLabel>
+            <translation><!-- Marshall Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maryland</masterLabel>
+            <translation><!-- Maryland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massachusetts</masterLabel>
+            <translation><!-- Massachusetts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michigan</masterLabel>
+            <translation><!-- Michigan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minnesota</masterLabel>
+            <translation><!-- Minnesota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mississippi</masterLabel>
+            <translation><!-- Mississippi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missouri</masterLabel>
+            <translation><!-- Missouri --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Montana</masterLabel>
+            <translation><!-- Montana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nebraska</masterLabel>
+            <translation><!-- Nebraska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nevada</masterLabel>
+            <translation><!-- Nevada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Hampshire</masterLabel>
+            <translation><!-- New Hampshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey</masterLabel>
+            <translation><!-- New Jersey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Mexico</masterLabel>
+            <translation><!-- New Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York</masterLabel>
+            <translation><!-- New York --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina</masterLabel>
+            <translation><!-- North Carolina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Dakota</masterLabel>
+            <translation><!-- North Dakota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northern Mariana Islands</masterLabel>
+            <translation><!-- Northern Mariana Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio</masterLabel>
+            <translation><!-- Ohio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oklahoma</masterLabel>
+            <translation><!-- Oklahoma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oregon</masterLabel>
+            <translation><!-- Oregon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Palau</masterLabel>
+            <translation><!-- Palau --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania</masterLabel>
+            <translation><!-- Pennsylvania --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Puerto Rico</masterLabel>
+            <translation><!-- Puerto Rico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rhode Island</masterLabel>
+            <translation><!-- Rhode Island --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Carolina</masterLabel>
+            <translation><!-- South Carolina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Dakota</masterLabel>
+            <translation><!-- South Dakota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennessee</masterLabel>
+            <translation><!-- Tennessee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas</masterLabel>
+            <translation><!-- Texas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US Virgin Islands</masterLabel>
+            <translation><!-- US Virgin Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United States Minor Outlying Islands</masterLabel>
+            <translation><!-- United States Minor Outlying Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utah</masterLabel>
+            <translation><!-- Utah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vermont</masterLabel>
+            <translation><!-- Vermont --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virginia</masterLabel>
+            <translation><!-- Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Washington</masterLabel>
+            <translation><!-- Washington --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Virginia</masterLabel>
+            <translation><!-- West Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wisconsin</masterLabel>
+            <translation><!-- Wisconsin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wyoming</masterLabel>
+            <translation><!-- Wyoming --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If this donation was made personally, please add your name here. --></help>
+        <label><!-- Volunteer Donor --></label>
+        <name>vounteer_Name__c</name>
+        <relationshipLabel><!-- In-Kind Donation &amp; Reimbursement --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>In Kind Donation</layout>
+        <sections>
+            <label><!-- Attachment information --></label>
+            <section>Attachment information</section>
+        </sections>
+        <sections>
+            <label><!-- Attachments --></label>
+            <section>Attachments</section>
+        </sections>
+        <sections>
+            <label><!-- Chapter Staff Only --></label>
+            <section>Chapter Staff Only</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Reimbursement</layout>
+        <sections>
+            <label><!-- Attachment information --></label>
+            <section>Attachment information</section>
+        </sections>
+        <sections>
+            <label><!-- Attachments --></label>
+            <section>Attachments</section>
+        </sections>
+        <sections>
+            <label><!-- Chapter Staff Only --></label>
+            <section>Chapter Staff Only</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Expense Description Section --></label>
+            <section>Expense Description Section</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Mailing Address --></label>
+            <section>Payment Mailing Address</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Volunteer Inkind</layout>
+        <sections>
+            <label><!-- Attachment information --></label>
+            <section>Attachment information</section>
+        </sections>
+        <sections>
+            <label><!-- Attachments --></label>
+            <section>Attachments</section>
+        </sections>
+        <sections>
+            <label><!-- Chapter Staff Only --></label>
+            <section>Chapter Staff Only</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Volunteer Reimbursement</layout>
+        <sections>
+            <label><!-- Attachment information --></label>
+            <section>Attachment information</section>
+        </sections>
+        <sections>
+            <label><!-- Attachments --></label>
+            <section>Attachments</section>
+        </sections>
+        <sections>
+            <label><!-- Chapter Staff Only --></label>
+            <section>Chapter Staff Only</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Expense Description Section --></label>
+            <section>Expense Description Section</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Mailing Address --></label>
+            <section>Payment Mailing Address</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- In-Kind Donation --></label>
+        <name>In_Kind_Donation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Reimbursement --></label>
+        <name>Reimbursement</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please enter either the Business Donor or Volunteer Donor. --></errorMessage>
+        <name>IKR_AccountName_VolunteerName_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You do not have access to edit the approved record --></errorMessage>
+        <name>IKR_Editing_Approved_Record_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You should enter the reason for changing the gift value --></errorMessage>
+        <name>InKind_Gift_Value_Change_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please add the attachment otherwise should select attachment as &apos;No&apos;, or  if attachment is added value should be Yes- Attached --></errorMessage>
+        <name>Inkind_Reimbursement_Attachment_Validati</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Search_Add_In_Kind_Donor --></label>
+        <name>Search_Add_In_Kind_Donor</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Submit_For_Approval --></label>
+        <name>Submit_For_Approval</name>
+    </webLinks>
+</CustomObjectTranslation>

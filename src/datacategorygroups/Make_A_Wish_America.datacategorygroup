@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <label>How To</label>
+            <name>How_To</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Standards of Use</label>
+            <name>Standards_of_Use</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Policy and Procedures</label>
+            <name>Policy_and_Procedures</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <description>This group is used to hold all nationally available resources.</description>
+    <label>Make-A-Wish America</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

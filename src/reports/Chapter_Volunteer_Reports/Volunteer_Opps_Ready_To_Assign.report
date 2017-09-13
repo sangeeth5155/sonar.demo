@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case.Volunteer_Roles__r$Name</field>
+    </columns>
+    <columns>
+        <field>Case.Volunteer_Roles__r$RecordType</field>
+    </columns>
+    <columns>
+        <field>Case.Volunteer_Roles__r$Volunteer_Name__c</field>
+    </columns>
+    <columns>
+        <field>Case$Rush__c</field>
+    </columns>
+    <columns>
+        <field>Case$Rush_Explanation__c</field>
+    </columns>
+    <description>Wishes in Ready to Assign Status. Needing Volunteers</description>
+    <filter>
+        <criteriaItems>
+            <column>Case$Status</column>
+            <operator>equals</operator>
+            <value>Ready to Assign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Volunteer_Roles__r$Chapter_Name__c</column>
+            <operator>equals</operator>
+            <value>Make-A-Wish Arizona</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case$Ready_to_Assign_Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case$Contact</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Volunteer Opps: Ready To Assign</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cases_with_Assigned_Volunteer_opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Case$ClosedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

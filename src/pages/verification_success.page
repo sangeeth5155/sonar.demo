@@ -1,0 +1,77 @@
+<apex:page applyBodyTag="false" sidebar="false" showHeader="false" docType="html-5.0" standardStylesheets="false" title="Make-A-Wish | Diagnosis Verification Form Success">  
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.prospective_assets, 'web/css/core.css')}" media="all" />
+    
+    <body class="vcp">
+        <span>
+            <header role="main-header" class="container">
+                <div class="row">
+                    <nav class="col-xs-3 col-xs-offset-9 pre-nav" role="top_menubar"></nav>
+                </div>
+                <div class="row">
+                    <apex:outputLink styleClass="center-block maw-logo" value=""><span class="sr-only" aria-label="Make-A-Wish">Make-A-Wish&reg;</span></apex:outputLink>    
+                </div>
+                <nav class="navbar navbar-dark sub-nav">
+                    <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar">
+                    </div>
+                </nav>
+            </header>
+        </span>
+        
+        <main role="main" class="container">
+            <div class="row">
+                <h1 class="col-md-12">Diagnosis Verification</h1>
+            </div>
+            <div class="row">
+                <section class="col-md-8">
+                    <p class="col-md-12">Your form has been successfully saved.<br/><br/>
+                        Thank you for your time and contribution to infusing Hope, Strength and Joy into the lives of children, their families and everyone who touches them.</p>
+                </section>
+            </div>
+        </main>
+        <span>
+            <footer class="container-fluid">
+                <div class="container">
+                    <section class="row">
+                        <div class="col-md-4 col-md-push-4">
+                            <a class=" btn-md cnt" href="https://wish.org/wishes/stay-in-touch">
+                                <div class="col-xs-8 rich-text">
+                                    <span class="title">Stay In Touch!</span>
+                                    <span class="detail">Sign up to receive email from Make-A-Wish.</span>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="row legal">
+                        <span class="col-sm-1 col-md-2 col-lg-1"><a class="bbb" href="http://wish.org/about-us/making-a-difference/managing-funds/better-business-bureau"><span class="sr-only">Better Business Bureau</span></a></span>
+                        <div class="col-sm-11 col-md-10 col-lg-11">
+                            <p>&copy;2006-2016 Make-A-Wish Foundation of America<br/>
+                                Make-A-Wish Foundation of America is an Arizona nonprofit corporation exempt from federal income tax under Section 501(c)(3) of the Internal Revenue Code.<br/>
+                                <a href="https://wish.org/content/terms-and-policy">Privacy Policy &amp; Terms</a> | <a href="https://wish.org/content/faq">FAQ</a></p>
+                        </div>
+                    </section>
+                </div>
+            </footer>
+        </span>
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <!-- fallbacks -->
+        <script>window.jQuery || document.write('<script src="{!URLFOR($Resource.prospective_assets, 'web/js/jquery.min.js')}"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="{!URLFOR($Resource.prospective_assets, 'web/js/bootstrap.min.js')}"><\/script>')</script>
+        
+        <!-- bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+        <!-- bootstrap css fallback (appends to head) -->
+        <script>$.each(document.styleSheets, function(i,sheet){ if(sheet.href=='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css') {var rules = sheet.rules ? sheet.rules : sheet.cssRules; if (rules.length == 0) { $('<link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css" />').appendTo('head');} } });</script>
+        <script>
+        (function ($, root, undefined) {
+            // prepend meta/link tags before VF head output
+            $('head').prepend('<meta http-equiv="x-ua-compatible" content="ie=edge" /><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta name="HandheldFriendly" content="True" /><meta name="MobileOptimized" content="480" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" /><meta http-equiv="cleartype" content="on" />');
+        })(jQuery);
+        </script>
+    </body>
+</apex:page>

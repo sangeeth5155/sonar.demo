@@ -1,0 +1,149 @@
+<apex:page controller="DelegatedApproverController_AC" sidebar="false" showHeader="false" id="page" standardStylesheets="false" applyBodyTag="false" docType="html-5.0" cache="false">
+    <title>Approval Process</title>
+    <apex:form >
+        <apex:stylesheet value="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+        <apex:includeScript value="{!URLFOR($Resource.wff_assets, 'wff_assets/js/jquery-2.2.4.min.js')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.prospective_assets, 'web/css/lib/jquery.dataTables.min.css')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.prospective_assets, 'web/js/jquery.dataTables.min.js')}"/>
+        <apex:includeScript value="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"/>
+        <style>
+            body {width:90%; margin: 0px auto; padding:10px;padding: 1rem; border: 1px solid #ececec;margin-top: 5%;margin-bottom: 5%;}
+            #myTable {font-size:10px;font-size: .8em;}
+            .notification {float:left}
+            .element-form {float:left; padding-right:20px}
+            .filterSection {position:relative;padding-top:10px; clear:right}
+            .input-sm {height:25px !important}
+            .form-group {margin-bottom:5px}
+            .form-group label {font-size:11px}
+            th {background-color:#f9f9f9 !important; border-top:1px solid black}
+            .input-xs{ height: 20px; line-height: 1.5; font-size: 12px; padding: 1px 5px; border-radius: 3px; }
+            <!--.select-list {width:200px}-->
+        </style>
+        <body>
+            <div class="row">
+                <nav aria-label="..." class="col-sm-2 col-md-2">
+                    <ul class="pager">
+                        <li class="previous"><a href="#" onClick="goBack();"><span aria-hidden="true">&larr;</span> Go Back</a></li>
+                        <!--<li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>-->
+                    </ul>
+                    
+                </nav>
+                <div class="col-sm-8 col-md-8">
+                    <Center><h3>Approval Process Report</h3></Center>
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-sm-12 col-md-2" Style="margin-top: 1.5%;">
+                    <label for="processName"><b>Apply Filters:</b></label>
+                </div>
+                <div class="form-group col-sm-12 col-md-2">
+                    <label for="processName">Process Name:</label>
+                    <apex:selectList value="{!selectedprocessName}" multiselect="false" size="1" styleClass="form-control input-xs">
+                        <apex:actionSupport event="onchange" action="{!viewProcess}"/>
+                        <apex:selectOptions value="{!processItems}"/>        
+                    </apex:selectList>
+                </div>
+                <div class="form-group col-sm-12 col-md-2">
+                    <label for="chaptername">Chapter Name:</label>
+                    <apex:selectList value="{!selectedChapter}" multiselect="false" size="1" styleClass="form-control input-xs">
+                        <apex:actionSupport event="onchange"   action="{!viewProcess}"/>
+                        <apex:selectOptions value="{!chapterItems}"/>        
+                    </apex:selectList>
+                </div>
+                <div class="form-group col-sm-12 col-md-2">
+                    <label for="status">Status:</label>
+                    <apex:selectList value="{!selectedStatus}" multiselect="false" size="1" styleClass="form-control input-xs">
+                        <apex:actionSupport event="onchange"   action="{!viewProcess}"/>
+                        <apex:selectOptions value="{!statusItems}"/>        
+                    </apex:selectList>
+                </div>
+                <div class="form-group col-sm-12 col-md-2">
+                    <label for="approvedby">Approved By:</label>
+                    <apex:selectList value="{!selectedApprover}" multiselect="false" size="1" styleClass="form-control input-xs">
+                        <apex:actionSupport event="onchange"   action="{!viewProcess}"/>
+                        <apex:selectOptions value="{!approvedByItems}"/>        
+                    </apex:selectList>
+                </div>
+                <div class="form-group col-sm-12 col-md-2">
+                    <label for="assignedto">Assigned To:</label>
+                    <apex:selectList value="{!selectedCompltedBy}" multiselect="false" size="1" styleClass="form-control input-xs">
+                        <apex:actionSupport event="onchange"   action="{!viewProcess}"/>
+                        <apex:selectOptions value="{!approvedByItems}"/>        
+                    </apex:selectList>
+                </div>
+            </div>
+            <hr/>
+            <table id="myTable" class="stripe">  
+                <thead>
+                    <th> Process Name</th>  
+                    <th>Chapter Name</th>
+                    <th>Record Name</th>
+                    <th>Status</th>
+                    <th>Created By</th>
+                    <th>Submitted By</th>
+                    <th>Approved By</th> 
+                    <th>Assigned To</th>         
+                    <th>Submitted Date</th>       
+                    <th>Completed Date</th>       
+                    <th>Object Type</th>
+                    
+                </thead>
+                <tbody>  
+                    <apex:repeat value="{!approvalMap}" var="process">
+                        <apex:outputPanel rendered="{!OR(selectedprocessName == Null,selectedprocessName == '',selectedprocessName == process )}" layout="none">
+                            <tr>
+                                <td><b>{!process}</b></td>
+                                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                            </tr>
+                            <apex:repeat value="{!approvalMap[process]}" var="process2">
+                                <apex:outputPanel rendered="{!AND(OR(selectedChapter == Null,selectedChapter == '',selectedChapter == process2.SubmittedBy.UserRole.Name),OR(process2.Status == selectedStatus,selectedStatus == Null,selectedStatus == ''),OR(if((process2.StepsandWorkItems.Size >0 && process2.StepsandWorkItems[0].Actor.Name == selectedApprover),true,false),selectedApprover == '' ,selectedApprover ==Null),OR(if((process2.StepsandWorkItems.Size >0 && process2.StepsandWorkItems[0].OriginalActor.Name == selectedApprover),true,false),selectedCompltedBy == '' ,selectedCompltedBy == Null))}" layout="none">  
+                                    <tr>   
+                                        <td><label style="display:none">{!process}</label></td>
+                                        <td>{!IF(CONTAINS(process2.SubmittedBy.UserRole.Name, 'Make'),LEFT(process2.SubmittedBy.UserRole.Name, LEN(process2.SubmittedBy.UserRole.Name)-13),'Make-A-Wish '+LEFT(process2.SubmittedBy.UserRole.Name,LEN(process2.SubmittedBy.UserRole.Name)-9))}</td>
+                                        <td><apex:outputLink value="/{!process2.TargetObject.Id}">{!process2.TargetObject.Name}</apex:outputLink></td>
+                                        <td>{!process2.Status}</td>
+                                        <td>{!process2.CreatedBy.Name}</td>
+                                        <td>{!process2.SubmittedBy.Name}</td>                            
+                                        <apex:repeat value="{!process2.StepsandWorkItems}" var="step" >
+                                            <td>{!step.Actor.Name}</td>   
+                                            <td>{!step.OriginalActor.Name}</td>             
+                                        </apex:repeat>  
+                                        <td>
+                                            <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                                <apex:param value="{!process2.CreatedDate}"/>
+                                            </apex:outputText>
+                                        </td>                            
+                                        <td>
+                                            <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                                <apex:param value="{!process2.completedDate}"/>
+                                            </apex:outputText>
+                                        </td>                               
+                                        <td><apex:outputtext value="{!If(Contains(process2.TargetObject.type,'__c'),SUBSTITUTE(LEFT(process2.TargetObject.type, LEN(process2.TargetObject.type)-3),'_',' '),process2.TargetObject.type)}" /></td>
+                                    </tr>
+                                </apex:outputPanel>
+                                
+                            </apex:repeat>
+                        </apex:outputPanel>
+                    </apex:repeat>
+                </tbody>  
+            </table>  
+            
+        </body>
+        <script>
+        $(document).ready(function(){
+            $('#myTable').DataTable( {
+                responsive: true,
+                "columnDefs": [ {
+                    "targets": 'no-sort',
+                    "orderable": false,
+                } ]
+            } );
+        });
+        function goBack() {
+            window.history.back();
+        }
+        </script>
+    </apex:form>
+</apex:page>

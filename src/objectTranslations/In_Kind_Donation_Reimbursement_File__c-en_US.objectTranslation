@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>In Kind Donation &amp; Reimbursement File</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>In Kind Donation &amp; Reimbursement Files</value>
+    </caseValues>
+    <fields>
+        <label><!-- Content Type --></label>
+        <name>Content_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- File Name --></label>
+        <name>File_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- File Path --></label>
+        <name>File_Path__c</name>
+    </fields>
+    <fields>
+        <label><!-- File Size --></label>
+        <name>File_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- File Size in Bytes --></label>
+        <name>File_Size_in_Bytes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Latest Version --></label>
+        <name>Is_Latest_Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Key --></label>
+        <name>Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Folder Id --></label>
+        <name>Parent_Folder_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent --></label>
+        <name>Parent__c</name>
+        <relationshipLabel><!-- In Kind Donation &amp; Reimbursement Files --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Preview Key --></label>
+        <name>Preview_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preview Version Id --></label>
+        <name>Preview_Version_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Private --></label>
+        <name>Private__c</name>
+    </fields>
+    <fields>
+        <label><!-- Thumbnail Key --></label>
+        <name>Thumbnail_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Thumbnail Version Id --></label>
+        <name>Thumbnail_Version_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Version Description --></label>
+        <name>Version_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Version Id --></label>
+        <name>Version_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- WIP --></label>
+        <name>WIP__c</name>
+    </fields>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,29 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">{!Case.OwnerFullName},<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">&nbsp;</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">Please be aware that a Diagnosis Verification form was received on
+{!Case.Diagnosis_Verification_Receive_Date__c} that was designated as a <b><font color="#cc0000">RUSH
+</font></b>wish.<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;"><br></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">Details:</span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">&nbsp;</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">{!Case.Contact}</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">Case #{!Case.CaseNumber}<o:p></o:p></span></p><p class="MsoNormal"><font face="Century Gothic, sans-serif">{!Case.Rush_Explanation__c}</font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">&nbsp;<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">Thank you,<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:12.0pt;font-family:&quot;Century Gothic&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">{!Case.Hidden_Chapter_Name__c}</span><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;"><o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">{!Case.Hidden_Chapter_Phone__c}</span><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;"><o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">{!Case.Hidden_Chapter_Email__c}</span><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;"><o:p></o:p></span></p>]]></td>
+</tr>
+</table>

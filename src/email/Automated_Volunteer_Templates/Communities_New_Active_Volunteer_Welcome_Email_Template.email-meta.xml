@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>It will be used to send an email when prospective user become as active</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Communities:New Active Volunteer Welcome Email Template</name>
+    <style>freeForm</style>
+    <subject>Welcome to the Make-A-Wish Volunteer Center</subject>
+    <textOnly>Hi {!npe5__Affiliation__c.npe5__Contact__c},
+
+Congratulations, you have completed your volunteer on-boarding and have been granted access to the active volunteer community! We are excited to welcome you as a Make-A-Wish® volunteer. To get started, please visit the Make-A-Wish Volunteer Center with the username below.
+
+Username: {!npe5__Affiliation__c.User_Name_Hidden__c}
+
+From there, you can stay informed about everything happening at our chapter. You’ll find:
+
+
+New volunteer opportunities
+Information about the wish-granting process
+Helpful tips
+Ways to get even more involved in helping kids with life-threatening medical conditions
+
+
+You will also be able to review and update your volunteer profile.
+
+As always, please feel free to contact the chapter with any questions, comments, concerns or ideas.
+
+
+Thanks,
+
+{!npe5__Affiliation__c.npe5__Organization__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

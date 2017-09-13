@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>It will be used to send an email alert when the rientation is cancelled</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Orientation:Cancelled Email Template</name>
+    <style>freeForm</style>
+    <subject>Orientation Cancelled</subject>
+    <textOnly>Hi {!Volunteer_Orientation_Training__c.Volunteer__c},
+
+You have successfully cancelled your registration for {!Volunteer_Orientation_Training__c.Orientation_Training_Hidden__c}. Please visit the Make-A-Wish Volunteer Center to register for an alternate orientation and continue the application process.
+
+Thanks,
+
+{!Volunteer_Orientation_Training__c.Account_Name__c}
+{!Volunteer_Orientation_Training__c.Account_Phone__c}
+{!Volunteer_Orientation_Training__c.Account_Email__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,13 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="font-family: arial; margin: 7.5pt 0in 0.0001pt; line-height: normal; background: white;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">Hi&nbsp;{!npe5__Affiliation__c.npe5__Contact__c},<br><br>Congratulations, you have completed your volunteer&nbsp;on-boarding and
+have&nbsp;been granted access to the active volunteer community! We are excited
+to welcome you as a&nbsp;Make-A-Wish<sup>®</sup>&nbsp;volunteer.&nbsp; To get
+started, please visit&nbsp;the&nbsp;<a href="https://make-a-wish.force.com/"><span style="color:blue">Make-A-Wish Volunteer Center</span></a>&nbsp;with the
+username below.<br><br>Username: &nbsp;{!npe5__Affiliation__c.User_Name_Hidden__c}<br></span><span style="font-size: 12pt;"><br><font face="Century Gothic, sans-serif">From there, you can stay informed about everything happening at
+our chapter. You’ll find:</font><font face="Arial, sans-serif"><br></font></span></p><div style="font-family: &quot;Century Gothic&quot;, sans-serif; text-indent: 0px;"><ul><li>New volunteer opportunities</li><li><span style="font-variant-numeric: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;</span><span style="font-size: 12pt; text-indent: -0.25in;">Information about the wish-granting process</span></li><li>Helpful tips</li><li>Ways to get even more involved in helping kids with
+life-threatening medical conditions</li></ul></div><p style="font-family: arial;"></p><p class="MsoNormal" style="margin: 7.5pt 0in 0.0001pt; line-height: normal; background: white;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">You will also be able to review and update your volunteer profile.<br></span><span style="font-size: 12pt;"><br><font face="Century Gothic, sans-serif">As always, please feel free to contact the chapter with any questions,
+comments, concerns or ideas.</font><font face="Arial, sans-serif"><br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif"><br></font><font face="Century Gothic, sans-serif">Thanks,<br></font></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>{!npe5__Affiliation__c.npe5__Organization__c}</span></p>]]></td>
+</tr>
+</table>

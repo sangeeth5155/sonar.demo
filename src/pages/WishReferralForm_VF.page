@@ -1,0 +1,602 @@
+<apex:page controller="WishReferralForm_AC" showHeader="false" applyBodyTag="false" sidebar="false" standardStylesheets="false" docType="html-5.0">
+    <apex:includeScript value="{!URLFOR($Resource.wff_assets, 'wff_assets/js/jquery-2.2.4.min.js')}" />
+    <script>window.jQuery || document.write('<script src="{!URLFOR($Resource.prospective_assets, "web/js/jquery.min.js")}"><\/script>')</script>
+    <apex:includeScript value="{!URLFOR($Resource.wff_assets, 'wff_assets/js/jquery-ui-1.11.3.min.js')}" />
+    <style>form{border:none}</style>
+    <script>
+      // prepend meta/link tags before VF head output
+      $('head').prepend('<meta http-equiv="x-ua-compatible" content="ie=edge" /><meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>Wish Referral Form | Make-A-Wish \u00AE</title><meta name="HandheldFriendly" content="True" /><meta name="MobileOptimized" content="480" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" /><meta http-equiv="cleartype" content="on" id="cleartype" /><meta name="ref-chid" content=""><meta name="ref-mawsite" content="salesforce">');
+      $('head').append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous"><link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css"/><link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.prospective_assets, "web/css/core.css")}" media="all" id="corecss">');
+    </script>
+    <script>
+      // dev/prod url check
+      (function(){
+        var topLoc = top.location.href,
+              prod = /^(http[s]?:\/\/wish\.secure\.force\.com)([\/].*)+$/i.test(topLoc);
+        if (prod){
+          //prevent standalone
+          window.location = "https://wish.org/refer-a-child/referral-inquiry-form";
+        }
+      })();
+      </script>
+      <script>
+      //script to pull chid argument from the URL
+      function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+          var pair = vars[i].split("=");
+          if (pair[0] == variable) {
+            return pair[1];
+          }
+        }
+        return (false);
+      }
+      //populate meta tags based on chid argument
+      var refchid = getQueryVariable('chid');
+      $('meta[name=ref-chid]').attr('content', refchid);
+    </script>
+    <!-- maw satellite script -->
+    <!-- <script src="//ssl.wish.org/satellite/staging/edec8212b3b96d293794554858d0cc86077c139d/satelliteLib-1ec2b614cbc9d2632dabfb246ea08ebad993f205-staging.js"></script> -->
+    <script src="//ssl.wish.org/satellite/edec8212b3b96d293794554858d0cc86077c139d/satelliteLib-1ec2b614cbc9d2632dabfb246ea08ebad993f205.js"></script>     
+    <script type="text/javascript" src="//ssl.wish.org/javascript/iframeResizer.contentWindow.min.js"></script>
+    <style>.dateOnlyInput input {width:100% !important} #datePicker, .dateFormat {display:none! important} .date-input {background-color:initial} .ui-autocomplete {overflow-y: scroll;max-height: 270px} .displayNone, .medicalProvider, .other, .repeatMedProf, .shownOnSiblingsYes, .sibInfo {display: none} .shownOnYes {position: relative} .shownOnYes.fam-aware-overlay::after {content: ""; position: absolute; top: 0; left: 0; background: rgba(255,255,255, .8); min-width: 100%; min-height: 100%; z-index: 2} .shownOnYes.fam-aware-overlay: hover::after {content: "Please answer the required fields above to proceed"; position: absolute; top: 0; left: 0; color: #666; line-height: 5rem; text-align: center} .repeatMedProf label {padding-right: 10px} .displayBlock {display: block} .ui-autocomplete-loading {background: url(" {! URLFOR($Resource.WishReferralStyle, 'WishReferralStyle/img/loader-circle-blue.gif')} ") right .5rem center no-repeat! important; background-size: 1rem 1rem! important} .placeHolder {font-style: italic} .vfHelpText a {position: relative} .vfHelpText a span {display: none} .vfHelpText a: hover span {display: block; position: absolute; right: -15em; width: 15em; z-index: 100; border: 1px solid; background-color: #FEFDB9; color: #000} .pop-wrap {position: fixed; top: 20%; left: 50%; z-index: 9999; width: 90%; max-width: 35rem} .custPopup {font-family: arial,helvetica,sans-serif; position: relative; background: #fff; border: 1px solid #006bb6; border-radius: .25rem; top: -20%; left: -50%; padding: 1rem; width: 100%} .pop-wrap-main-message {top: 1%} .custPopup-main-message {top: 0; padding: 0 1rem} .popupBackground {position: fixed; background: rgba(0,0,0, .4); width: 100%; height: 100%; top: 0; left: 0; z-index: 9998} .labelCol {width: 180px} .field-word-seperator, .r2c {position: relative; width: 100%} .r2c {padding: 1rem} .r2c input {margin-right: 1rem} .r2c label {font-family: FuturaStd-Book,"Century Gothic",Arial,sans-serif; float: left; background: #fff; background: -moz-linear-gradient(top,rgba(255,255,255,1) 0,rgba(243,243,243,1) 100%); background: -webkit-linear-gradient(top,rgba(255,255,255,1) 0,rgba(243,243,243,1) 100%); background: linear-gradient(to bottom,rgba(255,255,255,1) 0,rgba(243,243,243,1) 100%); filter: progid:  DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f3f3f3', GradientType=0); border: .1rem solid #ccc; border-radius: .2rem; box-shadow: .05rem .05rem .1rem #ccc; height: 2rem; padding: .5rem; margin-bottom: .2rem; font-size: .7rem; text-transform: capitalize} .ui-widget-content li {padding-left: .5rem} input[id*=diagnosisTextId][disabled=""],input[id*=searchDiagnosisId][disabled=""] {background: #eee; color: #bbb; cursor: not-allowed} .field-word-seperator {font-family: arial; font-size: .7rem; display: block; border-top: 1px dotted #747678; color: #747678} .modal-footer, .modal-header, .table tr: nth-child(1) td {border-top: none} .field-word-seperator::after {content: "OR"; background: #fff; padding: 0 1rem; position: absolute; left: 43%; top: -.6rem; text-align: center; z-index: 1} .form-group-seperator {margin-bottom: 2rem} .age-text {position: absolute; bottom: .6rem; right: 2rem} .option-disabled {cursor: not-allowed! important; color: #bbb; opacity: 1! important; padding: .5rem 0! important; border-bottom: 1px dashed #bbb; margin-bottom: 1rem! important; margin-left: 1rem! important; font-size: .8rem; width: 50%} h1.modal-title {text-align: center; padding-bottom: 0} .modal-header .close {margin-top: -4rem} .modal-footer {display: flex; justify-content: center} .modal-footer .btn-md, .nav-sub-inner .btn-md {max-width: 10rem} .modal-footer .btn-md {min-width: 10rem} fieldset.connected, fieldset.connected-haslegend {background:#fff; border-top:1px dashed #ccc; margin-top:-1px; position: relative;} /* connected in relation to fieldset */ fieldset.connected-haslegend>legend {float:left; padding-top:0; padding-bottom:0; margin-bottom:0;} fieldset.connected-haslegend>.info {margin-top: 0} fieldset.connected a {font-size: .8rem} form a.text-muted {color:#006bb6 !important} form a.text-muted:hover {color:#0275d8 !important} .guardian-2 {border-top-style:dashed} a.remove-block {position:absolute; top:1rem; right:1rem; z-index:1}</style>
+    <body>
+        <apex:form id="frm" styleClass="portal inquiry">
+            <apex:pagemessages id="msg"/>
+            <apex:outputpanel rendered="{!displayAckMsg == false}" id="panel" >
+                <fieldset>
+                    <apex:inputText value="{!refChildFormParent}" styleClass="chid-value" style="display:none" />
+                    <legend>Relationship to Child</legend>
+                    <div class="row" style="margin-bottom:2rem">
+                        <div class="form-group r2c mySelect23 radioClickable radioSection">
+                            <!--<apex:actionRegion >-->
+                            <apex:selectRadio value="{!currLead.Relationship_to_child__c}" layout="pageDirection">
+                                <apex:selectOptions value="{!Relationships}"/>
+                            </apex:selectRadio>
+                            <!--  </apex:actionRegion>-->
+                        </div>
+                    </div>
+                    <div class="form-group row" style="display: none;">
+                        <label class="col-sm-3">Is Family Aware of Referral?</label>
+                        <div class="col-sm-6">
+                            <apex:inputField value="{!currLead.is_Family_Aware_of_Referral__c}" styleClass="form-control col-xs-12 c-select familyAware" id="aware-of-referral">
+                                <!-- <apex:actionSupport event="onchange" action="{!disPlayChildForm}" reRender="panel"/> -->
+                            </apex:inputField>
+                            <span class="familyAwareError text-muted"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row medicalProvider">
+                        <label class="col-sm-3">Medical Provider Category</label>
+                        <div class="col-sm-6">
+                            <apex:inputField value="{!currLead.Medical_Provider_Category__c}" styleClass="form-control col-xs-12 col-sm-12 c-select medProvCat" id="medprov" />
+                        </div>
+                    </div>
+                    <div class="form-group row other">
+                        <label class="col-sm-3">Provide Your Relationship to the Child</label>
+                        <div class="col-sm-6">
+                            <apex:inputField value="{!currLead.Other_Relationship_To_Child__c}" styleClass="form-control col-xs-12 col-sm-12" id="r2cManualInput" html-placeholder="example: Friend, Friend of family"/>
+                        </div>
+                    </div>
+                    <div class="form-group row medprovcat-other-wrap">
+                        <label class="col-sm-3">Other Medical Provider Category</label>
+                        <div class="col-sm-6">
+                           <apex:inputField styleClass="form-control medprovcat-other" html-maxlength="100" html-placeholder="Please specify other medical provider category" value="{!currLead.Other_Medical_Provider_Category__c}" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3">How did you hear about Make-A-Wish?</label>
+                        <div class="col-sm-6">
+                            <apex:inputField value="{!currLead.How_Did_you_hear_about_Make_A_Wish__c}" styleClass="form-control col-xs-12 c-select required" id="referred-by" />
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!--- For Yes Family Aware -->
+                <div class="shownOnYes fam-aware-overlay">
+
+                    <!-- referrer info -->
+                    <fieldset>
+                        <legend>Referrer Information</legend>
+                        <div class="referrerInfo">
+                            <div class="refToParent">
+                                <div class="refToRepeat">
+                                    <div class="form-group row">
+                                        <div class="col-sm-3"><label>Name</label></div>
+                                        <div class="col-sm-6">
+                                            <apex:inputText value="{!currLead.Referrer_FirstName__c}" styleClass="form-control name-group rfirstname" html-placeholder="First Name" id="rfirstname" maxlength="40" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-3"><label class="sr-only" aria-label="last_name">Last Name</label></div>
+                                        <div class="col-sm-6 lastname">
+                                            <apex:inputText value="{!currLead.Referrer_Last_Name__c}" styleClass="form-control name-group rlastname" html-placeholder="Last Name" id="rlastname" maxlength="40"  />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-3"><label>Phone</label></div>
+                                        <div class="col-sm-6">
+                                            <apex:inputText value="{!currLead.Referrer_Phone__c}" styleClass="form-control rphone phonemask numbers-only phonechk-std" html-placeholder="(000) 000-0000" id="rphone" html-pattern=".{10,14}" maxlength="14" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-3"><label>Email</label></div>
+                                        <div class="form-group col-sm-6">
+                                            <apex:inputText value="{!currLead.Referrer_Email__c}" styleClass="form-control remail email-std" html-placeholder="your_email@domain.com" id="remail" maxlength="40" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-3"><label>City</label></div>
+                                    <div class="col-sm-6">
+                                        <apex:inputText value="{!currLead.Referrer_City__c}" styleClass="form-control rcity alpha-only" html-placeholder="City" id="rcity" maxlength="50"  />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-3"><label>Postal Code</label></div>
+                                    <div class="col-sm-6">
+                                        <apex:inputText value="{!currLead.Referrer_Zip__c}" styleClass="form-control rpostalcode postalcode numbers-only" html-placeholder="00000" maxlength="5" id="rpostalcode"  />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- wish child info -->
+                    <fieldset>
+                        <legend>Wish Child Information</legend>
+                        <div class="childToRepeat">
+
+                            <div class="form-group row fullname">
+                                <div class="col-sm-3"><label aria-labelledby="first_name">Name</label></div>
+                                <div class="col-xs-8 col-sm-4">
+                                    <apex:inputText value="{!currLead.FirstName}" styleClass="form-control name-group wcfirstname" id="wcfirstname" html-placeholder="First Name" maxlength="40"  />
+                                </div>
+                                <div class="col-xs-4 col-sm-2">
+                                    <label class="sr-only" aria-label="Middle Name">Middle Initial</label>
+                                    <apex:inputText value="{!currLead.Child_Middle_Initial__c}" styleClass="form-control middleinitial" maxlength="1" id="wcmiddleinitial" html-placeholder="M.I." title="Middle Initial" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label class="sr-only" aria-label="last_name">Last Name</label></div>
+                                <div class="col-sm-6 lastname">
+                                    <apex:inputText value="{!lastName}" styleClass="form-control name-group wclastname" html-placeholder="Last Name" id="wclastname" maxlength="40"  />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-3"><label>Gender</label></div>
+                            <div class="col-sm-6">
+                                <apex:inputField value="{!currLead.Gender__c}" id="wcgender" styleClass="form-control col-xs-12 c-select chosen" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-3"><label>Age</label></div>
+                            <div class="col-sm-6">
+                                <apex:inputField value="{!currLead.Child_Age__c}" id="wcage" styleClass="form-control col-xs-12 c-select childAge wcage">
+                                    <!--  <apex:actionSupport event="onchange" action="{!birthDateValidation}" />-->
+                                </apex:inputField>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-3"><label>Date of Birth</label></div>
+                            <div class="col-sm-6">
+                                <apex:inputField value="{!currLead.DOB__c}" styleClass="form-control date-std" id="wcdob" html-placeholder="mm/dd/yyyy" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3">Has this child ever received a prior wish from Make-A-Wish or any other wish-granting organizations?</label>
+                            <div class="col-sm-6">
+                                <apex:selectList value="{!currLead.Has_this_child_ever_received_prior_wish__c}" size="1" multiselect="false" styleClass="form-control col-xs-12 c-select chosen" >
+                                    <apex:selectOption itemLabel="--None--" itemValue="" />
+                                    <apex:selectOption itemLabel="Yes" itemValue="Yes" />
+                                    <apex:selectOption itemLabel="No" itemValue="No" />
+                                </apex:selectList>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <apex:outputPanel id="family">
+                        <!-- family info -->
+                        <fieldset>
+                            <legend>Family Information <span class="text-muted">Parent or Guardian 1</span></legend>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label>Relationship to Child</label></div>
+                                <div class="col-sm-6">
+                                    <apex:selectList size="1" id="p-r2c-1" value="{!currLead.Parent_Relationship_to_Child__c}" styleClass="form-control col-xs-12 c-select">
+                                        <apex:selectOptions value="{!RelationshipsToChild}" />
+                                    </apex:selectList>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label>Name</label></div>
+                                <div class="col-sm-6">
+                                    <apex:inputText value="{!currLead.Parent_First_Name__c}" styleClass="form-control name-group pfirstname alpha-only" id="pfirstname" html-placeholder="First Name" maxlength="40" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label class="sr-only" aria-label="last_name">Last Name</label></div>
+                                <div class="col-sm-6 lastname">
+                                    <apex:inputText value="{!currLead.Parent_Last_Name__c}" styleClass="form-control name-group plastname alpha-only" html-placeholder="Last Name" id="plastname" maxlength="40"  />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label>Address</label></div>
+                                <div class="col-sm-6">
+                                    <apex:inputText value="{!currLead.Street}" styleClass="form-control" html-placeholder="0000 NE 00 Ave" id="paddress" maxlength="40" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label>City</label></div>
+                                <div class="col-sm-6">
+                                    <apex:inputText value="{!currLead.City}" styleClass="form-control pcity alpha-only" html-placeholder="City" id="pcity" maxlength="40"  />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label>State</label></div>
+                                <div class="col-sm-6">
+                                    <apex:selectList size="1" id="p-state" value="{!currState}" styleClass="form-control col-xs-12 c-select state" >
+                                        <apex:selectOptions value="{!States}" />
+                                    </apex:selectList>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label>Postal Code</label></div>
+                                <div class="col-sm-6">
+                                    <apex:inputText value="{!currLead.PostalCode}" styleClass="form-control ppostalcode postalcode numbers-only" html-placeholder="00000" maxlength="5" id="ppostalcode"  />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label aria-labelledby="email address">Email Address</label></div>
+                                <div class="col-sm-6">
+                                    <apex:inputText value="{!currLead.Email}" styleClass="form-control pemailaddress email-std" id="pemailaddress" maxlength="50" html-placeholder="guardian_email@domain.com"  />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label aria-labelledby="phone number">Primary Number</label></div>
+                                <div class="col-sm-6">
+                                    <apex:inputText value="{!currLead.Phone}" styleClass="form-control pphone phonemask numbers-only" id="pphonenumber" html-pattern=".{10,15}" maxlength="14" html-placeholder="(000) 000-0000" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3">What is the family’s primary spoken language?</label>
+                                <div class="col-sm-6">
+                                    <apex:inputField value="{!currLead.What_is_the_family_s_primary_spoken_lang__c}" id="plang" styleClass="form-control col-xs-12 c-select chosen"/>
+                                </div>
+                            </div>
+                            <apex:outputPanel id="rr">
+                                <apex:actionRegion >
+                                    <div class="form-group row">
+                                        <div class="col-sm-3"><label>Number of Siblings</label></div>
+                                        <div class="col-sm-6">
+                                            <apex:selectList value="{!currLead.of_Siblings__c}" id="nSib" size="1" multiselect="false" styleClass="form-control col-xs-12 c-select chosen">
+                                                <apex:selectOptions value="{!NoOfSiblings}" />
+                                                <apex:actionSupport event="onchange" action="{!disPlayChildForm}" reRender="table"/>
+                                            </apex:selectList>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row sibInfo">
+                                        <apex:outputPanel id="table">
+                                        <apex:outputPanel rendered="{!currLead.of_Siblings__c != '0' && currLead.of_Siblings__c != '' && currLead.of_Siblings__c != 'Unknown'}">
+                                          <label class="col-md-12">Sibling Information</label>
+                                        </apex:outputPanel>
+
+
+                                        <div class="col-md-12 sib-tablewrap">
+                                            <apex:dataTable value="{!SiblingList}" var="currsibling"  styleClass="table table-maw table-hover">
+                                                <apex:column >
+                                                    <apex:inputText value="{!currsibling.fName}" styleClass="form-control" html-placeholder="First Name" id="psibfirstname" />
+                                                </apex:column>
+                                                <apex:column >
+                                                    <apex:inputText value="{!currsibling.lName}" styleClass="form-control" html-placeholder="Last Name" id="psiblastname" />
+                                                </apex:column>
+                                                <apex:column >
+                                                    <apex:inputText value="{!currsibling.age}" styleClass="form-control" html-placeholder="Age" id="psibage" />
+                                                </apex:column>
+                                            </apex:dataTable>
+                                        </div>
+                                       </apex:outputPanel>
+
+                                    </div>
+                                </apex:actionRegion>
+                            </apex:outputPanel>
+
+                        </fieldset>
+
+                        <fieldset class="connected">
+                           <div class="form-group row">
+                            <div class="col-md-12"><a href="#" class="text-muted add-guardian">+ Add Parent/Legal Guardian</a></div>
+                          </div>
+                        </fieldset>
+
+                        <!-- parent/guardian 2 -->
+                        <fieldset class="guardian-2 connected-haslegend fadein-alert">
+                            <legend><span class="text-muted">Parent or Guardian 2</span></legend>
+                            <a href="#" class="text-muted remove-block">- Remove</a>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label>Relationship to Child</label></div>
+                                <div class="col-sm-6">
+                                    <apex:selectList size="1" id="p-r2c-2" value="{!currLead.Additional_Parent_Relationship_to_Child__c}" styleClass="form-control col-xs-12 c-select r2c-select">
+                                        <apex:selectOptions value="{!RelationshipsToChild}" />
+                                    </apex:selectList>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label>Name</label></div>
+                                <div class="col-sm-6">
+                                    <apex:inputText value="{!currLead.Additional_Parent_First_Name__c}" styleClass="form-control name-group pfirstname alpha-only" id="pfirstname2" html-placeholder="First Name" maxlength="40" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label class="sr-only" aria-label="last_name">Last Name</label></div>
+                                <div class="col-sm-6 lastname">
+                                    <apex:inputText value="{!currLead.Additional_Parent_Last_Name__c}" styleClass="form-control name-group plastname alpha-only" html-placeholder="Last Name" id="plastname2" maxlength="40"  />
+                                </div>
+                            </div>
+                            <div class="form-group row clone-guardian-1">
+                                <div class="col-sm-12 offset-sm-3">
+                                    <label class="c-input c-checkbox">
+                                        <input type="checkbox"/>
+                                        <span class="c-indicator"></span>
+                                        Same Address as Parent or Guardian 1
+                                    </label>
+                                </div>
+                            </div>
+                            <span class="guardian-2-address-fields">
+                              <div class="form-group row">
+                                  <div class="col-sm-3"><label>Address</label></div>
+                                  <div class="col-sm-6">
+                                      <apex:inputText value="{!currLead.Additional_Parent_Street__c}" styleClass="form-control" html-placeholder="0000 NE 00 Ave" id="paddress2" maxlength="40" />
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <div class="col-sm-3"><label>City</label></div>
+                                  <div class="col-sm-6">
+                                      <apex:inputText value="{!currLead.Additional_Parent_City__c}" styleClass="form-control pcity alpha-only" html-placeholder="City" id="pcity2" maxlength="40"  />
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <div class="col-sm-3"><label>State</label></div>
+                                  <div class="col-sm-6">
+                                      <apex:selectList size="1" id="p-state2" value="{!additionalParentState }" styleClass="form-control col-xs-12 c-select state">
+                                          <apex:selectOptions value="{!States}" />
+                                      </apex:selectList>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <div class="col-sm-3"><label>Postal Code</label></div>
+                                  <div class="col-sm-6">
+                                      <apex:inputText value="{!currLead.Additional_Parent_Postal_Code__c}" styleClass="form-control ppostalcode postalcode numbers-only" html-placeholder="00000" maxlength="5" id="ppostalcode2"  />
+                                  </div>
+                              </div>
+                            </span>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label aria-labelledby="email address">Email Address</label></div>
+                                <div class="col-sm-6">
+                                    <apex:inputText value="{!currLead.Additional_Parent_Email__c}" styleClass="form-control pemailaddress email-std" id="pemailaddress2" maxlength="50" html-placeholder="guardian_email@domain.com"  />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label aria-labelledby="phone number">Primary Number</label></div>
+                                <div class="col-sm-6">
+                                    <apex:inputText value="{!currLead.Additional_Parent_Phone__c}" styleClass="form-control pphone phonemask numbers-only" id="pphonenumber2" html-pattern=".{10,15}" maxlength="14" html-placeholder="(000) 000-0000" />
+                                </div>
+                            </div>
+                        </fieldset>
+
+                    </apex:outputPanel>
+
+                    <!-- medical and physician info -->
+                    <fieldset>
+                        <legend>Medical Information</legend>
+                        <div class="form-group row primaryDiagnosis">
+                            <div class="col-sm-3"><label>Primary Diagnosis</label></div>
+                            <div class="col-sm-6">
+                                <apex:inputText id="searchDiagnosisId" styleClass="placeHolder form-control" html-placeholder="example: Malignant Neoplasm" />
+                                <apex:inputText styleClass="searchDiagnosisId" value="{!selectedDiagnosis}" style="display:none"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-6"><span class="field-word-seperator"></span></div>
+                        </div>
+                        <div class="form-group form-group-seperator row">
+                            <div class="col-sm-3"><label>ICD Code</label></div>
+                            <div class="col-sm-6">
+                                <apex:inputText id="diagnosisTextId"  styleClass="diagnosisText placeHolder form-control" html-placeholder="example: C00" />
+                                <apex:outputText id="shortTextId" styleClass="shortTextId text-muted"/>
+                                <apex:inputText styleClass="diagnosisFilter" value="{!diagnosisFilter}" style="display:none"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3">Is there a medical reason why we need to move quickly?</label>
+                            <div class="col-sm-6">
+                                <apex:selectList value="{!currLead.Any_medical_reason_for_moving_quickly__c}" size="1" multiselect="false" styleClass="form-control col-xs-12 c-select chosen" id="urgency">
+                                    <apex:selectOption itemLabel="Please Select" itemValue="" html-selected="true" html-disabled="true" />
+                                    <apex:selectOption itemLabel="Yes" itemValue="Yes" />
+                                    <apex:selectOption itemLabel="No" itemValue="No" />
+                                </apex:selectList>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Physician Information</legend>
+
+                        <div class="form-group row repeatMedProf">
+                            <div class="col-sm-12 offset-sm-3">
+                                <label class="c-input c-checkbox">
+                                    <apex:inputCheckbox value="{!copyReferrerInfo}"/>
+                                    <span class="c-indicator"></span>
+                                    Same as Referrer Information
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="medToRepeat">
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label>Name</label></div>
+                                <div class="col-sm-6">
+                                    <apex:inputText value="{!currLead.Treating_Medical_Professional_First_Name__c}" styleClass="form-control name-group mfirstname" html-placeholder="First Name" id="mpfirstname" maxlength="40" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label class="sr-only" aria-label="last_name">Last Name</label></div>
+                                <div class="col-sm-6 lastname">
+                                    <apex:inputText value="{!currLead.Treating_Medical_Professional_Last_Name__c}" styleClass="form-control name-group mlastname" html-placeholder="Last Name" id="mplastname" maxlength="40"  />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label>Phone</label></div>
+                                <div class="col-sm-6">
+                                    <apex:inputText value="{!currLead.Treating_Medical_Professional_Phone__c}" styleClass="form-control mphone phonemask numbers-only" html-placeholder="(000) 000-0000" id="mpphone" html-pattern=".{10,14}" maxlength="10" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3"><label>Email</label></div>
+                                <div class="form-group col-sm-6">
+                                    <apex:inputText value="{!currLead.Treating_Medical_Professional_Email__c}" styleClass="form-control memail email-std" html-placeholder="physician_email@domain.com" id="mpemail" maxlength="40" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3">Hospital or Treatment Facility</label>
+                                <div class="col-sm-6">
+                                    <apex:inputText value="{!currLead.Hospital_Treatment_Facility_Treating__c}" styleClass="form-control" id="mphospitalname" maxlength="50" html-placeholder="Hospital/Facility Name" />
+                                </div>
+                            </div>
+                        </div>
+                        </fieldset>
+                        <fieldset class="connected main-office-contact">
+                            <div class="form-group row">
+                                <label class="col-sm-3">Please provide the best person in the Physician's Office to contact if different than the physician</label>
+                                <div class="col-sm-6">
+                                    <apex:inputText value="{!currLead.Best_Contact_for_Physician_First_Name__c}" styleClass="form-control" id="mpmaincontactfirstname" maxlength="50" html-placeholder="First Name" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label class="sr-only">Last Name</label></div>
+                                <div class="col-sm-6">
+                                    <apex:inputText value="{!currLead.Best_Contact_for_Physician_Last_Name__c}" styleClass="form-control" id="mpmaincontactlastname" maxlength="50" html-placeholder="Last Name" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-3"><label class="sr-only">Email</label></div>
+                                <div class="col-sm-6">
+                                    <apex:inputText value="{!currLead.Best_contact_for_Physician_Email__c}" styleClass="form-control bemail email-std notqualto" html-placeholder="email@domain.com" id="mpmaincontactemail" maxlength="40" />
+                                </div>
+                            </div>
+                    </fieldset>
+                    <fieldset class="fs">
+                        <legend>Form Security</legend>
+                        <div class="form-group row">
+                            <div class="col-sm-3"><label for="form-security" aria-label="form-security">Security Checkbox</label></div>
+                            <div class="col-sm-6">
+                                <label class="c-input c-checkbox" for="b98084695645e0e89ec5a2f3c41f0a2d">
+                                    <input type="checkbox" id="b98084695645e0e89ec5a2f3c41f0a2d" name="b98084695645e0e89ec5a2f3c41f0a2d" />
+                                    <span class="c-indicator"></span>
+                                    If you are human, <strong>do not</strong> check this.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-3"><label for="2-b98084695645e0e89ec5a2f3c41f0a2d">Security Input</label></div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control 2-b98084695645e0e89ec5a2f3c41f0a2d" maxlength="50" name="udh&6**33#" id="2-b98084695645e0e89ec5a2f3c41f0a2d" placeholder="If you see this, you might be a bot or you have your JavaScript disabled" value="udh&6**33#" />
+                                <small class="text-muted">Do not change this field</small>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="footer">
+                        <apex:commandbutton value="Submit" action="{!createLead}" styleClass="submitBtn col-xs-12 col-sm-4 col-sm-4 col-sm-push-8 push-sm-8 btn-md submit"/>
+                    </fieldset>
+                </div>
+
+            </apex:outputpanel>
+            <apex:outputpanel rendered="{!displayAckMsg == True}">
+                <div class="col-sm-12" style="margin-top:2rem">
+                  <p>Thank you for submitting a referral. Chapter staff will be in contact soon if additional information is required.</p>
+                </div>
+            </apex:outputpanel>
+
+
+            <apex:inputText value="{!currLead.Relationship_to_child__c}" styleClass="Relchild sr-only" />
+        </apex:form>
+
+        <div class="modal fade"  id="warningModal" data-target="#warningModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="Warning Modal" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title" id="exit-form">Age Requirement</h1>
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button> -->
+              </div>
+              <div class="modal-body">
+                <p class="text-muted col-xs-12 alertMsg" style="text-align:center"></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" style="font-family:'FuturaStd-Bold', 'Century Gothic', Arial, sans-serif; color:#fff; border:none; text-transform:uppercase; height:4rem;" class="btn-md" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Continue</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="age13under-modal" tabindex="-1" data-target="#age13under-modal" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="Under 13 Years" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title" id="exit-form">Age Requirement</h1>
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button> -->
+              </div>
+              <div class="modal-body">
+                <p class="text-muted col-xs-12 alertMsg" style="text-align:center"></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" style="font-family:'FuturaStd-Bold', 'Century Gothic', Arial, sans-serif; color:#fff; border:none; text-transform:uppercase; height:4rem; margin-right:1px" class="btn-md" data-dismiss="modal" aria-label="cancel" onclick="window.location.reload();"><span aria-hidden="true">Cancel</span></button>
+                <button type="button" style="font-family:'FuturaStd-Bold', 'Century Gothic', Arial, sans-serif; color:#fff; border:none; text-transform:uppercase; height:4rem;" class="btn-md" data-dismiss="modal" aria-label="confirm"><span aria-hidden="true">Confirm</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- / modal end -->
+
+        <!-- fallbacks -->
+        <script>window.jQuery || document.write('<script src="{!URLFOR($Resource.prospective_assets, "web/js/bootstrap.min.js")}"><\/script>')</script>
+        <!-- bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+        <!-- bootstrap css fallback (appends to head) -->
+        <script>$.each(document.styleSheets, function(i,sheet){ if(sheet.href=='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css') {var rules = sheet.rules ? sheet.rules : sheet.cssRules; if (rules.length == 0) { $('<link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css" />').appendTo('head');} } });</script>
+
+        <!-- chosen select
+        <script src="{!URLFOR($Resource.prospective_assets, 'web/js/chosen.jquery.min.js')}"></script> -->
+        <!-- masked input -->
+        <script src="{!URLFOR($Resource.prospective_assets, 'web/js/jq.maskedinput.min.js')}"></script>
+        <!-- validate forms -->
+        <script src="{!URLFOR($Resource.prospective_assets, 'web/js/jquery.validate.min.js')}"></script>
+        <!-- validate form (additional methods) -->
+        <script src="{!URLFOR($Resource.prospective_assets, 'web/js/additional-methods.min.js')}"></script>
+        <!-- diagnosis/ICD, form validation, form ui interactions -->
+        <script src="{!URLFOR($Resource.wishreferralui_js)}"></script>
+        <!-- Persist chid to receipt -->
+        <script>$('.chid-value').val(getQueryVariable('chid'));</script>
+        <!-- //DATA COLLECTOR -->
+        <script language="javascript" type="text/livescript">
+        var _mawData = {
+          "form": {
+            "fID": "Wish Referral"
+          },
+          "pageCat": {
+            "hierarchy": "Refer a Child:Referral Inquiry Form",
+            "pageId": "Wish Referral Form"
+          },
+
+          "siteId": getQueryVariable('chid'),
+          "ThirdPartyId": "SalesForce Referral"
+        };
+        </script>
+        <script>_satellite.pageBottom();</script>
+    </body>
+</apex:page>

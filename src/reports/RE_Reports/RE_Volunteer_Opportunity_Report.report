@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Volunteer_Opportunity__c.RE_Created_Date__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Opportunity__c.RE_Last_Modified_Date__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Opportunity__c.RE_Volunteer_Opportunity_Id__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Opportunity__c.RE_Role__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Opportunity__c.RE_Volunteer_Notes__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Opportunity__c.RE_Import_Id__c</field>
+    </columns>
+    <description>RE Volunteer Opportunity Records</description>
+    <filter>
+        <criteriaItems>
+            <column>Volunteer_Opportunity__c.Migrated_Record__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_RECORDTYPE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>RE Volunteer Opportunity Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Volunteer_Opportunity__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Volunteer_Opportunity__c.NWE_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

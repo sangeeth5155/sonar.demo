@@ -1,0 +1,11 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">Hi {!Volunteer_Opportunity__c.Hidden_Volunteer_Contact_Name__c},<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>Thank you for requesting a new volunteer opportunity. Your request
+to volunteer for&nbsp;{!Volunteer_Opportunity__c.Hidden_Non_Wish_Event_Name__c}&nbsp;as
+a&nbsp;{!Volunteer_Opportunity__c.Hidden_Chapter_Role_Name__c}&nbsp;has been
+approved. Please visit the <a href="https://make-a-wish.force.com/communitieslogin">Make-A-Wish Volunteer Center</a> and look under “My
+Assignments” to find additional details regarding this opportunity.<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>Thanks,<br></span><span style="background-color: white; font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>{!User.Name}<br></span><span style="background-color: white; font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Volunteer_Opportunity__c.Hidden_Chapter_Name__c}<br></span><span style="background-color: white; font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Volunteer_Opportunity__c.Hidden_Chapter_Phone__c}<br></span><span style="background-color: white; font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Volunteer_Opportunity__c.Hidden_Chapter_Email__c}</span></p>]]></td>
+</tr>
+</table>

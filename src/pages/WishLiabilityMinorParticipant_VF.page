@@ -1,0 +1,75 @@
+<apex:page sidebar="false"  standardController="Case" extensions="WishLiabilityMinorParticipant_AC" >
+<apex:form >
+<apex:stylesheet value="{!URLFOR($Resource.MakeAWishAmericaDesign, 'css/Liability.css')}" /> 
+  <style>
+    .custPopup, .custPopup-main-message{
+            left: -32% !important;
+            padding: 2.5rem;
+            width: 70% !important;
+            font-weight : bold;
+            font-size : 150%;
+    
+    }
+    </style>
+<apex:pageMessages id="showmsg13"/> 
+<apex:pageBlock id="membAdd" >               
+ <apex:commandLink action="{!ReturnToWish}" value="Return to Wish" Style="float:right;padding:30px" html-data-toggle="modal" html-data-target="wffsame-alert"/>   
+  <apex:outputPanel id="ReturntoWish">
+        <apex:outputPanel rendered="{!displayReturnToWish}" layout="block">
+    <div class="pop-wrap">
+        <div class="custPopup">
+            <div class="container">
+                <div class="row">
+                    <div class="row" style="padding:10px">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                     <center> Are you sure you want to exit ? </center>
+                    </div>
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:20px">
+                       <apex:commandButton value="Yes" styleClass="col-xs-12 col-sm-6 col-md-4 btn-md"  action="{!Cancel}" style="height: 2.75rem; margin-left: 5%;"/>
+                        <apex:commandButton value="No" styleClass="col-xs-12 col-sm-6 col-md-4 btn-md"  action="{!ReturnToLiabilityForm}"  style="height: 2.75rem; margin-left: 5%;"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</apex:outputPanel>
+</apex:outputPanel>
+<apex:pageBlockTable value="{!addContactEmailList}" var="memb" rendered="{!inPutMode}">
+<!-- <apex:variable value="{!0}" var="cnt"/>
+<apex:column headervalue="Action">
+<apex:commandlink value="Remove" action="{!removeContact}" immediate="true">
+  Pass the row number to the controller so that we know which row to remove 
+  <apex:param name="index" value="{!cnt}"/>
+</apex:commandlink> 
+<apex:variable var="cnt" value="{!cnt+1}"/>              
+</apex:column>  -->
+    <apex:column headerValue="Parent/Guardian of Minor participant">
+        <apex:inputField value="{!memb.FirstName}"/>
+    </apex:column>
+    <apex:column headerValue="Email">
+        <apex:inputField value="{!memb.Email}"/>
+    </apex:column>
+ </apex:pageBlockTable> 
+<br/> <center><apex:commandButton value="Add Row" action="{!AddRow}" reRender="membAdd" rendered="{!inPutMode}"/> &nbsp;     
+<apex:commandButton value="Save" action="{!SaveContact}" rendered="{!inPutMode}"/>  &nbsp;
+<apex:commandButton value="Preview" action="{!preview}" rendered="{!inPutMode}"/> &nbsp;
+<apex:commandButton value="Cancel" action="{!cancel}" rendered="{!inPutMode}"/>  </center>    
+
+
+<apex:pageBlockTable value="{!addContactEmailList}" var="memb" rendered="{!outPutMode}">
+
+    <apex:column headerValue="Parent/Guardian of Minor participant">
+        <apex:outputField value="{!memb.FirstName}"/>
+    </apex:column>
+    <apex:column headerValue="Email">
+        <apex:outputField value="{!memb.Email}"/>
+    </apex:column>
+ </apex:pageBlockTable> 
+
+<center> <apex:commandButton value="Send for Signature" action="{!SendtoEmail}" rendered="{!outPutMode}"/> 
+<apex:commandButton value="Cancel" action="{!cancel}" rendered="{!outPutMode}"/>  </center>    
+</apex:pageBlock>
+</apex:form>
+</apex:page>

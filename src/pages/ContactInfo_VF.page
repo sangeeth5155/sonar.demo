@@ -1,0 +1,9 @@
+<apex:page StandardController="Task" extensions="ContactInfo_AC">
+<apex:form >
+ <apex:pageBlock >
+ <apex:pageBlockSection >
+ <apex:outputField value="{!con.Old_Update_Contact_Values__c }"/>
+ </apex:pageBlockSection>
+ </apex:pageBlock>
+ </apex:form>
+</apex:page>

@@ -1,0 +1,138 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false">
+     <noscript>For full functionality and the best experience possible of this site it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com/" target="_blank">instructions how to enable JavaScript in your web browser</a>.</noscript>
+      <style>
+        .fadein-alert:last-child {-webkit-animation: fadein-alert .5s forwards; -moz-animation: fadein-alert .5s forwards; -o-animation: fadein-alert .5s forwards; animation: fadein-alert .5s forwards}
+        .fadein {-webkit-animation: fadein .5s forwards; -moz-animation: fadein .5s forwards; -o-animation: fadein .5s forwards; animation: fadein .5s forwards}
+        /* fadein-alert keyframes */
+        @-moz-keyframes fadein-alert    {from {opacity:0; background: #ffbe00} to {opacity:1; background: transparent}}
+        @-webkit-keyframes fadein-alert {from {opacity:0; background: #ffbe00} to {opacity:1; background: transparent}}
+        @-o-keyframes fadein-alert      {from {opacity:0; background: #ffbe00} to {opacity:1; background: transparent}}
+        @keyframes fadein-alert         {from {opacity:0; background: #ffbe00} to {opacity:1; background: transparent}}
+        /* fadein keyframes */
+        @-moz-keyframes fadein    {from {opacity:0; margin-top:-1rem} to {opacity:1; margin-top:0rem}}
+        @-webkit-keyframes fadein {from {opacity:0; margin-top:-1rem} to {opacity:1; margin-top:0rem}}
+        @-o-keyframes fadein      {from {opacity:0; margin-top:-1rem} to {opacity:1; margin-top:0rem}}
+        @keyframes fadein         {from {opacity:0; margin-top:-1rem} to {opacity:1; margin-top:0rem}}
+        .messages > span > span > div {margin:1rem;padding:1rem;border:1px solid red}
+        form {margin-top:3.3rem; margin-bottom: 4rem}
+        form label {display: inline-block; line-height:1rem}
+        .disabled {pointer-events: none; cursor: default;}
+        .step-base {position:absolute; top:3.9rem; left:1rem; width:100%}
+        /* bottom nav */
+        .nav-btm {position:fixed; bottom:0; right:0; z-index:1; background:rgba(255,255,255,.9); box-shadow: 0px -6px 1rem 0px rgba(0,0,0,.2); width:100%; padding:.5rem; margin:0; border-top:1px solid #ccc;}
+        nav.btm ul {display: flex; justify-content: center; align-items:center; margin:0; padding:0}
+        nav.btm li {list-style-type: none; margin-left:1px;}
+        .wif nav.btm ul {justify-content: space-between;}
+        .wif nav.btm li {width: 100%; padding:0;}
+        form .btm .btn-md {font-size: 0.45rem; height:2.75rem; padding:0 .25rem; white-space:normal; width:4rem; max-width: 10rem}
+        .wif form .btm .btn-md {width:100%}
+        fieldset.connected, fieldset.connected-haslegend {background:#fff; border-top:1px dashed #ccc; margin-top:-1px; position: relative;} /* connected in relation to fieldset */
+        fieldset.connected-haslegend>legend {float:left; padding-top:0; padding-bottom:0; margin-bottom:0;}
+        fieldset.connected-haslegend>.info {margin-top: 0}
+        fieldset.connected a {font-size: .8rem}
+        form a.text-muted {color:#006bb6 !important}
+        form a.text-muted:hover {color:#0275d8 !important}
+        .dataTables_info {margin-bottom: 2rem; font-size: .75rem;}
+        .btn-md {font-family: "FuturaStd-Bold", "Century Gothic", Arial, sans-serif; border: none; text-transform: uppercase; font-size: .85rem; border-bottom: 2px solid #333; color: #fff; height: 3.75rem; padding: 0 1rem; white-space: normal;}
+        .vcpactivelogin .table-maw th {cursor:help; padding-right:1rem}
+        .vcpactivelogin ul.step {display:flex; justify-content:space-around; align-items:center; background:#fff; padding-top:0; padding-bottom:0; margin-bottom:0; height:3.5rem; border-bottom:1px solid #ccc; width:100%;}
+        .vcpactivelogin ul.step li {flex-direction:row; width:31%; border-bottom:0; line-height:1rem; padding:0}
+        .step li a.current {color:#006bb6 !important; text-decoration:underline}
+        /* drop down */
+        .vcpactivelogin ul.step li li {text-align:left; width:100%; padding:.5rem;}
+        .vcpactivelogin ul.step {padding-right:2rem}
+        .step li{position:relative; z-index:1; background:#fff;}
+        .step li ul {position:absolute; top:2.1rem; left:0; margin:0; padding:0; width:13rem; visibility: hidden; display:flex; flex-direction:column; justify-content:space-around; border:1px solid #ccc; border-top:none; background:#fff;}
+        .step li:hover ul {visibility: visible;}
+        .step li ul li {list-style-type:none; margin-left:-6.5rem; margin:0;}
+        .step li ul li a {display:block; width:100%; text-decoration: none;}
+        .step li ul li a.down:before {content: "\2193\0000a0"}
+        .step li ul li a.up:before {content: "\2191\0000a0"}
+        .step li:nth-child(3) ul {left:auto; right:0}
+        .step li:nth-child(3) ul li {text-align:right}
+        .step li:nth-child(3) ul li a.down:before {content: ""}
+        .step li:nth-child(3) ul li a.up:before {content: ""}
+        .step li:nth-child(3) ul li a.down:after {content: " \2193\0000a0"}
+        .step li:nth-child(3) ul li a.up:after {content: " \2191\0000a0"}
+        .step li ul li a.active {color:#006bb6 !important}
+        .tether-enabled {width:calc(100% + .5rem); margin-left:-1rem; padding-left:1rem; z-index: 1;}
+        .step-tether.active {box-shadow:0 6px 15px -9px rgba(0,0,0,1);margin-left: -1px;}
+        .nav-sub-inner {float:right; width:50%; display:flex; justify-content:flex-end; align-items:center;}
+        .nav-sub-inner a {font-size:.7rem; margin-right:1rem; text-align:center; margin-right:1rem; width:100%}
+        .nav-sub-inner input {width:4rem; font-size:.5rem; white-space:normal; text-align:center; margin-left:1px; padding:0 .5rem}
+        .nav-up {top: -5.6rem !important;}
+        a.remove-block {position:absolute; top:1rem; right:1rem; z-index:1}
+        span.info {font-family: "FuturaStd-Bold", "Century Gothic", Arial, sans-serif; font-size:.6rem; color:#747678; display:block; line-height:1.5; margin-top:-2.5rem; margin-bottom:2rem;}
+        .modal-header,.modal-footer {border-top:none;}
+        h1.modal-title {text-align: center; padding-bottom: 0}
+        .modal-header .close {margin-top: -4rem}
+        .modal-footer, .modal-footer span {display: flex; justify-content: center;}
+        .modal-footer .btn-md, .nav-sub-inner .btn-md {max-width:10rem}
+        .modal-footer .btn-md {min-width:10rem}
+        header .pre-nav input {background:transparent; border:none; color: #747678; font-size: .7rem; line-height: 3rem; white-space: nowrap;}
+        form .form-control[readonly]{cursor:default; background-color:#ddd;}
+        /* notification */
+        .notification {position:fixed; top:5rem; left:50%; z-index: 1000}
+        .notification div {position:relative; left:-50%; background:#00C069; border-radius:.5rem; padding:1rem; color:#fff; text-align:center;}
+        .notification h6 {margin:0; text-transform:none !important}
+        .notification p {padding:0; margin:0; font-size:.8rem; font-family:arial,helvetica;}
+        /* indent hidden fields */
+        .sel-wrap ~ div, .f-prior-wish {margin-left:1rem}
+        .form-group ~ .is-yes, .form-group ~ .prior-details {margin-left:.1rem}
+        @media (min-width: 34em) {
+          .tether-enabled {width:34.1rem; margin-left:0;padding-left:0}
+          .nav-sub-inner {margin-top:0}
+          .vcpactivelogin ul.step {display:block; height:4.5rem; width:100%;}
+          .vcpactivelogin ul.step li {float:left; padding:.5rem; margin-top:1rem; width:auto}
+          .step li:nth-child(3) ul {left:0; right:auto}
+          .step li:nth-child(3) ul li {text-align:left}
+          .step li:nth-child(3) ul li a.down:after {content: ""}
+          .step li:nth-child(3) ul li a.up:after {content: ""}
+          .step li:nth-child(3) ul li a.down:before {content: "\2193\0000a0"}
+          .step li:nth-child(3) ul li a.up:before {content: "\2191\0000a0"}
+        }
+        @media (min-width: 48em) {.tether-enabled {width:43.1rem} .nav-sub-inner {margin-top:-4.2rem;} form {margin-top:2.5rem;} .nav-sub-inner input {width: 100%; font-size: .8rem } }
+        @media (min-width: 62em) {.tether-enabled {width:56.8rem} .nav-sub-inner {width: 60%;} }
+        @media (min-width: 75em) {.tether-enabled {width:69.4rem} /*.nav-sub-inner input {font-size: .7rem;}*/ }
+      </style>
+
+      <script>
+       var locurl = window.location.href;
+       var y = locurl.split('=')[1];
+
+       var pageName= ["WishChildForm_VF", "WishFamilyForm_VF", "WishInformationForm_VF"];
+       window.onload = function(){
+         for (var i = 0; i < pageName.length; i++) {
+          if(locurl.indexOf(pageName[i]) >= 0) {
+              //document.getElementById(pageName[i]).className='custMenu activeClass';
+            }
+         }
+       }
+
+       function redir(v){
+           window.location='/apex/'+v+'?id='+y;
+       }
+
+       // fire x amount of times
+       function setIntervalX(callback, delay, repetitions) {
+         var x = 0;
+         var intervalID = window.setInterval(function () {
+           callback();
+           if (++x === repetitions) {
+             window.clearInterval(intervalID);
+           }
+         }, delay);
+       }
+      </script>
+      <header role="main-header" class="container">
+          <div class="row">
+              <nav class="col-xs-3 col-xs-offset-9 pre-nav" role="top_menubar">
+                <a href="#" data-toggle="modal" data-target="#exit-alert" onclick="preventDefault();">Return To Wish</a>
+              </nav>
+          </div>
+          <div class="row">
+              <apex:outputLink styleClass="center-block maw-logo" onclick="preventDefault();" html-data-toggle="modal" html-data-target="#exit-alert"><span class="sr-only" aria-label="Make-A-Wish">Make-A-Wish&reg;</span></apex:outputLink>
+          </div>
+          <nav class="navbar navbar-dark sub-nav"></nav>
+      </header>
+</apex:page>

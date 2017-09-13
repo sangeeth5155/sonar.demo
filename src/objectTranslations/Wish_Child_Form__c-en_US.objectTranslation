@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Wish Paperwork Packet</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Wish Paperwork Packets</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actor/Actress --></label>
+        <name>Actor_Actress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Requests --></label>
+        <name>Additional_Requests__c</name>
+    </fields>
+    <fields>
+        <label><!-- Already wish granted by MAW/Other Org --></label>
+        <name>Already_wish_granted_by_MAW_Other_Org__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Any impact your ability to join wish --></label>
+        <name>Any_impact_your_ability_to_join_wish__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Are all requested participants Details --></label>
+        <name>Are_all_requested_participants_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Automobile insurance provide coverage --></label>
+        <name>Automobile_insurance_provide_coverage__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Availability Time Period 1 --></label>
+        <name>Availability_Time_Period_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Availability Time Period 2 --></label>
+        <name>Availability_Time_Period_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Availability Time Period 3 --></label>
+        <name>Availability_Time_Period_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- BirthDate --></label>
+        <name>BirthDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Book/Story --></label>
+        <name>Book_Story__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bringing_Own_Wheel_Chair --></label>
+        <name>Bringing_Own_Wheel_Chair__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cake/Candy --></label>
+        <name>Cake_Candy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Team Member1 --></label>
+        <name>Case_Team_Member1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Team Member2 --></label>
+        <name>Case_Team_Member2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>Case__c</name>
+        <relationshipLabel><!-- Wish Paperwork Packets --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Class in School --></label>
+        <name>ClassinSchool__c</name>
+    </fields>
+    <fields>
+        <label><!-- Color --></label>
+        <name>Color__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivered Hidden Envelop Id --></label>
+        <name>Delivered_Hidden_Envelop_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivered LiabilitySignerMapKeyPair --></label>
+        <name>Delivered_LiabilitySignerMapKeyPair__c</name>
+    </fields>
+    <fields>
+        <label><!-- Details about Impact --></label>
+        <name>Details_about_Impact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Diagnosis --></label>
+        <name>Diagnosis__c</name>
+    </fields>
+    <fields>
+        <label><!-- Does each requestedParticipant18Details --></label>
+        <name>Does_each_requested_participan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Does each requested participant Details --></label>
+        <name>Does_each_requested_participant_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Does participant have valid photo ID? --></label>
+        <name>Does_participant_have_valid_photo_ID__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Does your family Details --></label>
+        <name>Does_your_family_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Does your family have a credit card_Note --></label>
+        <name>Does_your_family_have_a_credit_card_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Does your family have a credit card? --></label>
+        <name>Does_your_family_have_a_credit_card__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Driver Details --></label>
+        <name>Driver_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Driver Information --></label>
+        <name>Driver_Information__c</name>
+    </fields>
+    <fields>
+        <label><!-- Driver Name --></label>
+        <name>Driver_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Electronics/Games that I like to play --></label>
+        <name>Electronics_Games_that_I_like_to_play__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Emergency Email --></label>
+        <name>Emergency_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Emergency First Name --></label>
+        <name>Emergency_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Emergency Last Name --></label>
+        <name>Emergency_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Emergency Middle Name --></label>
+        <name>Emergency_Middle_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Emergency mobilephone --></label>
+        <name>Emergency_Mobilephone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Emergency Relationship --></label>
+        <name>Emergency_Relationship__c</name>
+        <picklistValues>
+            <masterLabel>Child</masterLabel>
+            <translation><!-- Child --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Friend</masterLabel>
+            <translation><!-- Friend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grandparent</masterLabel>
+            <translation><!-- Grandparent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neighbor</masterLabel>
+            <translation><!-- Neighbor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Family</masterLabel>
+            <translation><!-- Other Family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parent</masterLabel>
+            <translation><!-- Parent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spouse</masterLabel>
+            <translation><!-- Spouse --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Hidden Envelop Id --></label>
+        <name>Envelop_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>FirstName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Food --></label>
+        <name>Food__c</name>
+    </fields>
+    <fields>
+        <label><!-- Game --></label>
+        <name>Game__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gender --></label>
+        <name>Gender__c</name>
+        <picklistValues>
+            <masterLabel>Female</masterLabel>
+            <translation><!-- Female --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I choose not to self-identify</masterLabel>
+            <translation><!-- I choose not to self-identify --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Male</masterLabel>
+            <translation><!-- Male --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Handicap accommodations be required?No --></label>
+        <name>Handicap_accommodations_be_required_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Handicap accommodations be required? --></label>
+        <name>Handicap_accommodations_be_required__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Has your family flown --></label>
+        <name>Has_your_family_flown__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has your family flown before? Note --></label>
+        <name>Has_your_family_flown_before_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has your family flown before? --></label>
+        <name>Has_your_family_flown_before__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Have current automobile insurance --></label>
+        <name>Have_current_automobile_insurance__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Hidden Contact Name --></label>
+        <name>Hidden_Contact_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Email List --></label>
+        <name>Hidden_Email_List__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Envelop Id 1 --></label>
+        <name>Hidden_Envelop_Id_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Envelop Id 2 --></label>
+        <name>Hidden_Envelop_Id_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Envelop Id 3 --></label>
+        <name>Hidden_Envelop_Id_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Liability Envelop Id 1 --></label>
+        <name>Hidden_Liability_Envelop_Id_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Liability Envelop Id 2 --></label>
+        <name>Hidden_Liability_Envelop_Id_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Liability Envelop Id 3 --></label>
+        <name>Hidden_Liability_Envelop_Id_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Liability SignerMap Key 1 --></label>
+        <name>Hidden_Liability_SignerMap_Key_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Liability SignerMap Key 2 --></label>
+        <name>Hidden_Liability_SignerMap_Key_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Liability SignerMap Key 3 --></label>
+        <name>Hidden_Liability_SignerMap_Key_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Name List --></label>
+        <name>Hidden_Name_List__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Same as Family --></label>
+        <name>Hidden_Same_as_Family__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden SignerMap Key 1 --></label>
+        <name>Hidden_SignerMap_Key_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden SignerMap Key 2 --></label>
+        <name>Hidden_SignerMap_Key_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden SignerMap Key 3 --></label>
+        <name>Hidden_SignerMap_Key_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Fmaily Contact Email --></label>
+        <name>Hidden_Wish_Fmaily_Contact_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Family Contact Name --></label>
+        <name>Hidden_Wish_Fmaily_Contact_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hobby --></label>
+        <name>Hobby__c</name>
+    </fields>
+    <fields>
+        <help><!-- If already wish granted, please indicate the organization&apos;s name, the wish, 
+and the date it was or will be granted. --></help>
+        <label><!-- If yes,Enter Org.Name,Wish&amp; Date it wa --></label>
+        <name>If_yes_Enter_Org_Name_Wish_Date_it_wa__c</name>
+    </fields>
+    <fields>
+        <label><!-- Information Provided --></label>
+        <name>Information_Provided__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsParticipant --></label>
+        <name>IsParticipant__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsWishFamily --></label>
+        <name>IsWishFamily__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is a wheelchair accessible vehicle neede --></label>
+        <name>Is_a_wheelchair_accessible_vehicle_neede__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is_the_wheelchair_collapsible_Note__c --></label>
+        <name>Is_the_wheelchair_collapsible_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is the wheelchair collapsible? --></label>
+        <name>Is_the_wheelchair_collapsible__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is the wheelchair power? Note --></label>
+        <name>Is_the_wheelchair_power_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is the wheelchair power? --></label>
+        <name>Is_the_wheelchair_power__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is your family comfortable in rendal car --></label>
+        <name>Is_your_family_comfortable_in_rendal_car__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>LastName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden LiabilitySignerMapKeyPair --></label>
+        <name>LiabilitySignerMapKeyPair__c</name>
+    </fields>
+    <fields>
+        <label><!-- MY WISH IS TO --></label>
+        <name>MY_WISH_IS_TO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medication require refrigeration? Note --></label>
+        <name>Medication_require_refrigeration_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medication_require_refrigeration --></label>
+        <name>Medication_require_refrigeration__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Medication_require_refrigeration_name --></label>
+        <name>Medication_require_refrigeration_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Middle Name --></label>
+        <name>Middle_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Movie --></label>
+        <name>Movie__c</name>
+    </fields>
+    <fields>
+        <label><!-- Music/Singer --></label>
+        <name>Music_Singer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name_of_wheelchair_collapsible --></label>
+        <name>Name_of_wheelchair_collapsible__c</name>
+    </fields>
+    <fields>
+        <label><!-- Names_for_receiving_nursing_care --></label>
+        <name>Names_for_receiving_nursing_care__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Favorites --></label>
+        <name>Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent/Legal Guardian Signature --></label>
+        <name>Parent_Legal_Guardian_Signature__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pariticipant_name_havingWheelchair_Power --></label>
+        <name>Pariticipant_name_havingWheelchair_Power__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant Contacts --></label>
+        <name>Participant_Contacts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant Details --></label>
+        <name>Participant_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant Name --></label>
+        <name>Participant_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant_Name_for_Dietary_Restriction --></label>
+        <name>Participant_Name_for_Dietary_Restriction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant Names --></label>
+        <name>Participant_Names__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant dietary restrictions? Note --></label>
+        <name>Participant_dietary_restrictions_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant dietary restrictions? --></label>
+        <name>Participant_dietary_restrictions__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Participant have allergies to food Note --></label>
+        <name>Participant_have_allergies_to_food_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant have allergies to food --></label>
+        <name>Participant_have_allergies_to_food__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Participant_have_valid_passports_Note__c --></label>
+        <name>Participant_have_valid_passports_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant have valid passports? --></label>
+        <name>Participant_have_valid_passports__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Participant have valid photo ID_Note --></label>
+        <name>Participant_have_valid_photo_ID_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant require a wheelchair Details --></label>
+        <name>Participant_require_a_wheelchair_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant_require_a_wheelchair_Note__c --></label>
+        <name>Participant_require_a_wheelchair_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant require a wheelchair? --></label>
+        <name>Participant_require_a_wheelchair__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Participant require medical suppliesNote --></label>
+        <name>Participant_require_medical_suppliesNote__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant require medical supplies? --></label>
+        <name>Participant_require_medical_supplies__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Participant require oxygen? Note --></label>
+        <name>Participant_require_oxygen_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant require oxygen?&amp;how often? --></label>
+        <name>Participant_require_oxygen_how_often__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Pet/Animal --></label>
+        <name>Pet_Animal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Potential Driver Expiration Date --></label>
+        <name>Potential_Driver_Expiration_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Potential Driver Name --></label>
+        <name>Potential_Driver_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Potential_Driver_State --></label>
+        <name>Potential_Driver_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Potential Valid D.L. # --></label>
+        <name>Potential_Valid_D_L__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Driver Expiration Date --></label>
+        <name>Preferred_Driver_Expiration_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Driver Name --></label>
+        <name>Preferred_Driver_Name_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Driver State --></label>
+        <name>Preferred_Driver_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Driver Valid D.L. # --></label>
+        <name>Preferred_Driver_Valid_D_L__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Name --></label>
+        <name>Preferred_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Address --></label>
+        <name>PrimaryAddreess__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Address --></label>
+        <name>Primary_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Race/Ethnicity Details --></label>
+        <name>Race_Ethnicity_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Race/Ethnicity --></label>
+        <name>Race_Ethnicity__c</name>
+        <picklistValues>
+            <masterLabel>American Indian or Alaska Native</masterLabel>
+            <translation><!-- American Indian or Alaska Native --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Asian</masterLabel>
+            <translation><!-- Asian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Black or African American</masterLabel>
+            <translation><!-- Black or African American --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hispanic, Latino or Spanish</masterLabel>
+            <translation><!-- Hispanic, Latino or Spanish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Middle Eastern</masterLabel>
+            <translation><!-- Middle Eastern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Native Hawaiian/Other Pacific Islander</masterLabel>
+            <translation><!-- Native Hawaiian/Other Pacific Islander --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>White or Caucasian</masterLabel>
+            <translation><!-- White or Caucasian --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Related Contact --></label>
+        <name>RelatedContact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requested_Participant_Name_forWheelchair --></label>
+        <name>Requested_Participant_Name_forWheelchair__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requested_Participant_Name_for_Allergies --></label>
+        <name>Requested_Participant_Name_for_Allergies__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requested_Participant_Name_for_OtherNeed --></label>
+        <name>Requested_Participant_Name_for_OtherNeed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requested_Participant_Name_for_Oxygen --></label>
+        <name>Requested_Participant_Name_for_Oxygen__c</name>
+    </fields>
+    <fields>
+        <label><!-- Restaurant --></label>
+        <name>Restaurant__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden SignerMapKeyPair --></label>
+        <name>SignerMapKeyPair__c</name>
+    </fields>
+    <fields>
+        <label><!-- Signers --></label>
+        <name>Signers__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sit up takeoff/landing on airplane? Note --></label>
+        <name>Sit_up_takeoff_landing_on_airplane_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sit up takeoff/landing on airplane? --></label>
+        <name>Sit_up_takeoff_landing_on_airplane__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Snack Food --></label>
+        <name>Snack_Food__c</name>
+    </fields>
+    <fields>
+        <help><!-- Make-A-Wish would like to stay connected through social media. If interested, please 
+provide contact information for each site on which you are active. --></help>
+        <label><!-- Social Media Link --></label>
+        <name>Social_Media_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sport/Athlete --></label>
+        <name>Sport_Athlete__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street --></label>
+        <name>Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- TV Show --></label>
+        <name>TVShow__c</name>
+    </fields>
+    <fields>
+        <label><!-- T-Shirt Size --></label>
+        <name>T_Shirt_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- This is my wish because --></label>
+        <name>This_is_my_wish_because__c</name>
+    </fields>
+    <fields>
+        <label><!-- To me,the most important part of my wish --></label>
+        <name>To_me_the_most_important_part_of_my_wish__c</name>
+    </fields>
+    <fields>
+        <label><!-- When I’m inside, I like to… --></label>
+        <name>When_I_m_inside_I_like_to__c</name>
+    </fields>
+    <fields>
+        <label><!-- When I’m outside, I like to... --></label>
+        <name>When_I_m_outside_I_like_to__c</name>
+    </fields>
+    <fields>
+        <label><!-- When I’m with my family, I like to… --></label>
+        <name>When_I_m_with_my_family_I_like_to__c</name>
+    </fields>
+    <fields>
+        <label><!-- When I’m with my friends, I like to… --></label>
+        <name>When_I_m_with_my_friends_I_like_to__c</name>
+    </fields>
+    <fields>
+        <label><!-- When I think about my wish, I imagine…. --></label>
+        <name>When_I_think_about_my_wish_I_imagine__c</name>
+    </fields>
+    <fields>
+        <label><!-- When thinking,some of my wish ideas were --></label>
+        <name>When_thinking_some_of_my_wish_ideas_were__c</name>
+    </fields>
+    <fields>
+        <label><!-- Will a rental car seat(s)  Details --></label>
+        <name>Will_a_rental_car_seat_s_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Will a rental car seat(s) be needed?Note --></label>
+        <name>Will_a_rental_car_seat_s_be_needed_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Will a rental car seat(s) be needed? --></label>
+        <name>Will_a_rental_car_seat_s_be_needed__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Will a rental stroller Details --></label>
+        <name>Will_a_rental_stroller_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Will a rental stroller be needed? Note --></label>
+        <name>Will_a_rental_stroller_be_needed_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Will a rental stroller be needed? --></label>
+        <name>Will_a_rental_stroller_be_needed__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Will an interpreter be needed Details --></label>
+        <name>Will_an_interpreter_be_needed_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Will an interpreter be needed? Note --></label>
+        <name>Will_an_interpreter_be_needed_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Will an interpreter be needed? --></label>
+        <name>Will_an_interpreter_be_needed__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Will handicap accessible Details --></label>
+        <name>Will_handicap_accessible_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Will_your_family_bring_wheelchair_Note__ --></label>
+        <name>Will_your_family_bring_wheelchair_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Will your family bring wheelchair? --></label>
+        <name>Will_your_family_bring_wheelchair__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Wish Type --></label>
+        <name>WishType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish Determination Case Id --></label>
+        <name>Wish_Determination_Case_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish Family Contact --></label>
+        <name>Wish_Family_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Liability Envolep --></label>
+        <name>Wish_Liability_Envolep__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish Notes… --></label>
+        <name>Wish_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish child receive nursing care? Note --></label>
+        <name>Wish_child_receive_nursing_care_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish child receive nursing care? --></label>
+        <name>Wish_child_receive_nursing_care__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Zip Code --></label>
+        <name>Zip_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mobile --></label>
+        <name>mobilePhone__c</name>
+    </fields>
+    <fields>
+        <label><!-- oxygen Details --></label>
+        <name>oxygen_Details__c</name>
+    </fields>
+    <layouts>
+        <layout>Wish Child Form Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Hidden Section --></label>
+            <section>Hidden Section</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Child Form --></label>
+            <section>Wish Child Form</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Family Info --></label>
+            <section>Wish Family Info</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Information Info --></label>
+            <section>Wish Information Info</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

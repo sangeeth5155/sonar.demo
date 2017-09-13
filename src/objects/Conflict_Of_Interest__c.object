@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Account_Email__c</fullName>
+        <description>It will used as a hidden field to store account email to merge in the email template</description>
+        <externalId>false</externalId>
+        <label>Hidden Account Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <description>This Field is used as hidden field in COI Email template</description>
+        <externalId>false</externalId>
+        <label>Hidden Account Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Phone__c</fullName>
+        <description>It holds the value of Account Phone</description>
+        <externalId>false</externalId>
+        <label>Hidden Account Phone</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used to check weather this conflict of interest is active or not.</description>
+        <externalId>false</externalId>
+        <label>Current</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Expiration_Date__c</fullName>
+        <description>This field is used to store the value of expiration date.</description>
+        <externalId>false</externalId>
+        <label>Expiration Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>It holds the Id of External System.</description>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>HiddenConflictExpire__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is checked when the conflict of Interest record get expire.</description>
+        <externalId>false</externalId>
+        <label>Hidden Conflict Expire</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Hidden_Volunteer_Contact_Email__c</fullName>
+        <description>This field is used as hidden field to store volunteer contact email in COI.</description>
+        <externalId>false</externalId>
+        <label>Hidden Volunteer Contact Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Import_Id__c</fullName>
+        <description>IMPORT ID</description>
+        <externalId>false</externalId>
+        <label>Import Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Migrated_Record__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>It will indicate that records created manually or imported from RE.</description>
+        <externalId>false</externalId>
+        <label>Migrated Record</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RE_Import_Id__c</fullName>
+        <description>ID, IMPORT_ID</description>
+        <externalId>false</externalId>
+        <label>RE Import Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RE_Signed_Date__c</fullName>
+        <description>DATE_COMPLETED</description>
+        <externalId>false</externalId>
+        <label>RE Signed Date</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Signed_Date__c</fullName>
+        <description>This field is used to store the value of signed date.</description>
+        <externalId>false</externalId>
+        <label>Signed Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Volunteer_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This lookup field is used store the value of the volunteer contact.</description>
+        <externalId>false</externalId>
+        <label>Volunteer Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Conflict Of Interest</relationshipLabel>
+        <relationshipName>Conflict_Of_Interest</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Volunteer_is_Inactive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>It activates when the volunteer becomes inactive or all affiliations records are inactive status.</description>
+        <externalId>false</externalId>
+        <label>Hidden Volunteer is Inactive</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Conflict Of Interest</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Volunteer_Contact__c</columns>
+        <columns>Signed_Date__c</columns>
+        <columns>Expiration_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Migrated_Record__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>COI -{0000}</displayFormat>
+        <label>Conflict Of Interest Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Conflict Of Interest</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Read</sharingModel>
+    <sharingReasons>
+        <fullName>Chapter_Staff__c</fullName>
+        <label>Chapter_Staff</label>
+    </sharingReasons>
+</CustomObject>

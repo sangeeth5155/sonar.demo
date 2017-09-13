@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This will be used to manually send volunteer applicants the upcoming interview schedule.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Task:AZ Available Interview Times</name>
+    <style>freeForm</style>
+    <subject>Upcoming Volunteer Interviews</subject>
+    <textOnly>Hi {!Contact.Name},
+
+We received your application and are excited to speak with you. Our upcoming interview schedule is listed below.  Please reply with your date preference so we can add you to the schedule.
+
+Option 1
+
+Date:
+Time:
+Venue:
+
+
+
+Option 2
+
+Date:
+Time:
+Venue:
+
+
+
+Option 3
+
+Date:
+Time:
+Venue:
+
+
+If you need to cancel or change your interview date, please contact the chapter or visit the Make-A-Wish Volunteer Center.
+
+Thank you,
+
+{!Task.Account_Name__c}
+{!Task.Account_Phone__c}
+{!Task.Account_Email__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

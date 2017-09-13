@@ -1,0 +1,12 @@
+<apex:page standardController="Account" extensions="cg.AccountEmailExtension" tabStyle="Account">
+    <cg:AttachmentComponent title="Account Files"
+    customObjectName="Account" customObjectFileName="AccountFile__c"
+    fileNamespacePrefix="cg__"
+    relationshipName="Account__r"
+    legacyIdSupport="true"
+    objectId="{!Account.Id}"
+    privateEnabled="true"
+    inline="true"
+    enableAttachFromSDriveFolders="false"
+    defaultEmailAddress="{!defaultAccountEmail}"/>
+</apex:page>

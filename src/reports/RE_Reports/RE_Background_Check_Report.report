@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Background_check__c.RE_Date_Completed__c</field>
+    </columns>
+    <columns>
+        <field>Background_check__c.RE_Date_Requested__c</field>
+    </columns>
+    <columns>
+        <field>Background_check__c.RE_Import_Id__c</field>
+    </columns>
+    <description>RE Background Check Records</description>
+    <filter>
+        <criteriaItems>
+            <column>Background_check__c.Migrated_Record__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>RE Background Check Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Background_check__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Background_check__c.Date_Completed__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

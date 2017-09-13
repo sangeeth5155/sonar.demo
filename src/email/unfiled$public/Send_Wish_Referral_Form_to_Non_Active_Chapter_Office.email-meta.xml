@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Send email with Wish Referral Form to Non Active Chapter Office</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Send Wish Referral Form to Non Active Chapter Office</name>
+    <style>freeForm</style>
+    <subject>Online Wish Referral Received</subject>
+    <textOnly>Make-A-Wish Foundation®
+Online Wish Referral (Advice)
+From wish.org
+
+
+The following information was submitted via md.wish.org, the Make-A-Wish Foundation&apos;s online referral site.
+This referral was sent to {!Lead.Office_Referral_Email__c}
+at {!Lead.ChapterName__c}
+
+
+Referrer Information
+
+Date Submitted:
+
+{!Lead.CreatedDate}
+
+Name:
+
+{!Lead.Referrer_FirstName__c} {!Lead.Referrer_Last_Name__c}
+
+Phone:
+
+{!Lead.Referrer_Phone__c}
+
+Email:
+
+{!Lead.Referrer_Email__c}
+
+Relationship to child:
+
+{!Lead.Relationship_to_child__c}
+
+Primary ICD-10 Code
+
+{!Lead.PD_ICD_Code__c}
+
+Primary Diagnosis
+
+{!Lead.PD_Condition_Description__c}
+
+Form:
+
+Wish Referral Form
+
+Yes, I have discussed a referral to the Make-A-Wish Foundation with this family/child and have received their permission to share the following information.
+
+
+
+Child Information
+
+Click on the Wish Referral Form to view the referral details.
+The Form is encrypted and requires a password to open. Please contact Mission Resources (missionresources@wish.org) at the National Office, if you have any questions.
+
+The information contained herein is being provided to the Make-A-Wish Foundation for the sole purpose of determining whether the identified child is medically eligible for a wish. Such information is strictly confidential and may not be shared with anyone other than authorized Make-A-Wish representatives.</textOnly>
+    <type>html</type>
+</EmailTemplate>

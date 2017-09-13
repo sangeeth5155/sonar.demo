@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>RE Board Member Contact Records</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact$RecordType.DeveloperName</column>
+            <operator>equals</operator>
+            <value>Board_Member</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>RE Board Member Contact Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Contact$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

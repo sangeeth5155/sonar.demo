@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used to send an email when the case sub status is &quot;Abandoned&quot;.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Case : Abandoned Wish Template</name>
+    <style>freeForm</style>
+    <subject>Abandoned Wish Notification</subject>
+    <textOnly>Hello
+
+The wish has been closed.
+
+{!Case.Hidden_Wish_Child_Full_Name__c}
+{!Case.CaseNumber}
+{!Case.00N3600000MqwNn}
+{!Case.Hidden_Wish_Child_Street__c}
+{!Case.Hidden_Wish_Child_City__c}
+{!Case.Hidden_Wish_Child_StateCode__c}
+{!Case.Hidden_Wish_Child_Country_Code__c}
+{!Case.Hidden_Wish_Child_Postalcode__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

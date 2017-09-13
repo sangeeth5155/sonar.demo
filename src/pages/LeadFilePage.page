@@ -1,0 +1,8 @@
+<apex:page standardController="Lead" tabStyle="Lead">
+ <cg:AttachmentComponent title="Lead Files"
+ inline="true"
+ enableAttachFromSDriveFolders="false" 
+ customObjectName="Lead"
+ customObjectFileName="Lead_File__c"
+ objectId="{!Lead.Id}" />
+</apex:page>

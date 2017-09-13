@@ -1,0 +1,3060 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddInfluence</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <businessProcesses>
+        <fullName>Donation</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pledged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Posted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospecting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Grant</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Application Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awarded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOI Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospecting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>In-Kind Gift</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Cultivating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Kind Not Yet Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Kind Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>npsp__Donation_Compact_Layout</fullName>
+        <fields>AccountId</fields>
+        <fields>Amount</fields>
+        <fields>CloseDate</fields>
+        <fields>StageName</fields>
+        <label>DEPRICATED: Donation Compact Layout</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>npsp__Membership_Compact_Layout</fullName>
+        <fields>AccountId</fields>
+        <fields>Amount</fields>
+        <fields>StageName</fields>
+        <fields>npe01__Membership_Start_Date__c</fields>
+        <fields>npe01__Membership_End_Date__c</fields>
+        <fields>npe01__Member_Level__c</fields>
+        <label>DEPRICATED: Membership Compact Layout</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>npsp__NPSP_Donation_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Amount</fields>
+        <fields>CloseDate</fields>
+        <fields>StageName</fields>
+        <label>NPSP Donation Compact Layout</label>
+    </compactLayouts>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>npsp__BDE_Entry_FS_v2</fullName>
+        <availableFields>
+            <field>npsp__Acknowledgment_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Acknowledgment_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>CampaignId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe01__Contact_Id_for_Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Description</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe01__Do_Not_Automatically_Create_Payment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ExpectedRevenue</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Fair_Market_Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ForecastCategory</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ForecastCategoryName</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Grant_Contract_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Grant_Contract_Number__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Grant_Period_End_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Grant_Period_Start_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Grant_Program_Area_s__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Grant_Requirements_Website__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>HasOpportunityLineItem</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Honoree_Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Honoree_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__In_Kind_Description__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__In_Kind_Donor_Declared_Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__In_Kind_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>IsPrivate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Is_Grant_Renewal__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastActivityDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastModifiedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastModifiedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastReferencedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastViewedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LeadSource</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Matching_Gift_Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Matching_Gift_Employer__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Matching_Gift_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Matching_Gift__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe01__Member_Level__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe01__Membership_End_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe01__Membership_Origin__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe01__Membership_Start_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>NextStep</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Next_Grant_Deadline_Due_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Notification_Message__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Notification_Preference__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Notification_Recipient_Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Notification_Recipient_Information__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Notification_Recipient_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe01__Number_of_Payments__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>OwnerId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Previous_Grant_Opportunity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Pricebook2Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Primary_Contact_Campaign_Member_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Primary_Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Probability</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>RecordTypeId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe03__Recurring_Donation__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Requested_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>TotalOpportunityQuantity</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Tribute_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Type</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npo02__systemHouseholdContactRoleProcessor__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Batch Data Entry</description>
+        <displayedFields>
+            <field>AccountId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>StageName</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Amount</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CloseDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>BDE Entry FS v2</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>npsp__BDE_List_FS_v2</fullName>
+        <availableFields>
+            <field>npsp__Acknowledgment_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Acknowledgment_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe01__Amount_Outstanding__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe01__Amount_Written_Off__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Batch__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>CampaignId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npo02__CombinedRollupFieldset__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe01__Contact_Id_for_Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ContractId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>CreatedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>CreatedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Description</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe01__Do_Not_Automatically_Create_Payment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ExpectedRevenue</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Fair_Market_Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ForecastCategory</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>ForecastCategoryName</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Grant_Contract_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Grant_Contract_Number__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Grant_Period_End_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Grant_Period_Start_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Grant_Program_Area_s__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Grant_Requirements_Website__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>HasOpportunityLineItem</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Honoree_Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Honoree_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__In_Kind_Description__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__In_Kind_Donor_Declared_Value__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__In_Kind_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>IsClosed</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>IsDeleted</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>IsPrivate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>IsWon</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Is_Grant_Renewal__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe01__Is_Opp_From_Individual__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastActivityDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastModifiedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastModifiedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastReferencedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastViewedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LeadSource</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Matching_Gift_Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Matching_Gift_Employer__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Matching_Gift_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Matching_Gift__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe01__Member_Level__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe01__Membership_End_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe01__Membership_Origin__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe01__Membership_Start_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>NextStep</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Next_Grant_Deadline_Due_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Notification_Message__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Notification_Preference__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Notification_Recipient_Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Notification_Recipient_Information__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Notification_Recipient_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe01__Number_of_Payments__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>OwnerId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe01__Payments_Made__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Previous_Grant_Opportunity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Pricebook2Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Primary_Contact_Campaign_Member_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Primary_Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Probability</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>RecordTypeId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Recurring_Donation_Installment_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Recurring_Donation_Installment_Number__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npe03__Recurring_Donation__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Requested_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>TotalOpportunityQuantity</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npsp__Tribute_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Type</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>npo02__systemHouseholdContactRoleProcessor__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Batch Data Entry</description>
+        <displayedFields>
+            <field>AccountId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Amount</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>StageName</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CloseDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>New BDE List v2</label>
+    </fieldSets>
+    <fields>
+        <fullName>AccountId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Amount</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>CampaignId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CloseDate</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContractId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DB_Competitor__c</fullName>
+        <description>This is a field that is installed by and used with the Adoption Dashboard AppExchange package. If your org already has a similar field, you can change the reports that are part of the Adoption Dashboard package to use your custom field and can delete this field.</description>
+        <externalId>false</externalId>
+        <label>DB Competitor</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Competitor A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Competitor B</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Competitor C</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ExpectedRevenue</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsPrivate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>LeadSource</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fax</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Online</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>NextStep</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Pricebook2Id</fullName>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Probability</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>StageName</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Prospecting</fullName>
+                <default>false</default>
+                <closed>false</closed>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>0</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pledged</fullName>
+                <default>false</default>
+                <closed>false</closed>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>50</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Posted</fullName>
+                <default>false</default>
+                <closed>true</closed>
+                <forecastCategory>Closed</forecastCategory>
+                <probability>100</probability>
+                <won>true</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+                <closed>true</closed>
+                <forecastCategory>Omitted</forecastCategory>
+                <probability>0</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed Won</fullName>
+                <default>false</default>
+                <closed>true</closed>
+                <forecastCategory>Closed</forecastCategory>
+                <probability>100</probability>
+                <won>true</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LOI Submitted</fullName>
+                <default>false</default>
+                <closed>false</closed>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>20</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Application Submitted</fullName>
+                <default>false</default>
+                <closed>false</closed>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>30</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Awarded</fullName>
+                <default>false</default>
+                <closed>true</closed>
+                <forecastCategory>Closed</forecastCategory>
+                <probability>100</probability>
+                <won>true</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cultivating</fullName>
+                <default>false</default>
+                <closed>false</closed>
+                <forecastCategory>Omitted</forecastCategory>
+                <probability>10</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In-Kind Not Yet Received</fullName>
+                <default>false</default>
+                <closed>false</closed>
+                <forecastCategory>Omitted</forecastCategory>
+                <probability>50</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In-Kind Received</fullName>
+                <default>false</default>
+                <closed>true</closed>
+                <forecastCategory>Omitted</forecastCategory>
+                <probability>100</probability>
+                <won>true</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+                <closed>true</closed>
+                <forecastCategory>Omitted</forecastCategory>
+                <probability>0</probability>
+                <won>false</won>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TotalOpportunityQuantity</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Existing Funding</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Funding</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>npe01__Amount_Outstanding__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula: The Amount of this Opportunity minus the Payment Writeoff Amount and Payment Amount Received.</description>
+        <externalId>false</externalId>
+        <formula>Amount - NULLVALUE(npe01__Payments_Made__c, 0) - NULLVALUE(npe01__Amount_Written_Off__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula: The Amount of this Opportunity minus the Payment Writeoff Amount and Payment Amount Received.</inlineHelpText>
+        <label>Remaining Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>npe01__Amount_Written_Off__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total value of the Payments marked as written-off or noncollectable for this Opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total value of the Payments marked as written-off or noncollectable for this Opportunity.</inlineHelpText>
+        <label>Payment Writeoff Amount</label>
+        <summarizedField>npe01__OppPayment__c.npe01__Payment_Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>npe01__OppPayment__c.npe01__Written_Off__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>npe01__OppPayment__c.npe01__Opportunity__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>npe01__Contact_Id_for_Role__c</fullName>
+        <deprecated>false</deprecated>
+        <description>System field updated automatically.  Do not use.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hidden field for passing a Contact Id for Contact Role creation.</inlineHelpText>
+        <label>Contact Id for Role</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>npe01__Do_Not_Automatically_Create_Payment__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If payments are active, and if this is checked, a new payment will not be automatically created for this Opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If payments are active, and if checked, a new payment will not be automatically created for this Opportunity.</inlineHelpText>
+        <label>Do Not Automatically Create Payment</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>npe01__Is_Opp_From_Individual__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Formula: Whether or not the related Account is defined as an individual (SYSTEMIsIndividual__c)</description>
+        <externalId>false</externalId>
+        <formula>IF( Account.npe01__SYSTEMIsIndividual__c, &apos;true&apos;, &apos;false&apos; )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula: Whether or not the related Account is defined as an individual (SYSTEMIsIndividual__c)</inlineHelpText>
+        <label>Is Opp From Individual</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>npe01__Member_Level__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used for Membership Opportunities (Record Type)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines the value on the Contact or Account of the Last Membership Level field.</inlineHelpText>
+        <label>Member Level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>npe01__Membership_End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used for Membership Opportunities (Record Type)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date membership period ends.</inlineHelpText>
+        <label>Membership End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>npe01__Membership_Origin__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used for Membership Opportunities (Record Type)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Is this a renewal, a new membership, or a membership with someone who lapsed and has returned.</inlineHelpText>
+        <label>Membership Origin</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reacquire</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>npe01__Membership_Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used for Membership Opportunities (Record Type)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date when membership period starts</inlineHelpText>
+        <label>Membership Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>npe01__Number_of_Payments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Calculated based on the Payment object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total number of payments for this Opportunity (Donation)</inlineHelpText>
+        <label>Number of Payments</label>
+        <summaryForeignKey>npe01__OppPayment__c.npe01__Opportunity__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>npe01__Payments_Made__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The total value of Payments marked as paid for this Opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total value of Payments marked as paid for this Opportunity.</inlineHelpText>
+        <label>Payment Amount Received</label>
+        <summarizedField>npe01__OppPayment__c.npe01__Payment_Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>npe01__OppPayment__c.npe01__Paid__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>npe01__OppPayment__c.npe01__Opportunity__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>npe03__Recurring_Donation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Recurring Donation</label>
+        <referenceTo>npe03__Recurring_Donation__c</referenceTo>
+        <relationshipLabel>Donations</relationshipLabel>
+        <relationshipName>Donations</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>npo02__CombinedRollupFieldset__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Hidden system field, do not add to layouts.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(CloseDate) + &apos;;|;&apos;+ TEXT(Amount) + &apos;;|;&apos;+ TEXT(npe01__Member_Level__c) + &apos;;|;&apos;+ TEXT(npe01__Membership_Origin__c) + &apos;;|;&apos; +  Id</formula>
+        <inlineHelpText>Concatenated fields used during rollups to locate the most recent opportunity.</inlineHelpText>
+        <label>Combined Rollup Fieldset</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>npo02__systemHouseholdContactRoleProcessor__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Hidden system field.  Do not update, updated by automatic process.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Controls if Household contact roles are created for Opportunities.  DEPRECATED.  Replaced by custom settings.</inlineHelpText>
+        <label>_SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR</label>
+        <picklist>
+            <picklistValues>
+                <fullName>All Opportunities</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Opportunities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Acknowledgment_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used to track date opportunity was acknowledged</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date of acknowledgment</inlineHelpText>
+        <label>Acknowledgment Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Acknowledgment_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Status of Acknowledgment of this gift.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of Acknowledgment of this gift.</inlineHelpText>
+        <label>Acknowledgment Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>To Be Acknowledged</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Acknowledged</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Do Not Acknowledge</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email Acknowledgment Now</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email Acknowledgment Not Sent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Ask_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The date when the donor was specifically asked for the donation, as opposed to the Opportunity Close Date that the organization may set to either when the Opportunity was first created, or when the Opportunity was won.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date when the donor was specifically asked for the donation, as opposed to the Opportunity Close Date that the organization may set to either when the Opportunity was first created, or when the Opportunity was won.</inlineHelpText>
+        <label>Ask Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Batch__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Batch</label>
+        <referenceTo>npsp__Batch__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Closed_Lost_Reason__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Notes on why the donation ask was not successful.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Notes on why the donation ask was not successful.</inlineHelpText>
+        <label>Closed Lost Reason</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>npsp__Fair_Market_Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Fair Market Value of an In-Kind gift.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Fair Market Value of an In-Kind gift.</inlineHelpText>
+        <label>Fair Market Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Gift_Strategy__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Categorizes the type of ask for this opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Categorizes the type of ask for this opportunity.</inlineHelpText>
+        <label>Gift Strategy</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New Donor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Grant_Contract_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The date of the grant&apos;s inception, according to the document or contract sent by the grant-making organization.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date of the grant&apos;s inception, according to the document or contract sent by the grant-making organization.</inlineHelpText>
+        <label>Grant Contract Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Grant_Contract_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Tracks unique numbers sometimes assigned by grant-making organizations.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tracks unique numbers sometimes assigned by grant-making organizations.</inlineHelpText>
+        <label>Grant Contract Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>npsp__Grant_Period_End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The date on which the period of the grant ends.</description>
+        <externalId>false</externalId>
+        <label>Grant Period End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Grant_Period_Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The date on which the period of the grant begins.</description>
+        <externalId>false</externalId>
+        <label>Grant Period Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Grant_Program_Area_s__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Describes the funding areas for the grant/gift. You can enter anything you want here. For example, you could enter the name of the program the grant/gift applies to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describes the funding areas for the grant. You can enter anything you want here. For example, you could enter the name of the program the grant applies to.</inlineHelpText>
+        <label>Program Areas</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Grant_Requirements_Website__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A URL that points to the grant requirements on the grant-maker&apos;s website.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A URL that points to the grant requirements on the grant-maker&apos;s website.</inlineHelpText>
+        <label>Grant Requirements Website</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Honoree_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The existing Contact record of the honoree for this donation.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The existing Contact record of the honoree for this donation.</inlineHelpText>
+        <label>Honoree Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Opportunities (Honoree Contact)</relationshipLabel>
+        <relationshipName>Honoree_Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Honoree_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The honoree name as provided by the donor. If this field is left blank, and the Honoree Contact field contains a value, Salesforce automatically populates this field with that value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The honoree name as provided by the donor. If this field is left blank, and the Honoree Contact field contains a value, Salesforce automatically populates this field with that value.</inlineHelpText>
+        <label>Honoree Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>npsp__In_Kind_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Holds any rich text description of the In-Kind Gift, including pictures.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Holds any rich text description of the In-Kind Gift, including pictures.</inlineHelpText>
+        <label>In-Kind Description</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>npsp__In_Kind_Donor_Declared_Value__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Checked if the donor provided the Fair Market Value for this In-Kind gift.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked if the donor provided the Fair Market Value for this In-Kind gift.</inlineHelpText>
+        <label>In-Kind Donor Declared Value</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>npsp__In_Kind_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The type of In-Kind gift.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The type of In-Kind gift.</inlineHelpText>
+        <label>In-Kind Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Goods</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Is_Grant_Renewal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If selected, indicates that the grant is a renewal of a previous grant.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If selected, indicates that the grant is a renewal of a previous grant.</inlineHelpText>
+        <label>Is Grant Renewal</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Matching_Gift_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The account of the company who will match this gift.</description>
+        <externalId>false</externalId>
+        <label>Matching Gift Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Matched Gifts</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Matching_Gift_Employer__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The name of the company who will match this gift.</description>
+        <externalId>false</externalId>
+        <label>Matching Gift Employer</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>npsp__Matching_Gift_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The status of this gift being matched.</description>
+        <externalId>false</externalId>
+        <label>Matching Gift Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Potential</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Received</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Matching_Gift__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The employer&apos;s matching gift for this employee&apos;s gift.</description>
+        <externalId>false</externalId>
+        <label>Matching Gift</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Matched Gifts</relationshipLabel>
+        <relationshipName>MatchedGifts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Next_Grant_Deadline_Due_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The NPSP updates this field automatically based on the next Deliverable record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The NPSP updates this field automatically based on the next Grant Deadline record.</inlineHelpText>
+        <label>Next Deliverable Date</label>
+        <summarizedField>npsp__Grant_Deadline__c.npsp__Grant_Deadline_Due_Date__c</summarizedField>
+        <summaryFilterItems>
+            <field>npsp__Grant_Deadline__c.npsp__Grant_Deadline_Due_Date__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>npsp__Grant_Deadline__c.npsp__Grant_Deliverable_Close_Date__c</field>
+            <operation>equals</operation>
+            <value></value>
+        </summaryFilterItems>
+        <summaryForeignKey>npsp__Grant_Deadline__c.npsp__Opportunity__c</summaryForeignKey>
+        <summaryOperation>min</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Notification_Message__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A personalized message for the notification recipient.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A personalized message for the notification recipient.</inlineHelpText>
+        <label>Notification Message</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>npsp__Notification_Preference__c</fullName>
+        <deprecated>false</deprecated>
+        <description>How the notification recipient should be notified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>How the notification recipient should be notified.</inlineHelpText>
+        <label>Notification Preference</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Postal Mail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Do Not Notify</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Notification_Recipient_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The existing Contact record of the person to be notified for this donation.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The existing Contact record of the person to be notified for this donation.</inlineHelpText>
+        <label>Notification Recipient Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Opportunities (Notification Recipient)</relationshipLabel>
+        <relationshipName>Notification_Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Notification_Recipient_Information__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The contact information (as provided by the donor) for the notification recipient.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The contact information (as provided by the donor) for the notification recipient.</inlineHelpText>
+        <label>Notification Recipient Information</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Notification_Recipient_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The name (as provided by the donor) of the person who should be notified about this gift. If this field is left blank and the Notification Recipient Contact field contains a value, Salesforce automatically populates this field with that value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The name (as provided by the donor) of the person who should be notified about this gift. If this field is left blank and the Notification Recipient Contact field contains a value, Salesforce automatically populates this field with that value.</inlineHelpText>
+        <label>Notification Recipient Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>npsp__Previous_Grant_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>If this grant/gift is a renewal of a previous grant/gift, use this field to relate this record to the previous one.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If this grant is a renewal of a previous grant, use this field to relate this record to the previous one.</inlineHelpText>
+        <label>Previous Grant/Gift Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Related Grants/Gifts</relationshipLabel>
+        <relationshipName>Previous_Grant_Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Primary_Contact_Campaign_Member_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The status to use when creating a campaign member for this opportunity&apos;s primary contact and primary campaign source. Leave blank to default to an responded status for closed/won opportunities, and a non-responded status for other opportunities.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The status to use when creating a campaign member for this opportunity&apos;s primary contact and primary campaign source. Leave blank to default to an responded status for closed/won opportunities, and a non-responded status for other opportunities.</inlineHelpText>
+        <label>Primary Contact Campaign Member Status</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>npsp__Primary_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The primary contact for this opportunity. The primary contact role is kept in sync with this field. For individual donations, this denotes attribution for this opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The primary contact for this opportunity. The primary contact role is kept in sync with this field. For individual donations, this denotes attribution for this opportunity.</inlineHelpText>
+        <label>Primary Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Qualified_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The date this donor was identified as qualifying for this donation.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date this donor was identified as qualifying for this donation.</inlineHelpText>
+        <label>Qualified Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Recurring_Donation_Installment_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Installment name for inclusion in Opportunity Naming. Shows the installment number in parenthesis for open ended recurring donations, or the installment number out of the total for recurring donations with a set number of installments.</description>
+        <externalId>false</externalId>
+        <formula>IF(
+ISBLANK(npe03__Recurring_Donation__c),
+&apos;&apos;,
+  IF(
+    OR(ISPICKVAL(npe03__Recurring_Donation__r.npe03__Open_Ended_Status__c, &apos;Open&apos;),ISPICKVAL(npe03__Recurring_Donation__r.npe03__Open_Ended_Status__c, &apos;Closed&apos;),ISBLANK(npe03__Recurring_Donation__r.npe03__Installments__c)),
+    &apos;(&apos;&amp;TEXT(npsp__Recurring_Donation_Installment_Number__c)&amp;&apos;)&apos;,
+    &apos;(&apos;&amp;TEXT(npsp__Recurring_Donation_Installment_Number__c)&amp;&apos; &apos;&amp;$Label.npsp__oppInstallmentsOf&amp;&apos; &apos;&amp;TEXT(npe03__Recurring_Donation__r.npe03__Installments__c)&amp;&apos;)&apos;
+  )
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Installment name for inclusion in Opportunity Naming. Shows the installment number in parenthesis for open ended recurring donations, or the installment number out of the total for recurring donations with a set number of installments.</inlineHelpText>
+        <label>Recurring Donation Installment Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>npsp__Recurring_Donation_Installment_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The installment number of this opportunity&apos;s recurring donation schedule.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The installment number of this opportunity&apos;s recurring donation schedule.</inlineHelpText>
+        <label>Recurring Donation Installment Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>npsp__Requested_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The amount you are requesting. This number might be different from the final award amount.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The amount you are requesting. This number might be different from the final award amount.</inlineHelpText>
+        <label>Requested Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>npsp__Tribute_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates whether the gift is in honor or memory of an individual.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether the gift is in honor or memory of an individual.</inlineHelpText>
+        <label>Tribute Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Honor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Memorial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <listViews>
+        <fullName>AllDonations</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Opportunity.Donation</value>
+        </filters>
+        <label>All Donations</label>
+    </listViews>
+    <listViews>
+        <fullName>AllOpportunities</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Opportunities</label>
+    </listViews>
+    <listViews>
+        <fullName>ClosingNextMonth</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <operation>equals</operation>
+            <value>NEXT_MONTH</value>
+        </filters>
+        <label>Closing Next Month</label>
+    </listViews>
+    <listViews>
+        <fullName>ClosingThisMonth</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_MONTH</value>
+        </filters>
+        <label>Closing This Month</label>
+    </listViews>
+    <listViews>
+        <fullName>Default_Opportunity_Pipeline</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>LAST_N_MONTHS:3</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.RECORDTYPE</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Opportunity Pipeline</label>
+    </listViews>
+    <listViews>
+        <fullName>MyOpportunities</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Opportunities</label>
+    </listViews>
+    <listViews>
+        <fullName>NewLastWeek</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_WEEK</value>
+        </filters>
+        <label>New Last Week</label>
+    </listViews>
+    <listViews>
+        <fullName>NewThisWeek</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <label>New This Week</label>
+    </listViews>
+    <listViews>
+        <fullName>Private</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Private</label>
+    </listViews>
+    <listViews>
+        <fullName>Won</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CLOSED</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.WON</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Won</label>
+    </listViews>
+    <listViews>
+        <fullName>npsp__To_Be_Acknowledged</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>npsp__Primary_Contact__c</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>npsp__Acknowledgment_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>npsp__Acknowledgment_Status__c</field>
+            <operation>equals</operation>
+            <value>To Be Acknowledged,Email Acknowledgment Not Sent</value>
+        </filters>
+        <label>To Be Acknowledged</label>
+        <language>en_US</language>
+    </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypes>
+        <fullName>Donation</fullName>
+        <active>true</active>
+        <businessProcess>Donation</businessProcess>
+        <description>Donation Received</description>
+        <label>Donation</label>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Existing Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Funding</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npe01__Member_Level__c</picklist>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npe01__Membership_Origin__c</picklist>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reacquire</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npo02__systemHouseholdContactRoleProcessor__c</picklist>
+            <values>
+                <fullName>All Opportunities</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>No Opportunities</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npsp__Acknowledgment_Status__c</picklist>
+            <values>
+                <fullName>Email Acknowledgment Not Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email Acknowledgment Now</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Grant</fullName>
+        <active>true</active>
+        <businessProcess>Donation</businessProcess>
+        <description>Grant Received</description>
+        <label>Grant</label>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Existing Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Funding</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npe01__Member_Level__c</picklist>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npe01__Membership_Origin__c</picklist>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reacquire</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npo02__systemHouseholdContactRoleProcessor__c</picklist>
+            <values>
+                <fullName>All Opportunities</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>No Opportunities</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npsp__Acknowledgment_Status__c</picklist>
+            <values>
+                <fullName>Email Acknowledgment Not Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email Acknowledgment Now</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>In_Kind_Gift</fullName>
+        <active>true</active>
+        <businessProcess>In-Kind Gift</businessProcess>
+        <description>Goods or Services received as In-Kind</description>
+        <label>In-Kind Gift</label>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Existing Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Funding</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npe01__Member_Level__c</picklist>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npe01__Membership_Origin__c</picklist>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reacquire</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npo02__systemHouseholdContactRoleProcessor__c</picklist>
+            <values>
+                <fullName>All Opportunities</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>No Opportunities</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npsp__Acknowledgment_Status__c</picklist>
+            <values>
+                <fullName>Acknowledged</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do Not Acknowledge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email Acknowledgment Not Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email Acknowledgment Now</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>To Be Acknowledged</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npsp__In_Kind_Type__c</picklist>
+            <values>
+                <fullName>Goods</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Services</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npsp__Matching_Gift_Status__c</picklist>
+            <values>
+                <fullName>Potential</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npsp__Notification_Preference__c</picklist>
+            <values>
+                <fullName>Do Not Notify</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Postal Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npsp__Tribute_Type__c</picklist>
+            <values>
+                <fullName>Honor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Memorial</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>MajorGift</fullName>
+        <active>true</active>
+        <businessProcess>Donation</businessProcess>
+        <description>Large Donation from a Major Donor</description>
+        <label>Major Gift</label>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Existing Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Funding</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npe01__Member_Level__c</picklist>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npe01__Membership_Origin__c</picklist>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reacquire</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npo02__systemHouseholdContactRoleProcessor__c</picklist>
+            <values>
+                <fullName>All Opportunities</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>No Opportunities</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npsp__Acknowledgment_Status__c</picklist>
+            <values>
+                <fullName>Email Acknowledgment Not Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email Acknowledgment Now</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Matching_Gift</fullName>
+        <active>true</active>
+        <businessProcess>Donation</businessProcess>
+        <description>Matching Donation from an Donor&apos;s Employer or other Organization</description>
+        <label>Matching Gift</label>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Existing Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Funding</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npe01__Member_Level__c</picklist>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npe01__Membership_Origin__c</picklist>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reacquire</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npo02__systemHouseholdContactRoleProcessor__c</picklist>
+            <values>
+                <fullName>All Opportunities</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>No Opportunities</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npsp__Acknowledgment_Status__c</picklist>
+            <values>
+                <fullName>Email Acknowledgment Not Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email Acknowledgment Now</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npsp__Matching_Gift_Status__c</picklist>
+            <values>
+                <fullName>Potential</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Membership</fullName>
+        <active>true</active>
+        <businessProcess>Donation</businessProcess>
+        <description>A membership record type</description>
+        <label>Membership</label>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Existing Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Funding</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npe01__Member_Level__c</picklist>
+            <values>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npe01__Membership_Origin__c</picklist>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reacquire</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npo02__systemHouseholdContactRoleProcessor__c</picklist>
+            <values>
+                <fullName>All Opportunities</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>No Opportunities</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>npsp__Acknowledgment_Status__c</picklist>
+            <values>
+                <fullName>Email Acknowledgment Not Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email Acknowledgment Now</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OPPORTUNITY.AMOUNT</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OPPORTUNITY.STAGE_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OPPORTUNITY.CLOSE_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OPPORTUNITY.RECORDTYPE</customTabListAdditionalFields>
+        <listViewButtons>npsp__Email_Acknowledgments</listViewButtons>
+        <lookupDialogsAdditionalFields>OPPORTUNITY.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OPPORTUNITY.AMOUNT</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OPPORTUNITY.STAGE_NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OPPORTUNITY.CLOSE_DATE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OPPORTUNITY.RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupFilterFields>OPPORTUNITY.NAME</lookupFilterFields>
+        <lookupFilterFields>ACCOUNT.NAME</lookupFilterFields>
+        <lookupFilterFields>OPPORTUNITY.AMOUNT</lookupFilterFields>
+        <lookupFilterFields>OPPORTUNITY.STAGE_NAME</lookupFilterFields>
+        <lookupFilterFields>OPPORTUNITY.CLOSE_DATE</lookupFilterFields>
+        <lookupFilterFields>OPPORTUNITY.RECORDTYPE</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>OPPORTUNITY.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.SITE</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.AMOUNT</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.STAGE_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.CLOSE_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.RECORDTYPE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <webLinks>
+        <fullName>Loop__LOOP</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>800</height>
+        <linkType>url</linkType>
+        <masterLabel>Create PDF</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/loop__loop?eid={!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Loop__LOOP_Merge</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>1000</height>
+        <linkType>url</linkType>
+        <masterLabel>Deprecated LM</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/loop__loopmerge?eid={!Opportunity.Id}&amp;accountId={!Opportunity.AccountId}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Loop__LOOPlus</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>500</height>
+        <linkType>url</linkType>
+        <masterLabel>Run DDP</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/loop__looplus?eid={!Opportunity.Id}&amp;accountId={!Opportunity.AccountId}&amp;sessionId={!$Api.Session_ID}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Loop__Mass_LOOP_Merge</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Deprecated Mass LM</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+var ids = {!GETRECORDIDS($ObjectType.Opportunity)};
+if (!ids || ids.length &lt; 1)
+    alert(&apos;Please select at least one record.&apos;);
+else
+{
+    var url = &quot;/apex/loop__loopmerge?retURL=&quot;+encodeURI(window.location.pathname+window.location.search);
+    url += &quot;&amp;recordIds=&quot;+ids.join(&apos;,&apos;);
+    window.location.href = url;
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Loop__Mass_LOOPlus</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Run DDP</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+var ids = {!GETRECORDIDS($ObjectType.Opportunity)};
+if (!ids || ids.length &lt; 1)
+    alert(&apos;Please select at least one record.&apos;);
+else
+{
+    var url = &quot;/apex/loop__masslooplus?retURL=&quot; + encodeURI(window.location.pathname+window.location.search);
+    url += &quot;&amp;recordIds=&quot;+ids.join(&apos;,&apos;);
+    url += &quot;&amp;sessionId={!$Api.Session_ID}&quot;;
+    window.location.href = url;
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>dsfs__Send_with_DocuSign</fullName>
+        <availability>online</availability>
+        <description>This button will initiate a DocuSign Envelope that is linked to the Opportunity</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send with DocuSign</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/apex/dsfs__DocuSign_JavaScript&quot;)}
+DocuSign_CreateEnvelope();</url>
+    </webLinks>
+    <webLinks>
+        <fullName>dsfs__Verify_with_DNB</fullName>
+        <availability>online</availability>
+        <description>This button will initiate DnBs Pre-Contract Risk Screening linked to the Opportunity</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Verify with D&amp;B</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/apex/dsfs__DocuSign_JavaScript&quot;)}
+        
+{!REQUIRESCRIPT(&apos;//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js&apos;)} 
+{!REQUIRESCRIPT(&apos;//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js&apos;)} 
+
+var html = &apos;&lt;div id=&quot;dialog&quot; style=&quot;display: none;&quot;&gt;&lt;/div&gt;&apos;;
+
+var $g = jQuery.noConflict();
+
+var address = &apos;&lt;iframe id=&quot;dnbContent&quot; width=&quot;700&quot; height=&quot;730&quot; scrolling=&quot;no&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; frameborder=&quot;0&quot; src=&quot;&apos;+DocuSign_GetVerifyWithDnb(&apos;opportunity&apos;)+&apos;&quot;&gt;&lt;/iframe&gt;&apos;;
+		
+$g(function() { 
+
+	$g(&apos;head&apos;).append(&apos;&lt;link rel=&quot;stylesheet&quot; href=&quot;https://code.jquery.com/ui/1.11.4/themes/redmond/jquery-ui.css&quot;/&gt;&apos;);
+
+	if($g(&apos;#dialog&apos;).length == 0) {
+		$g(&apos;body&apos;).append(html); 
+	}
+	$g(&quot;#dialog&quot;).dialog({ 
+		autoOpen: true, 
+		modal: true, 
+		width: 700,
+		height: 783,
+		open: function(event, ui) {
+		  if($g(&apos;#myNewImage&apos;).length == 0) {
+		     $g(&quot;.ui-dialog-titlebar&quot;).append(&quot;&lt;img src=&apos;&quot;+getDnbLogo()+&quot;&apos; id=&apos;myNewImage&apos; /&gt;&quot;);
+		  }
+		  $g(&apos;.ui-widget-overlay&apos;).bind(&apos;click&apos;,function(){
+    			$g(&apos;#dialog&apos;).dialog(&quot;close&quot;);
+		  });
+		}
+	})
+	if($g(&apos;#dnbContent&apos;).length == 0) {
+		$g(&apos;#dialog&apos;).append(address); 
+	}
+
+
+	$g(&quot;.ui-dialog-title&quot;).hide();
+	$g(&quot;#dialog&quot;).css(&apos;padding&apos;, &apos;0px&apos;);
+	$g(&quot;.ui-widget-header&quot;).attr(&apos;style&apos;, &apos;padding-top:5px; padding-right:5px; padding-left:10px;padding-bottom:5px; border-radius:0px; background: #005172;border:0px;margin:auto;&apos;);
+	$g(&quot;.ui-button-text&quot;).css(&apos;padding&apos;, &apos;0&apos;);
+	$g(&quot;.ui-icon-closethick&quot;).attr(&apos;style&apos;, &apos;background-color:#005172; width:19px; height:19px; margin-top:-10px; margin-left:-10px;&apos;);
+	$g(&quot;.ui-dialog-titlebar-close&quot;).attr(&apos;style&apos;, &apos;border-radius:0px; padding:0px; width:18px; height:18px; border:0px;&apos;);
+	$g(&quot;.ui-dialog&quot;).css(&apos;z-index&apos;, &apos;10000&apos;);
+	$g(&quot;.ui-dialog&quot;).css(&apos;border-radius&apos;, &apos;0px&apos;);
+});</url>
+    </webLinks>
+    <webLinks>
+        <fullName>npe01__Add_Matching_Donation</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>sControl</linkType>
+        <masterLabel>Add Matching Donation_DEPRECATED</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <scontrol>npe01__OpportunityCreateMatching</scontrol>
+    </webLinks>
+    <webLinks>
+        <fullName>npe01__Matching_Donation</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>DEPRECATED - Matching Donation</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/npsp__OPP_MatchingDonationsBTN?id={!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>npe01__New_Contact_Donation</fullName>
+        <availability>online</availability>
+        <description>Replaces the standard New Donation button on the Donations related list on the Contact Page Layout if you have Donation Record Types.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Contact Donation</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/setup/ui/recordtypeselect.jsp?
+ent=Opportunity&amp;
+retURL=%2F{!Contact.Id}&amp;
+save_new_url=%2F006%2Fe%3Flookupcmpgn%3D1%26retURL%3D%252F{!Contact.Id}%26accid%3D{!Account.Id}%26conid%3D{!Contact.Id}&amp;opp3={!Contact.Name}-%20Donation%20{!Today}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>npe01__New_Organization_Donation</fullName>
+        <availability>online</availability>
+        <description>Replaces the standard New Donation button on the Donations related list on the Organization Page Layout if you have Donation Record Types.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Account Donation</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/setup/ui/recordtypeselect.jsp?
+ent=Opportunity&amp;
+retURL=%2F{!Account.Id}&amp;
+save_new_url=%2F006%2Fe%3Flookupcmpgn%3D1%26retURL%3D%252F{!Account.Id}%26accid%3D{!Account.Id}&amp;
+opp3={!Account.Name}-%20Donation%20{!Today}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>npsp__Email_Acknowledgment</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Email Acknowledgment</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/NPSP__OPP_SendAcknowledgmentBTN?OppId={!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>npsp__Email_Acknowledgments</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Email Acknowledgments</masterLabel>
+        <openType>sidebar</openType>
+        <page>npsp__OPP_SendAcknowledgmentBTN</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>npsp__Find_Matched_Gifts</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Find Matched Gifts</masterLabel>
+        <openType>sidebar</openType>
+        <page>npsp__MTCH_FindGifts</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>npsp__Manage_Soft_Credits</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Manage Soft Credits</masterLabel>
+        <openType>sidebar</openType>
+        <page>npsp__PSC_ManageSoftCredits</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>npsp__Refresh_Name</fullName>
+        <availability>online</availability>
+        <description>Updates this opportunity&apos;s name based on the naming scheme in NPSP settings.</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Refresh Name</masterLabel>
+        <openType>sidebar</openType>
+        <page>npsp__OPP_OpportunityNamingBTN</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

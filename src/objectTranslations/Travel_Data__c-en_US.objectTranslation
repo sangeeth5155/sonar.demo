@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Travel Data</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Travel Data</value>
+    </caseValues>
+    <fields>
+        <label><!-- Activity --></label>
+        <name>Activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address --></label>
+        <name>Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Airline --></label>
+        <name>Airline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Airport --></label>
+        <name>Airport__c</name>
+    </fields>
+    <fields>
+        <label><!-- Arrival Date --></label>
+        <name>Arrival_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Arrival Time --></label>
+        <name>Arrival_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Avis AWD # --></label>
+        <name>Avis_AWD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Avis Wizard # --></label>
+        <name>Avis_Wizard__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cabin # --></label>
+        <name>Cabin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Check In Date --></label>
+        <name>Check_In_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Check Out Date --></label>
+        <name>Check_Out_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company --></label>
+        <name>Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Confirmation # --></label>
+        <name>Confirmation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Confirmed Date --></label>
+        <name>Confirmed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Departure Date --></label>
+        <name>Departure_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Departure Time --></label>
+        <name>Departure_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Destination --></label>
+        <name>Destination__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drop off Date --></label>
+        <name>Drop_off_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drop off Location --></label>
+        <name>Drop_off_Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drop off Time --></label>
+        <name>Drop_off_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Time --></label>
+        <name>End_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- End date --></label>
+        <name>End_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Flight ID --></label>
+        <name>Flight_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Flight # --></label>
+        <name>Flight__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gr Transportation Inc? --></label>
+        <name>Gr_Transportation_Inc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hotel Name --></label>
+        <name>Hotel_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import Id --></label>
+        <name>Import_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item --></label>
+        <name>Item__c</name>
+    </fields>
+    <fields>
+        <label><!-- Kitchen needed? --></label>
+        <name>Kitchen_needed__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Migrated Record --></label>
+        <name>Migrated_Record__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>Parent_Wish__c</name>
+        <relationshipLabel><!-- Travel Data --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pick up Date --></label>
+        <name>Pick_up_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pick up Time --></label>
+        <name>Pick_up_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pick up location --></label>
+        <name>Pick_up_location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Driver --></label>
+        <name>Preferred_Driver__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Airline --></label>
+        <name>RE_Airline__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Airport --></label>
+        <name>RE_Airport__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Airport --></label>
+        <name>RE_Airport_departure__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Arrival Date --></label>
+        <name>RE_Arrival_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Arrival Time --></label>
+        <name>RE_Arrival_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Check In Date --></label>
+        <name>RE_Check_In_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Check Out Date --></label>
+        <name>RE_Check_Out_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Company --></label>
+        <name>RE_Company_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Company --></label>
+        <name>RE_Company_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Company --></label>
+        <name>RE_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Confirmation # --></label>
+        <name>RE_Confirmation__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Confirmed Date --></label>
+        <name>RE_Confirmed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Departure Date --></label>
+        <name>RE_Departure_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Departure Time --></label>
+        <name>RE_Departure_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE End date --></label>
+        <name>RE_End_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Flight ID --></label>
+        <name>RE_Flight_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Flight # --></label>
+        <name>RE_Flight__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Gr Transportation Inc? --></label>
+        <name>RE_Gr_Transportation_Inc__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Hotel Name --></label>
+        <name>RE_Hotel_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Import Id --></label>
+        <name>RE_Import_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Notes --></label>
+        <name>RE_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Pick up Date --></label>
+        <name>RE_Pick_up_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Pick-up Location --></label>
+        <name>RE_Pick_up_Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Pick up Time --></label>
+        <name>RE_Pick_up_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Reservation Name --></label>
+        <name>RE_Reservation_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Sequence --></label>
+        <name>RE_Sequence__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Start Date --></label>
+        <name>RE_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE # of Free Tix --></label>
+        <name>RE_of_Free_Tix__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE # of Paid Tix --></label>
+        <name>RE_of_Paid_Tix__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE # of Rooms --></label>
+        <name>RE_of_Rooms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reservation Name --></label>
+        <name>Reservation_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reservation # --></label>
+        <name>Reservation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reserved Name --></label>
+        <name>Reserved_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence --></label>
+        <name>Sequence__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Time --></label>
+        <name>Start_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Beds? --></label>
+        <name>of_Beds__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Free Tix --></label>
+        <name>of_Free_Tix__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Paid Tix --></label>
+        <name>of_Paid_Tix__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Participants --></label>
+        <name>of_Participants__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Rooms --></label>
+        <name>of_Rooms__c</name>
+    </fields>
+    <layouts>
+        <layout>Activities/Excursions</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Cruise</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Dates</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Flight</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Ground Transportation</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Limousine</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Lodging</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Medical Needs</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Rental Car</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Travel Data Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Activities/Excursions --></label>
+        <name>Activities_Excursions</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Cruise --></label>
+        <name>Cruise</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Flight --></label>
+        <name>Flight</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Ground Transportation --></label>
+        <name>Ground_Transportation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Limousine --></label>
+        <name>Limousine</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Lodging --></label>
+        <name>Lodging</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Medical Needs --></label>
+        <name>Medical_Needs</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Rental Car --></label>
+        <name>Rental_Car</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

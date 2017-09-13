@@ -1,0 +1,23 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Century Gothic, sans-serif">Hi&nbsp;</font></span><font face="Century Gothic, sans-serif">{!Contact.FirstName}</font><span style="color: rgb(0, 0, 0); font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">,<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>Thank you for completing your
+volunteer application. We are thrilled to have you as part of the Make-A-Wish
+family!<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>The next step to becoming a
+Make-A-Wish volunteer is to attend a screening interview with a member of our
+staff. Additionally, if you would like to become a wish granter, our wish
+granter training begins immediately after the screening interview. Although all
+volunteers must attend a screening interview, becoming a wish granter is
+optional.<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>Please read the details below and RSVP
+by replying to this email with your preferred date of the screening interview
+and wish granter training, if desired.<br></span><span style="font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;"><br><b>Date:<br></b></span></span><b style="font-size: 12pt;"><span style="font-size:12.0pt;
+font-family:&quot;Century Gothic&quot;,sans-serif">Time:<br></span></b><b style="font-size: 12pt;"><span style="font-size:12.0pt;
+font-family:&quot;Century Gothic&quot;,sans-serif">Location:<br></span></b><b style="font-size: 12pt;"><span style="font-size:12.0pt;
+font-family:&quot;Century Gothic&quot;,sans-serif"><br>OR<br></span></b><b style="font-size: 12pt;"><span style="font-size:12.0pt;
+font-family:&quot;Century Gothic&quot;,sans-serif"><br>Date:<br></span></b><b style="font-size: 12pt;"><span style="font-size:12.0pt;
+font-family:&quot;Century Gothic&quot;,sans-serif">Time:<br></span></b><b style="font-size: 12pt;"><span style="font-size:12.0pt;
+font-family:&quot;Century Gothic&quot;,sans-serif">Location:<br></span></b><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><b><br></b>If you are unable to attend one of
+these dates, please contact us for more sessions in the future.<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>Thank you for your interest in
+becoming a volunteer and/or a wish granter!&nbsp; We hope to see you soon!<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>Best wishes,<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>{!User.Name}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!User.Account_Name__c}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!User.Title}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!User.Phone}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!User.Email}</span></p>]]></td>
+</tr>
+</table>

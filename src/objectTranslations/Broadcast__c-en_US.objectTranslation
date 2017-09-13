@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Broadcast</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Broadcast</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Broadcast Message --></label>
+        <name>Broadcast_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Chapter Name --></label>
+        <lookupFilter>
+            <errorMessage><!-- Chapter Name should be chapter record type --></errorMessage>
+        </lookupFilter>
+        <name>Chapter_Name__c</name>
+        <relationshipLabel><!-- Broadcast --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <layouts>
+        <layout>Broadcast Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

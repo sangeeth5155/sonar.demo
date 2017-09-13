@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Hi&nbsp;{!Case.VOlunteer_Manager_Name__c},<div><br></div><div>Still wish granter is not assigned for this case&nbsp;{!Case.CaseNumber},</div><div>please refer this link.</div><div><br></div><div><br></div><div>&nbsp;{!Case.Link}</div>]]></td>
+</tr>
+</table>

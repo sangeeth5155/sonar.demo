@@ -1,0 +1,227 @@
+<!-- ************************************************************************************************************************************
+Description : This page is used to display volunteer Open and Closed task list
+************************************************************************************************************************************** -->
+<apex:page controller="VolunteerActivities_AC" sidebar="false" showHeader="false" applyBodyTag="false" docType="html-5.0" standardStylesheets="false" cache="false" readOnly="true">
+    <apex:stylesheet value="{!URLFOR($Resource.prospective_assets, 'web/css/lib/jquery.dataTables.min.css')}"/>
+    <apex:include pageName="prospective_head" id="phead" />
+    <style type="text/css">
+        body > main {margin-bottom:4em; margin-bottom:4rem;}
+        body {font-size:80%}
+        .ac-btn,.messageCell h4 {background-color:#066cb6}
+        .hs-btn {background-color:#747678}
+        .vcpactivelogin .table-maw td {vertical-align:middle}
+        .pad {overflow-x:auto; width:100%}
+        table.dataTable thead .sorting, table.table thead th {padding-right:1rem}
+        .vcpactivelogin .table-maw td {border-bottom:none}
+        /*.rich-tab-active {border:1px solid #c0c0c0}
+        .rich-tab-inactive {border:1px solid #eee}*/
+        input[type="search"] {line-height: 1.5; color: #55595c; background-color: #fff; background-image: none; border: 1px solid #ccc; border-radius: 0; font-family: "Arial", sans-serif; font-size: .65rem; padding:.61rem 0 .9em .9rem; margin:0 0 1rem; min-width:11rem}
+        .apexp {position:relative; margin-top: 2rem}
+        h2 {text-align: center;}
+        @media (min-width: 48em) {
+        .nav-content {position:absolute; top:0; right:0; width:100%; margin-right:1rem; margin-top:6.2rem; z-index:1}
+        .nav-content > div {margin:0; padding: 0 0 0 1rem;}
+        .apexp {margin-top:0;}
+        h2{text-align: left;}
+        .dataTables_wrapper {padding: 1rem; border: 1px solid #ececec;}
+        }
+        .nav-content .btn-info {background-color:#ececec; border:1px solid #ececec; color:#748678; border-bottom:none; font-size:.7rem; border-radius: .25rem .25rem 0 0; text-transform:uppercase; padding:.5rem; margin:0; outline:0}
+        .btn-info.current {background-color:#fff; color:#066cb6; font-weight: bolder;}
+        .dataTables_length {margin: .5rem 0 0;}
+        table {width:100%}
+    </style>
+    <body class="vcp vcpactivelogin full registered">
+        <apex:include pageName="active_header" id="pheader" />
+        <main role="main" class="container">
+            <div class="row">
+                <section class="col-md-12">
+                    <h1>My Tasks</h1>
+                    <apex:outputPanel id="refreshForm">
+                        <apex:form >
+                            <div class="pad">
+                                
+                                <!-------------- Open & Close task button block Starts -------------->
+                                
+                                <div class="nav-content">
+                                    <div class="col-xs-6 col-sm-6 col-md-2 col-md-push-8">
+                                        <input type="button" class="col-xs-12 col-sm-12 openTask btn-info btn" value="Current" />
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-2 col-md-push-8">
+                                        <input type="button" class="col-xs-12 col-sm-12 closedTask btn-info btn" value="Historical" />
+                                    </div>
+                                </div>
+                                
+                                <!-------------- Open & Close task button block Ends -------------->
+                                
+                                <!-------------- Volunteer open activities block Starts -------------->
+                                
+                                <div class="openActivities">
+                                    <apex:pageBlock id="details">
+                                        <h2 class="col-xs-12">Open Activities</h2>
+                                        <table id="dataTab1" class="display table table-maw table-hover">
+                                            <thead class="thead-default">
+                                                <tr>
+                                                    <th class="sm-width">Action</th>
+                                                    <th>Name</th>
+                                                    <th>Subject</th>
+                                                    <th>Status</th>
+                                                    <th>Due Date</th>
+                                                    <th>Assigned To</th>
+                                                    <!--<th>Type</th>-->
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <apex:repeat value="{!OpenActivities}" var="openAct">
+                                                    
+                                                    <tr>
+                                                        <td>
+                                                            <a href="/{!openAct.volunteerTask.Id}" style="color:#066cb6; text-decoration: underline;margin-right:3px">View</a>|
+                                                            <!--<a href="/{!openAct.volunteerTask.Id}" target="_blank" style="color:#066cb6; text-decoration: underline; margin-left:2px">Close</a>-->
+                                                            <!--<apex:commandLink style="color:#066cb6; text-decoration: underline; margin-left:2px" value="Close" action="{!closeTask}" onclick="return TaskCloseAlert();" reRender="None">
+<apex:param name="nickName" value="{!openAct.volunteerTask.Id}" assignTo="{!taskId}"/>
+</apex:commandLink>-->
+                                                            <a data-p1="{!openAct.volunteerTask.Id}" href="javascript:;" style="color:#066cb6; text-decoration: underline; margin-left:2px" class="cls1">Close</a>
+                                                            
+                                                        </td>
+                                                        <td>{!openAct.nameField}</td>
+                                                        <td>{!openAct.volunteerTask.Subject}</td>
+                                                        <td>{!openAct.volunteerTask.Status}</td>
+                                                        <td>
+                                                            <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                                                <apex:param value="{!openAct.volunteerTask.ActivityDate}"/>
+                                                            </apex:outputText>
+                                                        </td>
+                                                        <td>{!openAct.volunteerTask.Owner.Name}</td>
+                                                        <!--<td>{!openAct.wishType}</td>-->
+                                                    </tr>
+                                                </apex:repeat>
+                                            </tbody>
+                                        </table>
+                                        <apex:actionFunction name="closeTask" action="{!closeTask}" reRender="None" oncomplete="RedirectToPage();">
+                                            <apex:param name="taskId1" value="{!taskId}" assignTo="{!taskId}"/>
+                                        </apex:actionFunction>
+                                    </apex:pageBlock>
+                                </div>
+                                
+                                <!-------------- Volunteer open activities block Ends -------------->
+                                
+                                <!-------------- Volunteer closed activities block Starts -------------->
+                                
+                                <div class="closedActivities">
+                                    <apex:pageBlock id="details1">
+                                        <h2 class="col-xs-12">Closed Activities</h2>
+                                        <table id="dataTab1" class="display table table-maw table-hover">
+                                            <thead class="thead-default">
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Subject</th>
+                                                    <th>Status</th>
+                                                    <th>Due Date</th>
+                                                    <th>Assigned To</th>
+                                                    <!--<th>Type</th>-->
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <apex:repeat value="{!CloseActivities}" var="closeAct">
+                                                    <tr>
+                                                        <td>{!closeAct.nameField}</td>
+                                                        <td>{!closeAct.volunteerTask.Subject}</td>
+                                                        <td>{!closeAct.volunteerTask.Status}</td>
+                                                        <td>
+                                                            <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                                                <apex:param value="{!closeAct.volunteerTask.ActivityDate}"/>
+                                                            </apex:outputText>
+                                                        </td>
+                                                        <td>{!closeAct.volunteerTask.Owner.Name}</td>
+                                                        <!--<td>{!closeAct.wishType}</td>-->
+                                                    </tr>
+                                                </apex:repeat>
+                                            </tbody>
+                                        </table>
+                                    </apex:pageBlock>
+                                </div>
+                                
+                                <!-------------- Volunteer closed activities block Ends -------------->
+                            </div>
+                        </apex:form>
+                    </apex:outputPanel>
+                </section>
+            </div>
+        </main>
+        <apex:include pageName="prospective_footer" id="pfooter" />
+        
+        <apex:stylesheet value="{!URLFOR($Resource.SweetAlert, 'sweet-alert.css')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.SweetAlert, 'sweet-alert.js')}"/>
+        <script src="{!URLFOR($Resource.prospective_assets, 'web/js/jquery.dataTables.min.js')}"></script>
+        <script src="{!URLFOR($Resource.prospective_assets, 'web/js/stacktable.min.js')}"></script>
+        
+        <script>
+        $(document).ready(function() {
+            $(".openTask").addClass('current');
+            $('.closedActivities').hide();
+            $('head').prepend('<title>My Tasks - Communities | Make-A-Wish\u00AE America</title>');
+            $('#dataTab1,#dataTab2').DataTable({
+                "paging": true,
+                "searching": true
+            });
+            $('input[type=search]').attr('placeholder','Search Tasks');
+            // remove "label" text
+            $('#dataTab1_filter label').contents().filter(function(){
+                return (this.nodeType == 3);
+            }).remove();
+            
+            /********** Mobile responsive table script **********/
+            
+            $('#dataTab1,#dataTab2').stacktable({myClass:'mobile-table'});
+            $('.sorting_asc, .sorting').removeAttr('style');
+            $('table.mobile-table.dataTable').css('border-collapse','collapse');
+            
+            /********** Used to hide closed activities section & Open open activities section **********/
+            
+            $('.openTask').on('click',function(){
+                $(".openTask").addClass('current');
+                $(".closedTask").removeClass('current');
+                $('.closedActivities').hide();
+                $('.openActivities').show();
+            });
+            
+            /********** Used to hide open activities section & Open closed activities section **********/
+            
+            $('.closedTask').on('click',function(){
+                $(".closedTask").addClass('current');
+                $(".openTask").removeClass('current');
+                $('.openActivities').hide();
+                $('.closedActivities').show();
+            });
+        });
+        
+        $(document).delegate('.cls1','click',function(){
+            var $this = $(this);
+            var da1 = $this.data('p1');
+            swal({
+                title: "",
+                text: "Are you sure you would like to close the task?",
+                showCancelButton: true,
+                type: 'info',
+                confirmButtonColor: "#006bb6",
+                cancelButtonColor: "#006bb6",
+                confirmButtonText: "Ok",
+                cancelButtonText: "Cancel",
+                closeOnConfirm: false,
+                closeOnCancel: true
+            },
+                 function(isConfirm) {
+                     if (isConfirm) {
+                         closeTask(da1);
+                     } else {
+                         
+                     }
+                 });
+        });
+        function RedirectToPage() {
+            swal.close();
+            location.reload();
+        }
+        </script>
+    </body>
+</apex:page>

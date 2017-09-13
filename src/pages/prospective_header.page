@@ -1,0 +1,22 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false">
+     <noscript>For full functionality and the best experience possible of this site it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com/" target="_blank">instructions how to enable JavaScript in your web browser</a>.</noscript>
+
+    <header role="main-header" class="container">
+        <div class="row">
+            <nav class="col-xs-3 col-xs-offset-9 pre-nav" role="top_menubar">
+                <apex:outputLink styleClass="login" value="CommunitiesLogin">Log In</apex:outputLink> 
+                <apex:outputLink styleClass="logout" value="/secur/logout.jsp">Log Out</apex:outputLink>
+            </nav>
+        </div>
+        
+        <div class="row">
+            <apex:outputLink styleClass="center-block maw-logo newuser" value="CommunitiesSelfReg"><span class="sr-only" aria-label="Make-A-Wish">Make-A-Wish&reg;</span></apex:outputLink>            
+            <apex:outputLink styleClass="center-block maw-logo loggedin" value="VolunteerWelcomePage_VF"><span class="sr-only" aria-label="Make-A-Wish">Make-A-Wish&reg;</span></apex:outputLink>    
+            <apex:outputLink styleClass="btn btn-primary btn-md" value="CommunitiesSelfReg">Sign Up</apex:outputLink>
+        </div>
+        <nav class="navbar navbar-dark sub-nav">
+            <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar">
+            </div>
+        </nav>
+    </header>
+</apex:page>

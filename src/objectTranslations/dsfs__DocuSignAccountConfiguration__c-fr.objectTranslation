@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Configuration du compte DocuSign</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Configurations du compte DocuSign</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Configuration du compte DocuSign</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

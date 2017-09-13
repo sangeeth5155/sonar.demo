@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Send email to both wish granters assigned to wish if 14 days from wish end date and wish granted tasks are open</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Case: Email alert to wish granters</name>
+    <style>freeForm</style>
+    <subject>Wish Granting Task Reminder</subject>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,269 @@
+<!--------------------------------------------------------------------------------------------------
+CreatedBy: Kanagaraj 
+Author   : MST Solutions
+CreatedDate : 05/27/2016
+Description : Once the application submit & sign  by the volunteer, this page is used to generate the application as pdf
+and attached with the docusign under the volunteer conatct related list.  
+---------------------------------------------------------------------------------------------------->
+
+<apex:page renderAs="pdf" showHeader="false" sidebar="false" applyHtmlTag="false" standardStylesheets="false" standardController="Contact" applyBodyTag="false">
+     <html>
+        <head>
+            <style>
+            @page {
+                size: letter;
+                margin: 25mm;
+                @top-right{
+                    content: "Volunteer Application";
+                }
+                @bottom-center {
+                    content: "Page " counter(page) " of " counter(pages);
+                }
+            }
+            .page-break {
+                display:block;
+                page-break-after:always;
+            }
+            table{width:100%}
+            .th{background: #5fafce;font-weight: bold;}
+            body{background:#f8f8f8}
+            td{padding:3px}
+            .splitRow{padding: 5px;border-bottom:solid 1px #a7a9ab;}
+            .secEnd{padding: 10px;}
+            .secEndto{padding: 150px;}
+            </style>
+        </head>
+        <body>
+    <apex:form id="formid">
+     <h2> Volunteer Application</h2>
+
+            <table>
+                <tr class='th'><td colspan='2' style='padding: 5px'>Personal Information</td></tr>
+                <tr>
+                    <td>Title : <apex:outputfield value="{!Contact.Salutation}" /></td><td></td>
+                </tr>
+                <tr>
+                    <td>FirstName : <apex:outputfield value="{!Contact.FirstName}" /></td>
+                    <td>Middle Name : <apex:outputfield value="{!Contact.Middle_Name__c}" /></td>
+                </tr>
+                <tr>
+                    <td>LastName : <apex:outputfield value="{!Contact.LastName}" /></td>
+                    <td>Nickname : <apex:outputfield value="{!Contact.Preferred_Name__c}" /></td>
+                </tr>
+                 <tr><td colspan='2' class='splitRow'></td></tr>
+                 <tr>
+                    <td>Street: <apex:outputfield value="{!Contact.MailingStreet}" /></td>
+                    <td>City : <apex:outputfield value="{!Contact.MailingCity}" /></td>
+                </tr>
+                 <tr>
+                    <td>State : <apex:outputfield value="{!Contact.mailingstatecode}" /></td>
+                    <td>Zip: <apex:outputfield value="{!Contact.MailingPostalCode}" /></td>
+                </tr>
+                <tr>
+                <td colspan ='2' >Country : <apex:outputfield value="{!Contact.MailingCountrycode}" /></td>
+                </tr>
+                <tr><td colspan='2' class='splitRow'></td></tr>
+                 <tr>
+                    <td>Birth Day: <apex:outputfield value="{!Contact.Birth_Day__c}" /></td>
+                    <td>Birth Month: <apex:outputfield value="{!Contact.Birth_Month__c}" /></td>
+                </tr>
+                <tr><td colspan='2' class='splitRow'></td></tr>
+                 <tr>
+                    <td>Mobile Phone: <apex:outputfield value="{!Contact.MobilePhone}" ></apex:outputfield></td> 
+                    <td>Preferred Phone Type: <apex:outputfield value="{!Contact.Preferred_Phone_Types__c}" ></apex:outputfield></td>
+                    </tr>
+                    <tr>
+                       <td>Home Phone:<apex:outputfield value="{!Contact.HomePhone}" ></apex:outputfield></td>
+                       <td></td>
+                    </tr>
+                    <tr>
+                      <td>Other Phone:<apex:outputfield value="{!Contact.OtherPhone}" ></apex:outputfield></td>
+                      <td></td>
+                     
+                     </tr>
+                
+                <tr><td colspan='2' class='splitRow' ></td></tr>
+                <tr>
+                    <td colspan='2'>Email: <apex:outputfield value="{!Contact.Email}" /></td>
+                </tr>
+                <tr>
+                    <td colspan='2'>I am on LinkedIn: <apex:outputfield value="{!Contact.I_m_on_LinkedIn__c}" /></td>
+                </tr>
+                <tr><td colspan='2' class='splitRow' ></td></tr>
+                <tr>
+                    <td colspan='2'>How did you hear about Make-A-Wish?: <apex:outputfield value="{!Contact.How_did_you_hear_about_Make_A_Wish__c}" /></td>
+                </tr>
+                <tr> <td class='secEnd'></td></tr>
+                <tr class='th'><td colspan='2' style='padding: 5px'>Employment Information</td></tr>
+                <tr>
+                    <td>Employer: <apex:outputfield value="{!Contact.Employer__c}" /></td>
+                    <td>Position : <apex:outputfield value="{!Contact.Position__c}" /></td>
+                </tr>
+                <tr>
+                    <td>Street: <apex:outputfield value="{!Contact.Street_Employer__c}" /></td>
+                    <td>City: <apex:outputfield value="{!Contact.City_Employer__c}" /></td>
+                </tr>
+                <tr>
+                   <td>State: <apex:outputfield value="{!Contact.State_Employer__c}" /></td> 
+                    <td>Zip: <apex:outputfield value="{!Contact.Zip_Employer__c}" /></td>
+                </tr>
+                <tr><td colspan='2' class='splitRow' ></td></tr>
+                <tr>
+                    <td colspan='2'>May We Contact You at Work? : <apex:outputfield value="{!Contact.May_We_Contact_You_at_Work__c}" /></td>
+                </tr>
+                <tr>
+                    <td colspan='2'>Would your company be interested MAW : <apex:outputfield value="{!Contact.Interested_involved_with_Make_A_Wish__c}" /></td>
+                </tr>
+                <tr> <td class='secEnd'></td></tr>
+                <tr class='th'><td colspan='2' style='padding: 5px'>Emergency Contact Information</td></tr>
+                <tr>
+                    <td>Emergency Contact : <apex:outputfield value="{!Contact.Emergency_Contact__c}" /></td>
+                    <td>Relationship : <apex:outputfield value="{!Contact.Emergency_Contact_Relationship__c}" /></td>
+                </tr>
+                <tr>
+                    <td>Emergency Contact Phone : <apex:outputfield value="{!Contact.Emergency_Contact_Phone__c}" /></td>
+                </tr>
+              
+                <tr> <td style='padding:50px'></td></tr>
+                <tr class='th'><td colspan='2' style='padding: 5px'>Language Skills</td></tr>
+                <tr>
+                    <td>Language : <apex:outputfield value="{!Contact.Language__c}" /></td>
+                    <td>Language Notes: <apex:outputfield value="{!Contact.Language_Notes__c}" /></td>
+                </tr>
+                <tr>
+                    <td>Read: <apex:outputfield value="{!Contact.Read__c}" /></td>
+                    <td>Write: <apex:outputfield value="{!Contact.Write__c}" /></td>
+                </tr>
+                <tr>
+                    <td>Speak: <apex:outputfield value="{!Contact.Speak__c}" /></td>
+                    <td>Understand: <apex:outputfield value="{!Contact.Understand__c}" /></td>
+                </tr>
+                <tr> <td class='secEnd'></td></tr>
+                <tr class='th'><td colspan='2' style='padding: 5px'>Professional Skills</td></tr>
+                <tr>
+                    <td>Professional Skills: <apex:outputfield value="{!Contact.Professional_Skills__c}" /></td>
+                </tr>
+                <tr class='th'><td colspan='2' style='padding: 5px'>Volunteer Opportunities</td></tr>
+                <tr>
+                    <td>Volunteer Roles: <apex:outputfield value="{!Contact.Volunteer_Role__c}" /></td>
+                </tr>
+                
+                <tr> <td class='secEnd'></td></tr>
+               <!-- <tr class='th'><td colspan='2' style='padding: 5px'>Volunteer Opportunities</td></tr>
+                <tr>
+                    <td>Volunteer Opportunities: <apex:outputfield value="{!Contact.Volunteer_Role__c}" /></td>
+                </tr> -->
+                <tr> <td class='secEnd'></td></tr>
+                <tr>
+                <td>SIGNATURE</td>
+                </tr>
+                <tr><td style="text-align: justify;" colspan='2'>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I affirm that the information I have given on this form is true and correct. The information that I have provided may be verified by contacting persons or organizations named in this application, or by contacting any person or organization that may have information concerning me, or by conducting a criminal background check.  
+
+I have read and understood the various volunteer roles and am able to perform those roles in which I’ve applied for. I am volunteering my time for personal reasons and understand I will not be paid for my services as a volunteer and I expect no compensation. Furthermore, I understand that this application will help in determining the best fit of my skills for Make-A-Wish.
+
+                    </td>
+                </tr>
+                <tr> <td class='secEnd'></td></tr>
+                <tr> <td class='secEnd'></td></tr>
+               <tr>
+               <td >Signature:<span style="color:white;text-decoration: underline;">~s1</span> </td> <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date:&nbsp;<span style="color:white;text-decoration: underline;">~date</span> </td>
+               </tr>
+               <tr></tr>
+               <tr></tr>
+               <tr></tr>
+               <tr></tr>
+               <tr></tr>
+<tr><td>Print Name:&nbsp;<apex:outputField value="{!contact.Name}"/></td></tr>
+                 <tr> <td class='secEndto'></td></tr>
+                 
+                <tr>
+                    <td colspan='2' style='text-align:center'>ANNUAL CONFLICT OF INTEREST AND ETHICS ASSURANCE STATEMENT </td>
+                </tr>
+                <tr>
+                    <td colspan='2' style='text-align:justify'>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; As an employee or volunteer of the Make-A-Wish Foundation (the "Foundation"), I have an obligation to the Foundation and the constituencies it serves to comply with the highest standards of ethical conduct.  I will not commit acts contrary to those standards, and I will promptly report to appropriate Foundation representatives – either directly, or through MySafeWorkplace (a 24-hour confidential whistle-blower hotline that can be accessed at www.MySafeWorkplace.com or by calling 1-800-461-9330) – the commission of any such acts by others within the Foundation.  I understand that my responsibilities include the following:
+                    </td>
+                </tr>
+                <tr> <td class='secEnd'></td></tr>
+                <tr>
+                    <td colspan='2' style='text-align:center'>Ethics and Legal Assurance </td>
+                </tr>
+                <tr>
+                    <td colspan='2' style='text-align:justify'>
+                        <ul>
+<li>
+I will at all times: (a) perform my duties in accordance with relevant laws, regulations and Foundation policies and standards; (b) promote the attainment of the Foundation's legitimate and ethical objectives; and (c) represent the interests of all constituencies served by the Foundation and not favor special interests inside or outside the Foundation in connection with Foundation business.
+</li>
+<li>
+I will refrain from: (a) violating any criminal or civil law or regulation, the violation of which may reflect poorly on the Foundation; and/or (b) engaging in or supporting any activity that would discredit the Foundation.
+</li>
+<li>
+I will submit to a criminal background check every three years (or more frequently if required by the Foundation), and I agree to disclose at the time I execute this document and thereafter as the same may arise any official investigations of criminal activities, arrests and/or convictions involving me (other than for routine traffic offenses not involving drugs or alcohol).
+</li>
+</ul>
+                    </td>
+                </tr>
+               <tr>
+<td colspan='2' style='text-align:center'>
+Conflict Of Interest
+</td>
+</tr>
+<tr>
+<td colspan='2' style='text-align:justify'>
+<ul>
+<li>
+I will either avoid, or will promptly disclose and recuse myself from any decisions involving, any activity or practice which conflicts with, or can be perceived as conflicting with, the interests of the Foundation, including but not limited to situations where I, or a relative, friend or business acquaintance of mine, proposes to provide goods or services to the Foundation for consideration. 
+</li>
+<li>
+I will refrain from using Foundation property or resources for personal profit or advantage, or for any purpose not related to the activities of the Foundation.
+</li>
+<li>
+I will refuse any personal gifts, loans, favors or other consideration of more than nominal value from any Foundation vendor, sponsor or other outside party that would influence, or could be perceived as influencing, my actions or the actions of others.
+</li>
+</ul>
+</td>
+</tr>
+<tr> <td class='secEnd'></td></tr>
+<tr> <td class='secEnd'></td></tr>
+<tr> <td class='secEnd'></td></tr>
+<tr> <td class='secEnd'></td></tr>
+<tr>
+<td colspan='2' style='text-align:center'>
+Confidentiality
+</td>
+</tr>
+<tr>
+<td colspan='2' style='text-align:justify'>
+<ul>
+<li>
+During my involvement with the Foundation and thereafter, I will maintain the confidentiality of any information regarding the Foundation, wish children and their families, donors and volunteers that has not been released publicly, unless legally obligated to do otherwise.
+</li>
+<li>
+I will refrain from using or appearing to use confidential information acquired in the course of my service for unethical or illegal advantage, either personally or through third parties. 
+</li>
+</ul>
+</td>
+</tr>
+<tr> <td class='secEnd'></td></tr>
+<tr> <td class='secEnd'></td></tr>
+<tr>
+<td colspan='2'><b>I have read, understand and agree to be bound by the above standards.</b></td>
+</tr>
+<tr> <td class='secEnd'></td></tr>
+ <tr><td colspan='2' class='splitRow'></td></tr>
+<tr> <td class='secEnd'></td></tr>
+<tr>
+<td >Signature:<span style="color:white;text-decoration: underline;">~s1</span> </td> <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date:&nbsp;<span style="color:white;text-decoration: underline;">~date</span> </td>
+</tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr><td>Print Name:&nbsp;<apex:outputField value="{!contact.Name}"/></td></tr>
+ </table>
+    </apex:form>
+    </body>
+    </html>
+</apex:page>

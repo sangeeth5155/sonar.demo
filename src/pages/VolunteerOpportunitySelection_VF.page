@@ -1,0 +1,43 @@
+<apex:page controller="VolunteerOpportunitySelection_AC" standardStylesheets="false" action="{!CreateNewTimeSheet}">
+<apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"/>
+ 
+  <script>
+    $(document).ready(function(){
+      $(function() { 
+        $('input[type="checkbox"]').bind('click',function() {
+          $('input[type="checkbox"]').not(this).prop("checked", false);
+        });
+      });
+    });
+</script>
+<style>
+table, th, td {
+    border: 1px solid black;
+    
+}
+</style>
+
+    <apex:form id="formId">
+    <apex:pagemessages /> 
+           <table style="width:100%"  >
+               <tr><th>Selected</th>
+               <th>Volunteer Opportunity Name</th>
+               <th>Volunteer Name</th>
+               <th>Chapter Name</th>
+               <th>Role</th></tr>
+               
+               <apex:repeat value="{!volunteerWrapperList}" var="vol" id="table">
+               <tr></tr>
+                   <tr>
+                       <td><apex:inputCheckbox value="{!vol.recordSelected}"/></td>
+                       <td>{!vol.volOpp.Name}</td>
+                       <td>{!vol.volOpp.Volunteer_Name__r.Name}</td>
+                       <td>{!vol.volOpp.Chapter_Name__r.Name}</td>
+                       <td>{!vol.volOpp.Role__c}</td>
+                       
+                   </tr>
+               </apex:repeat>
+           </table>
+        <center> <apex:commandButton value="Create TimeSheet" action="{!createTimeSheet}" rerender="formId,table" /></center>
+    </apex:form>
+</apex:page>

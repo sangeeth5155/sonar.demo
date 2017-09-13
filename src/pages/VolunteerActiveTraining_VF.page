@@ -1,0 +1,246 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" docType="html-5.0" controller="VolunteerActiveTraining_AC" title="Make-A-Wish Communities | Training">
+        <apex:include pageName="prospective_head" id="phead"/>
+        <apex:stylesheet value="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"/>
+        <style type="text/css">
+                body > main {margin-bottom:4em; margin-bottom:4rem;}
+                .vcpactivelogin .table-maw {border:1px solid #e2e2e2; width:99%; margin:0}
+                .vcpactivelogin .table-maw td {vertical-align:middle}
+                .pad {overflow-x:auto}
+                table.dataTable thead .sorting, table.table thead th {padding-right:1rem}
+                .messageCell h4{color:#066cb6}
+                .dataTables_info {margin-bottom: 2rem; font-size: .75rem;}
+                .messageCell h4 {color: #066cb6}
+                .table-wrap {overflow-x: auto}
+        </style>
+        <script type="text/javascript">
+            function openLMS(ssoLink, courseLink) {
+                newwindow = window.open(ssoLink, 'openLMS');
+                if ((newwindow == null || typeof(newwindow) == 'undefined')) {
+                    $('#poppup-alert').modal({backdrop: 'static', keyboard: false});
+                }
+                setTimeout(function () {
+                    window.newwindow.close();
+                    setTimeout(function () {
+                        window.open(courseLink, '_blank');
+                    }, 10);
+                }, 2000);
+            }
+        </script>
+        <!-- Popup styling starts here -->
+    <style type="text/css">
+        .vfHelpText a            {position:relative;}
+        .vfHelpText a span       {display: none;}
+        .vfHelpText a:hover span {display: block; position:absolute; right:-15em; width:15em; z-index:100; border:1px solid #006bb; background-color:#FEFDB9; color:black;}
+        .pop-wrap, .pop-wrap-main-message { position:fixed; top: 20%; left: 50%; z-index: 9999; width:90%; max-width:35rem;}
+        .custPopup, .custPopup-main-message{ font-family:"arial", helvetica, sans-serif; position: relative; background: white; border: 1px solid #006bb6; border-radius: .25rem; top: -20%; left: -50%; padding:1rem; width: 100%;}
+        .pop-wrap-main-message {top: 1%} .custPopup-main-message{top: 0; padding:0 1rem 0;}
+        .popupBackground{ position: fixed; background: rgba(0,0,0,.4); width: 100%; height: 100%; top: 0; left: 0; z-index: 9998}
+        .labelCol{width:180px;}
+        .highlight h3 {text-align:center}
+        .modal-header,.modal-footer {border-top:none;}
+        h1.modal-title {text-align: center; padding-bottom: 0}
+        .modal-header .close {margin-top: -4rem}
+        .modal-footer, .modal-footer span {display: flex; justify-content: center;}
+        .modal-footer .btn-md, .nav-sub-inner .btn-md {max-width:10rem}
+        .modal-footer .btn-md {min-width:10rem}
+        @media (min-width: 48em) {.feature{min-height: 15rem} }
+    </style>
+    <!-- Popup styling ends here -->
+    <body class="vcp vcpactivelogin">
+        <apex:include pageName="active_header" id="pheader"/>
+
+        <main role="main" class="container">
+            <div class="row">
+                <section class="col-md-12">
+                    <div class="row">
+                        <h1 class="col-md-12">Training</h1>
+                    </div>
+
+                    <nav>
+                        <ul class="step">
+                            <li>
+                                <a href="/VolunteerProfile_VF">Back to Profile</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <apex:form id="frm1" styleClass="col-md-12">
+                        <div class="messages"><!--<apex:pagemessages />--><apex:messages /></div>
+                        <apex:pageBlock >
+                            <apex:outputPanel rendered="{!(isTrainingExist == True)}">
+                                <h3>Success</h3>
+                                <p>You have successfully registered for a volunteer training. If you need to change your training day/time please cancel your existing training and register for a new training.</p>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!(isCancelled == True)}">
+                                <h3>Cancelled</h3>
+                                <p>You have successfully cancelled for a registered Volunteer Training program</p>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!If(checkExistProgram == true, false,true)}">
+                                <p><strong>Registered Training Details</strong></p>
+                                <table id="dataTab1" class="table table-maw table-hover" width="100%">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Chapter Name</th>
+                                            <th>Type</th>
+                                            <th>Date</th>
+                                            <th>Start Time</th>
+                                            <th>End Time</th>
+                                            <th>Location</th>
+                                            <th>Max Capacity</th>
+                                            <th>Available Seats</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                            <th>Link</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <apex:repeat value="{!TrainingRecordList}" var="training">
+                                            <apex:outputPanel rendered="{!(AND(training.volOppSize>0,OR(training.status == 'Registered',training.status == 'Completed')))}">
+                                          <!--  <apex:outputPanel rendered="{!OR(AND(training.volOppSize>0,training.status == 'Registered'),AND(training.volOppSize < 0,training.status == 'Registered'),AND(training.volOppSize == 0,training.status == 'Registered'))}"> -->
+                                                <apex:outputPanel rendered="{!(training.status == 'Registered')}">
+                                                <tr>
+                                                    <td>{!training.orientationName} </td>
+                                                    <td>{!training.chapterName}</td>
+                                                    <td>{!training.recordType}</td>
+                                                    <td>
+                                                        <apex:outputText value="{0,date,MM'/'dd'/'yyyy}"><apex:param value="{!training.orientationDate}"/></apex:outputText>
+                                                    </td>
+                                                    <td>{!training.startTime}</td>
+                                                    <td>{!training.endTime}</td>
+                                                    <td>{!training.location}</td>
+                                                    <td>{!training.maxCapacity}</td>
+                                                    <td>{!training.avilableSheets}</td>
+                                                    <td>{!training.Status}</td>
+
+                                                    <td>
+                                                        <apex:commandLink action="{!Cancel}" rendered="{!(If(training.status == 'Registered',True,False))}">Cancel
+                                                            <apex:param name="trainingId" value="{!training.recordId}" assignTo="{!trainingId}"/>
+                                                        </apex:commandLink>
+                                                    </td>
+                                                    <td>
+                                                        <apex:commandLink action="{!viewLMS}" oncomplete="openLMS('{!ssoURL}','{!courseURL}');" rendered="{!(training.recordtypeId== classOffereningRecordtypeId)}">Start Course
+                                                            <apex:param name="lMSCourseId" value="{!training.courseId}" assignTo="{!lMSCourseId}"/>
+                                                        </apex:commandLink>
+                                                    </td>
+                                                </tr>
+                                                </apex:outputPanel>
+                                            </apex:outputPanel>
+                                        </apex:repeat>
+                                    </tbody>
+                                </table>
+                            </apex:outputPanel>
+
+                            <apex:outputPanel id="myPanel">
+                                <h2>Upcoming Trainings</h2>
+                                <table id="dataTab2" class="table table-maw table-hover" width="100%">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Chapter Name</th>
+                                            <th>Type</th>
+                                            <th>Date</th>
+                                            <th>Start Time</th>
+                                            <th>End Time</th>
+                                            <th>Location</th>
+                                            <th>Max Capacity</th>
+                                            <th>Available Seats</th>
+
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <apex:repeat value="{!TrainingRecordList}" var="training">
+                                           
+                                            <!--   <apex:outputPanel rendered="{!OR(AND(training.volOppSize == 0),AND(training.volOppSize > 0,training.status == 'Cancelled'))}">-->
+                                              <apex:outputpanel rendered="{!training.displayRec==True}">
+                                                <tr>
+                                                    <td>{!training.orientationName}</td>
+                                                    <td>{!training.chapterName}</td>
+                                                    <td>{!training.recordType}</td>
+                                                   
+                                                    <td>
+                                                        <apex:outputText value="{0,date,MM'/'dd'/'yyyy}"><apex:param value="{!training.orientationDate}"/></apex:outputText>
+                                                    </td>
+                                                    <td>{!training.startTime}</td>
+                                                    <td>{!training.endTime}</td>
+                                                    <td>{!training.location}</td>
+                                                    <td>{!training.maxCapacity}</td>
+                                                    <td>{!training.avilableSheets}</td>
+
+                                                    <td>
+                                                        <apex:commandLink action="{!Register}">Register
+                                                            <apex:param name="trainingId" value="{!training.recordId}" assignTo="{!trainingId}"/>
+                                                        </apex:commandLink>
+                                                    </td>
+                                                </tr>
+                                            </apex:outputPanel>
+                                        </apex:repeat>
+                                    </tbody>
+                                </table>
+                            </apex:outputPanel>
+                        </apex:pageBlock>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>Additional Information</h3>
+                                <apex:outputText value="{!orientationContent}" escape="false"/>
+                            </div>
+                        </div>
+                        
+                         <div class="modal fade" id="poppup-alert" tabindex="-1" role="dialog" aria-labelledby="poppup-alert" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title">For a Better Experience</h1>
+                              </div>
+                              <div class="modal-body">
+                                <p class="text-muted">Please select the radio option "Always allow pop-ups for this domain", in the URL bar (Pop up Blocker options) then refresh the page.</p>
+                              </div>
+                              <div class="modal-footer">
+                                <apex:commandButton html-data-dismiss="modal" html-aria-label="Close" styleClass="btn-md" value="Ok"/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                         <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!isCompleted}"/>
+                            <apex:outputPanel styleClass="custPopup" layout="block" rendered="{!isCompleted}">
+                        <div class="pop-wrap">
+                                    <div class="custPopup">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                                    <div class="row">
+                            Our records show you have already completed this training. Do you want to continue registering?<br/>
+                            </div><div class="col-sm-4">
+                            <apex:commandButton value="Yes" action="{!Register}" styleClass="col-sm-offset-3 col-md-offset-4 col-md-12 col-sm-6 col-md-4 btn-md"/>
+                            </div><div class="col-sm-4">
+                            <apex:CommandButton value="No" action="{!No}" styleClass="col-sm-offset-3 col-md-offset-4 col-md-12 col-sm-6 col-md-4 btn-md"/>
+                            </div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </apex:outputPanel>
+                        
+                    </apex:form>
+
+                </section>
+            </div>
+        </main>
+        <apex:include pageName="prospective_footer" id="pfooter"/>
+        <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+        <script src="{!URLFOR($Resource.prospective_assets, ' web/js/stacktable.min.js ')}"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('head').prepend('<title>Trainings - Communities | Make-A-Wish\u00AE America</title>');
+                    $('#dataTab1,#dataTab2').DataTable({"paging": false, "searching": false});
+                    $('#dataTab1, #dataTab2').stacktable({myClass: 'mobile-table'});
+                    $('.sorting_asc, .sorting').removeAttr('style');
+                    $('table.mobile-table.dataTable').css('border-collapse', 'collapse');
+            });
+    </script>
+    </body>
+</apex:page>

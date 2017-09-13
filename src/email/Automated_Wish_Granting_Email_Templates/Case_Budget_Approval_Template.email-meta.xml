@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Case : Budget Approval Template</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Case : Budget Approval Template</name>
+    <style>freeForm</style>
+    <subject>Budget Approval Request</subject>
+    <textOnly>Hello,
+
+The following budget has been assigned to you for approval. Please click the link below to review the submission.
+
+
+Wish Child: {!Case.Hidden_Wish_Child_Full_Name__c}
+Click Here to Review Budget
+
+Thanks,
+
+{!User.Name}
+{!User.Title}
+{!Case.Hidden_Chapter_Name__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Database_Chapter_Mapping</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>FE_Database_Chapter_Mapping</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Chapter Id --></label>
+        <name>Chapter_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- FE Database Name --></label>
+        <name>FE_Database_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Database Name --></label>
+        <name>RE_Database_Name__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

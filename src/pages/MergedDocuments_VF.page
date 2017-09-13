@@ -1,0 +1,90 @@
+<!--/***************************************************************************************************
+Author      : MST Solutions
+Description : This vf page contains all the custom links in one section on the paren wish for each from
+***************************************************************************************************** -->
+<apex:page standardController="Case" extensions="WishRelatedLinks_AC" action="{!updateCaseTeamMember}">
+    <style>
+        table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-left:10%;
+        margin-top:5%
+        }
+        
+        th, td {
+        text-align: left;
+        padding: 8px;
+        }
+        
+        tr:nth-child(even){background-color: #f2f2f2}
+        
+        th {
+        background-color: #DFDFDF;
+        color: white;
+        }
+        .tbl td, th { border: 1px solid #CCC; }
+    </style>
+    <apex:form id="frm">
+        <apex:messages />
+        <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"/>
+        
+        <apex:outputPanel rendered="{!$Profile.Name !='Active Volunteer (Member)' && $Profile.Name != 'Active Volunteer (Login)'}" layout="block" style="margin-top:10px;">
+            <table style="width:70%; font-size:14px" cellpadding="10" class="tbl">
+                <tr style="width:100%">
+                    <th align="center" colspan="2"><div style="font-size: 20px; color: #333"><center>Merged Documents</center></div></th>
+                </tr>
+                <tr>
+                    <td><b>English</b></td>
+                    <td><b>Spanish</b></td>
+                </tr>
+                <tr style="width:100%">
+                    <td align="center"><div><apex:outputLink target="_blank" value="{!dnqLetter}"> DNQ Letter</apex:outputLink></div></td>
+                    <td align="center"><div><apex:outputLink target="_blank" value="{!dnqLetterSpanish}"> DNQ Letter Spanish</apex:outputLink></div></td>
+                    
+                </tr>
+                <tr style="width:100%">
+                    <td align="center"><div><apex:outputLink target="_blank" value="{!welcomeLetter}">Welcome Letter</apex:outputLink></div></td>
+                    <td align="center"><div><apex:outputLink target="_blank" value="{!welcomeLetterSpanish}"> Welcome Letter Spanish</apex:outputLink></div></td>
+                    
+                </tr>
+                <apex:outputPanel rendered="{!WishReceipt != Null}">
+                    <tr style="width:100%">
+                        <td align="center"><div><apex:commandLink action="{!updateSenderInfo}" value="Wish Receipt">
+                            <apex:param value="wishreceipt" name="wr" assignTo="{!recipitLink}" />
+                            </apex:commandLink></div></td>
+                        <td align="center"><div><apex:commandLink action="{!updateSenderInfo}" value="Wish Receipt Spanish">
+                            <apex:param value="wishreceiptSpanish" name="wrsp" assignTo="{!recipitLink}" />
+                            </apex:commandLink></div></td>
+                    </tr>
+                </apex:outputPanel>
+                
+                <tr style="width:100%">
+                    <td align="center"><div><apex:outputLink target="_blank" value="{!WG_StepOne_90days}"> WG Step One 90days </apex:outputLink></div></td>
+                    <td align="center"><div><apex:outputLink target="_blank" value="{!WG_StepOne_90days_Spanish}"> WG Step One 90days Spanish </apex:outputLink></div></td>
+                </tr>
+                
+                 <tr style="width:100%">
+                    <td align="center"><div><apex:outputLink target="_blank" value="{!WG_StepTwo_60days}"> WG Step Two 60days </apex:outputLink></div></td>
+                    <td align="center"><div><apex:outputLink target="_blank" value="{!WG_StepTwo_60days_Spanish}"> WG Step Two 60days Spanish </apex:outputLink></div></td>
+                </tr>
+                
+                <tr style="width:100%">
+                    <td align="center"><div><apex:outputLink target="_blank" value="{!WG_StepThree_30days}"> WG Step Three 30days </apex:outputLink></div></td>
+                    <td align="center"><div><apex:outputLink target="_blank" value="{!WG_StepThree_30days_Spanish}"> WG Step Three 30days Spanish </apex:outputLink></div></td>
+                </tr>
+               
+               <tr style="width:100%">
+                    <td align="center"><div><apex:outputLink target="_blank" value="{!WG_FinalStep_FileClosed}"> WG Final Step File Closed </apex:outputLink></div></td>
+                    <td align="center"><div><apex:outputLink target="_blank" value="{!WG_FinalStep_FileClosed_Spanish}"> WG Final Step File Closed Spanish </apex:outputLink></div></td>
+                </tr>
+               
+                <tr style="width:100%">
+                    <td align="center"><div><apex:outputLink target="_blank" value="{!sneakPeek}"> Sneak Peek</apex:outputLink></div></td>
+                </tr>
+                <tr style="width:100%">
+                    <td align="center"><div><apex:outputLink target="_blank" value="{!bioSheet}"> Bio Sheet</apex:outputLink></div></td>
+                </tr>
+            </table>
+        </apex:outputPanel>
+    </apex:form>                 
+</apex:page>

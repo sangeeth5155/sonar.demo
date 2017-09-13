@@ -1,0 +1,5 @@
+Hi  {!Task.OwnerId},
+
+An interview task has been rescheduled. Please find the below link for more details.
+
+{!Task.Link}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template will send when the volunteer opportunity is rejected by the chapter staff</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Volunteer Opportunity : Wish Rejected</name>
+    <style>freeForm</style>
+    <subject>Volunteer Opportunity Wish Rejected</subject>
+    <textOnly>Hi {!Volunteer_Opportunity__c.Hidden_Volunteer_Contact_Name__c},
+
+Thank you for your interest in the  role  {!Volunteer_Opportunity__c.Hidden_Chapter_Role_Name__c}  for {!Volunteer_Opportunity__c.Name__c}. At this time, chapter staff have filled this opportunity. We encourage you to visit the Make-A-Wish Volunteer Center. to explore additional ways to get involved with our chapter. Please feel free to contact chapter staff at the number below if you have any questions.
+
+Thanks,
+
+{!Volunteer_Opportunity__c.Hidden_Chapter_Name__c}
+{!Volunteer_Opportunity__c.Hidden_Chapter_Phone__c}
+{!Volunteer_Opportunity__c.Hidden_Chapter_Email__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

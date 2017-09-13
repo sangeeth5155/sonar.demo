@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AbsentForm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AbsentForm</shortDescription>
+        <value>7FCCD6EF-69DF-4D30-8C6E-F3A17B849CEE</value>
+    </labels>
+    <labels>
+        <fullName>Active_Volunteer_Profile</fullName>
+        <categories>It holds the Id of Active Volunteer Profile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Active Volunteer Profile</shortDescription>
+        <value>00e36000001CMlq</value>
+    </labels>
+    <labels>
+        <fullName>B_C_No_of_days_for_expiration</fullName>
+        <categories>It holds the expiration duration for Background check.</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B/C No of days for expiration</shortDescription>
+        <value>30</value>
+    </labels>
+    <labels>
+        <fullName>Bio_Sheet_DDP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Bio Sheet DDP</shortDescription>
+        <value>a1a360000033dtX</value>
+    </labels>
+    <labels>
+        <fullName>COI_no_of_expiration_days</fullName>
+        <categories>It holds the expiration duration for COI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>COI no of expiration days</shortDescription>
+        <value>30</value>
+    </labels>
+    <labels>
+        <fullName>ChildMedicalSummary</fullName>
+        <categories>Docusign Medical Summary Template Id</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Child Medical Summary</shortDescription>
+        <value>8937F5DD-D14B-4F57-88F5-6A22455731A9</value>
+    </labels>
+    <labels>
+        <fullName>Combo_CMS_and_WC</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Combo CMS and WC</shortDescription>
+        <value>25f3ca74-2c06-4c46-b61e-ac4a8e4f0edc</value>
+    </labels>
+    <labels>
+        <fullName>ContactIdValue</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ContactIdValue</shortDescription>
+        <value>0033600000Z3S0Z</value>
+    </labels>
+    <labels>
+        <fullName>DNQ_Letter_DDP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DNQ Letter DDP</shortDescription>
+        <value>a1a360000033dtW</value>
+    </labels>
+    <labels>
+        <fullName>DNQ_Letter_Spanish_DDP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DNQ Letter Spanish DDP</shortDescription>
+        <value>a1a360000033dtY</value>
+    </labels>
+    <labels>
+        <fullName>DSProSFUsername</fullName>
+        <categories>It holds the DSProSFUsername</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DocuSignUserName</shortDescription>
+        <value>5a81d5c0-fcaa-4dba-9712-5f206b7f7c13</value>
+    </labels>
+    <labels>
+        <fullName>Instance_Url</fullName>
+        <categories>It will hold the instance url</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Instance Url</shortDescription>
+        <value>https://na30.salesforce.com</value>
+    </labels>
+    <labels>
+        <fullName>Lead_DNQ_Letter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead DNQ Letter</shortDescription>
+        <value>a1a3600000346jn</value>
+    </labels>
+    <labels>
+        <fullName>Lead_DNQ_Medical_Professional_DDP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead DNQ Medical Professional DDP</shortDescription>
+        <value>a1a3600000346jp</value>
+    </labels>
+    <labels>
+        <fullName>Lead_DNQ_Spanish_Letter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead DNQ Spanish Letter</shortDescription>
+        <value>a1a3600000346jo</value>
+    </labels>
+    <labels>
+        <fullName>Local_Email_Template_ID</fullName>
+        <categories>Local MAC Team Email Template ID</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Local Email Template ID</shortDescription>
+        <value>00X36000001Ilh9</value>
+    </labels>
+    <labels>
+        <fullName>National_Email_Template_ID</fullName>
+        <categories>National Email template Id</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>National Email Template ID</shortDescription>
+        <value>00X36000001Ilh8</value>
+    </labels>
+    <labels>
+        <fullName>OrganizationWideEmail</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OrganizationWideEmail</shortDescription>
+        <value>wvcsupport@wish.org</value>
+    </labels>
+    <labels>
+        <fullName>Prospective_Volunteer</fullName>
+        <categories>It holds the id of Prospective Volunteer community profile</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Prospective Volunteer Profile</shortDescription>
+        <value>00e36000001CMlr</value>
+    </labels>
+    <labels>
+        <fullName>Prospective_Volunteer_Profile</fullName>
+        <categories>It holds the site guest user profile id</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Prospective Volunteer Profile</shortDescription>
+        <value>00e36000000HVbO</value>
+    </labels>
+    <labels>
+        <fullName>Rush_Child_Summary</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Rush Child Summary</shortDescription>
+        <value>E8A2FCDB-4A45-40B5-8C3A-83AFC7729948</value>
+    </labels>
+    <labels>
+        <fullName>Rush_Wish_Clearance</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Rush Wish Clearance</shortDescription>
+        <value>20C0778C-FFA8-44BF-9883-77158C76395F</value>
+    </labels>
+    <labels>
+        <fullName>Salesforce_Support_User_Id</fullName>
+        <categories>It holds Salesforce Support User Id</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Salesforce Support User Id</shortDescription>
+        <value>00536000002PP9x</value>
+    </labels>
+    <labels>
+        <fullName>Shopping_Spree_DDP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shopping_Spree_DDP</shortDescription>
+        <value>a1a360000023L5S</value>
+    </labels>
+    <labels>
+        <fullName>Sigle_Day_Volunteer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SigleDayVolunteer</shortDescription>
+        <value>a1036000003GY8B</value>
+    </labels>
+    <labels>
+        <fullName>SingleForm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SingleForm</shortDescription>
+        <value>65971643-175D-4EB8-BD82-5E4ADE5C2BCF</value>
+    </labels>
+    <labels>
+        <fullName>Site_Url</fullName>
+        <categories>It holds the volunteer portal url.</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Site Url</shortDescription>
+        <value>http://make-a-wish.force.com/</value>
+    </labels>
+    <labels>
+        <fullName>Sneak_Peek_DDP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Sneak Peek DDP</shortDescription>
+        <value>a1a360000033dtb</value>
+    </labels>
+    <labels>
+        <fullName>Volunteer_Opportunity_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Volunteer Opportunity Id</shortDescription>
+        <value>CF00N3600000OtMjl</value>
+    </labels>
+    <labels>
+        <fullName>WG_FinalStep_FileClosed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WG FinalStep FileClosed</shortDescription>
+        <value>a1a360000034sSZ</value>
+    </labels>
+    <labels>
+        <fullName>WG_FinalStep_FileClosed_Spanish</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WG FinalStep FileClosed Spanish</shortDescription>
+        <value>a1a360000034sSd</value>
+    </labels>
+    <labels>
+        <fullName>WG_StepOne_90days</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WG StepOne 90days</shortDescription>
+        <value>a1a360000034sSa</value>
+    </labels>
+    <labels>
+        <fullName>WG_StepOne_90days_Spanish</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WG StepOne 90days Spanish</shortDescription>
+        <value>a1a360000034sSe</value>
+    </labels>
+    <labels>
+        <fullName>WG_StepThree_30days</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WG StepThree 30days</shortDescription>
+        <value>a1a360000034sSb</value>
+    </labels>
+    <labels>
+        <fullName>WG_StepThree_30days_Spanish</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WG StepThree 30days Spanish</shortDescription>
+        <value>a1a360000034sSg</value>
+    </labels>
+    <labels>
+        <fullName>WG_StepTwo_60days</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WG StepTwo 60days</shortDescription>
+        <value>a1a360000034sSc</value>
+    </labels>
+    <labels>
+        <fullName>WG_StepTwo_60days_Spanish</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WG StepTwo 60days Spanish</shortDescription>
+        <value>a1a360000034sSf</value>
+    </labels>
+    <labels>
+        <fullName>Welcome_Letter_DDP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Welcome Letter DDP</shortDescription>
+        <value>a1a360000024ayM</value>
+    </labels>
+    <labels>
+        <fullName>Welcome_Letter_Spanish_DDP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Welcome Letter Spanish DDP</shortDescription>
+        <value>a1a360000033dtZ</value>
+    </labels>
+    <labels>
+        <fullName>WishClearence</fullName>
+        <categories>Docusign Wish Clearence Template Id</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Wish Clearence</shortDescription>
+        <value>F2EE9917-FC0C-48AB-8BC2-C98E11F6D034</value>
+    </labels>
+    <labels>
+        <fullName>WishReceiptDocusingDeliverOption</fullName>
+        <categories>This label is used to store the docusign delivery option for wishreceipt</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WishReceiptDocusingDeliverOption</shortDescription>
+        <value>a1Y360000023Tjq</value>
+    </labels>
+    <labels>
+        <fullName>WishReceiptDownloadDeliverOption</fullName>
+        <categories>This label is used to store the downloaddelivery option for wish receipt</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WishReceiptDownloadDeliverOption</shortDescription>
+        <value>a1Y360000023Tjp</value>
+    </labels>
+    <labels>
+        <fullName>WishReceiptSpanishDocusingDeliverOption</fullName>
+        <categories>This label is used to store the docusign delivery option for wish receipt spanish</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WishReceiptSpanishDocusingDeliverOption</shortDescription>
+        <value>a1Y36000002GOoh</value>
+    </labels>
+    <labels>
+        <fullName>WishReceiptSpanishDownloadDeliverOption</fullName>
+        <categories>This label is used to store the download delivery option for wish receipt Spanish</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WishReceiptSpanishDownloadDeliverOption</shortDescription>
+        <value>a1Y36000002GOog</value>
+    </labels>
+    <labels>
+        <fullName>Wish_Receipt_DDP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Wish Receipt DDP</shortDescription>
+        <value>a1a360000022UI9</value>
+    </labels>
+    <labels>
+        <fullName>Wish_Receipt_Spanish</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Wish Receipt Spanish DDP</shortDescription>
+        <value>a1a360000033dta</value>
+    </labels>
+</CustomLabels>

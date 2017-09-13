@@ -1,0 +1,25 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal"><span style="line-height: 107%; background: white;"><font face="Century Gothic, sans-serif"><span style="font-size: 12pt;">Hi </span>{!Conflict_Of_Interest__c.Volunteer_Contact__c}<span style="font-size: 12pt;">,</span></font></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; line-height: 107%; font-family: &quot;Century Gothic&quot;, sans-serif; background: white;">
+<br>
+Thank you so much for your dedication to&nbsp;<span style="background-image:
+initial;background-position:initial;background-size: initial;background-repeat:
+initial;background-attachment:initial;background-origin: initial;background-clip: initial">Make-A-Wish<sup>®</sup></span>.
+&nbsp;Our records indicate that your signature on the Annual Conflict of
+Interest and Ethics Statement has expired. If you are still interested in
+volunteering with Make-A-Wish, please log in to the<span class="apple-converted-space">&nbsp;</span></span><span style="font-size: 12pt; line-height: 107%; font-family: &quot;Century Gothic&quot;, sans-serif;"><a href="https://make-a-wish.force.com/communitieslogin"><span style="background:white">Make-A-Wish Volunteer Center</span></a></span><span class="apple-converted-space"><span style="font-size: 12pt; line-height: 107%; font-family: &quot;Century Gothic&quot;, sans-serif; background: white;">&nbsp;to electronically sign the form. If we have not
+received a signed Annual Conflict of Interest &amp; Ethics Statement by
+{!Conflict_Of_Interest__c.Expiration_Date__c + 7}, we will mark you as “</span><span class="apple-converted-space"><b><span style="font-size: 12pt; line-height: 107%; font-family: &quot;Century Gothic&quot;, sans-serif;">INACTIVE</span></b></span><span class="apple-converted-space"><span style="font-size: 12pt; line-height: 107%; font-family: &quot;Century Gothic&quot;, sans-serif;">”and
+any current assignments will be re-assigned to an active volunteer.</span></span><span style="font-size: 12pt; line-height: 107%; font-family: &quot;Century Gothic&quot;, sans-serif;"><br>
+<br>
+<span class="apple-converted-space">We are grateful for your continued support of
+our mission and the children we serve!</span><br>
+<br>
+<span class="apple-converted-space">Thanks,</span><br>
+<br>
+<span class="apple-converted-space">{!Conflict_Of_Interest__c.Account_Name__c}</span><br>
+<span class="apple-converted-space">{!Conflict_Of_Interest__c.Account_Phone__c}</span><br>
+<span class="apple-converted-space">{!Conflict_Of_Interest__c.Account_Email__c}</span></span></span><span style="font-size:12.0pt;line-height:107%;font-family:&quot;Century Gothic&quot;,sans-serif"><o:p></o:p></span></p>]]></td>
+</tr>
+</table>

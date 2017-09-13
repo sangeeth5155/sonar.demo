@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Awards_Recognition__c.RE_Award_Name__c</field>
+    </columns>
+    <columns>
+        <field>Awards_Recognition__c.RE_Awards_Recognition_Name__c</field>
+    </columns>
+    <columns>
+        <field>Awards_Recognition__c.RE_Comment__c</field>
+    </columns>
+    <columns>
+        <field>Awards_Recognition__c.RE_Date_Field__c</field>
+    </columns>
+    <columns>
+        <field>Awards_Recognition__c.RE_Import_ID__c</field>
+    </columns>
+    <columns>
+        <field>Awards_Recognition__c.Chapter_Name__c</field>
+    </columns>
+    <columns>
+        <field>Awards_Recognition__c.Volunteer_Contact__c</field>
+    </columns>
+    <description>RE Related Volunteer Awards &amp; Recognitions</description>
+    <filter>
+        <criteriaItems>
+            <column>Awards_Recognition__c.Migrated_Record__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>RE Vol Awards &amp; Recognitions</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Awards_Recognition__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Awards_Recognition__c.Date_Field__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

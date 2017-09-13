@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>mawoffshore@gmail.com</contactEmail>
+    <label>Integration User</label>
+    <oauthConfig>
+        <callbackUrl>https://google.com</callbackUrl>
+        <consumerKey>3MVG9uudbyLbNPZMln9fOAZ82GntJPX.cAg9BMf.GDe_hbPo30syUDCy8ZPL6onSENqyxGISUR6TRI7eLHSd8</consumerKey>
+        <scopes>Full</scopes>
+    </oauthConfig>
+</ConnectedApp>

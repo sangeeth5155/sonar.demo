@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template will send when the non wish volunteer opportunity is approved by the chapter staff</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Volunteer Opportunity : Non-Wish Approved</name>
+    <style>freeForm</style>
+    <subject>Volunteer Opportunity Approved</subject>
+    <textOnly>Hi {!Volunteer_Opportunity__c.Hidden_Volunteer_Contact_Name__c},
+
+Thank you for requesting a new volunteer opportunity! Chapter staff have approved your request for the  {!Volunteer_Opportunity__c.Hidden_Chapter_Role_Name__c} role for the {!Volunteer_Opportunity__c.Hidden_Non_Wish_Event_Name__c} on {!Volunteer_Opportunity__c.Hidden_Non_Wish_Event_Date__c}. Please visit the Make-A-Wish Volunteer Center for more information about your volunteer assignment.
+
+Thanks,
+{!Volunteer_Opportunity__c.Hidden_Chapter_Name__c}
+{!Volunteer_Opportunity__c.Hidden_Chapter_Phone__c}
+{!Volunteer_Opportunity__c.Hidden_Chapter_Email__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

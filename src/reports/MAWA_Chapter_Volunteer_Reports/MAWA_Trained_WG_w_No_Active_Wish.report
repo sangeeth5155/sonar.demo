@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CNTC_FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$Contact.Date_of_last_engagement__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Contact.Number_of_wishes_granted__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Roles__c.Migrated_Record__c</field>
+    </columns>
+    <description>Trained Wish Granters with No Active Wish</description>
+    <filter>
+        <criteriaItems>
+            <column>Volunteer_Roles__c.Role_Name__c</column>
+            <operator>contains</operator>
+            <value>Wish Granter</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Volunteer_Roles__c.Status__c</column>
+            <operator>equals</operator>
+            <value>Trained</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Contact.Number_of_wishes_active__c</column>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Contact.is_Active_Volunteer__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Contact.Active_Wish_Granter__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>MAWA Trained WG w/ No Active Wish</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Volunteer_Roles__c@Volunteer_Roles__c.Volunteer_Name__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>FK_$Contact.Date_of_last_engagement__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>FK_$Contact.Date_of_last_engagement__c</dateColumn>
+        <interval>INTERVAL_PREVCURFY</interval>
+    </timeFrameFilter>
+</Report>

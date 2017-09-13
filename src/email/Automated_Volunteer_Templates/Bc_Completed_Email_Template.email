@@ -1,0 +1,8 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">Hi&nbsp;{!Background_check__c.Volunteer__c},<br></span><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;"><br>We have received the results of your criminal background check.
+You are welcome to visit the&nbsp;</span><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif; color: blue;"><a href="https://make-a-wish.force.com">Make-A-Wish Volunteer Center</a></span><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">&nbsp;to register for
+your role-specific training.<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>Thanks,<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>{!Background_check__c.Account_Name__c}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Background_check__c.Account_Phone__c}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Background_check__c.Account_Email__c}</span></p></div>]]></td>
+</tr>
+</table>

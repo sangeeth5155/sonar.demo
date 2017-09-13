@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used to send email reminder to volunteer if presentation date is blank 23 days before wish start date.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Case: Send Email to Volunteer for Blank Presentation date</name>
+    <style>freeForm</style>
+    <subject>Wish Presentation Date Reminder</subject>
+    <type>html</type>
+</EmailTemplate>

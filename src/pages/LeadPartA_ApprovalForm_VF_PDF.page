@@ -1,0 +1,349 @@
+<apex:page showHeader="false" renderAs="pdf" sidebar="false" applyHtmlTag="false" standardStylesheets="false" controller="PARTAPDF" applyBodyTag="false" cache="false">
+    <head>
+        <style type="text/css" media="print">
+            @page { size: A4; margin-left:0px; margin-right:0px; //background-color:#fafafa; //font-color:gray !important;
+            @top-center { content: element(header); }
+            @bottom-left { content: element(footer); } }
+            * { margin: 0px; padding: 0px; }
+            div.header { height: 130px; width: 100%; text-align: center; position: running(header); }
+            .bkb{ background: #abbaab; /* fallback for old browsers */ background: -webkit-linear-gradient(to left, #abbaab , #ffffff); /* Chrome 10-25, Safari 5.1-6 */ background: linear-gradient(to left, #abbaab , #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+            div.footer { display: block; padding: 5px; background-color:#D3D3D3 !important; position: running(footer); }
+            div.subfooter { display: inline-block; }
+            div.right { float: right; }
+            .pagenumber:before { content: counter(page); }
+            
+            .pagecount:before {
+            content: counter(pages);
+            }
+            
+            .stationName {
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 30px;
+            }
+            
+            table {
+            width: 100%;
+            }
+            
+            .centered {
+            text-align: center;
+            }
+            
+            .right {
+            text-align: right;
+            }
+            
+            .tableHeader {
+            border-width: 0px 0px 1px 0px;
+            border-color: #000;
+            border-style: solid;
+            }
+            
+            .sectionHeader {background-color: #016cb6 !important; font-family: Verdana; font-weight: bold; font-size: 15px; padding: 5px; margin-bottom:1% !important; color:white !important}
+            .left-col {float:left; width:48%; text-align: left; font-family: Verdana, sans-serif, Arial; font-weight: normal; 
+            font-size: 12px !important; height:auto !important; padding-top: 4px; padding-bottom: 4px; padding-left: 2%; padding-right: 0px;}
+            
+            /*.container{border-bottom: 1px #DCDCDC dotted;}*/
+            #totalCostLabel {font-weight: bold;}
+            
+            .diagnosis-text {margin-left:2%; font-size:14px}
+            
+            table, td, th {
+            font-size:12px !important;
+            }
+            
+            table {
+            border-collapse: collapse;
+            width: 100%;
+            }
+            
+            th {
+            text-align: left;
+            }
+            .wish-child-info {padding:20px !important}
+            .tab-button{top:-40px! important}
+            tr.spaceUnder > td { padding-bottom: 1em; }
+            
+        </style>
+    </head>
+    <body>
+        <!--<div class="header"></div>-->
+        <div class="content">
+            <h1 class="stationName"><apex:image url="{!URLFOR($Resource.logo)}"/></h1>
+            <apex:pageBlock >
+                <table>
+                    <tr>
+                        <td>
+                            <!---- Wish Child Information ------>
+                            <div class="wish-child-info">
+                                <div class="sectionHeader">Wish Child Information</div>
+                                <div class="container" style="width:100%;">
+                                    <div class="left-col"> Child Age : </div>
+                                    <div class="left-col"> {!currLead.Child_Age__c} </div>
+                                </div>
+                                <div class="container" style="width:100%;">
+                                    <div class="left-col"> Child DOB : </div>
+                                    <div class="left-col"> 
+                                        <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                            <apex:param value="{!currLead.DOB__c}"/>
+                                        </apex:outputText> </div>
+                                </div>
+                                <div class="container" style="width:100%;">
+                                    <div class="left-col"> Child FirstName : </div>
+                                    <div class="left-col"> {!currLead.FirstName} </div>
+                                </div>
+                                <div class="container" style="width:100%;">
+                                    <div class="left-col"> Child Middle Initial : </div>
+                                    <div class="left-col"> {!currLead.Child_Middle_Initial__c} </div>
+                                </div>
+                                
+                                <div class="container" style="width:100%;">
+                                    <div class="left-col"> Child Last Name : </div>
+                                    <div class="left-col"> {!currLead.LastName} </div>
+                                </div>
+                                <div class="container" style="width:100%;">
+                                    <div class="left-col"> Child Gender : </div>
+                                    <div class="left-col"> {!currLead.Gender__c} </div>
+                                </div>
+                                
+                                <div class="container" style="width:100%;">
+                                    <div class="left-col"> Parent First Name : </div>
+                                    <div class="left-col"> {!currLead.Parent_First_Name__c} </div>
+                                </div>
+                                <div class="container" style="width:100%;">
+                                    <div class="left-col"> Parent Last Name : </div>
+                                    <div class="left-col"> {!currLead.Parent_Last_Name__c} </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!---- Medical Provider Information ------>
+                            <div class="wish-child-info" style="margin-top:1% !important">
+                                <div class="sectionHeader">Medical Provider Information</div>
+                                <div class="container" style="width:100%;">
+                                    <div class="left-col"> Provider First Name : </div>
+                                    <div class="left-col"> {!currLead.Treating_Medical_Professional_First_Name__c}</div>
+                                </div>
+                                <div class="container" style="width:100%;">
+                                    <div class="left-col"> Provider Last Name : </div>
+                                    <div class="left-col"> {!currLead.Treating_Medical_Professional_Last_Name__c}</div>
+                                </div>
+                                <div class="container" style="width:100%;">
+                                    <div class="left-col"> Provider Phone : </div>
+                                    <div class="left-col"> {!currLead.Treating_Medical_Professional_Phone__c}</div>
+                                </div>
+                                <div class="container" style="width:100%;">
+                                    <div class="left-col"> Provider Email : </div>
+                                    <div class="left-col"> {!currLead.Treating_Medical_Professional_Email__c}</div>
+                                </div>
+                                <div class="container" style="width:100%;">
+                                    <div class="left-col"> Hospital or Treatment Facility : </div>
+                                    <div class="left-col"> {!currLead.Hospital_Treatment_Facility_Treating__c}</div>
+                                </div>
+                                <div class="container" style="width:100%;">
+                                    <div class="left-col"> I am recognized by my state to practice as a : </div>
+                                    <div class="left-col"> {!currLead.I_am_Recognized_To_Practice_As_a__c}</div>
+                                </div>
+                                <div class="container" style="width:100%;">
+                                    <div class="left-col"> I have direct knowledge of this patients condition and I am part of the treating healthcare team : </div>
+                                    <div class="left-col"> {!currLead.I_m_Part_of_The_Treating_HealthCare_Team__c }</div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <!---- Medical Provider Information ------>
+                            <div class="wish-child-info" style="margin-top:1% !important">
+                                <div class="sectionHeader">About {!currLead.FirstName} {!currLead.LastName}</div>
+                                <div class="container" style="width:100%;">
+                                    <div class="left-col"> Please choose the one statement that best describes your patient: </div>
+                                    <div class="left-col"> 
+                                        <apex:outputPanel rendered="{!currLead.Responds_to_treatment_with_normal_health__c}">
+                                        	{!currLead.FirstName} {!currLead.LastName} responds to standard treatment which approximates normal health (e.g., diabetes, asthma, uncomplicated epilepsy)
+                                        </apex:outputPanel>
+                                        <apex:outputPanel rendered="{!currLead.Risk_of_complications_premature_death__c}">
+                                            	{!currLead.FirstName} {!currLead.LastName} has a non-progressive condition that may have a risk of complications and/or risk of a shortened life expectancy (e.g., cerebral palsy, quadriplegia, hemophilia)
+                                        </apex:outputPanel>
+                                        <apex:outputPanel rendered="{!currLead.Treatment_may_be_feasible_but_can_fail__c}">
+                                            	{!currLead.FirstName} {!currLead.LastName} has a condition for which curative treatment may be feasible but can fail; non-compliance is not included as a treatment failure. (e.g., cancer, irreversible organ failure)
+                                        </apex:outputPanel>
+                                        <apex:outputPanel rendered="{!currLead.Treatment_may_prolong_normal_activities__c}">
+                                            	{!currLead.FirstName} {!currLead.LastName} has a condition where a significantly shortened life expectancy is probable, but frequent and/or long periods of intensive treatment may prolong and allow participation in normal activities (e.g., cystic fibrosis, solid organ transplant)
+                                        </apex:outputPanel>
+                                        <apex:outputPanel rendered="{!currLead.Debilitation_may_extend_over_many_years__c}">
+                                            	{!currLead.FirstName} {!currLead.LastName} has a condition without curative treatment options in which debilitation may extend over many years (e.g., severe treatment resistant epilepsy, metabolic disease)
+                                        </apex:outputPanel>
+                                        <apex:outputPanel rendered="{!currLead.Increased_probability_of_premature_death__c}">
+                                            	{!currLead.FirstName} {!currLead.LastName} has an irreversible but non-progressive condition with severe disability and is experiencing multiple health complications that increase the probability of a significantly shortened life expectancy (e.g., anoxic brain injury, severe cerebral palsy)
+                                        </apex:outputPanel>
+                                        <apex:outputPanel rendered="{!currLead.Child_will_ultimately_die_prematurely__c}">
+                                            	{!currLead.FirstName} {!currLead.LastName} has a condition for which there is no reasonable hope of cure and from which children or young people will experience a significantly shortened life expectancy (e.g., Duchenne muscular dystrophy or neurodegenerative disease)
+                                        </apex:outputPanel>
+                                        <apex:outputPanel rendered="{!currLead.None_of_these_statements_describes_Child__c}">
+                                            	None of these statements describe {!currLead.FirstName} {!currLead.LastName}
+                                        </apex:outputPanel>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>
+                            <!---- Medical Question Information ------>        
+                            <div class="wish-child-info" style="margin-top:1% !important">
+                                <div class="sectionHeader">Diagnosis Information</div>
+                                <apex:variable value="{!0}" var="diagnosisBlock"/>
+                                <apex:repeat value="{!diagnosisVerificationList}" var="diagnosisVerification" >
+                                    <div class="container" style="width:100%;">
+                                        <div style="clear:both; font-weight:bold" class="diagnosis-text">{!IF(diagnosisBlock == 0, 'Primary Diagnosis', IF(diagnosisBlock != 0, 'Secondary Diagnosis', ''))} {!If(diagnosisBlock == 0 ,'',diagnosisBlock)}</div>
+                                        <div class="left-col"> ICD Code :</div>
+                                        <div class="left-col"> {!diagnosisVerification.ICD_Code__c}</div>
+                                    </div>
+                                    <div class="container" style="width:100%;">
+                                        <div class="left-col"> Condition Description : </div>
+                                        <div class="left-col"> {!diagnosisVerification.Condition_Description__r.Name}</div>
+                                    </div>
+                                    <apex:outputPanel rendered="{!If(diagnosisVerification.DiagnosisMedicalQuestions__r.size != 0, true, false)}">
+                                    <apex:repeat value="{!diagnosisVerification.DiagnosisMedicalQuestions__r}" var="medicalQuestion">
+                                        <div class="container" style="width:100%;">
+                                            <div class="left-col">{!medicalQuestionMap[medicalQuestion.Medical_Question__c]}</div>
+                                            <div class="left-col">{!medicalQuestion.Medical_Question_Answer__c}
+                                                <apex:outputpanel rendered="{!medicalQuestion.Epilepsy_Value__c!=Null}">
+                                                    ,{!medicalQuestion.Epilepsy_Value__c}
+                                                </apex:outputpanel>
+                                                <apex:outputpanel rendered="{!medicalQuestion.Comment__c!=Null}">
+                                                    {!medicalQuestion.Comment__c}
+                                                </apex:outputpanel>
+                                            </div>
+                                        </div>
+                                    </apex:repeat>
+                                    </apex:outputPanel>
+                                    <apex:variable var="diagnosisBlock" value="{!diagnosisBlock + 1}"/>
+                                </apex:repeat>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!---- Other Information ------>
+                            <div class="wish-child-info" style="margin-top:1% !important">
+                                <div class="sectionHeader">Other Information</div>
+                                
+                                
+                                
+                                <apex:outputpanel rendered="{!currLead.Why_do_you_feel_would_be_eligible_Wish__c!=Null}">
+                                    <div class="container" style="width:100%;">
+                                        <div class="left-col"> Why do you feel would be eligible Wish?</div>
+                                        <div class="left-col"> {!currLead.Why_do_you_feel_would_be_eligible_Wish__c}</div>
+                                    </div>
+                                </apex:outputpanel>
+                                
+                                <div class="container" style="width:100%;">
+                                    <div class="left-col"> Is {!currLead.FirstName} {!currLead.LastName} in a comatose or vegetative state? : </div>
+                                    <div class="left-col"> {!currLead.Is_in_a_Comatose_Vegetative_State__c}</div>
+                                </div>
+                                
+                                <!--<apex:outputpanel rendered="{!currentCondition != Null}">
+                                    <div class="container" style="width:100%;">
+                                        <div class="left-col"> Does {!currLead.FirstName} {!currLead.LastName} have any of the following conditions? (please select all that apply):</div>
+                                        <div class="left-col"> {!currentCondition}</div>
+                                    </div>
+                                </apex:outputpanel>-->
+                                
+                                <apex:outputPanel rendered="{!currentConditionList.size != 0}">
+                                    <div class="container" style="width:100%;">
+                                        <div class="left-col"> Does {!currLead.FirstName} {!currLead.LastName} have any of the following conditions? (please select all that apply):</div>
+                                        <div class="left-col"> 
+                                            <table>
+                                                <apex:repeat value="{!currentConditionList}" var="currentCondition" >
+                                                    <tr>
+                                                        <td>{!currentCondition}</td>
+                                                    </tr>
+                                                </apex:repeat>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </apex:outputPanel>
+                                
+                                
+                                <apex:outputpanel rendered="{!currLead.Communication__c != Null}">
+                                    <div class="container" style="width:100%;">
+                                        <div class="left-col"> In order to facilitate communication, please select all that apply to {!currLead.FirstName} {!currLead.LastName} :</div>
+                                        <div class="left-col"> {!currLead.Communication__c}</div>
+                                    </div>
+                                </apex:outputpanel>
+                                
+                                <apex:outputpanel rendered="{!currLead.Is_We_Need_To_Expedite_The_Process__c!=Null}">
+                                    <div class="container" style="width:100%;">
+                                        <div class="left-col"> Is there a medical reason we would need to expedite the process?</div>
+                                        <div class="left-col"> {!currLead.Is_We_Need_To_Expedite_The_Process__c}</div>
+                                    </div>
+                                </apex:outputpanel>
+                                
+                                <apex:outputpanel rendered="{!currLead.Please_Explain__c!=Null}">
+                                    <div class="container" style="width:100%;">
+                                        <div class="left-col"> Please explain :</div>
+                                        <div class="left-col"> {!currLead.Please_Explain__c}</div>
+                                    </div>
+                                </apex:outputpanel>
+                                
+                                <apex:outputpanel rendered="{!currLead.Will_Child_s_Condition_Deteriorate__c!=Null}">
+                                    <div class="container" style="width:100%;">
+                                        <div class="left-col"> Do you expect this childs condition will significantly deteriorate in the next 3-6 months? </div>
+                                        <div class="left-col"> {!currLead.Will_Child_s_Condition_Deteriorate__c}</div>
+                                    </div>
+                                </apex:outputpanel>
+                                
+                                <apex:outputpanel rendered="{!currLead.Please_Explain_Deteriorate__c!=Null}">
+                                    <div class="container" style="width:100%;">
+                                        <div class="left-col"> Please explain Deteriorate :</div>
+                                        <div class="left-col"> {!currLead.Please_Explain_Deteriorate__c}</div>
+                                    </div>
+                                </apex:outputpanel>
+                                
+                                <apex:outputpanel rendered="{!currLead.Provided_additional_information__c!=Null}">
+                                    <div class="container" style="width:100%;">
+                                        <div class="left-col"> Is there additional information you would like to provide?</div>
+                                        <div class="left-col"> {!currLead.Provided_additional_information__c}</div>
+                                    </div>
+                                </apex:outputpanel>
+                               
+                                
+                                <!--<div class="container" style="width:100%;">
+                                    <div class="left-col"> Travel Algorithm :</div>
+                                    <div class="left-col"><apex:outputText value="{!currLead.Travel_algorithm__c}" escape="false"/></div>
+                                    <!--<div class="left-col"> {!currLead.Travel_algorithm__c}</div>
+                                </div>-->
+                                
+                                
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                
+                <table align="left" cellpadding="20" style="width:100%; margin-top:5%">
+                    <tr>
+                        <td style="width:50%"><span style="color:white;">~s1</span></td>
+                        <td style="width:50%"><span><apex:outputText value="{0,date,dd/MM/yyyy HH:mm:ss}"> <apex:param value="{!NOW()}"/> </apex:outputText></span></td>
+                    </tr>
+                </table>
+                
+            </apex:pageBlock>
+        </div>
+        <div class="footer">
+            <div class="centered">Generated by {!$User.FirstName} {!$User.LastName}</div>
+            <div>
+                <div class="subfooter">{!NOW()}</div>
+                <div class="subfooter right">Page <span class="pagenumber"/> of <span class="pagecount"/></div>
+            </div>
+        </div>
+    </body>
+</apex:page>

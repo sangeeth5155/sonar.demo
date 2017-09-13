@@ -1,0 +1,124 @@
+<apex:page renderAs="pdf" showHeader="false" sidebar="false" applyHtmlTag="false" standardStylesheets="false"  StandardController="Contact" applyBodyTag="false">
+     <html>
+        <head>
+            <style>
+            @page {
+                size: letter;
+                margin: 25mm;
+                @top-right{    
+                    content: "Conflict Of Interest";
+                }
+                @bottom-center {
+                    content: "Page " counter(page) " of " counter(pages);
+                }
+            }
+            .page-break {
+                display:block;
+                page-break-after:always;
+            }
+            table{width:100%}
+            .th{background: #5fafce;font-weight: bold;}
+            body{background:#f8f8f8}
+            td{padding:3px}
+            .splitRow{padding: 5px;border-bottom:solid 1px #a7a9ab;}
+            .secEnd{padding: 10px;}
+            .secEndto{padding: 150px;}
+            </style>
+        </head>
+        <body>
+    <apex:form id="formid">
+     <h2>Conflict Of Interest</h2>
+
+            <table>
+               
+                 
+                <tr>
+                    <td colspan='2' style='text-align:center'>ANNUAL CONFLICT OF INTEREST AND ETHICS ASSURANCE STATEMENT </td>
+                </tr>
+                <tr>
+                    <td colspan='2' style='text-align:justify'>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; As an employee or volunteer of the Make-A-Wish Foundation (the "Foundation"), I have an obligation to the Foundation and the constituencies it serves to comply with the highest standards of ethical conduct.  I will not commit acts contrary to those standards, and I will promptly report to appropriate Foundation representatives – either directly, or through MySafeWorkplace (a 24-hour confidential whistle-blower hotline that can be accessed at www.MySafeWorkplace.com or by calling 1-800-461-9330) – the commission of any such acts by others within the Foundation.  I understand that my responsibilities include the following:
+                    </td>
+                </tr>
+                <tr> <td class='secEnd'></td></tr>
+                <tr>
+                    <td colspan='2' style='text-align:center'>Ethics and Legal Assurance </td>
+                </tr>
+                <tr>
+                    <td colspan='2' style='text-align:justify'>
+                        <ul>
+<li>
+I will at all times: (a) perform my duties in accordance with relevant laws, regulations and Foundation policies and standards; (b) promote the attainment of the Foundation's legitimate and ethical objectives; and (c) represent the interests of all constituencies served by the Foundation and not favor special interests inside or outside the Foundation in connection with Foundation business.
+</li>
+<li>
+I will refrain from: (a) violating any criminal or civil law or regulation, the violation of which may reflect poorly on the Foundation; and/or (b) engaging in or supporting any activity that would discredit the Foundation.
+</li>
+<li>
+I will submit to a criminal background check every three years (or more frequently if required by the Foundation), and I agree to disclose at the time I execute this document and thereafter as the same may arise any official investigations of criminal activities, arrests and/or convictions involving me (other than for routine traffic offenses not involving drugs or alcohol).
+</li>
+</ul>
+                    </td>
+                </tr>
+               <tr>
+<td colspan='2' style='text-align:center'>
+Conflict Of Interest
+</td>
+</tr>
+<tr>
+<td colspan='2' style='text-align:justify'>
+<ul>
+<li>
+I will either avoid, or will promptly disclose and recuse myself from any decisions involving, any activity or practice which conflicts with, or can be perceived as conflicting with, the interests of the Foundation, including but not limited to situations where I, or a relative, friend or business acquaintance of mine, proposes to provide goods or services to the Foundation for consideration. 
+</li>
+<li>
+I will refrain from using Foundation property or resources for personal profit or advantage, or for any purpose not related to the activities of the Foundation.
+</li>
+<li>
+I will refuse any personal gifts, loans, favors or other consideration of more than nominal value from any Foundation vendor, sponsor or other outside party that would influence, or could be perceived as influencing, my actions or the actions of others.
+</li>
+</ul>
+</td>
+</tr>
+<tr> <td class='secEnd'></td></tr>
+<tr> <td class='secEnd'></td></tr>
+<tr> <td class='secEnd'></td></tr>
+<tr> <td class='secEnd'></td></tr>
+<tr>
+<td colspan='2' style='text-align:center'>
+Confidentiality
+</td>
+</tr>
+<tr>
+<td colspan='2' style='text-align:justify'>
+<ul>
+<li>
+During my involvement with the Foundation and thereafter, I will maintain the confidentiality of any information regarding the Foundation, wish children and their families, donors and volunteers that has not been released publicly, unless legally obligated to do otherwise.
+</li>
+<li>
+I will refrain from using or appearing to use confidential information acquired in the course of my service for unethical or illegal advantage, either personally or through third parties. 
+</li>
+</ul>
+</td>
+</tr>
+<tr> <td class='secEnd'></td></tr>
+<tr> <td class='secEnd'></td></tr>
+<tr>
+<td colspan='2'><b>I have read, understand and agree to be bound by the above standards.</b></td>
+</tr>
+<tr> <td class='secEnd'></td></tr>
+ <tr><td colspan='2' class='splitRow'></td></tr>
+<tr> <td class='secEnd'></td></tr>
+<tr>
+<td >Signature:<span style="color:white;text-decoration: underline;">~s1</span> </td> <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date:&nbsp;<span style="color:white;text-decoration: underline;">~date</span> </td>
+</tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr><td>Print Name:&nbsp;<apex:outputField value="{!contact.Name}"/></td></tr>
+ </table>
+    </apex:form>
+    </body>
+    </html>
+</apex:page>

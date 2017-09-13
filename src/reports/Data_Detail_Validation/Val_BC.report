@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Background_check__c.RE_Import_Id__c</field>
+    </columns>
+    <columns>
+        <field>Background_check__c.Volunteer__c</field>
+    </columns>
+    <columns>
+        <field>Background_check__c.Resided_in_US_for_past_7_years__c</field>
+    </columns>
+    <columns>
+        <field>Background_check__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>Background_check__c.Requested_By__c</field>
+    </columns>
+    <columns>
+        <field>Background_check__c.Date_Requested__c</field>
+    </columns>
+    <columns>
+        <field>Background_check__c.Date_Completed__c</field>
+    </columns>
+    <description>Vol_Checklist Validation for BC items for Volunteers</description>
+    <filter>
+        <criteriaItems>
+            <column>CUST_CREATED_NAME</column>
+            <operator>equals</operator>
+            <value>integration user</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Val_BC</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Background_check__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Background_check__c.Date_Completed__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

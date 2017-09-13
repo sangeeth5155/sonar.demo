@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object have the ability to change the dynamic content on the volunteer portal in declarative manner.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Read</externalSharingModel>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Whenever the Dynamic Content content is created newly, this flag would be marked as Active by default.</description>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Application_Overview__c</fullName>
+        <description>It store the application details.</description>
+        <externalId>false</externalId>
+        <label>Application Overview</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Chapter_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It will look up to chapter records in the account object</description>
+        <externalId>false</externalId>
+        <label>Chapter Name</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Accounts related to Dynamic Content need to be a chapter name</errorMessage>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Chapter</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Dynamic Contents</relationshipLabel>
+        <relationshipName>Dynamic_Contents</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Chapter__c</fullName>
+        <description>It holds the chapter details</description>
+        <externalId>false</externalId>
+        <label>Chapter</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Feature_Quote__c</fullName>
+        <description>It holds the Feature Quote for Active volunteer landing page</description>
+        <externalId>false</externalId>
+        <label>Feature Quote</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Featured_Image__c</fullName>
+        <description>It holds the  featured image for Active Volunteer Landing Page</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Optimized image size width: 1140px by height: 450px (height can vary)</inlineHelpText>
+        <label>Featured Image</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Heading_Highlight_Image_1__c</fullName>
+        <description>It holds the Heading Highlight Image 1 for Active volunteer landing page</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Optimized image size- width: 342px by height: 314px</inlineHelpText>
+        <label>Heading Image 1</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Heading_Highlight_Image_2__c</fullName>
+        <description>It holds the Heading Highlight Image 2 for Active volunteer landing page</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Optimized image size- width: 342px by height: 314px</inlineHelpText>
+        <label>Heading Image 2</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Heading_Highlight_Image_3__c</fullName>
+        <description>It holds the Heading Highlight Image 3 for Active volunteer landing page</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Optimized image size- width: 342px by height: 314px</inlineHelpText>
+        <label>Heading Image 3</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Heading_Highlight_Text_1__c</fullName>
+        <description>It holds the Heading Highlight Text 1 for Active volunteer landing page</description>
+        <externalId>false</externalId>
+        <label>Heading Text 1</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Heading_Highlight_Text_2__c</fullName>
+        <description>It holds the Heading Highlight Text 2 for Active volunteer landing page</description>
+        <externalId>false</externalId>
+        <label>Heading Text 2</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Heading_Highlight_Text_3__c</fullName>
+        <description>It holds the Heading Highlight Text 3 for Active volunteer landing page</description>
+        <externalId>false</externalId>
+        <label>Heading Text 3</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Heading_Highlight_Title_1__c</fullName>
+        <description>It holds the Heading Highlight Title1 for Active volunteer landing page</description>
+        <externalId>false</externalId>
+        <label>Heading Title 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Heading_Highlight_Title_2__c</fullName>
+        <description>It holds the Heading Highlight Title 2 for Active volunteer landing page</description>
+        <externalId>false</externalId>
+        <label>Heading Title 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Heading_Highlight_Title_3__c</fullName>
+        <description>It holds the Heading Highlight Title 3 for Active volunteer landing page</description>
+        <externalId>false</externalId>
+        <label>Heading Title 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Heading_Text__c</fullName>
+        <description>It holds the heading text for Active Volunteer Landing Page</description>
+        <externalId>false</externalId>
+        <label>Heading Text</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Heading_Title__c</fullName>
+        <description>It holds the Heading Title for Active volunteer landing page</description>
+        <externalId>false</externalId>
+        <label>Heading Title</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>How_do_I_Become_a_Volunteer__c</fullName>
+        <description>It holds the text for How do I Become a Volunteer</description>
+        <externalId>false</externalId>
+        <label>How do I Become a Volunteer</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Interview_Additional_Info__c</fullName>
+        <description>It holds the text for Interview Additional Info for prospective volunteer</description>
+        <externalId>false</externalId>
+        <label>Interview Additional Info</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Orientation_Add_l_Info__c</fullName>
+        <description>It holds the details for Orientation Additional Info for prospective volunteer</description>
+        <externalId>false</externalId>
+        <label>Orientation Additional Info</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Sign_Up_Page__c</fullName>
+        <description>This field is not chapter dependent and should be only updated by the National staff. The content in this field would be displayed on the Community Sign Up page.</description>
+        <externalId>false</externalId>
+        <label>Sign Up Page</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Training_Additional_Info__c</fullName>
+        <description>It Holds the details of Training Additional Info</description>
+        <externalId>false</externalId>
+        <label>Training Additional Info</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Volunteer_Process__c</fullName>
+        <description>it holds the details about the volunteer process</description>
+        <externalId>false</externalId>
+        <label>Volunteer Process</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>WelcomePage__c</fullName>
+        <description>This Field is used to store the content of welcome page.</description>
+        <externalId>false</externalId>
+        <label>WelcomePage</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Welcome_Message__c</fullName>
+        <description>It holds the Welcome Message for Active Volunteer Landing Page</description>
+        <externalId>false</externalId>
+        <label>Welcome Message</label>
+        <length>131000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Welcome_Text__c</fullName>
+        <description>It Holds the welcome Text for prospective volunteer</description>
+        <externalId>false</externalId>
+        <label>Welcome Text</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Why_Need_Background_Check__c</fullName>
+        <description>It will hold the verbiage for Background check.</description>
+        <externalId>false</externalId>
+        <label>Why Need Background Check</label>
+        <length>131000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <label>Dynamic Content</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Chapter_Name__c</columns>
+        <columns>Active__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>DC-{00000}</displayFormat>
+        <label>Dynamic Content ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Dynamic Contents</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Chapter_Active</fullName>
+        <active>true</active>
+        <description>It will associated with Active Volunteer page layout</description>
+        <label>Chapter Active</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Chapter_Prospective</fullName>
+        <active>true</active>
+        <description>It will associated with Prospective Volunteer page layout</description>
+        <label>Chapter Prospective</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>National</fullName>
+        <active>true</active>
+        <description>It will associated with National page layout</description>
+        <label>National</label>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Chapter_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Active__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+</CustomObject>

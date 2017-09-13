@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Read</externalSharingModel>
+    <fields>
+        <fullName>Block__c</fullName>
+        <description>Used to hold the block value</description>
+        <externalId>false</externalId>
+        <label>Block</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Condition_Description__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It holds the condition description</description>
+        <externalId>false</externalId>
+        <label>Condition Description</label>
+        <referenceTo>Condition_Description__c</referenceTo>
+        <relationshipLabel>Diagnosis Verification</relationshipLabel>
+        <relationshipName>Diagnosis_Verification</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Used to hold the related contact</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Diagnosis Verification</relationshipLabel>
+        <relationshipName>Diagnosis_Verification</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Epilepsy_Value__c</fullName>
+        <description>Holds the value for epilepsy picklist</description>
+        <externalId>false</externalId>
+        <label>Epilepsy Value</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Eternal_Id__c</fullName>
+        <description>Used for integration purpose</description>
+        <externalId>true</externalId>
+        <label>Eternal Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Group1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used to identified whether the give ICD or Condition Description is Group1 record</description>
+        <externalId>false</externalId>
+        <label>Group1</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ICD_Code__c</fullName>
+        <description>It holds the ICD Code</description>
+        <externalId>false</externalId>
+        <label>ICD Code</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It holds the lead</description>
+        <externalId>false</externalId>
+        <label>Lead</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>Diagnosis Verification</relationshipLabel>
+        <relationshipName>Diagnosis_Verification</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Medical_Question_Answer__c</fullName>
+        <description>It holds the Medical Question answers</description>
+        <externalId>false</externalId>
+        <label>Medical Question Answer</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Medical_Question__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It holds the medical question</description>
+        <externalId>false</externalId>
+        <label>Medical Question</label>
+        <referenceTo>Medical_Questions__c</referenceTo>
+        <relationshipLabel>Diagnosis Verification</relationshipLabel>
+        <relationshipName>Diagnosis_Verification</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Order__c</fullName>
+        <description>It holds the block number</description>
+        <externalId>false</externalId>
+        <label>Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PCD_ICD__c</fullName>
+        <description>It is used to hold the block input value is from ICD Code or Condition Description</description>
+        <externalId>false</externalId>
+        <label>Hidden PCD-ICD</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Diagnosis__c</fullName>
+        <description>It holds the primary diagnosis value</description>
+        <externalId>false</externalId>
+        <label>Primary Diagnosis</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reason_for_Need__c</fullName>
+        <description>It holds the value for reason for wish need</description>
+        <externalId>false</externalId>
+        <label>Reason for Need</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Short_Description__c</fullName>
+        <description>Used to hold short description for condition description</description>
+        <externalId>false</externalId>
+        <label>Short Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>isEligible__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Determine whether the wish is eligible</description>
+        <externalId>false</externalId>
+        <label>Hidden isEligible</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Diagnosis Verification</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Condition_Description__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>DV-{000}</displayFormat>
+        <label>Diagnosis Verification Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Diagnosis Verification</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Read</sharingModel>
+</CustomObject>

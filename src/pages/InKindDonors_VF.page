@@ -1,0 +1,10 @@
+<apex:page standardController="In_Kind_Donation_Reimbursement__c" >
+<form>
+<style>
+.bFilterView{
+display:none!important;
+}
+</style>
+<apex:ListViews type="In_Kind_Donation_Reimbursement__c" />
+</form>
+</apex:page>

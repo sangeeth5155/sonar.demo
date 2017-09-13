@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Wish Expense Type Template</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Wish Expense Type Templates</value>
+    </caseValues>
+    <fields>
+        <label><!-- Wish Expense Type --></label>
+        <name>Wish_Expense_Type__c</name>
+        <relationshipLabel><!-- Wish Expense Type Templates --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Wish Type --></label>
+        <name>Wish_Type__c</name>
+        <picklistValues>
+            <masterLabel>Animal</masterLabel>
+            <translation><!-- Animal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Celebrity - Domestic Travel</masterLabel>
+            <translation><!-- Celebrity - Domestic Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Celebrity - International Travel</masterLabel>
+            <translation><!-- Celebrity - International Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Celebrity - Local</masterLabel>
+            <translation><!-- Celebrity - Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Celebrity- Domestic Travel</masterLabel>
+            <translation><!-- Celebrity- Domestic Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Celebrity- Local</masterLabel>
+            <translation><!-- Celebrity- Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Celebrity-International Travel</masterLabel>
+            <translation><!-- Celebrity-International Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computer</masterLabel>
+            <translation><!-- Computer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction</masterLabel>
+            <translation><!-- Construction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cruise - Celebrity/Royal</masterLabel>
+            <translation><!-- Cruise - Celebrity/Royal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cruise - Disney</masterLabel>
+            <translation><!-- Cruise - Disney --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cruise - Other</masterLabel>
+            <translation><!-- Cruise - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disney - Aulani</masterLabel>
+            <translation><!-- Disney - Aulani --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disney World</masterLabel>
+            <translation><!-- Disney World --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disneyland</masterLabel>
+            <translation><!-- Disneyland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electronics International - Sports</masterLabel>
+            <translation><!-- Electronics International - Sports --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I wish to be…</masterLabel>
+            <translation><!-- I wish to be… --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical Bed/Chair/Wheelchair</masterLabel>
+            <translation><!-- Medical Bed/Chair/Wheelchair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Motor Vehicle Customization</masterLabel>
+            <translation><!-- Motor Vehicle Customization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Motorized Vehicle</masterLabel>
+            <translation><!-- Motorized Vehicle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Musical Instrument/Music Related</masterLabel>
+            <translation><!-- Musical Instrument/Music Related --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Party</masterLabel>
+            <translation><!-- Party --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Philanthropic</masterLabel>
+            <translation><!-- Philanthropic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Playhouse/Playset</masterLabel>
+            <translation><!-- Playhouse/Playset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Room Redecoration/Furniture</masterLabel>
+            <translation><!-- Room Redecoration/Furniture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shopping Spree - Local</masterLabel>
+            <translation><!-- Shopping Spree - Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shopping Spree - Travel</masterLabel>
+            <translation><!-- Shopping Spree - Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spa/Hot Tub</masterLabel>
+            <translation><!-- Spa/Hot Tub --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sports-Domestic Travel</masterLabel>
+            <translation><!-- Sports-Domestic Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sports-International Travel</masterLabel>
+            <translation><!-- Sports-International Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sports-Local</masterLabel>
+            <translation><!-- Sports-Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sports/Camping Equipment</masterLabel>
+            <translation><!-- Sports/Camping Equipment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Swimming Pool</masterLabel>
+            <translation><!-- Swimming Pool --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Toys/Books</masterLabel>
+            <translation><!-- Toys/Books --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trailer/Camper</masterLabel>
+            <translation><!-- Trailer/Camper --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel - Hawai</masterLabel>
+            <translation><!-- Travel - Hawai --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel - International</masterLabel>
+            <translation><!-- Travel - International --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel - Other</masterLabel>
+            <translation><!-- Travel - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Values</masterLabel>
+            <translation><!-- Values --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

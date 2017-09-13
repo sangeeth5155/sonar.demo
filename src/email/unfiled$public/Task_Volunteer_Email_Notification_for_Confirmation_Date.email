@@ -1,0 +1,7 @@
+Hi {!Task.CreatedBy},
+
+Interiviewer has been confirmed date for interivew. Please find the confirmation date, tiime and venue below,
+
+Confirmation Date : {!Task.Confirmed_Date__c}
+Confirmation Time : {!Task.Confirmed_Time__c}
+Venue :  {!Task.Venue__c}

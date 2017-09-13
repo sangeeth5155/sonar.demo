@@ -1,0 +1,16 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 12pt;"><font face="Century Gothic, sans-serif">Hello {!Case.Local_MCA_Team__c},</font><font face="Arial, sans-serif"><br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif"><br></font><font face="Century Gothic, sans-serif">This patient has been referred for a wish!<br></font></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>Wish Child Name:
+&nbsp;{!Case.Hidden_Lead_Name__c}<br></span><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">Primary Diagnosis:
+&nbsp;{!Case.Hidden_Primary_Diagnosis_del__c}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>Please review the attached Diagnosis Verification form with your
+medical expertise. Is there enough information provided to make a determination
+of eligibility? If so, can you give us your opinion? If not, what additional
+information would be helpful? Simply reply to this email and your notes will be
+added to the record.<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>If the qualifying medical professional included a medical summary,
+it can be accessed by clicking the link below.</span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 12pt;"><font face="Century Gothic, sans-serif">{!Case.Medical_Summary_Attachments__c}</font><font face="Arial, sans-serif"><br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif"><br></font><font face="Century Gothic, sans-serif">Thanks to the support of you and other medical professionals
+around the country, we continue to come closer each year to our vision of
+making every eligible child’s wish come true. &nbsp;Thank you for taking the
+time to help us share the power of a wish</font></span><sup style="font-family: &quot;Century Gothic&quot;, sans-serif;">®</sup><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">.<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>Thanks,<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>{!User.Name}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Case.Chapter_Name__c}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Case.Hidden_Chapter_Phone__c}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Case.Hidden_Chapter_Email__c}</span></p>]]></td>
+</tr>
+</table>

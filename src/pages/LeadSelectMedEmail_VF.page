@@ -1,0 +1,74 @@
+<apex:page controller="LeadSelectMedEmailController_AC" standardStylesheets="false" sidebar="false">
+    <apex:includeScript value="{!URLFOR($Resource.MakeAWishAmericaDesign,'js/jquery.min.js')}"/> 
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS, '/0_12_2/assets/styles/salesforce-lightning-design-system-vf.min.css')}"/>
+    <style type="text/css">
+        th {font-weight:bold !important}
+        .successMsg {color: #3c763d; background-color: #dff0d8; border-color: #d6e9c6; padding:10px; border-radius:5px}
+        .alert-danger {display:none;border-radius: 5px;}
+        .alert-success {border-radius: 5px;}
+        .btn-process {float: right; margin-top: 1%;}
+        .slds {margin-top:3%}
+    </style>
+    <div class="slds">
+        <apex:form id="frm">
+            <div class="slds-card slds-m-horizontal--large">
+                <div class="slds-card__header slds-grid slds-grid--align-spread">
+                    <h2 class="slds-text-heading--small slds-truncate slds-align-middle">Select Contact to send the Diagnosis Verification</h2>
+                </div>
+                <table class="slds-table slds-table--bordered">
+                    <thead>
+                        <tr>
+                            <th>Select</th>
+                            <th>First Name</th>
+                            <th>LastName</th>
+                            <th>Email</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="slds-text-title_caps">
+                            <td><input type="radio" data-type="Treating Medical Professional" name="rec" class="selVal"/></td>
+                            <td>{!currLead.Treating_Medical_Professional_First_Name__c}</td>
+                            <td>{!currLead.Treating_Medical_Professional_Last_Name__c}</td>
+                            <td>{!currLead.Treating_Medical_Professional_Email__c}</td>
+                            <td>Treating Medical Professional</td>
+                        </tr>
+                        <tr class="slds-text-title_caps">
+                            <td><input type="radio" data-type="Best contact for Physician" name="rec" class="selVal"/></td>
+                            <td>{!currLead.Best_Contact_for_Physician_First_Name__C}</td>
+                            <td>{!currLead.Best_Contact_for_Physician_Last_Name__C}</td>
+                            <td>{!currLead.Best_contact_for_Physician_Email__c}</td>
+                            <td>Best contact for Physician</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="slds-m-horizontal--large">
+                <div style="margin-top:1%">
+                    <apex:outputPanel rendered="{!success}">
+                        <div class="slds-notify slds-notify--alert slds-theme--success slds-theme--alert-texture alert-success" style="float:left">
+                            <strong>Success!</strong> Diagnosis verification sent successfully.
+                        </div>
+                    </apex:outputPanel>
+                    
+                    <div class="slds-notify slds-notify--alert slds-theme--error slds-theme--alert-texture alert-danger" style="float:left">
+                        Please choose recipient
+                    </div>
+                    <input type="button" value="Cancel" class="slds-button slds-button--neutral btn-process" onClick="Cancel();"/>
+                    <input type="button" value="Send Diagnosis Verification" onClick="PassEmailVal();" class="slds-button slds-button--neutral btn-process" style="margin-right:5px"/>
+                </div>
+            </div>
+            <apex:actionFunction name="callupdateLead" action="{!updateLead}" reRender="frm,ChangeValue" oncomplete="GoToLeadPage()">
+                <apex:param id="aname" name="Type" value=""  />
+            </apex:actionFunction>
+            <script>
+            function PassEmailVal() { var emailTo = ''; var sendEmail = false; $('.selVal').each(function() { if($(this).is(':checked')) { emailTo = $(this).data( "type" ); sendEmail = true; } }); 
+                                     if(sendEmail) { callupdateLead(emailTo); } else { $('.alert-danger').show(); }
+                                    }
+            function GoToLeadPage() { window.location.href = $('.getUrl').val(); }
+            function Cancel() {window.history.back();}
+            </script>
+            <input type="hidden" value="{!URLToRedirect}" class="getUrl"/>
+        </apex:form>
+    </div>
+</apex:page>

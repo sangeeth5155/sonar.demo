@@ -1,0 +1,14 @@
+<apex:page controller="InKindDonorsAccount_AC"> 
+	<apex:pageBlock title="My Content"> 
+		<apex:pageBlockTable value="{!inKindAccountList}" var="Record"> 
+			<apex:column > 
+				<apex:facet name="header">Account Name</apex:facet> 
+				<apex:outputText value="{!Record.Name}"/> 
+			</apex:column> 
+			<apex:column > 
+				<apex:facet name="header">Account Number</apex:facet> 
+				<apex:outputText value="{!Record.AccountNumber}"/> 
+			</apex:column>  
+		</apex:pageBlockTable> 
+	</apex:pageBlock> 
+</apex:page>

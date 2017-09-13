@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This custom object stores the Roles that the Chapter offers.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Read</externalSharingModel>
+    <fields>
+        <fullName>Background_Check_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used to verify whether the background check is required or not</description>
+        <externalId>false</externalId>
+        <label>Background Check Required</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Chapter_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It holds the chapter details and role for this chapter.</description>
+        <externalId>false</externalId>
+        <label>Chapter Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Chapter Roles</relationshipLabel>
+        <relationshipName>Chapter_Roles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Role_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It holds the role name and chapters assigned for this role.</description>
+        <externalId>false</externalId>
+        <label>Role Name</label>
+        <referenceTo>Role__c</referenceTo>
+        <relationshipLabel>Chapter Roles</relationshipLabel>
+        <relationshipName>Chapter_Roles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <description>It holds the Role Name</description>
+        <externalId>false</externalId>
+        <label>Hidden Role</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Chapter Role</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Chapter_Name__c</columns>
+        <columns>Role_Name__c</columns>
+        <columns>Background_Check_Required__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CR-{000000}</displayFormat>
+        <label>Chapter Role ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Chapter Roles</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Chapter_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Role_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Background_Check_Required__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Role_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Chapter_Name__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>Chapter_Name__c</lookupFilterFields>
+        <lookupFilterFields>Role_Name__c</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>Role_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Chapter_Name__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>Chapter_Name__c</searchFilterFields>
+        <searchFilterFields>Role_Name__c</searchFilterFields>
+        <searchResultsAdditionalFields>Role_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Chapter_Name__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+</CustomObject>

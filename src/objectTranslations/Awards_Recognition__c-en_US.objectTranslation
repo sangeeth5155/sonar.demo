@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Awards &amp; Recognition</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Awards &amp; Recognitions</value>
+    </caseValues>
+    <fields>
+        <label><!-- Award Name --></label>
+        <name>Award_Name__c</name>
+        <picklistValues>
+            <masterLabel>10th Assignment</masterLabel>
+            <translation><!-- 10th Assignment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15th Assignment</masterLabel>
+            <translation><!-- 15th Assignment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1st Assignment</masterLabel>
+            <translation><!-- 1st Assignment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20th Assignment</masterLabel>
+            <translation><!-- 20th Assignment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>25th Assignment</masterLabel>
+            <translation><!-- 25th Assignment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>50th Assignment</masterLabel>
+            <translation><!-- 50th Assignment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5th Assignment</masterLabel>
+            <translation><!-- 5th Assignment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Airport Greeter of the Year</masterLabel>
+            <translation><!-- Airport Greeter of the Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Behind the Scenes Award</masterLabel>
+            <translation><!-- Behind the Scenes Award --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Collegiate Recognition</masterLabel>
+            <translation><!-- Collegiate Recognition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completion of Training</masterLabel>
+            <translation><!-- Completion of Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Daily Points of Light Award</masterLabel>
+            <translation><!-- Daily Points of Light Award --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estrella Award</masterLabel>
+            <translation><!-- Estrella Award --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Helping Hand Award</masterLabel>
+            <translation><!-- Helping Hand Award --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hometown Award</masterLabel>
+            <translation><!-- Hometown Award --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Make-A-Wish America Volunteer of the Year</masterLabel>
+            <translation><!-- Make-A-Wish America Volunteer of the Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Make-A-Wish Value Awards</masterLabel>
+            <translation><!-- Make-A-Wish Value Awards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mentor of the Year</masterLabel>
+            <translation><!-- Mentor of the Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peer on the Spot Recognition</masterLabel>
+            <translation><!-- Peer on the Spot Recognition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Presidential Service Award – Bronze</masterLabel>
+            <translation><!-- Presidential Service Award – Bronze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Presidential Service Award – Gold</masterLabel>
+            <translation><!-- Presidential Service Award – Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Presidential Service Award – Silver</masterLabel>
+            <translation><!-- Presidential Service Award – Silver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rising Star Award</masterLabel>
+            <translation><!-- Rising Star Award --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>State Commission on Volunteerism Award</masterLabel>
+            <translation><!-- State Commission on Volunteerism Award --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Volunteer of the Month</masterLabel>
+            <translation><!-- Volunteer of the Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Volunteer of the Year</masterLabel>
+            <translation><!-- Volunteer of the Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Granter of the Month</masterLabel>
+            <translation><!-- Wish Granter of the Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Granter of the Year</masterLabel>
+            <translation><!-- Wish Granter of the Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wishmaker Award</masterLabel>
+            <translation><!-- Wishmaker Award --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Award Type --></label>
+        <name>Award_Type__c</name>
+        <picklistValues>
+            <masterLabel>Chapter Recognition</masterLabel>
+            <translation><!-- Chapter Recognition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chapter Task Recognition</masterLabel>
+            <translation><!-- Chapter Task Recognition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community Recognition</masterLabel>
+            <translation><!-- Community Recognition --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Chapter Name --></label>
+        <name>Chapter_Name__c</name>
+        <relationshipLabel><!-- Awards &amp; Recognitions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Comment --></label>
+        <name>Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Field --></label>
+        <name>Date_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import Id --></label>
+        <name>Import_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migrated Record --></label>
+        <name>Migrated_Record__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Award Name --></label>
+        <name>RE_Award_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Awards &amp; Recognition Name --></label>
+        <name>RE_Awards_Recognition_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Comment --></label>
+        <name>RE_Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Date Field --></label>
+        <name>RE_Date_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Import ID --></label>
+        <name>RE_Import_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Volunteer Contact --></label>
+        <name>Volunteer_Contact__c</name>
+        <relationshipLabel><!-- Awards &amp; Recognitions --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Awards &amp; Recognition Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

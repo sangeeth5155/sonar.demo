@@ -1,0 +1,671 @@
+<apex:page renderAs="pdf" standardController="Case" extensions="WishChildForm_AC" standardStylesheets="false" showHeader="false" action="{!forceDownloadPDF}" sidebar="false"  applyBodyTag="false" applyHtmlTag="false">
+
+<head>
+ <style> 
+  .newfont{color:white;}
+  .oldfont{color:black;}
+ </style>
+</head> 
+
+<apex:form > 
+     <apex:image url="{!URLFOR($Resource.MakeAWishAmericaDesign,'images/MakeAWishAmerica.PNG')}" style="width:22%;" styleClass="header-logo"/>
+      <div class="row header-padding">         
+        <div style="font-size:20px; margin-bottom:1px; margin-right: auto;text-transform:uppercase; text-align:center; width:100%;">Wish Child Form</div>
+        <div>
+      </div>
+      <br/>
+      <hr style="border-width: 2px;margin-left: auto;display: block;margin-bottom: 0.5em;"></hr>
+ 
+  <div style="width:100%; position:relative;">
+  
+      <!-- Wish Child Form start -->
+    <div style="clear:both"></div>
+    <div style="margin-top:0px;">
+          <div style="width:20%;float:left;margin:0 10px 0 0;" type="text"><strong>Wish Child's Name:</strong></div>
+          <div style="width:24%;float:left;margin:0 10px 0 0;" type="text"><div class="{!IF(currWishChild.FirstName__c==null,'newfont','oldfont')}" style="border-bottom:1px solid #000 !important; border:none;">{!currWishChild.FirstName__c}</div><div style="font-size:14px;font-style:italic;">First</div></div>
+          <div style="width:24%;float:left;margin:0 10px 0 0;" type="text"><div class="{!IF(currWishChild.Middle_Name__c==null,'newfont','oldfont')}" style="border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Middle_Name__c==null,'-',currWishChild.Middle_Name__c)}</div><div style="font-size:14px;margin-top:1px !important;font-style:italic;">Middle</div></div>
+          <div style="width:24%;float:left;margin:0 10px 0 0;" type="text"><div class="{!IF(currWishChild.LastName__c==null,'newfont','oldfont')}" style="border-bottom:1px solid #000 !important; border:none;">{!currWishChild.LastName__c}</div><div style="font-size:14px;font-style:italic;">Last</div></div>
+     </div>    
+      
+      <div style="clear:both"></div>
+      <div style="margin-top:14px;">
+          <div style="width:17% !important; float:left; font-weight:normal;">Preferred Name :</div>
+          <div class="{!IF(currWishChild.Preferred_Name__c==null,'newfont','oldfont')}" style="width:15%; float:left;margin:0 10px 0 0; border-bottom:1px solid #000 !important;margin-top:0% !important;padding-left:1.6em !important;border:none;" >{!if((currWishChild.Preferred_Name__c)==null,"-",currWishChild.Preferred_Name__c)}</div>
+          <div style="width:10% !important; float:left; font-weight:normal;">Gender : </div>
+          <div class="{!IF(currWishChild.Gender__c==null,'newfont','oldfont')}" style="width:10%; float:left;margin:0 10px 0 0;border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Gender__c==null,"-",currWishChild.Gender__c)}</div>   
+          <div style="width:7% !important; float:left; font-weight:normal;">DOB :</div>
+          <div class="{!IF(currWishChild.BirthDate__c==null,'newfont','oldfont')}" style="width:15%; float:left;margin:0 10px 0 0;border-bottom:1px solid #000 !important; border:none;margin:0 20px 0 0;"><apex:outputField value="{!currWishChild.BirthDate__c}" /></div>
+         
+
+     </div>
+         
+      <div style="clear:both"></div>
+      <div style="margin-top:14px;">
+          <div style="width:25% !important;margin:5px 0 0 0; float:left; font-weight:normal;">Wish Child’s Diagnosis :</div>
+          <div class="{!IF(currWishChild.Diagnosis__c==null,'newfont','oldfont')}" style="width:67%; float:left; margin:3% 0 0 0; border-bottom:1px solid #000 !important; border:none;margin-top:0% !important;">{!if(currWishChild.Diagnosis__c==null,'-',currWishChild.Diagnosis__c)}</div>
+          <div style="width:30% !important;margin:5px 0 0 0; float:left; font-weight:normal;">Wish Child’s Primary Address :</div>
+          <div class="{!IF(currWishChild.Primary_Address__c==null,'newfont','oldfont')}" style="width:67%; float:left; margin:3% 20px 0 0 !important; border-bottom:1px solid #000 !important; border:none;margin-top:0% !important;">{!if(currWishChild.Primary_Address__c==null,'-',currWishChild.Primary_Address__c)} </div>
+          <!-- <div style="width:67%; float:left;margin:2% 10px 0 0 !important; border-bottom:1px solid #000 !important;padding-left:1.6em !important;border:none;">{!currWishChild.Diagnosis__c}</div>     -->     
+          <div style="width:32% !important;margin:5px 0 0 0; float:left; font-weight:normal;">Wish Child’s Mobile Telephone :</div>
+          <div class="{!IF(currWishChild.mobilePhone__c==null,'newfont','oldfont')}" style="width:60%; float:left; margin:3% 0 0 0; border-bottom:1px solid #000 !important; border:none;margin-top:0% !important;">{!if(currWishChild.mobilePhone__c==null,'-',currWishChild.mobilePhone__c)} </div>
+          <div style="width:22% !important;margin:5px 0 0 0; float:left; font-weight:normal;">Wish Child’s Email :</div>
+          <div class="{!IF(currWishChild.Email__c==null,'newfont','oldfont')}" style="width:65%; float:left; margin:3% 0 0 0; border-bottom:1px solid #000 !important; border:none;margin-top:0% !important;">{!if(currWishChild.Email__c==null,'-',currWishChild.Email__c)}</div>         
+          <div style="width:24% !important;margin:5px 0 0 0; float:left; font-weight:normal;">Wish Child T-Shirt Size :</div>
+          <div class="{!IF(currWishChild.T_Shirt_Size__c==null,'newfont','oldfont')}" style="width:60%; float:left; margin:3% 0 0 0; border-bottom:1px solid #000 !important; border:none;margin-top:0% !important;">{!if(currWishChild.T_Shirt_Size__c==null,'-',currWishChild.T_Shirt_Size__c)}</div>      
+      </div>
+      
+       <div style="clear:both"></div>
+      <div style="margin-top:14px;">
+          <!-- <div style="width:6% !important; float:left; font-weight:normal;">AGE:</div>
+          <div style="width:9%; float:left;margin:0 10px 0 0;border-bottom:1px solid #000 !important; border:none;margin-top:15px !important;padding-left:1.6em !important;"></div>
+          --> 
+      </div>
+  
+      
+      <div style="clear:both"></div>
+      <div style="margin-top:25px;">
+          <div style="font-weight:bold; margin-bottom:15px;">My Favorites:</div>
+          <div style="width:48%; float:left; margin-right:2%;">
+              <div style="margin-bottom:30px;display:block;clear:both;"><span style="width:32%; float:left;">Color</span><div class="{!IF(currWishChild.Color__c==null,'newfont','oldfont')}" style="width:65%; margin:3px 0 0 0; float:left;border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Color__c==null,'-',currWishChild.Color__c)}</div></div>
+              <div style="margin-bottom:30px;display:block;clear:both;"><span style="width:32%; float:left;">Book/Story</span><div class="{!IF(currWishChild.Book_Story__c==null,'newfont','oldfont')}" style="width:65%; margin:3px 0 0 0; float:left;border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Book_Story__c==null,'-',currWishChild.Book_Story__c)}</div></div>
+              <div style="margin-bottom:30px;display:block;clear:both;"><span style="width:32%; float:left;">Game</span><div class="{!IF(currWishChild.Game__c==null,'newfont','oldfont')}" style="width:65%; margin:3px 0 0 0; float:left;border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Game__c==null,'-',currWishChild.Game__c)}</div></div>
+              <div style="margin-bottom:30px;display:block;clear:both;"><span style="width:32%; float:left;">Food</span><div class="{!IF(currWishChild.Food__c==null,'newfont','oldfont')}" style="width:65%; margin:3px 0 0 0; float:left;border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Food__c==null,'-',currWishChild.Food__c)}</div></div>
+              <div style="margin-bottom:30px;display:block;clear:both;"><span style="width:32%; float:left;">Restaurant</span><div class="{!IF(currWishChild.Restaurant__c==null,'newfont','oldfont')}" style="width:65%; margin:3px 0 0 0; float:left;border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Restaurant__c==null,'-',currWishChild.Restaurant__c)}</div></div>
+              <div style="margin-bottom:30px;display:block;clear:both;"><span style="width:32%; float:left;">Cake/Candy</span><div class="{!IF(currWishChild.Cake_Candy__c==null,'newfont','oldfont')}" style="width:65%; margin:3px 0 0 0; float:left;border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Cake_Candy__c==null,'-',currWishChild.Cake_Candy__c)}</div></div>
+              <div style="margin-bottom:30px;display:block;clear:both;"><span style="width:32%; float:left;">Snack Food</span><div class="{!IF(currWishChild.Snack_Food__c==null,'newfont','oldfont')}" style="width:65%; margin:3px 0 0 0; float:left;border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Snack_Food__c==null,'-',currWishChild.Snack_Food__c)}</div></div>
+              <div style="margin-bottom:30px;display:block;clear:both;"><span style="width:32%; float:left;">Class in School</span><div class="{!IF(currWishChild.ClassinSchool__c==null,'newfont','oldfont')}" style="width:65%; margin:3px 0 0 0; float:left;border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.ClassinSchool__c==null,'-',currWishChild.ClassinSchool__c)}</div></div>
+          </div>
+          <div style="width:48%; float:left;">
+              <div style="margin-bottom:30px;display:block;clear:both;"><span style="width:32%; float:left;">Music/Singer</span><div class="{!IF(currWishChild.Music_Singer__c==null,'newfont','oldfont')}" style="width:65%; margin:3px 0 0 0; float:left;border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Music_Singer__c==null,'-',currWishChild.Music_Singer__c)}</div></div>
+              <div style="margin-bottom:30px;display:block;clear:both;"><span style="width:32%; float:left;">Hobby</span><div class="{!IF(currWishChild.Hobby__c==null,'newfont','oldfont')}" style="width:65%; margin:3px 0 0 0; float:left;border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Hobby__c==null,'-',currWishChild.Hobby__c)}</div></div>
+              <div style="margin-bottom:30px;display:block;clear:both;"><span style="width:32%; float:left;">Movie</span><div class="{!IF(currWishChild.Movie__c==null,'newfont','oldfont')}" style="width:65%; margin:3px 0 0 0; float:left;border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Movie__c==null,'-',currWishChild.Movie__c)}</div></div>
+              <div style="margin-bottom:30px;display:block;clear:both;"><span style="width:32%; float:left;">TV Show</span><div class="{!IF(currWishChild.TVShow__c==null,'newfont','oldfont')}" style="width:65%; margin:3px 0 0 0; float:left;border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.TVShow__c==null,'-',currWishChild.TVShow__c)}</div></div>
+              <div style="margin-bottom:30px;display:block;clear:both;"><span style="width:32%; float:left;">Actor/Actress</span><div class="{!IF(currWishChild.Actor_Actress__c==null,'newfont','oldfont')}" style="width:65%; margin:3px 0 0 0; float:left;border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Actor_Actress__c==null,'-',currWishChild.Actor_Actress__c)}</div></div>
+              <div style="margin-bottom:30px;display:block;clear:both;"><span style="width:32%; float:left;">Sport/Athlete</span><div class="{!IF(currWishChild.Sport_Athlete__c==null,'newfont','oldfont')}" style="width:65%; margin:3px 0 0 0; float:left;border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Sport_Athlete__c==null,'-',currWishChild.Sport_Athlete__c)}</div></div>
+              <div style="margin-bottom:30px;display:block;clear:both;"><span style="width:32%; float:left;">Pet/Animal</span><div class="{!IF(currWishChild.Pet_Animal__c==null,'newfont','oldfont')}" style="width:65%; margin:3px 0 0 0; float:left;border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Pet_Animal__c==null,'-',currWishChild.Pet_Animal__c)}</div></div>
+              <div style="margin-bottom:30px;display:block;clear:both;"><span style="width:32%; float:left;">Other</span><div class="{!IF(currWishChild.ClassinSchool__c==null,'newfont','oldfont')}" style="width:65%; margin:3px 0 0 0; float:left;border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.ClassinSchool__c==null,'-',currWishChild.ClassinSchool__c)}</div></div>
+          </div>
+          <div style="clear:both"></div>
+          <div style="margin:5px 0 30px 0;">
+            <div style="margin-bottom:5px !important;"><b>When I'm outside, I like to...</b></div>
+            <div style="width:100%;border-bottom:1px solid #000 !important; margin:5px 0 0 0; border:none;">{!currWishChild.When_I_m_outside_I_like_to__c}</div>
+          </div>
+          <div style="margin:5px 0 30px 0;">
+            <div style="margin-bottom:5px !important;"><b>When I'm inside, I like to...</b></div>
+            <div style="width:100%;border-bottom:1px solid #000 !important; margin:5px 0 0 0; border:none;">{!currWishChild.When_I_m_inside_I_like_to__c}</div>
+          </div>
+          <div style="margin:5px 0 30px 0;">
+            <div style="margin-bottom:5px !important;"><b>Electronics / Games that I like to play with are...</b></div>
+            <div style="width:100%;border-bottom:1px solid #000 !important; margin:5px 0 0 0; border:none;">{!currWishChild.Electronics_Games_that_I_like_to_play__c}</div>
+          </div>
+          <div style="margin:5px 0 30px 0;">
+            <div style="margin-bottom:5px !important;"><b>When I'm with my family, I like to...</b></div>
+            <div style="width:100%;border-bottom:1px solid #000 !important; margin:5px 0 0 0; border:none;">{!currWishChild.When_I_m_with_my_family_I_like_to__c}</div>
+          </div>
+          <div style="margin:5px 0 30px 0;">
+            <div style="margin-bottom:5px !important;"><b>When I'm with my friends, I like to...</b></div>
+            <div style="width:100%;border-bottom:1px solid #000 !important; margin:5px 0 0 0; border:none;">{!currWishChild.When_I_m_with_my_friends_I_like_to__c}</div>
+          </div>
+         
+       </div>
+      <!-- <div style="page-break-before:always;"/>
+         
+    <apex:image url="{!URLFOR($Resource.MakeAWishAmericaDesign,'images/MakeAWishAmerica.PNG')}" style="width:22%;" styleClass="header-logo"/>
+      <div class="row header-padding">         
+        <div style="font-size:20px; margin-bottom:1px; margin-right: auto;text-transform:uppercase; text-align:center; width:100%;">Wish Child Form</div>
+      </div>
+      <br/>
+      <hr style="border-width: 2px;margin-left: auto;display: block;margin-bottom: 0.5em;"></hr>
+    
+       -->    
+        <div style="margin-top:36px;">
+          <div style="margin:5px 0 30px 0;">
+            <div style="margin-bottom:5px !important;"><b>When thinking about a wish, some of my wish ideas were...</b></div>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;">{!currWishChild.When_thinking_some_of_my_wish_ideas_were__c}</div>
+            <!-- <br/>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;"></div>
+            <br/>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;"></div> -->
+          </div>
+          <div style="margin:5px 0 30px 0;">
+            <div style="margin-bottom:5px !important; font-weight: bold;"><b>MY WISH IS TO...</b></div>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;">{!currWishChild.MY_WISH_IS_TO__c}</div>
+           <!--   <br/>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;"></div>
+            <br/>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;"></div>--> 
+          </div> 
+          <div style="margin:5px 0 30px 0;">
+            <div style="margin-bottom:5px !important; font-weight: bold;"><b>This is my wish because...</b></div>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;">{!currWishChild.This_is_my_wish_because__c}</div>
+           <!--  <br/>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;"></div>
+            <br/>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;"></div> -->
+          </div>
+          <div style="margin:5px 0 30px 0;">
+            <div style="margin-bottom:5px !important; font-weight: bold;"><b>To me, the most important parts of my wish will be...</b></div>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;">{!currWishChild.To_me_the_most_important_part_of_my_wish__c}</div>
+            <!-- <br/>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;"></div>
+            <br/>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;"></div> -->
+          </div>
+          <div style="margin:5px 0 30px 0;">
+            <div style="margin-bottom:5px !important; font-weight: bold;"><b>When I think about my wish, I imagine...</b></div>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;">{!currWishChild.When_I_think_about_my_wish_I_imagine__c}</div>
+           <!--  <br/>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;"></div>
+            <br/>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;"></div> -->
+          </div>
+          <div style="margin:5px 0 30px 0;">
+            <div style="margin-bottom:5px !important; font-weight: bold;"><b>Wish Notes...</b></div>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;">{!currWishChild.Wish_Notes__c}</div>
+            <!-- <br/>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;"></div>
+            <br/>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;"></div> -->
+            
+          </div>
+           <div style="margin:5px 0 30px 0;">
+            <div style="margin-bottom:5px !important;"><b>Wish Type...</b></div>
+            <div style="width:100%;border-bottom:1px solid #000 !important; font-style:underline; border:none;">{!currWishChild.WishType__c}</div>
+           <!--  <br/>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;"></div>
+            <br/>
+            <div style="width:100%;border-bottom:1px solid #000 !important; border:none;"></div> -->
+          </div>
+      </div>
+      <div style="clear:both"></div>
+      </div>
+      <!-- <div style="page-break-before:always;"/> -->
+      <!-- Wish Child Form end -->
+      <!-- Wish Family Form start -->
+      <div style="page-break-before:always;"/>
+      <!--Header-->
+     <apex:image url="{!URLFOR($Resource.MakeAWishAmericaDesign,'images/MakeAWishAmerica.PNG')}" style="width:22%;" styleClass="header-logo"/>
+      <div class="row header-padding">
+            <div style="font-size:25px; margin-bottom:15px; text-transform:uppercase; text-align:center; width:100%;">Wish Family Form</div>
+      </div>
+      <br/>
+      <hr style="border-width: 2px;margin-left: auto;display: block;margin-bottom: 0.5em;"></hr>
+    <!--Header-->     
+     <div style="clear:both"></div>
+      <div style="margin-top:0px;">
+          <div style="width:20%;float:left;margin:0 10px 0 0" type="text"><strong>Wish Child's Name:</strong></div>
+          <div style="width:24%;float:left;margin:0 10px 0 0" type="text"><div class="{!IF(currWishChild.FirstName__c==null,'newfont','oldfont')}" style="border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.FirstName__c==null,'-',currWishChild.FirstName__c)}</div><div style="font-size:14px;font-style:italic;">First</div></div>
+          <div style="width:24%;float:left;margin:0 10px 0 0" type="text"><div class="{!IF(currWishChild.Middle_Name__c==null,'newfont','oldfont')}" style="border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Middle_Name__c==null,'-',currWishChild.Middle_Name__c)}</div><div style="font-size:14px;font-style:italic;">Middle</div></div>
+          <div style="width:24%;float:left;margin:0 10px 0 0" type="text"><div class="{!IF(currWishChild.LastName__c==null,'newfont','oldfont')}" style="border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.LastName__c==null,'-',currWishChild.LastName__c)}</div><div style="font-size:14px;font-style:italic;">Last</div></div>
+      </div>
+   
+     <apex:repeat value="{!wcfUtil.wishFamilyWrapList}" var="wishFamilContact">
+      
+      <div style="margin-top:50px;">
+          <div style="width:24%;float:left;margin:0 10px 0 0" type="text"><strong>Parent/Legal Guardian:</strong></div>
+          <div style="width:24%;float:left;margin:0 10px 0 0" type="text"><div class="{!IF(wishFamilContact.firstName==null,'newfont','oldfont')}" style="border-bottom:1px solid #000 !important; border:none;">{!if(wishFamilContact.firstName==null,'-',wishFamilContact.firstName)}</div><div style="font-size:14px;font-style:italic;">First</div></div>
+          <div style="width:24%;float:left;margin:0 10px 0 0" type="text"><div class="{!IF(wishFamilContact.MiddleName==null,'newfont','oldfont')}" style="border-bottom:1px solid #000 !important; border:none;">{!if(wishFamilContact.MiddleName==null,'-',wishFamilContact.MiddleName)}</div><div style="font-size:14px;font-style:italic;">Middle</div></div>
+          <div style="width:20%;float:left;margin:0 10px 0 0" type="text"><div class="{!IF(wishFamilContact.lastName==null,'newfont','oldfont')}" style="border-bottom:1px solid #000 !important; border:none;">{!if(wishFamilContact.lastName==null,'-',wishFamilContact.lastName)}</div><div style="font-size:14px;font-style:italic;">Last</div></div>
+      </div>   
+    
+
+        <div style="clear:both"></div>
+        <div style="margin-top:12px;">
+          <div style="width:23% !important; float:left; font-weight:normal;">Relationship :</div>
+          <div class="{!IF(wishFamilContact.Relationship==null,'newfont','oldfont')}" style="width:15%; float:left;border-bottom:1px solid #000 !important;margin-top:0% !important;margin:0 10px 0 0;border:none;">{!if(wishFamilContact.Relationship==null,'-',wishFamilContact.Relationship)}</div>
+          <!-- <div style="width:8% !important; float:left; font-weight:normal;">AGE : </div>
+          <div style="width:10%; float:left;border-bottom:1px solid #000 !important; border:none;">dummy</div>    -->
+          <div style="width:8% !important; float:left; font-weight:normal;">DOB : </div>
+          <div class="{!IF(wishFamilContact.dob==null,'newfont','oldfont')}" style="width:32%; float:left;border-bottom:1px solid #000 !important; margin:0 10px 0 0; border:none;"><apex:outputText value="{0,date,MM'/'dd'/'yyyy}" ><apex:param value="{!if(wishFamilContact.dob==null,NOW(),wishFamilContact.dob)}" /></apex:outputText></div>  
+          <div style="width:20% !important; float:left;margin:0 10px 0 0; font-weight:normal;">Address :</div>
+          <div class="{!IF(wishFamilContact.dob==null,'newfont','oldfont')}" style="width:65%; float:left;border-bottom:1px solid #000 !important;margin-top:0% !important;border:none;">address value</div>  
+        </div>
+
+      
+        <div style="clear:both"></div>
+        <div style="margin-top:5px;">
+          <div style="width:17% !important; float:left; font-weight:normal;">Home Telephone :</div>
+          <div class="{!IF(wishFamilContact.homeTelephone==null,'newfont','oldfont')}" style="width:15%; float:left;border-bottom:1px solid #000 !important;margin-top:0% !important;padding-left:1.6em !important;border:none;">{!if(wishFamilContact.homeTelephone==null,'-',wishFamilContact.homeTelephone)}</div>
+          <div style="width:20% !important; float:left; font-weight:normal;">Work Telephone : </div>
+          <div class="{!IF(wishFamilContact.workTelephone==null,'newfont','oldfont')}" style="width:15%; float:left;border-bottom:1px solid #000 !important; border:none;">{!if(wishFamilContact.workTelephone==null,'-',wishFamilContact.workTelephone)}</div>   
+         </div>
+         
+        <div style="clear:both"></div>
+        <div style="margin-top:5px;">
+          <div style="width:20% !important; float:left; font-weight:normal;">Mobile Telephone :</div>
+          <div class="{!IF(wishFamilContact.mobileTelephone==null,'newfont','oldfont')}" style="width:15%; float:left;border-bottom:1px solid #000 !important;margin-top:0% !important;padding-left:1.6em !important;border:none;">{!if(wishFamilContact.mobileTelephone==null,'-',wishFamilContact.mobileTelephone)}</div>
+          <div style="width:8% !important; float:left; font-weight:normal;">Email : </div>
+          <div class="{!IF(wishFamilContact.Email==null,'newfont','oldfont')}" style="width:30%; float:left;border-bottom:1px solid #000 !important; border:none;">{!if(wishFamilContact.Email==null,'-',wishFamilContact.Email)}</div>   
+         </div>   
+     
+   </apex:repeat>
+           <br/><br/>   
+       <div style="clear:both"></div>
+          <div style="margin:10px 0 0 0;"><strong>Prior Wish:</strong> Has your child ever had a wish granted or been considered by Make-A-Wish® or any other
+                wish-granting organization? <span style="border-bottom:1px solid #000; width:15%;">{!currWishChildContact.Already_wish_granted_by_MAW_Other_Org__c}</span> *If yes, please indicate the organization's name, the wish,
+                and the date it was or will be granted.<br/><br/>
+                 <div style="width:100%;border-bottom:1px solid #000 !important; font-style:underline; border:none;">{!currWishChild.If_yes_Enter_Org_Name_Wish_Date_it_wa__c}</div>
+                <span style="border-bottom:1px solid #000; width:100%;"></span>
+          </div>
+          <p style="text-align:center;font-style:italic;">A wish with another organization may not be pursued prior to completion of a Make-A-Wish experience.</p>
+            <div><strong>Social Media:</strong>Make-A-Wish would like to stay connected through social media. If interested, please
+provide contact information for each site on which you are active.<br/><br/>
+                <span style="border-bottom:1px solid #000; width:100%;"></span>
+                <div style="width:100%;border-bottom:1px solid #000 !important; font-style:underline; border:none;">{!currWishChild.Social_Media_Link__c}</div>
+          </div>
+          
+          <div style="page-break-before:always;"/>
+          <!--Header-->
+     <apex:image url="{!URLFOR($Resource.MakeAWishAmericaDesign,'images/MakeAWishAmerica.PNG')}" style="width:22%;" styleClass="header-logo"/>
+          <div class="row header-padding">
+            <div style="font-size:20px; margin-bottom:15px; text-transform:uppercase; text-align:center; width:100%;">Wish Family Form</div>
+          </div>
+          <br/>
+      <hr style="border-width: 2px;margin-left: auto;display: block;margin-bottom: 0.5em;"></hr>
+    <!--Header-->     
+     
+          <div style="border:1px solid #000;height:auto;margin:10px 0 0 0;font-size:20px; padding:15px;">
+              <p style="text-align:center; padding:0;margin:0">Required Signatures</p>
+              <p style="padding:0;margin:0">I understand and agree:</p>
+              <ul>
+                  <li style="list-style-type:decimal; margin:0 0 10px 0;">That no promises or assurances whatsoever have been made to me by any
+representative of Make-A-Wish regarding the requested wish;</li>
+<li style="list-style-type:decimal; margin:0 0 10px 0;">That the granting of any wish and the participation of any person in the wish is
+contingent upon approval by Make-A-Wish and the child’s physician, as well as full compliance with all conditions, qualifications, and restrictions designated by
+Make-A-Wish;</li>
+
+<li style="list-style-type:decimal; margin:0 0 10px 0;">That all individuals with parental or custodial rights for the child must approve
+the wish before it is granted and must sign all necessary documents; and</li>
+<li style="list-style-type:decimal; margin:0 0 10px 0;">That the receipt of a wish may impact the eligibility for public assistance and/or
+benefits.</li>
+              </ul>
+             <p style="padding:0;margin:5px 0;">I promise that the information provided by me is true and complete to the best of my knowledge.</p>
+               <div style="margin-top:10px;">
+         
+          <div style="width:48%; float:left; margin-right:2%;">
+          <apex:variable var="i" value="{!1}"/> 
+             <div style="width:48%; float:left; margin-right:2%;">
+             <table style="min-width:1024px;border=1px solid;">
+           
+             <apex:variable var="i" value="{!1}"/> 
+                   <apex:repeat value="{!wcfUtil.wishFamilyWrapList}" var="name">
+                        
+                        <tr style="width:100%;!important;">
+                           
+                            <td style="hight:30px;!important;">Signature : <span style="height: 25px; !important;color:white;padding-left:1em !important">~s{!i}</span></td>                            
+                            <td style="hight:30px;!important;"> Date : {!MONTH(TODAY())}/{!DAY(TODAY())}/{!YEAR(TODAY())}</td>
+                            
+                        </tr>
+                        <tr>
+                        <td></td>
+                        <td></td>
+                        </tr>
+                     <apex:variable var="i" value="{!i+1}"/>
+                 </apex:repeat> 
+            </table>
+          </div>
+             
+          </div>
+        
+          
+        </div>
+        <div style="clear:both"></div>
+        <p style="text-align:center;padding:0;margin:0 0 10px 0;">Names of Make-A-Wish representatives assisting in the completion of this form.</p>
+           <div class="{!IF(wcfUtil.caseTeamMemberNo1==null,'newfont','oldfont')}"  style="margin-bottom:10px; display:block;float:left;width:48%;margin:3% 3% 0 0;"><div style="width:100%;border-bottom:1px solid #000 !important; border:none;" type="text">{!if(wcfUtil.caseTeamMemberNo1==null,'-',wcfUtil.caseTeamMemberNo1)}</div></div>
+           <div class="{!IF(wcfUtil.caseTeamMemberNo2==null,'newfont','oldfont')}"  style="margin-bottom:10px; display:block;float:left;width:48%;margin:3% 0 0 0;"><div style="width:100%;border-bottom:1px solid #000 !important; border:none;" type="text">{!if(wcfUtil.caseTeamMemberNo2==null,'-',wcfUtil.caseTeamMemberNo2)}</div></div>
+        <div style="clear:both"></div>
+          </div>
+          <div style="page-break-before:always;"/>
+           <!--Header-->
+         <apex:image url="{!URLFOR($Resource.MakeAWishAmericaDesign,'images/MakeAWishAmerica.PNG')}" style="width:22%;" styleClass="header-logo"/>
+          <div class="row header-padding">
+            <div style="font-size:20px; margin-bottom:15px; text-transform:uppercase; text-align:center; width:100%;">Wish Family Form</div>
+          </div>
+          <br/>
+          <hr style="border-width: 2px;margin-left: auto;display: block;margin-bottom: 0.5em;"></hr>
+    <!--Header-->
+          
+          
+          <p>Requested Wish Participants, as indicated by the wish child. Please list legal names of all requested wish participants and relevant information. NOTE: Make-A-Wish cannot guarantee the participation of any
+individual(s) listed below.</p>
+
+    <table style="width:100%;" cellpadding="0" cellspacing="0">
+            <tr>
+                <td style="width:20%;background:#bfbfbf; padding:0 5px;text-align:center;border:1px solid #000;">First</td>
+                <td style="width:20%;background:#bfbfbf; padding:0 5px;text-align:center;border-bottom:1px solid #000;border-top:1px solid #000;border-right:1px solid #000;">Middle</td>
+                <td style="width:22%;background:#bfbfbf; padding:0 5px;text-align:center;border:1px solid #000;border-left:0;">Last</td>
+                <td style="width:14%;background:#bfbfbf; padding:0 5px;text-align:center;border-bottom:1px solid #000;border-top:1px solid #000;border-right:1px solid #000;">Relationship to Wish Child</td>
+                <td style="width:10%;background:#bfbfbf; padding:0 5px;text-align:center;border:1px solid #000;border-left:0;">Date of Birth</td>
+                <td style="width:10%;background:#bfbfbf; padding:0 5px;text-align:center;border-bottom:1px solid #000;border-top:1px solid #000;border-right:1px solid #000;">T-Shirt Size</td>
+                <td style="width:10%;background:#bfbfbf; padding:0 5px;text-align:center;border-bottom:1px solid #000;border-top:1px solid #000;border-right:1px solid #000;">Medical Needs</td>
+                <td style="width:10%;background:#bfbfbf; padding:0 5px;text-align:center;border-bottom:1px solid #000;border-top:1px solid #000;border-right:1px solid #000;">Residing With Wish Child</td>
+            </tr>
+       
+        <apex:repeat value="{!wcfUtil.wishParticipantList}" var="wishFamilContact">
+         
+            <tr>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">{!wishFamilContact.FirstName}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!wishFamilContact.MiddleName}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!wishFamilContact.lastName}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!wishFamilContact.relationship}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;"><apex:outputText value="{0,date,MM'/'dd'/'yyyy}" ><apex:param value="{!wishFamilContact.dob}" /></apex:outputText></td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!wishFamilContact.tshirtSize}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!wishFamilContact.medicalNeeds}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!wishFamilContact.residingWishMedical}</td>
+              
+            </tr>
+        </apex:repeat>  
+    </table>
+   
+    <div style="clear:both"></div>
+    <br/><br/><br/><br/>
+     <div style="display:block;position:relative;">
+          <div style="width:43% !important; float:left; font-weight:bold;">Adult Emergency Contact<span style="font-size:12px;font-style:italic;font-weight:normal;">(non-wish participant):</span></div>
+          <!-- <div style="width:19%; float:left;margin-top:20px;">{!currWishChild.Emergency_First_Name__c}</div>
+          <div style="width:19%; float:left;margin-top:20px;">{!currWishChild.Emergency_Middle_Name__c}</div>
+          <div style="width:19%; float:left;margin-top:20px;">{!currWishChild.Emergency_Last_Name__c}</div>   -->   
+          
+          <div style="width:15%;float:left;margin:0 10px 0 0" type="text"><div class="{!IF(currWishChild.Emergency_First_Name__c==null,'newfont','oldfont')}" style="border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Emergency_First_Name__c==null,'-',currWishChild.Emergency_First_Name__c)}</div><div style="font-size:14px;font-style:italic;">First</div></div>
+          <div style="width:15%;float:left;margin:0 10px 0 0" type="text"><div class="{!IF(currWishChild.Emergency_Middle_Name__c==null,'newfont','oldfont')}" style="border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Emergency_Middle_Name__c==null,'-',currWishChild.Emergency_Middle_Name__c)}</div><div style="font-size:14px;font-style:italic;">Middle</div></div>
+          <div style="width:18%;float:left;margin:0 10px 0 0" type="text"><div class="{!IF(currWishChild.Emergency_Last_Name__c==null,'newfont','oldfont')}" style="border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Emergency_Last_Name__c==null,'-',currWishChild.Emergency_Last_Name__c)}</div><div style="font-size:14px;font-style:italic;">Last</div></div>
+      </div>
+      <div style="clear:both"></div>
+      <div style="margin:20px 0 0 0;">
+      <div style="width:48%; float:left; margin-right:2%;">
+          <div style="margin-bottom:30px; display:block;clear:both;"><div style="width:25%; float:left;">Telephone:</div><div class="{!IF(currWishChild.Emergency_Mobilephone__c==null,'newfont','oldfont')}" style="width:70%; border-bottom:1px solid #000 !important;float:left;">{!if(currWishChild.Emergency_Mobilephone__c==null,'-',currWishChild.Emergency_Mobilephone__c)}</div></div>
+          <div style="margin-bottom:28px;display:block;clear:both;"><div style="width:60%; float:left;">Relationship to Wish Child:</div><div class="{!IF(currWishChild.Emergency_Relationship__c==null,'newfont','oldfont')}" style="width:30%; border-bottom:1px solid #000 !important;float:left;">{!if(currWishChild.Emergency_Relationship__c==null,'-',currWishChild.Emergency_Relationship__c)}</div></div>
+      </div>
+      <div style="width:48%; float:left; margin-right:2%;">
+          <div style="margin-bottom:30px; display:block;clear:both;"><div style="width:18%; float:left;">Email:</div><div class="{!IF(currWishChild.Emergency_Email__c==null,'newfont','oldfont')}" style="width:44%; border-bottom:1px solid #000 !important;float:left;">{!if(currWishChild.Emergency_Email__c==null,'-',currWishChild.Emergency_Email__c)}</div></div>
+      </div>
+      </div>
+      <br/><br/>
+      <div style="clear:both"></div>
+      <p style="margin-top:10px !important;padding:0;"><strong>Child’s Ethnicity :</strong>The following information is OPTIONAL and will be used for STATISTICAL PURPOSES
+        ONLY. The response should be provided by the child or his or her parent(s)/guardian(s) if they choose to do so.
+        Please select one or more of the choices as appropriate.</p>
+        <p>{!currWishChild.Race_Ethnicity__c}</p>
+      <!-- Wish Family Form end -->   
+      <!-- Wish Information Form start-->
+      
+      <div style="page-break-before:always;"/>
+      <div style="clear:both"></div>
+    <!--Header-->
+     <apex:image url="{!URLFOR($Resource.MakeAWishAmericaDesign,'images/MakeAWishAmerica.PNG')}" style="width:22%;" styleClass="header-logo"/>
+      <div class="row header-padding">
+            <div style="font-size:20px; margin-bottom:15px; text-transform:uppercase; text-align:center; width:100%;">Wish Information Form</div>
+      </div>
+      <br/>
+      <hr style="border-width: 2px;margin-left: auto;display: block;margin-bottom: 0.5em;"></hr>
+    <!--Header-->   
+     
+      <div style="margin-top:30px;">
+          <div style="width:20%;float:left;margin:0 10px 0 0" type="text">Wish Child's Name:</div>
+          <div style="width:24%;float:left;margin:0 10px 0 0" type="text"><div class="{!IF(currWishChild.FirstName__c==null,'newfont','oldfont')}" style="border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.FirstName__c==null,"-",currWishChild.FirstName__c)}</div><div style="font-size:14px;font-style:italic;">First</div></div>
+          <div style="width:24%;float:left;margin:0 10px 0 0" type="text"><div class="{!IF(currWishChild.Middle_Name__c==null,'newfont','oldfont')}" style="border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Middle_Name__c==null,"-",currWishChild.Middle_Name__c)}</div><div style="font-size:14px;font-style:italic;">Middle</div></div>
+          <div style="width:24%;float:left;margin:0 10px 0 0" type="text"><div class="{!IF(currWishChild.LastName__c==null,'newfont','oldfont')}" style="border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.LastName__c==null,"-",currWishChild.LastName__c)}</div><div style="font-size:14px;font-style:italic;">Last</div></div>
+      </div>
+     <div style="clear:both"></div>
+      <p style="text-align:center;font-weight:bold;">Scheduling the Wish</p>
+      <p style="text-align:center;">Please indicate three time periods in which your family will have the greatest availability for fulfillment of the wish.</p>
+     <div style="margin:10px 0 30px 0;">
+          <div style="width:29%;float:left;margin:0 10px 0 0" type="text"><div class="{!IF(currWishChild.Availability_Time_Period_1__c=='null/null','newfont','oldfont')}" style="border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Availability_Time_Period_1__c=='null/null',"-",currWishChild.Availability_Time_Period_1__c)}</div><div style="font-size:14px;font-style:italic;">Month/year</div></div><div style="width:2%;float:left;margin-right:15px;">or</div>
+          <div style="width:29%;float:left;margin:0 10px 0 0" type="text"><div class="{!IF(currWishChild.Availability_Time_Period_2__c=='null/null','newfont','oldfont')}" style="border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Availability_Time_Period_2__c=='null/null',"-",currWishChild.Availability_Time_Period_2__c)}</div><div style="font-size:14px;font-style:italic;">Month/year</div></div><div style="width:2%;float:left;margin-right:15px;">or</div>
+          <div style="width:29%;float:left;margin:0 10px 0 0" type="text"><div class="{!IF(currWishChild.Availability_Time_Period_3__c=='null/null','newfont','oldfont')}" style="border-bottom:1px solid #000 !important; border:none;">{!if(currWishChild.Availability_Time_Period_3__c=='null/null',"-",currWishChild.Availability_Time_Period_3__c)}</div><div style="font-size:14px;font-style:italic;">Month/year</div></div>
+      </div>
+      <br/>
+      <p>Is there anything on your family’s calendar (upcoming medical treatments, school or work commitments, planned vacations, etc.) that might impact your ability to participate in a wish?</p>
+      <p style="text-align:center;">Yes(please detail below)</p>
+      <div style="border-bottom:1px solid #000;">{!currWishChild.Any_impact_your_ability_to_join_wish__c}</div>
+      <br/>
+      <div style="border-bottom:1px solid #000;"></div>
+      <div style="text-align:center;">
+          <p><strong>Driver Identification Information</strong></p>
+          <p style="margin:0;padding:0">Many wishes involve the use of a rental vehicle. For this reason, please indicate a preferred and potential driver who may be driving during the course of the wish.</p>
+          <p style="margin:0;padding:0"><strong>Please submit a photocopy of valid driver’s license(s).</strong></p>
+      </div>
+      <br/><br/>
+      
+       <table style="width:100%;" cellpadding="0" cellspacing="0">
+            <tr>
+                <td style="width:20%;background:#bfbfbf; padding:0 5px;text-align:center;border:1px solid #000;">Driver's Name</td>
+                <td style="width:20%;background:#bfbfbf; padding:0 5px;text-align:center;border-bottom:1px solid #000;border-top:1px solid #000;border-right:1px solid #000;">Valid D.L #</td>
+                <td style="width:22%;background:#bfbfbf; padding:0 5px;text-align:center;border:1px solid #000;border-left:0;">State</td>
+                <td style="width:14%;background:#bfbfbf; padding:0 5px;text-align:center;border-bottom:1px solid #000;border-top:1px solid #000;border-right:1px solid #000;">Expiration Date</td>
+               
+            </tr>
+       
+        <apex:repeat value="{!wcfUtil.driverWrapperCls}" var="detail">
+         
+            <tr>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">{!detail.driverName}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!detail.licenseNum}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!detail.state}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;"><apex:outputText value="{0,date,MM'/'dd'/'yyyy}" ><apex:param value="{!detail.expirationDate}" /></apex:outputText></td>
+               
+              
+            </tr>
+        </apex:repeat>  
+    </table>
+      
+      
+      
+      
+    
+    <div style="clear:both"></div>
+      <div style="margin-top:40px;">
+          <div style="width:40%; float:left;">Do you have current automobile insurance?</div>
+          <div class="{!IF(currWishChild.Have_current_automobile_insurance__c==null,'newfont','oldfont')}"  style="width:40%; float:left;border-bottom:1px solid #000;">{!if(currWishChild.Have_current_automobile_insurance__c==null,'-',currWishChild.Have_current_automobile_insurance__c)}</div>
+      </div>
+      <div style="clear:both"></div>
+      <div style="margin-top:10px;">
+          <div style="width:70%; float:left;">Does your automobile insurance provide coverage while using a rental car?</div>
+          <div class="{!IF(currWishChild.Automobile_insurance_provide_coverage__c==null,'newfont','oldfont')}"  style="width:20%; float:left;border-bottom:1px solid #000;">{!if(currWishChild.Automobile_insurance_provide_coverage__c==null,'-',currWishChild.Automobile_insurance_provide_coverage__c)}</div>
+      </div>
+      <div style="clear:both"></div>
+      <div style="margin-top:10px;">
+          <div style="width:85%; float:left;">Is your family comfortable driving a rental vehicle, if one were recommended for the wish?</div>
+          <div class="{!IF(currWishChild.Is_your_family_comfortable_in_rendal_car__c==null,'newfont','oldfont')}" style="width:10%; float:left;border-bottom:1px solid #000;">{!if(currWishChild.Is_your_family_comfortable_in_rendal_car__c==null,'-',currWishChild.Is_your_family_comfortable_in_rendal_car__c)}</div>
+      </div>
+      <div style="clear:both"></div>
+      <div style="margin-top:10px;">
+          <div style="width:40%; float:left;">Is a wheelchair accessible vehicle needed?</div>
+          <div class="{!IF(currWishChild.Is_a_wheelchair_accessible_vehicle_neede__c==null,'newfont','oldfont')}" style="width:40%; float:left;border-bottom:1px solid #000;">{!if(currWishChild.Is_a_wheelchair_accessible_vehicle_neede__c==null,'-',currWishChild.Is_a_wheelchair_accessible_vehicle_neede__c)}</div>
+      </div>
+      
+      <div style="page-break-before:always;"/>
+      <div style="clear:both"></div>
+    <!--Header-->
+     <apex:image url="{!URLFOR($Resource.MakeAWishAmericaDesign,'images/MakeAWishAmerica.PNG')}" style="width:22%;" styleClass="header-logo"/>
+      <div class="row header-padding">
+            <div style="font-size:20px; margin-bottom:15px; text-transform:uppercase; text-align:center; width:100%;">Wish Information Form</div>
+      </div>
+      <br/>
+      <hr style="border-width: 2px;margin-left: auto;display: block;margin-bottom: 0.5em;"></hr>
+    <!--Header-->   
+      
+      <div style="clear:both"></div>
+      <div style="margin-top:30px;text-align:center;">
+          <p style="font-weight:bold;margin:0;padding:0;">Medical Information</p>
+          <p style="margin:0;padding:0;font-size:13px;font-style:italic;">Please fill out entirely if any requested participant has medical needs. Specific details can be listed within “additional requests”.</p>
+      </div>
+      <table style="width:100%;margin:20px 0 0 0;" cellpadding="0" cellspacing="0">
+            <tr>
+                <td style="width:45%;background:#bfbfbf; padding:0 5px;text-align:center;border:1px solid #000;">Medical Questions</td>
+                <td style="width:6%;background:#bfbfbf; padding:0 5px;text-align:center;border-bottom:1px solid #000;border-top:1px solid #000;border-right:1px solid #000;">Yes/No</td>
+                <td style="width:6%;background:#bfbfbf; padding:0 5px;text-align:center;border:1px solid #000;border-left:0;">Notes</td>
+                <td style="width:30%;background:#bfbfbf; padding:0 5px;text-align:center;border-bottom:1px solid #000;border-top:1px solid #000;border-right:1px solid #000;">Participant Name</td>
+            </tr>
+            <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Does any requested participant have special dietary restrictions? If yes, please note.</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Participant_dietary_restrictions__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Participant_dietary_restrictions_Note__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Participant_Name_for_Dietary_Restriction__c}</td>
+            </tr>
+            <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Does any requested participant require a wheelchair? If yes, please describe wheelchair size.</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Participant_require_a_wheelchair__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Participant_require_a_wheelchair_Note__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Requested_Participant_Name_forWheelchair__c}</td>
+            </tr>
+            <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Will your family bring your own wheelchair?</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Will_your_family_bring_wheelchair__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Will_your_family_bring_wheelchair_Note__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Bringing_Own_Wheel_Chair__c}</td>
+            </tr>
+            <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Is the wheelchair collapsible?</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Is_the_wheelchair_collapsible__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Is_the_wheelchair_collapsible_Note__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Name_of_wheelchair_collapsible__c}</td>
+            </tr>
+            <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Is the wheelchair power? If yes, please note battery type.</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Is_the_wheelchair_power__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Is_the_wheelchair_power_Note__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Pariticipant_name_havingWheelchair_Power__c}</td>
+            </tr>
+             <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Does any requested participant require oxygen? If yes, please describe how often.</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Participant_require_oxygen_how_often__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Participant_require_oxygen_Note__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Requested_Participant_Name_for_Oxygen__c}</td>
+            </tr>
+            <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Does any medication require refrigeration?</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Medication_require_refrigeration__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Medication_require_refrigeration_Note__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Medication_require_refrigeration_name__c}</td>
+            </tr>
+            <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Does the wish child currently receive nursing care? If yes, please list the # of hours, agency and phone number.</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Wish_child_receive_nursing_care__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Wish_child_receive_nursing_care_Note__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Names_for_receiving_nursing_care__c}</td>
+               
+               
+            </tr>
+            <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Does any requested participant have allergies to food or materials? If yes, please note who and what allergy.</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Participant_have_allergies_to_food__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Participant_have_allergies_to_food_Note__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Requested_Participant_Name_for_Allergies__c}</td>
+            </tr>
+             <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Does any requested participant require any other medical supplies? If yes, please detail who and what is required.</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Participant_require_medical_supplies__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Participant_require_medical_suppliesNote__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Requested_Participant_Name_for_OtherNeed__c}
+                
+                </td>
+            </tr>
+    </table>
+    <p><strong>Additional Requests: </strong>Any additional requests are at the discretion of the chapter office. If medical supplies are requested, please detail the relevant model number, manufacturer, size, dimensions, and
+any other pertinent information if needed during travel.</p>
+<div style="border-bottom:1px solid #000; width:100%">{!currWishChild.Additional_Requests__c}</div>
+
+ <div style="page-break-before:always;"/>
+      <div style="clear:both"></div>
+    <!--Header-->
+     <apex:image url="{!URLFOR($Resource.MakeAWishAmericaDesign,'images/MakeAWishAmerica.PNG')}" style="width:22%;" styleClass="header-logo"/>
+      <div class="row header-padding">
+            <div style="font-size:25px; margin-bottom:15px; text-transform:uppercase; text-align:center; width:100%;">Wish Information Form</div>
+      </div>
+      <br/>
+      <hr style="border-width: 2px;margin-left: auto;display: block;margin-bottom: 0.5em;"></hr>
+    <!--Header-->   
+
+<div style="clear:both"></div>
+      <div style="margin-top:30px;text-align:center;">
+          <p style="font-weight:bold;margin:0;padding:0;">Travel Information</p>
+          <p style="margin:0;padding:0;font-size:13px;font-style:italic;">Please fill out entirely if the requested wish is a travel wish.</p>
+      </div>
+      <table style="width:100%;margin:20px 0 0 0;" cellpadding="0" cellspacing="0">
+            <tr>
+                <td style="width:45%;background:#bfbfbf; padding:0 5px;text-align:center;border:1px solid #000;">Travel Questions</td>
+                <td style="width:6%;background:#bfbfbf; padding:0 5px;text-align:center;border-bottom:1px solid #000;border-top:1px solid #000;border-right:1px solid #000;">Yes/No</td>
+                <td style="width:30%;background:#bfbfbf; padding:0 5px;text-align:center;border-bottom:1px solid #000;border-top:1px solid #000;border-right:1px solid #000;">Notes</td>
+            </tr>
+            <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Has your family flown before?</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Has_your_family_flown_before__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Has_your_family_flown_before_Note__c}</td>
+            </tr>
+            <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Will an interpreter be needed?</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Will_an_interpreter_be_needed__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Will_an_interpreter_be_needed_Note__c}</td>
+              
+            </tr>
+            <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Will a rental car seat(s) be needed? If yes, please note how many/what type.</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Will_a_rental_car_seat_s_be_needed__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Will_a_rental_car_seat_s_be_needed_Note__c}</td>
+               
+            </tr>
+            <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Are all requested participants able to sit up during takeoff/ landing on airplane? If no, please note who cannot.</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Sit_up_takeoff_landing_on_airplane__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Sit_up_takeoff_landing_on_airplane_Note__c}</td>
+                
+            </tr>
+            <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Will a rental stroller be needed? If yes, what type?</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Will_a_rental_stroller_be_needed__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Will_a_rental_stroller_be_needed_Note__c}</td>
+               
+            </tr>
+            <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Will handicap accessible accommodations be required?</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Handicap_accommodations_be_required__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Handicap_accommodations_be_required_No__c}</td>
+               
+            </tr>
+            <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Does each requested participant have valid passports?</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Participant_have_valid_passports__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Participant_have_valid_passports_Note__c}</td>
+               
+            </tr>
+            <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Does each requested participant (18 and over) have a valid U.S. federal or state-issued photo ID? If yes, please provide a copy of a valid ID for each individual.</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Does_participant_have_valid_photo_ID__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Participant_have_valid_photo_ID_Note__c}</td>
+                
+            </tr>
+
+             <tr>
+                <td style="padding:5px;border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000">Does your family have a valid major credit card? Typically, a hotel will request a credit card for incidentals that may occur during a stay. If you do not have a credit card, other arrangements can be made; however, Make-AWish does need to know ahead of time.</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Does_your_family_have_a_credit_card__c}</td>
+                <td style="padding:5px;text-align:center;border-bottom:1px solid #000;border-right:1px solid #000;">{!currWishChild.Does_your_family_have_a_credit_card_Note__c}</td>
+                
+            </tr>
+            <tr>
+            <td></td>
+            </tr>
+            <tr>
+            <td></td>
+            </tr>
+            <tr>
+            <td></td>
+            </tr>
+            <tr>
+            <td></td>
+            </tr>
+            <tr>
+            <td></td>
+            </tr>
+            <tr>
+            <td></td>
+            </tr>
+           
+          
+           
+    </table>
+      <!-- Wish Information Form end-->
+  </div>
+  
+ </apex:form>
+
+</apex:page>

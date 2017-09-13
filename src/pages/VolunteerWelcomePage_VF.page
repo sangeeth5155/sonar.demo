@@ -1,0 +1,94 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" docType="html-5.0" controller="VolunteerWelcomePage_AC" title="Make-A-Wish Communities | Welcome">
+    <head>
+        <apex:include pageName="prospective_head" id="phead" />
+        <style>
+            .imageHide {display:none;}
+            .imageHide1 {height:16px}
+            .textHide{color: #e4dede;height: 16px;font-size: 14px;}
+            .textHide1{height: 16px;font-size: 14px;font-weight: bold;}
+            .not-active {pointer-events: none;cursor: default;}
+            .textHide i {color:#e4dede}
+            i {color:#006bb6}
+        </style>
+    </head>
+    <body class="vcp vcpactivelogin full">
+        <apex:include pageName="prospective_header" id="pheader" />
+        
+        <main role="main" class="container">
+            <div class="row">                
+                <!--<div class="checkout-wrap" style="margin-bottom:180px">
+                <ul class="checkout-bar">
+                <li class="{!orientationClass}"><a href="#">ORIENTATION</a></li>
+                <li class="{!applicationClass}"><a href="#">APPLICATION</a></li>
+                <li class="{!interviewClass}"><a href="#">INTERVIEW</a></li>
+                <li class="{!backgroundCheckClass}"><a href="#">BACKGROUND CHECK</a></li>
+                <li class="{!trainingClass}"><a href="#">TRAINING</a></li>
+                </ul>
+                </div>-->   
+
+                <apex:form >
+                    <fieldset>
+                        <h1>Welcome {!$User.FirstName},</h1><!-- {!$User.LastName} -->
+                        <p><apex:outputText value="{!welcomText}" escape="false" /></p>
+                        
+                        <h2>How do I become a Volunteer?</h2>
+                        <p><apex:outputText value="{!becomeAVolunteer}" escape="false" /></p>
+                        
+                        <!--<div class="form-group row">
+                            <div class="col-xs-12 col-sm-4 col-md-12">
+                            <apex:commandbutton styleClass="col-xs-12 col-sm-12 col-md-3 btn-md" value="Become a Volunteer"  rendered="{!isBecomVolunteer}" action="{!becomeAVolunteer}"/>
+                            </div>
+                        </div>-->
+                        <h2>Volunteer Application Process</h2>
+                        <nav class="row">
+                            <ul class="step status">
+                                <li class="{!if(orientationStatus == 'Completed','textHide1','textHide')}"><i class="fa fa-check-circle" aria-hidden="true"></i> Orientation</li>
+                                <li class="{!if(applicationStatus == 'Completed','textHide1','textHide')}"><i class="fa fa-check-circle" aria-hidden="true"></i> Application</li>
+                                <li class="{!if(interviewStatus == 'Completed','textHide1','textHide')}"><i class="fa fa-check-circle" aria-hidden="true"></i> Interview</li>
+                                <li class="{!if(backgroundCheckStatus == 'Completed','textHide1','textHide')}"><i class="fa fa-check-circle" aria-hidden="true"></i> Background Check</li>
+                                <li class="{!if(trainingStatus == 'Completed','textHide1','textHide')}"><i class="fa fa-check-circle" aria-hidden="true"></i> Training</li>
+                            </ul>
+                        </nav>
+                        <div class="form-group row">
+                            <div class="col-xs-12 col-sm-4 col-md-12">
+                                <apex:commandbutton value="BECOME A VOLUNTEER" styleClass="col-xs-12 col-sm-12 col-md-3 btn-md" rendered="{!isBecomVolunteer}" action="{!becomeAVolunteer}"/>
+                                <apex:commandbutton value="Continue Process" styleClass="col-xs-12 col-sm-12 col-md-3 btn-md" rendered="{!continueProcess}" action="{!becomeAVolunteer}"/>
+                            </div>
+                        </div>
+
+                    </fieldset>                  
+                </apex:form>
+                
+            </div>
+        </main>
+        
+        <div class="container-fluid calendar">
+            <apex:form styleClass="container">
+                <div class="row">
+                    <h4>Calendar of Events</h4>
+                    <ul class="col-xs-12 col-sm-12 col-md-12">
+                        
+                       <apex:repeat value="{!events}" var="ev">
+                            <li class="col-xs-12 col-sm-6 col-md-3">
+                                <figure class="col-xs-12 col-sm-12 col-md-12">
+                                    <!-- <img class="col-xs-4 col-sm-4 col-md-4" src="https://wish.org/~/media/022-000/News%20and%20Events/Signature%20Events/WAM_Thumbnail.ashx" /> -->
+                                    <apex:outputText value="{!ev.Event_Image__c}" escape="false"/>
+                                    <figcaption class="col-sm-8">
+                                        <h5><apex:outputText value="{!ev.Event_Name__c}" escape="false"/></h5>
+                                        <span class="date"><apex:outputText value="{0,date,MM/dd/yy}">
+                                            <apex:param value="{!ev.Event_Date__c}" />
+                                            </apex:outputText></span>
+                                        <p><apex:outputText value="{!ev.Event_Text__c}" escape="false"/></p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </apex:repeat>
+
+                    </ul>
+                </div>
+            </apex:form>
+        </div>
+        
+        <apex:include pageName="prospective_footer" id="pfooter" />
+    </body>
+</apex:page>

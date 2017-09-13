@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>It will be used to send an email alert when the Background check is completed</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Bc:Completed Email Template</name>
+    <style>freeForm</style>
+    <subject>Background Check Completed</subject>
+    <textOnly>Hi {!Background_check__c.Volunteer__c},
+
+We have received the results of your criminal background check. You are welcome to visit the Make-A-Wish Volunteer Center to register for your role-specific training.
+
+Thanks,
+
+{!Background_check__c.Account_Name__c}
+{!Background_check__c.Account_Phone__c}
+{!Background_check__c.Account_Email__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

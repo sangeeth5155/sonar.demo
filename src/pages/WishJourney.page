@@ -1,0 +1,532 @@
+<apex:page standardStylesheets="false" standardController="Case" extensions="WishJourneyController" title="Make-A-Wish Communities | Wish Journey" sidebar="false" showHeader="false">
+    <!--Start of Styles and Scripts-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css"/>
+    <link rel="stylesheet" href="{!URLFOR($Resource.wishcloudstyles, 'wishcloudstyles/core.css')}" />
+    <!--End of Styles and Scripts-->
+    <style>
+        .progressbar {width:123%}
+        .progressbar li.inactive .step .bar{background: #ffa500;background: -moz-linear-gradient(left, #ffa500 0%, #ffce75 100%);/* background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ffe500), color-stop(100%, #ffce75)); *//* background: -webkit-linear-gradient(left, #ffe500 0%, #ffce75 100%); */background: -o-linear-gradient(left, #ffe500 0%, #ffce75 100%);background: -ms-linear-gradient(left, #ffe500 0%, #ffce75 100%);/* background: linear-gradient(to right, #ffe500 0%, #ffce75 100%); */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe500', endColorstr='#ffce75',GradientType=1 );}
+        .progressbar li.inactive .step:hover .detail:after { content: "INACTIVE"; }
+        .progressbar li.inactive .step .bar > span:before { content: "DAYS"; position: absolute; font-size: .6em; top: -2%; right: 10%; }
+        .progressbar li.inactive .step .bar > span:after { content: "Since Start"; position: absolute; font-size: 1.5rem; font-size: .8vw; top: 42%; right: 6%; border-top: 1px solid #fff; padding-top: 1%; }
+        .progressbar li.inactive .step .bar > span:before { content: "DAYS"; position: absolute; font-size: .6em; top: -2%; right: 10%; }
+        .progressbar li.inactive .step .bar > span:after { content: "Since Start"; position: absolute; font-size: 1.5rem; font-size: .8vw; top: 42%; right: 6%; border-top: 1px solid #fff; padding-top: 1%; }
+
+        .progressbar li.inactive .step .bar > span { display: none; top: -50%; left: 0; font-size: 4rem; font-size: 2.3vw; font-weight: 100; color: #fff; text-transform: uppercase; padding-right: 40%; text-align: right; width: 100%; animation: fadein 1s ease 1, slideup .3s ease 1 forwards; }
+        .progressbar li.inactive .step .bar:hover > span { display: block; }
+        .progressbar li.inactive .step .bar:before { z-index: 1; }
+        .progressbar li.inactive .step .sub-progress > div span {top:3px; background: #747678; animation: fadeinout 2s ease infinite; }
+        .rush {font-size:3rem; font-size:4vw; width:auto; margin:0 !important; height:auto}
+        .progressbar li.in-progress .step .bar > span {font-size:3vw}
+        .progressbar li.referredDays .step .bar > span:after {right:2%}
+
+        .step a {text-decoration: none}
+
+        .grantedwrap { display:inline-block; background:#FFA500; color:#fff; padding:0 3px; t-size:1rem; font-size:1.3vw; font-weight:normal; vertical-align:middle; margin:-2px 7px 0 2px; width:135px; text-align:center;}
+        .onholdwrap, .rushwrap {padding:.2rem .6rem; text-transform: uppercase;}
+        .onholdwrap:nth-child(1) {margin-left:1rem}
+        .progressbarwrap { width:100%; clear:both; margin:5% 0 0px 0; float:left}
+        .titlewrap, .wc-photowrap, .progress-labels {display:flex; align-items:center;}
+        .titlewrap {height:9rem}
+        .wc-photowrap img {display:inline-block; max-width:11.5rem; max-height:10.05rem; margin:1rem}
+        .imgStyle{ border-style:none; min-width:20%; min-height:10%; width:50%;}
+        .cnamewrap{/*margin-left:14%;*/}
+    </style>
+    <div class="progress-wrap">
+
+        <!--This is to show the Child name and Rushwish/Inactive/Onhold indications-->
+        <div class="titlewrap">
+          <div class="wc-photowrap">
+            <apex:outputpanel rendered="{!(currCase.RecordType.Name == 'Wish')}" >
+              <apex:outputField value="{!currCase.Contact.Wish_Child_Photo__c}"/>
+            </apex:outputPanel>
+            <apex:outputpanel rendered="{!(currCase.RecordTypeId != 'Wish')}">
+              <apex:outputField value="{!currCase.Parent.Contact.Wish_Child_Photo__c}"/>
+            </apex:outputPanel>
+          </div>
+          <div class="rush">
+            <!-- <div class="cnamewrap">
+            <div class="fnamewrap"> -->
+            <apex:outputpanel rendered="{!parentCaseID != null}"><a href="/{!contactId}" target="_parent"><span class="fnamechildwrap">{!contactFName}</span> <span class="snamechildwrap">{!contactLName}</span></a> </apex:outputPanel>
+            <apex:outputpanel rendered="{!parentCaseID == null}"><a href="/{!contactId}" target="_parent"><span class="fnamechildwrap">{!contactFName}</span> <span class="snamechildwrap">{!contactLName}</span></a> </apex:outputPanel>
+
+
+            <!--
+            <apex:outputPanel rendered="{!onHold == true}"><span class="onholdwrap">On Hold</span></apex:outputPanel>
+            <apex:outputPanel rendered="{!escalated== true}"><span class="inactivewrap">Escalated</span></apex:outputPanel>
+            <apex:outputPanel rendered="{!granted == true}"><span class="onholdwrap">Granted</span></apex:outputPanel>
+            <apex:outputPanel rendered="{!qualified == true}"><span class="onholdwrap">Qualified</span></apex:outputPanel>
+            <apex:outputPanel rendered="{!readytoAssign == true}"><span class="grantedwrap">Ready to Assign</span></apex:outputPanel>
+            <apex:outputPanel rendered="{!wishDetermined == true}"><span class="grantedwrap">Wish Determined</span></apex:outputPanel>
+            <apex:outputPanel rendered="{!newStatus == true}"><span class="onholdwrap">New</span></apex:outputPanel>
+            <apex:outputPanel rendered="{!completed == true}"><span class="onholdwrap">Completed</span></apex:outputPanel>
+            <apex:outputPanel rendered="{!closed == true}"><span class="onholdwrap">Closed</span></apex:outputPanel>
+
+            <apex:outputPanel rendered="{!isSubmitted == true}"><span class="onholdwrap">Budget Approval - Submitted</span></apex:outputPanel>
+            <apex:outputPanel rendered="{!approved == true}"><span class="onholdwrap">Budget Approval - Approved</span></apex:outputPanel>
+            <apex:outputPanel rendered="{!design == true}"><span class="grantedwrap">Wish Design</span></apex:outputPanel>
+            <apex:outputPanel rendered="{!scheduled == true}"><span class="onholdwrap">Wish Scheduled</span></apex:outputPanel>
+            <apex:outputPanel rendered="{!interview == true}"><span class="onholdwrap">Ready to Interview</span></apex:outputPanel>
+            <apex:outputPanel rendered="{!inActive == true}"><span class="onholdwrap">inActive </span></apex:outputPanel>
+            <apex:outputPanel rendered="{!closed == true}"><span class="onholdwrap">Wish Scheduled</span></apex:outputPanel>-->
+
+            <!-- </div>
+            </div> -->
+
+          </div>
+          <div class="progress-labels">
+            <apex:outputPanel rendered="{!(deceased == 'Deceased')}">
+            <span class="onholdwrap" style="background:#696969">{!deceased}</span>
+            </apex:outputpanel>
+
+            <apex:outputPanel rendered="{!rushwish == true}">
+            <span class="rushwrap">Rush</span>
+            </apex:outputPanel>
+
+            <apex:outputText value="{!currCase.Status}" rendered="{!(currCase.RecordType.Name == 'Wish')}" styleClass="onholdwrap"/>
+            <apex:outputText value="{!currCase.Parent.Status}" rendered="{!(currCase.RecordType.Name != 'Wish')}" styleClass="onholdwrap"/>
+          </div>
+        </div>
+
+        <div class="progressbarwrap">
+            <ul class="progressbar">
+
+                <!--Wish Status Bar Logic-->
+                <apex:outputPanel rendered="{!(caseWithStatusMap['Wish'] == 'Completed' || caseWithStatusMap['Wish'] == 'Closed' || caseWithStatusMap['Wish'] == 'DNQ')}">
+                    <li class="completed completedReferral">
+                        <div class="step">
+                            <span class="title"><apex:outputText value="Qualification"  style="color: #026cb7;" rendered="{!currCase.id == wishId}"/>
+                            <apex:outputText value="Qualification" rendered="{!currCase.id <> wishId}"/></span>
+                            <!--<apex:outputLink target="_top" value="/{!currCase.id}"></apex:outputLink>-->
+                            <!--<span class="title">Case</span>-->
+                            <apex:outputPanel rendered="{!wishId != null}">
+                                <a href="/{!wishId}" target="_parent">
+                                    <div class="bar" style="margin-right: 2% !important;">
+                                        <span id="step-bar-detail-1">
+                                            <apex:outputLabel value="{!referredDays}"/>
+                                        </span>
+                                    </div>
+                                </a>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!wishId == null}">
+                                <div class="bar" style="margin-right: 2% !important;">
+                                    <span id="step-bar-detail-1">
+                                        <apex:outputLabel value="{!referredDays}"/>
+                                    </span></div>
+                            </apex:outputPanel>
+                            <span class="detail"></span>
+                        </div>
+                    </li>
+                </apex:outputPanel>
+
+                <apex:outputPanel rendered="{!(caseWithStatusMap['Wish'] != 'Completed' && caseWithStatusMap['Wish'] != 'Closed' && caseWithStatusMap['Wish'] != 'Not Started' && caseWithStatusMap['Wish'] != 'DNQ')}">
+                    <li class="in-progress referredDays">
+                        <div class="step">
+                            <span class="title"><apex:outputText value="Qualification"  style="color: #026cb7;" rendered="{!currCase.id == wishId}"/>
+                            <apex:outputText value="Qualification"  rendered="{!currCase.id <> wishId}"/></span>
+                            <!--<apex:outputLink target="_top" value="/{!currCase.id}"></apex:outputLink>-->
+                            <!--<span class="title">Case</span>-->
+                            <apex:outputPanel rendered="{!wishId!= null}">
+                                <a href="/{!wishId}" target="_parent">
+                                    <div class="bar">
+
+                                        <span id="step-bar-detail-1">
+                                            <apex:outputLabel value="{!referredDays}"/>
+                                        </span>
+                                    </div>
+
+                                </a>
+                            </apex:outputPanel>
+
+                            <span class="detail"></span>
+                            <!--<div class="sub-progress"><div><span></span></div></div>-->
+                        </div>
+                    </li>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!(caseWithStatusMap['Wish'] == 'Not Started')}">
+                    <li class="not-started">
+                        <div class="step">
+                            <span class="title"><apex:outputText value="Qualification"/></span>
+                            <!--  <apex:outputLink target="_top" value="/{!currCase.contactId}"><span class="title">Qualification</span></apex:outputLink> -->
+                            <!--<span class="title">Case</span>-->
+                            <apex:outputPanel rendered="{!wishId==null}">
+                                <div class="bar"><span id="step-bar-detail-5"></span></div>
+                            </apex:outputPanel>
+                            <span class="detail"></span>
+                            <!--<div class="sub-progress"><div><span></span></div></div>-->
+                        </div>
+                    </li>
+                </apex:outputPanel>
+
+                <!--Wish Determination Status Bar Logic-->
+                <apex:outputPanel rendered="{!(caseWithStatusMap['Wish Determination'] == 'Completed' || caseWithStatusMap['Wish Determination'] == 'Closed' || caseWithStatusMap['Wish Determination'] == 'DNQ')}">
+                    <li class="completed completedQualified">
+                        <div class="step">
+                            <span class="title"><apex:outputText value="Determination"  style="color: #026cb7;" rendered="{!currCase.id == determinationId }"/>
+                            <apex:outputText value="Determination"  rendered="{!currCase.id <> determinationId }"/></span>
+                            <!--<apex:outputLink target="_top" value="/{!currCase.contactId}"><span class="title">Determination</span></apex:outputLink>-->
+                            <!--<span class="title">Determination</span>-->
+                            <apex:outputPanel rendered="{!determinationId != null}">
+                                <a href="/{!determinationId}" target="_parent">
+                                    <div class="bar" style="margin-right: 2% !important;"><span id="step-bar-detail-3"><apex:outputLabel style="margin-right: 32%;" value="{! qualifiedDays }"/></span></div>
+                                </a>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!determinationId == null}">
+                                <div class="bar" style="margin-right: 2% !important;"><span id="step-bar-detail-3"><apex:outputLabel style="margin-right: 32%;" value="{! qualifiedDays }"/></span></div>
+                            </apex:outputPanel>
+                            <span class="detail"></span>
+                            <!--<div class="sub-progress"><div><span></span></div></div>-->
+                        </div>
+                    </li>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!(caseWithStatusMap['Wish Determination'] != 'Completed' && caseWithStatusMap['Wish Determination'] != 'Closed' && caseWithStatusMap['Wish Determination'] != 'Not Started' && caseWithStatusMap['Wish Determination'] != 'DNQ')}">
+                    <li class="in-progress qualifiedDays">
+                        <div class="step">
+                            <span class="title"><apex:outputText value="Determination"  style="color: #026cb7;" rendered="{!currCase.id == determinationId }"/>
+                            <apex:outputText value="Determination"  rendered="{!currCase.id <> determinationId }"/></span>
+                            <!--<apex:outputLink target="_top" value="/{!currCase.contactId}"><span class="title">Determination</span></apex:outputLink>-->
+                            <apex:outputPanel rendered="{!determinationId!= null}">
+                                <a href="/{!determinationId}" target="_parent">
+                                    <div class="bar">
+                                        <span id="step-bar-detail-1">
+                                            <apex:outputLabel style="margin-right: 32%;" value="{! qualifiedDays }"/>
+                                        </span>
+                                    </div>
+                                </a>
+                            </apex:outputPanel>
+
+                            <span class="detail"></span>
+                            <!--<div class="sub-progress"><div><span></span></div></div>-->
+                        </div>
+                    </li>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!(caseWithStatusMap['Wish Determination'] == 'Not Started')}">
+                    <li class="not-started">
+                        <div class="step">
+                            <span class="title">Determination</span>
+                            <!--<apex:outputLink target="_top" value="/{!currCase.contactId}"><span class="title">Determination</span></apex:outputLink>-->
+                            <apex:outputPanel rendered="{!determinationId== null}">
+                                <div class="bar"><span id="step-bar-detail-5"></span></div>
+                            </apex:outputPanel>
+                            <span class="detail"></span>
+                            <!--<div class="sub-progress"><div><span></span></div></div>-->
+                        </div>
+                    </li>
+                </apex:outputPanel>
+
+                <!--Wish planning Status Bar Logic-->
+                <apex:outputPanel rendered="{!(caseWithStatusMap['Wish Planning'] == 'Completed' || caseWithStatusMap['Wish Planning'] == 'Closed' || caseWithStatusMap['Wish Planning'] == 'DNQ')}">
+                    <li class="completed completedDetermined">
+                        <div class="step">
+                            <span class="title"><apex:outputText value="Planning"  style="color: #026cb7;" rendered="{!currCase.id == anticipationId }"/>
+                            <apex:outputText value="Planning"  rendered="{!currCase.id <> anticipationId }"/></span>
+                            <!--<apex:outputLink target="_top" value="/{!currCase.contactId}"><span class="title">Planning</span></apex:outputLink>-->
+                            <!-- <span class="title">Anticipation</span>-->
+                            <apex:outputPanel rendered="{!anticipationId != null}">
+                                <a href="/{!anticipationId}" target="_parent">
+                                    <div class="bar" style="margin-right: 2% !important;">
+                                    <apex:outputpanel rendered="{!blkPlanningOver==True}">
+                                    <span id="step-bar-detail-3"><apex:outputLabel style="margin-right: 42%;" value="{! determinationDays }"/>
+                                    </span>
+                                    </apex:outputpanel>
+                                    </div>
+                                </a>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!anticipationId == null}">
+                                <div class="bar" style="margin-right: 2% !important;">
+                                   <span id="step-bar-detail-3">
+                                     <apex:outputLabel style="margin-right: 42%;" value="{! determinationDays }"/>
+                                     </span></div>
+                            </apex:outputPanel>
+                            <span class="detail"></span>
+                            <!--<div class="sub-progress"><div><span></span></div></div>-->
+                        </div>
+                    </li>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!(caseWithStatusMap['Wish Planning'] != 'Completed' && caseWithStatusMap['Wish Planning'] != 'Closed' && caseWithStatusMap['Wish Planning'] != 'Not Started' && caseWithStatusMap['Wish Planning'] != 'DNQ')}">
+                    <li class="in-progress determinationDays ">
+                        <div class="step">
+                            <span class="title"><apex:outputText value="Planning"  style="color: #026cb7;" rendered="{!currCase.id == anticipationId }"/>
+                            <apex:outputText value="Planning"   rendered="{!currCase.id <> anticipationId }"/> </span>
+                            <!--<apex:outputLink target="_top" value="/{!currCase.contactId}"><span class="title">Planning</span></apex:outputLink>-->
+                            <!-- <span class="title">Anticipation</span>-->
+                            <apex:outputPanel rendered="{!anticipationId != null}">
+                                <a href="/{!anticipationId}" target="_parent">
+                                    <div class="bar">
+                                    <apex:outputpanel rendered="{!blkPlanningOver==True}">
+                                        <span id="step-bar-detail-1">
+                                            <apex:outputLabel style="margin-right: 42%;" value="{! determinationDays }"/>
+                                        </span>
+                                    </apex:outputpanel>
+                                    </div>
+                                </a>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!anticipationId == null}">
+                                <div class="bar">
+                                    <span id="step-bar-detail-1">
+                                        <apex:outputLabel value="{!recordTypeWithDaysMap['Wish Planning']}" rendered="{!recordTypeWithDaysMap['Wish Planning'] != null}"/>
+                                        <apex:outputLabel value="0" rendered="{!recordTypeWithDaysMap['Wish Planning'] == null}"/>
+                                    </span>
+                                </div>
+                            </apex:outputPanel>
+                            <span class="detail"></span>
+                            <!--<div class="sub-progress"><div><span></span></div></div>-->
+                        </div>
+                    </li>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!(caseWithStatusMap['Wish Planning'] == 'Not Started')}">
+                    <li class="not-started">
+                        <div class="step">
+                            <span class="title">Planning</span>
+                            <!--<apex:outputLink target="_top" value="/{!currCase.contactId}"><span class="title">Planning</span></apex:outputLink>-->
+                            <!-- <span class="title">Anticipation</span>-->
+                            <apex:outputPanel rendered="{!anticipationId== null}">
+                                <div class="bar"><span id="step-bar-detail-5"></span></div>
+                            </apex:outputPanel>
+                            <span class="detail"></span>
+                            <!--<div class="sub-progress"><div><span></span></div></div>-->
+                        </div>
+                    </li>
+                </apex:outputPanel>
+
+                <!--Wish Assist Status Bar Logic-->
+                <!--<apex:outputPanel rendered="{!(caseWithStatusMap['Wish Assist'] == 'Completed' || caseWithStatusMap['Wish Assist'] == 'Closed')}">
+                <li class="completed">
+                <div class="step">
+
+                <apex:outputPanel rendered="{!anticipationId != null}">
+                <a href="/{!anticipationId}" target="_parent">
+                <div class="bar"><span id="step-bar-detail-3"></span></div>
+                </a>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!anticipationId == null}">
+                <div class="bar"><span id="step-bar-detail-3"></span></div>
+                </apex:outputPanel>
+                <span class="detail"></span>
+                <div class="sub-progress"><div><span></span></div></div>
+                </div>
+                </li>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!(caseWithStatusMap['Wish Assist'] != 'Completed' && caseWithStatusMap['Wish Assist'] != 'Closed' && caseWithStatusMap['Wish Assist'] != 'Not Started') }">
+                <li class="in-progress">
+                <div class="step">
+                <span class="title">Assist</span>
+
+                <apex:outputPanel rendered="{!assitId!= null}">
+                <a href="/{!assitId}" target="_parent">
+                <div class="bar">
+                <span id="step-bar-detail-1">
+                <!--   <apex:outputLabel value="{!recordTypeWithDaysMap['Wish Assist']}" rendered="{!recordTypeWithDaysMap['Wish Assist'] != null}"/>
+                <apex:outputLabel value="0" rendered="{!recordTypeWithDaysMap['Wish Assist'] == null}"/> -->
+                                <!--   </span>
+                </div>
+                </a>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!assitId== null}">
+                <div class="bar">
+                <span id="step-bar-detail-1">
+                <apex:outputLabel value="{!recordTypeWithDaysMap['Wish Assist']}" rendered="{!recordTypeWithDaysMap['Wish Assist'] != null}"/>
+                <apex:outputLabel value="0" rendered="{!recordTypeWithDaysMap['Wish Assist'] == null}"/>
+                </span>
+                </div>
+                </apex:outputPanel>
+                <span class="detail"></span>
+                <div class="sub-progress"><div><span></span></div></div>
+                </div>
+                </li>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!(caseWithStatusMap['Wish Assist'] == 'Not Started')}">
+                <li class="not-started">
+                <div class="step">
+                <span class="title">Assist</span>
+
+                <apex:outputPanel rendered="{!assitId== null}">
+                <div class="bar"><span id="step-bar-detail-5"></span></div>
+                </apex:outputPanel>
+                <span class="detail"></span>
+                <div class="sub-progress"><div><span></span></div></div>
+                </div>
+                </li>
+                </apex:outputPanel>-->
+
+                <!--Wish Grant Status Bar Logic-->
+                <apex:outputPanel rendered="{!(caseWithStatusMap['Wish Granting'] == 'Completed' || caseWithStatusMap['Wish Granting'] == 'Closed' || caseWithStatusMap['Wish Granting'] == 'DNQ')}">
+                    <li class="completed completedUntil">
+                        <div class="step">
+                            <span class="title"><apex:outputText value="Granting"  style="color: #026cb7;" rendered="{!currCase.id == grantId}"/>
+                            <apex:outputText value="Granting"  rendered="{!currCase.id <> grantId}"/></span>
+                            <!--<apex:outputLink target="_top" value="/{!currCase.contactId}"><span class="title">Granting</span></apex:outputLink> -->
+                            <!-- <span class="title">Granted</span>-->
+
+                            <apex:outputPanel rendered="{! (grantId!= null)}">
+                                <a href="/{!grantId}" target="_parent">
+                                    <div class="bar" style="margin-right: 2% !important;">
+                                        <apex:outputpanel rendered="{!blkGrantingOver==True}">
+                                            <span id="step-bar-detail-3"><apex:outputLabel value="{! anticipationDays }" />
+                                            </span>
+                                        </apex:outputpanel>
+                                    </div>
+                                </a>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!(grantId == null)}">
+                                <div class="bar" style="margin-right: 2% !important;">
+                                    <apex:outputpanel rendered="{!blkGrantingOver==True}">
+                                        <span id="step-bar-detail-3"><apex:outputLabel value="{! anticipationDays }"/>
+                                        </span>
+                                    </apex:outputpanel>
+                                </div>
+                            </apex:outputPanel>
+                            <span class="detail"></span>
+                            <!--<div class="sub-progress"><div><span></span></div></div>-->
+                        </div>
+                    </li>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!(caseWithStatusMap['Wish Granting'] != 'Completed' && caseWithStatusMap['Wish Granting'] != 'Closed' && caseWithStatusMap['Wish Granting'] != 'Not Started' && caseWithStatusMap['Wish Granting'] != 'DNQ')}">
+                    <li class="in-progress anticipationDays">
+                        <div class="step">
+                            <span class="title"><apex:outputText value="Granting"  style="color: #026cb7;" rendered="{!currCase.id == grantId}"/><apex:outputText value="Granting"  rendered="{!currCase.id <> grantId}"/></span>
+                            <!--<apex:outputLink target="_top" value="/{!currCase.contactId}"><span class="title">Granting</span></apex:outputLink> -->
+
+                            <apex:outputPanel rendered="{!(grantId!= null)}">
+                                <a href="/{!grantId}" target="_parent">
+                                    <div class="bar">
+                                        <apex:outputpanel rendered="{!blkGrantingOver==True}">
+                                            <span id="step-bar-detail-1">
+                                                <apex:outputLabel value="{! anticipationDays }"/>
+                                            </span>
+                                        </apex:outputpanel>
+                                    </div>
+                                </a>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!(grantId== null)}">
+                                <div class="bar">
+                                    <apex:outputpanel rendered="{!blkGrantingOver==True}">
+                                        <span id="step-bar-detail-1">
+                                            <apex:outputLabel value="{! anticipationDays }" />
+                                        </span>
+                                    </apex:outputpanel>
+                                </div>
+                            </apex:outputPanel>
+                            <span class="detail"></span>
+                            <!--<div class="sub-progress"><div><span></span></div></div>-->
+                        </div>
+                    </li>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!(caseWithStatusMap['Wish Granting'] == 'Not Started')}">
+                    <li class="not-started">
+                        <div class="step">
+                            <span class="title">Granting</span>
+                            <!--<apex:outputLink target="_top" value="/{!currCase.contactId}"><span class="title">Granting</span></apex:outputLink> -->
+
+                            <apex:outputPanel rendered="{!grantId!= null}">
+                                <a href="/{!grantId}" target="_parent"><div class="bar"><span id="step-bar-detail-5"></span></div></a>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!grantId== null}">
+                                <div class="bar"><span id="step-bar-detail-5"></span></div>
+                            </apex:outputPanel>
+                            <span class="detail"></span>
+                            <!--<div class="sub-progress"><div><span></span></div></div>-->
+                        </div>
+                    </li>
+                </apex:outputPanel>
+                <!--Wish Effect Status Bar Logic-->
+                <apex:outputPanel rendered="{!(caseWithStatusMap['Wish Impact'] == 'Completed' || caseWithStatusMap['Wish Impact'] == 'Closed' || caseWithStatusMap['Wish Impact'] == 'DNQ')}">
+                    <li class="completed in-progress effectDays">
+                        <div class="step">
+                            <!--<apex:outputLink target="_top" value="/{!currCase.contactId}"><span class="title">Impact</span></apex:outputLink>-->
+                            <span class="title"><apex:outputText value="Impact"  style="color: #026cb7;" rendered="{!currCase.id == effectId}"/><apex:outputText value="Impact"  rendered="{!currCase.id <> effectId}"/></span>
+                            <apex:outputPanel rendered="{!effectId!= null}">
+                                <a href="/{!effectId}" target="_parent">
+                                    <div class="bar" style="margin-right: 2% !important;">
+                                      <apex:outputpanel rendered="{!blkImpactOver==True}">
+                                        <span id="step-bar-detail-3">
+                                        <apex:outputLabel style="margin-right: 32%;" value="{! effectDays }"/>
+                                        </span>
+                                      </apex:outputpanel>
+                                    </div>
+                                </a>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!effectId == null}">
+                                <div class="bar" style="margin-right: 2% !important;"><span id="step-bar-detail-3"></span></div>
+                            </apex:outputPanel>
+                            <span class="detail"></span>
+                            <!--<div class="sub-progress"><div><span></span></div></div>-->
+                        </div>
+                    </li>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!(caseWithStatusMap['Wish Impact'] != 'Completed' && caseWithStatusMap['Wish Impact'] != 'Closed' && caseWithStatusMap['Wish Impact'] != 'Not Started' && caseWithStatusMap['Wish Impact'] != 'DNQ')}">
+                    <li class="in-progress effectDays">
+                        <div class="step">
+                            <!--<apex:outputLink target="_top" value="/{!currCase.contactId}"><span class="title">Impact</span></apex:outputLink>-->
+                            <span class="title"><apex:outputText value="Impact"  style="color: #026cb7;" rendered="{!currCase.id == effectId}"/><apex:outputText value="Impact"  rendered="{!currCase.id <> effectId}"/>
+                            </span>
+
+                            <apex:outputPanel rendered="{!effectId != null}">
+                                <a href="/{!effectId}" target="_parent">
+                                    <div class="bar">
+                                       <apex:outputpanel rendered="{!blkImpactOver==True}">
+                                        <span id="step-bar-detail-1">
+                                            <apex:outputLabel style="margin-right: 32%;" value="{! effectDays }"/>
+                                        </span>
+                                       </apex:outputpanel>
+                                    </div>
+                                </a>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!effectId== null}">
+                                <div class="bar">
+                                  <apex:outputpanel rendered="{!blkImpactOver==True}">
+                                    <span id="step-bar-detail-1">
+                                        <apex:outputLabel value="{! effectDays }"/>
+                                    </span>
+                                  </apex:outputpanel>
+                                </div>
+                            </apex:outputPanel>
+                            <span class="detail"></span>
+                            <!--<div class="sub-progress"><div><span></span></div></div>-->
+                        </div>
+                    </li>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!(caseWithStatusMap['Wish Impact'] == 'Not Started')}">
+                    <li class="not-started">
+                        <div class="step">
+                            <!--<apex:outputLink target="_top" value="/{!currCase.contactId}"><span class="title">Impact</span></apex:outputLink>-->
+                            <span class="title">Impact</span>
+                            <apex:outputPanel rendered="{!effectId== null}">
+                                <div class="bar"><span id="step-bar-detail-5"></span></div>
+                            </apex:outputPanel>
+                            <span class="detail"></span>
+                            <!--<div class="sub-progress"><div><span></span></div></div>-->
+                        </div>
+                    </li>
+                </apex:outputPanel>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+    <script>
+    $(function() {
+        // var fname = $(".fnamechildwrap").text();
+        // var sname = $(".snamechildwrap").text();
+        // if(fname.length>5){
+        //     $(".fnamechildwrap").text(fname.substring(0,5) + "..");
+        // }
+        //
+        // if(sname.length>5){
+        //     $(".snamechildwrap").text(sname.substring(0,5) + "..");
+        // }
+
+        $('#step-bar-detail-1').hover(function(){
+            //$('#step-bar-detail-1').show();
+
+        });
+        $('.wc-photowrap img').unwrap().unwrap().unwrap().unwrap().unwrap().unwrap().unwrap()
+        if ( !$('.wc-photowrap img').length ){
+          // remove if image doesn't exist
+          $('.wc-photowrap').remove();
+        }
+        $('.rushwrap').unwrap()
+
+    })();
+    </script>
+</apex:page>

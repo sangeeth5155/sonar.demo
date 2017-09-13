@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>It will be used to send an email to Medical Professional after wish determined.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Med Professional: Your patient decided on a wish!</name>
+    <style>freeForm</style>
+    <subject>Your patient decided on a wish!</subject>
+    <textOnly>Hello {!Case.Qualifying_Medical_Professional_Name__c},
+
+We are excited your patient has chosen their wish!  If you have any questions, concerns or comments we would love to hear from you.
+
+Wish Child Name: {!Contact.Name}
+Primary Diagnosis: {!Contact.Diagnosis__c}
+Wish: {!Case.Wish_Type__c}
+
+Thanks to the support of you and other medical professionals around the country, we continue to come closer each year to our vision of making every eligible child’s wish come true.
+
+Thank you for taking the time to help us share the power of a wish®.
+
+Warmly,
+
+{!User.Name}
+{!User.Title}
+{!Case.Hidden_Chapter_Name__c}
+{!User.Email}
+{!User.Phone}</textOnly>
+    <type>html</type>
+</EmailTemplate>

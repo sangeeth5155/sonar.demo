@@ -1,0 +1,27 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">Hi Wish Granters,<o:p></o:p></span></p><p class="MsoNormal" style="line-height: normal; margin-bottom: 0pt;">
+
+</p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;"><br>
+Thank you for volunteering for&nbsp;{!Case.Hidden_Wish_Child_Full_Name__c}’s
+wish. Please take a moment to enter the initial interview date for this wish
+child into the&nbsp;<a href="https://make-a-wish.force.com/communitieslogin"><span style="color:black">Wish &amp; Volunteer Center</span></a>&nbsp;as soon as you
+are able. You can find this particular wish child’s record by visiting the
+Make-A-Wish Volunteer Center and looking under “My Assignments."<br>
+<br>
+If you are experiencing difficulties contacting this family, please email me at&nbsp;</span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Case.OwnerEmail}&nbsp;</span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">.</span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">
+<br>
+Thanks,<br>
+<br>
+{!Case.OwnerFullName}<br>
+{!Case.OwnerTitle}<br>
+{!Case.Hidden_Chapter_Name__c}<br>
+{!Case.OwnerPhone}<br>
+{!Case.OwnerEmail}<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); line-height: normal; font-family: arial; font-size: 12pt; margin-bottom: 0pt;">
+<!--[endif]--><font face="Century Gothic, sans-serif"><span style="font-size: 12pt;"><o:p></o:p></span></font></p>]]></td>
+</tr>
+</table>

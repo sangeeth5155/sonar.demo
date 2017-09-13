@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email template will be used to send an approval alert when the  In Kind Donors account created</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Account:In Kind Donors Approval Email Template</name>
+    <style>freeForm</style>
+    <subject>Approval Request For {!Account.Name}</subject>
+    <textOnly>Hi {!Account.Volunteer_Manager__c},
+
+You received an account {!Account.Name} for your approval.Please click the below link {!Account.Link}.</textOnly>
+    <type>html</type>
+</EmailTemplate>

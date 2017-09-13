@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <branding>
+        <loginFooterText>salesforce.com</loginFooterText>
+        <loginLogo>Communities_Shared_Document_Folder1/maw_logo_blue_small_png.png</loginLogo>
+        <pageFooter>SharedDocuments/Wish_Volunteer_Center_Global_Footer.html</pageFooter>
+        <pageHeader>SharedDocuments/Wish_Volunteer_Center_Global_Header.html</pageHeader>
+        <primaryColor>#1797C0</primaryColor>
+        <primaryComplementColor>#FFFFFF</primaryComplementColor>
+        <quaternaryColor>#FFFFFF</quaternaryColor>
+        <quaternaryComplementColor>#222222</quaternaryComplementColor>
+        <secondaryColor>#51606E</secondaryColor>
+        <tertiaryColor>#DDE4E9</tertiaryColor>
+        <tertiaryComplementColor>#222222</tertiaryComplementColor>
+        <zeronaryColor>#51606E</zeronaryColor>
+        <zeronaryComplementColor>#FFFFFF</zeronaryComplementColor>
+    </branding>
+    <changePasswordTemplate>Automated_Volunteer_Templates/Communities_Reset_Password_Email_Template</changePasswordTemplate>
+    <emailSenderAddress>wvc@wish.org</emailSenderAddress>
+    <emailSenderName>Wish &amp; Volunteer Center</emailSenderName>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <forgotPasswordTemplate>Automated_Volunteer_Templates/Communities_Volunteer_Forgot_Password_Email_Template</forgotPasswordTemplate>
+    <navigationLinkSet>
+        <navigationMenuItem>
+            <label>Topics</label>
+            <position>1</position>
+            <publiclyAvailable>true</publiclyAvailable>
+            <target>ShowMoreTopics</target>
+            <type>NavigationalTopic</type>
+        </navigationMenuItem>
+    </navigationLinkSet>
+    <networkMemberGroups>
+        <profile>Admin</profile>
+        <profile>Active Volunteer %28Member%29</profile>
+        <profile>Prospective Volunteer %28Member%29</profile>
+        <profile>Active Volunteer %28Login%29</profile>
+        <profile>Prospective Volunteer %28Login%29</profile>
+        <profile>Volunteer Staff</profile>
+        <profile>Chapter Dev%2FFin Staff</profile>
+        <profile>Customer Community Plus Login User</profile>
+        <profile>Office Staff</profile>
+        <profile>Program Staff</profile>
+        <profile>Customer Community Plus User</profile>
+        <profile>Read Only National Staff</profile>
+        <profile>Full Access National Staff</profile>
+    </networkMemberGroups>
+    <picassoSite>Wish_Volunteer_Community_C</picassoSite>
+    <selfRegProfile>prospective volunteer (login)</selfRegProfile>
+    <selfRegistration>true</selfRegistration>
+    <sendWelcomeEmail>false</sendWelcomeEmail>
+    <site>Wish_Volunteer_Community</site>
+    <status>Live</status>
+    <tabs>
+        <customTab>dsfs__DocuSign_Status__c</customTab>
+        <defaultTab>Chatter</defaultTab>
+        <standardTab>Chatter</standardTab>
+    </tabs>
+    <welcomeTemplate>Automated_Volunteer_Templates/Communities_New_Prospective_Volunteer_Welcome_Email_Template</welcomeTemplate>
+</Network>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Volunteer_Orientation_Training__c$RE_ID__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Orientation_Training__c$Volunteer__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Orientation_Training__c$Type__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Orientation_Training__c$Registered_Date__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Orientation_Training__c$Completed_Date__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Orientation_Training__c$Volunteer_Attendance__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Orientation_Training__c$Class_Offering__c.Course_Name__c</field>
+    </columns>
+    <description>Vol_Courses Validation for Volunteers</description>
+    <filter>
+        <criteriaItems>
+            <column>Volunteer_Orientation_Training__c$CreatedBy</column>
+            <operator>equals</operator>
+            <value>integration user</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Val_OT</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Volunteer_Orientation_Training__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Volunteer_Orientation_Training__c$Completed_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

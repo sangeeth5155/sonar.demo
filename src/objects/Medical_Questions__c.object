@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>It holds the medical questions for the diagnosis entered by the submitter.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Condition_Description__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It holds the Diagnosis name for medical questions</description>
+        <externalId>false</externalId>
+        <label>Condition Description</label>
+        <referenceTo>Condition_Description__c</referenceTo>
+        <relationshipLabel>Medical Questions</relationshipLabel>
+        <relationshipName>Medical_Questions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Current_Condition__c</fullName>
+        <description>It contains wish child diagnosis current condition</description>
+        <externalId>false</externalId>
+        <label>Current Condition</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Data_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Data Type</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Epilepsy_picklist__c</fullName>
+        <description>It holds the value of Epilepsy picklit values</description>
+        <externalId>false</externalId>
+        <label>Epilepsy picklist</label>
+        <length>100000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Picklist_values__c</fullName>
+        <externalId>false</externalId>
+        <label>Picklist values</label>
+        <length>100000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Question__c</fullName>
+        <description>Question for diagnosis</description>
+        <externalId>false</externalId>
+        <label>Question</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Recommendation_to_Chapter__c</fullName>
+        <description>It holds the recommendation for kids based on travel list they selected</description>
+        <externalId>false</externalId>
+        <label>Recommendation to Chapter</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Sort_Order__c</fullName>
+        <description>It contains the sort order for medical questions</description>
+        <externalId>false</externalId>
+        <label>Sort Order</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Wrapper_Variable__c</fullName>
+        <description>It will hold the wrapper class variable name.</description>
+        <externalId>false</externalId>
+        <label>Wrapper Variable</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Medical Question</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Condition_Description__c</columns>
+        <columns>Current_Condition__c</columns>
+        <columns>Data_Type__c</columns>
+        <columns>Epilepsy_picklist__c</columns>
+        <columns>Picklist_values__c</columns>
+        <columns>Question__c</columns>
+        <columns>Recommendation_to_Chapter__c</columns>
+        <columns>Wrapper_Variable__c</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CMQ-{0000}</displayFormat>
+        <label>Medical Questions Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Medical Questions</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Medical_Questions</fullName>
+        <active>true</active>
+        <description>It contains medical questions</description>
+        <label>Medical Questions</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Travel_Algorithm</fullName>
+        <active>true</active>
+        <description>It contains the list of current conditions for travel algorithm</description>
+        <label>Travel Algorithm</label>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

@@ -1,0 +1,51 @@
+<apex:page standardController="Case" extensions="WishRelatedLinks_AC">
+<script>
+    function validateform(){
+       if(!{!showPopup}){
+            alert('Participant information must be completed and saved on wish paperwork packet before completing this form.');
+            return false;
+        }
+    }
+  </script>
+ 
+    <apex:form >
+        <apex:messages />
+        <apex:outputPanel rendered="{!$Profile.Name !='Active Volunteer (Member)' && $Profile.Name != 'Active Volunteer (Login)'}">
+            <apex:outputPanel rendered="{!WishFamilyForm != Null}">
+                <div style="margin-left:10%"><apex:outputLink target="_blank" value="{!WishFamilyForm}"> Wish Paperwork Packet </apex:outputLink></div> 
+                <div style="margin-left:10%; margin-top: 2%;"><apex:outputLink target="_blank" value="{!LiabilityFrom}" rendered="{!showPopup = true}"  >Liability And Publicity Release Form </apex:outputLink></div>
+                <apex:outputpanel rendered="{!showPopup = false}" >
+                  <div style="margin-left:10%; margin-top: 2%;"> <apex:commandLink onclick="validateform()" value="Liability And Publicity Release Form "/></div> 
+                  <div style="margin-left:10%; margin-top: 2%;"> <apex:commandLink onclick="validateform()" value="Liability And Publicity Release Form – Minor Participants"/></div> 
+                </apex:outputpanel>
+                <div style="margin-left:10%; margin-top: 2%;"><apex:outputLink target="_blank" value="{!miniorParticipant}"  rendered="{!showPopup = true}"  >Liability And Publicity Release Form – Minor Participants</apex:outputLink></div> 
+                <div style="margin-left:10%; margin-top: 2%;"><apex:outputLink target="_blank" value="{!absentParentForm}">Absent Parent Form</apex:outputLink></div>
+                <div style="margin-left:10%; margin-top: 2%;"><apex:outputLink target="_blank" value="{!singleForm}">Single Parent Form</apex:outputLink></div>
+                <div style="margin-left:10%; margin-top: 2%;"><apex:outputLink target="_blank" value="{!celebrityForm}">Entertainment And Sports Wish LOU</apex:outputLink></div> 
+                <div style="margin-left:10%; margin-top: 2%;"><apex:outputLink target="_blank" value="{!MergedDocuments}">Merged Documents</apex:outputLink></div>
+                <div style="margin-left:57%; margin-top: -21%;"><apex:outputLink target="_blank" value="{!contactInfo}">View or Update Family Contact Info</apex:outputLink></div> 
+                <div style="margin-left:57%; margin-top: 2%;"><apex:outputLink target="_blank" value="{!wishClearence}">Wish Clearance</apex:outputLink></div> 
+                <div style="margin-left:57%; margin-top: 2%;"><apex:outputLink target="_blank" value="{!ComboCMSWC }">Combo Document CMS and WC</apex:outputLink></div> 
+                <div style="margin-left:57%; margin-top: 2%;"><apex:outputLink target="_blank" value="{!ChildMedicalForm }">Child Medical Summary</apex:outputLink></div>
+                <div style="margin-left:57%; margin-top: 2%;"><apex:outputLink target="_blank" value="{!ShoppingSpree}">Itinerary</apex:outputLink></div>
+            </apex:outputPanel>
+        </apex:outputPanel>
+        
+        <apex:outputPanel rendered="{!$Profile.Name == 'Active Volunteer (Member)' || $Profile.Name == 'Active Volunteer (Login)'}">
+            <apex:outputPanel rendered="{!WishFamilyForm != Null}">
+                <div style="margin-left:10%"><apex:outputLink target="_blank" value="{!WishFamilyForm}"> Wish Paperwork Packet </apex:outputLink></div> 
+                <div style="margin-left:10%; margin-top: 2%;"><apex:outputLink target="_blank" value="{!LiabilityFrom}" rendered="{!showPopup = true}">Liability And Publicity Release Form </apex:outputLink></div>
+                <apex:outputpanel rendered="{!showPopup = false}" >
+                  <div style="margin-left:10%; margin-top: 2%;"> <apex:commandLink onclick="validateform()" value="Liability And Publicity Release Form "/></div> 
+                   <div style="margin-left:10%; margin-top: 2%;"> <apex:commandLink onclick="validateform()" value="Liability And Publicity Release Form – Minor Participants"/></div> 
+                </apex:outputpanel>
+                <div style="margin-left:10%; margin-top: 2%;"><apex:outputLink target="_blank" value="{!miniorParticipant}" rendered="{!showPopup = true}">Liability And Publicity Release Form – Minor Participants</apex:outputLink></div> 
+                <div style="margin-left:10%; margin-top: 2%;"><apex:outputLink target="_blank" value="{!absentParentForm}">Absent Parent Form</apex:outputLink></div>
+                <div style="margin-left:10%; margin-top: 2%;"><apex:outputLink target="_blank" value="{!singleForm}">Single Parent Form</apex:outputLink></div>
+                <!--<div style="margin-left:10%; margin-top: 2%;"><apex:outputLink target="_blank" value="{!celebrityForm}">Entertainment And Sports Wish LOU</apex:outputLink></div>--> 
+                <div style="margin-left:57%; margin-top: -18%;"><apex:outputLink target="_blank" value="{!contactInfo}">View or Update Family Contact Info</apex:outputLink></div>
+            </apex:outputPanel>
+        </apex:outputPanel>
+        
+    </apex:form>
+</apex:page>

@@ -1,0 +1,16 @@
+<apex:page standardController="Case" extensions="WishRelatedLinks_AC">
+    <apex:form >
+        
+             <apex:outputPanel rendered="{!WishFamilyForm != Null}">
+              <apex:outputLink target="_blank" value="{!WishFamilyForm}"> Wish Family Form </apex:outputLink> <br/><br/>
+              <apex:outputPanel rendered="{!WishReceipt != Null}">
+               <apex:outputLink target="_blank" value="{!WishReceipt }">Wish Receipt</apex:outputLink><br/>
+              </apex:outputPanel>
+              <apex:outputLink target="_blank" value="{!contactInfo}">Update Contact Info</apex:outputLink><br/><br/>
+              <apex:outputLink target="_blank" value="{!LiabilityFrom}" >Liability And Publicity Release Form</apex:outputLink>
+             </apex:outputPanel>
+             
+             
+               
+    </apex:form>
+</apex:page>

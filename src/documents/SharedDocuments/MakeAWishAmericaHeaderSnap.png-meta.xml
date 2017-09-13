@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>It hods the Make A Wish America Footer Snap</description>
+    <internalUseOnly>false</internalUseOnly>
+    <name>MakeAWishAmericaHeaderSnap</name>
+    <public>true</public>
+</Document>

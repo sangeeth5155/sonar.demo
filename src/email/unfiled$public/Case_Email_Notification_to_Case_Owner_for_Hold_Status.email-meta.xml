@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Need an email alert to the wish owner 6 months after the Hold Date</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Case : Email Notification to Case Owner for Hold Status</name>
+    <style>freeForm</style>
+    <subject>Wish On Hold Status</subject>
+    <textOnly>Hi {!Case.OwnerFullName},
+
+
+This below case is on hold status on past 6 months. Please take an action.
+
+{!Case.Link}</textOnly>
+    <type>html</type>
+</EmailTemplate>

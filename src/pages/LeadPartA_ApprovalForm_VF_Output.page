@@ -1,0 +1,5 @@
+<!-- Development not completed -->
+
+<apex:page showHeader="false" sidebar="false" applyHtmlTag="false" action="{!SubmitSign}" standardStylesheets="false" controller="DiagnosisVerification_AC" applyBodyTag="false" cache="false">
+    
+</apex:page>

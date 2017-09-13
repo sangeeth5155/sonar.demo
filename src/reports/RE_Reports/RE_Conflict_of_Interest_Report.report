@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Conflict_Of_Interest__c$RE_Signed_Date__c</field>
+    </columns>
+    <columns>
+        <field>Conflict_Of_Interest__c$RE_Import_Id__c</field>
+    </columns>
+    <description>RE Conflict of Interest Records</description>
+    <filter>
+        <criteriaItems>
+            <column>Conflict_Of_Interest__c$Migrated_Record__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>RE Conflict of Interest Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>COI_Record_Type__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Conflict_Of_Interest__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,11 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt;"><span style="font-size:12.0pt;line-height:107%;font-family:&quot;Century Gothic&quot;,sans-serif">Hello Wish Granters,<br><span style="font-size: 12pt; line-height: 107%;"><br>{!Contact.First_Last_Initial__c}</span><span style="font-size: 12pt; line-height: 107%;">’s wish to <span style="color:#C00000">&lt;INSERT WISH DESCRIPTION&gt; </span>is scheduled for
+{!Case.Start_Date__c} and it is time to start planning how this wish can be
+delivered in a fun and magical way! Please work with each other and the wish
+family to confirm a date and location for the wish party and let me know those
+details as soon as possible! The wish packet and itinerary should be ready for
+you within two weeks of the wish date.<br></span></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>Thank you,<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;"><br>{!User.Name}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!User.Title}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Case.Hidden_Chapter_Name__c}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Case.Hidden_Chapter_Phone__c}<br></span><span style="font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">{!Case.Hidden_Chapter_Email__c}</span></p>]]></td>
+</tr>
+</table>

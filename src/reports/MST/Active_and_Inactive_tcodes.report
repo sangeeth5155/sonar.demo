@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Wish_Expense_Type__c.Wish_Expense_Transaction_Codes__r$Name</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Wish_Expense_Type__c$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Wish_Expense_Type__c.Wish_Expense_Transaction_Codes__r$Is_Active__c</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <name>Active and Inactive tcodes</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Wish_expense_types_transaction_codes__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Wish_Expense_Type__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

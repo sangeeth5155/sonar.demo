@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Letterhead xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <backgroundColor>#CCCCCC</backgroundColor>
+    <bodyColor>#FFFFFF</bodyColor>
+    <bottomLine>
+        <color>#006eb3</color>
+        <height>0</height>
+    </bottomLine>
+    <footer>
+        <backgroundColor>#006db5</backgroundColor>
+        <height>25</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <verticalAlignment>Top</verticalAlignment>
+    </footer>
+    <header>
+        <backgroundColor>#006db5</backgroundColor>
+        <height>100</height>
+        <horizontalAlignment>Right</horizontalAlignment>
+        <logo>SharedDocuments/MAWALogo.png</logo>
+        <verticalAlignment>Top</verticalAlignment>
+    </header>
+    <middleLine>
+        <color>#006eb3</color>
+        <height>0</height>
+    </middleLine>
+    <name>Make a Wish America</name>
+    <topLine>
+        <color>#006eb3</color>
+        <height>0</height>
+    </topLine>
+</Letterhead>

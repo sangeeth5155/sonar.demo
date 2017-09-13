@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.Volunteer_Opportunities1__r$Volunteer_Name__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Volunteer_Opportunities1__r$Volunteer_Role_Name__c</field>
+    </columns>
+    <columns>
+        <field>Contact$is_Active_Volunteer__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Contact$RecordType</column>
+            <operator>equals</operator>
+            <value>Contact.Volunteer_Contact</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Volunteer_Opportunities1__r$RecordType</column>
+            <operator>equals</operator>
+            <value>Volunteer_Opportunity__c.Non_Wish_Event</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Volunteer_Opportunities1__r$Volunteer_Role_Name__c</column>
+            <operator>equals</operator>
+            <value>Wish Granter</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$is_Active_Volunteer__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Active Non-Wish Granters</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Volunteer_Opp_With_Contact__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Contact.Volunteer_Opportunities1__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

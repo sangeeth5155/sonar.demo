@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>It hold the details about Interview confirmation date and Venue</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Task: Volunteer Email Notification for Confirmation Date</name>
+    <style>none</style>
+    <subject>Interview Confirmation Date and Venue</subject>
+    <type>text</type>
+</EmailTemplate>

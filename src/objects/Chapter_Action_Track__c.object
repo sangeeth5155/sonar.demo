@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>It holds list of tasks for child wishes</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Assigned_To__c</fullName>
+        <description>it holds case team role to which the task should assigned</description>
+        <externalId>false</externalId>
+        <label>Assigned To</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Volunteer Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wish Coordinator</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wish Granter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Case_Type_Stage__c</fullName>
+        <description>It holds the wish type which it is belongs to.</description>
+        <externalId>false</externalId>
+        <label>Case Type/Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Wish Determination</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wish Planning &amp; Anticipation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wish Assist</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wish Grant</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wish Effect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Chapter_Name__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>It holds the Chapter Name</description>
+        <externalId>false</externalId>
+        <label>Chapter Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Chapter Action Tracks</relationshipLabel>
+        <relationshipName>Chapter_Action_Tracks</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Used to hold the description of task for the volunteer</description>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <description>it describes the Due date for Tasks</description>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Due_Days__c</fullName>
+        <description>it describes the Due date for Tasks</description>
+        <externalId>false</externalId>
+        <label>Due Days</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Months__c</fullName>
+        <externalId>false</externalId>
+        <label>Months</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recurring_Frequency__c</fullName>
+        <description>It will display the recurring frequency value.</description>
+        <externalId>false</externalId>
+        <label>Recurring Frequency</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recurring__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>It determines whether the action is recurring or not</description>
+        <externalId>false</externalId>
+        <label>Recurring</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sort_Order__c</fullName>
+        <description>It holds the value for Sorting Order</description>
+        <externalId>false</externalId>
+        <label>Sort Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task_Name__c</fullName>
+        <description>It contains name of the task</description>
+        <externalId>false</externalId>
+        <label>Task Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Weeks__c</fullName>
+        <externalId>false</externalId>
+        <label>Weeks</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Wish_type__c</fullName>
+        <description>it holds the details of types of wish</description>
+        <externalId>false</externalId>
+        <label>Wish type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Disney World</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shopping Spree - Local</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Travel - International</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cruise - Celebrity/Royal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cruise - Disney</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cruise - Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Travel - Hawai</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Travel - Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shopping Spree - Travel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Chapter Action Track</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Task_Name__c</columns>
+        <columns>Chapter_Name__c</columns>
+        <columns>Sort_Order__c</columns>
+        <columns>Wish_type__c</columns>
+        <columns>Months__c</columns>
+        <columns>Weeks__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>DisneyWorld_Action_Track</fullName>
+        <columns>NAME</columns>
+        <columns>Chapter_Name__c</columns>
+        <columns>Wish_type__c</columns>
+        <columns>Task_Name__c</columns>
+        <columns>Sort_Order__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Chapter_Name__c</field>
+            <operation>equals</operation>
+            <value>Make-A-Wish Arizona</value>
+        </filters>
+        <filters>
+            <field>Wish_type__c</field>
+            <operation>equals</operation>
+            <value>Disney World</value>
+        </filters>
+        <label>DisneyWorld Action Track</label>
+    </listViews>
+    <listViews>
+        <fullName>Wish_Determination</fullName>
+        <columns>NAME</columns>
+        <columns>Task_Name__c</columns>
+        <columns>Description__c</columns>
+        <columns>Due_Days__c</columns>
+        <columns>Sort_Order__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Chapter_Action_Track__c.Wish_Determination</value>
+        </filters>
+        <label>Wish Determination</label>
+    </listViews>
+    <listViews>
+        <fullName>Wish_Panning</fullName>
+        <columns>NAME</columns>
+        <columns>Task_Name__c</columns>
+        <columns>Chapter_Name__c</columns>
+        <columns>Wish_type__c</columns>
+        <columns>Months__c</columns>
+        <columns>Weeks__c</columns>
+        <columns>Sort_Order__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Chapter_Action_Track__c.Wish_Planning</value>
+        </filters>
+        <label>Wish Panning</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CAT-{0000}</displayFormat>
+        <label>Task Id</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Chapter Action Tracks</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Wish_Determination</fullName>
+        <active>true</active>
+        <description>Used to hold the task of wish determination case</description>
+        <label>Wish Determination</label>
+        <picklistValues>
+            <picklist>Assigned_To__c</picklist>
+            <values>
+                <fullName>Volunteer Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Granter</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Case_Type_Stage__c</picklist>
+            <values>
+                <fullName>Wish Assist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Determination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Effect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Grant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Planning %26 Anticipation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Wish_type__c</picklist>
+            <values>
+                <fullName>Cruise - Celebrity%2FRoyal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cruise - Disney</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cruise - Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disney World</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shopping Spree - Local</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shopping Spree - Travel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Travel - Hawai</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Travel - International</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Travel - Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Wish_Granting</fullName>
+        <active>true</active>
+        <description>It holds wish granting tasks</description>
+        <label>Wish Granting</label>
+        <picklistValues>
+            <picklist>Assigned_To__c</picklist>
+            <values>
+                <fullName>Volunteer Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Granter</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Case_Type_Stage__c</picklist>
+            <values>
+                <fullName>Wish Assist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Determination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Effect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Grant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Planning %26 Anticipation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Wish_type__c</picklist>
+            <values>
+                <fullName>Cruise - Celebrity%2FRoyal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cruise - Disney</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cruise - Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disney World</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shopping Spree - Local</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shopping Spree - Travel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Travel - Hawai</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Travel - International</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Travel - Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Wish_Planning</fullName>
+        <active>true</active>
+        <description>Used to hold the task of wish planning case</description>
+        <label>Wish Planning</label>
+        <picklistValues>
+            <picklist>Assigned_To__c</picklist>
+            <values>
+                <fullName>Volunteer Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Granter</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Case_Type_Stage__c</picklist>
+            <values>
+                <fullName>Wish Assist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Determination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Effect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Grant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Planning %26 Anticipation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Wish_type__c</picklist>
+            <values>
+                <fullName>Cruise - Celebrity%2FRoyal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cruise - Disney</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cruise - Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disney World</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shopping Spree - Local</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shopping Spree - Travel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Travel - Hawai</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Travel - International</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Travel - Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Task_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Assigned_To__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Wish_type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Case_Type_Stage__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Chapter_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Recurring_Frequency__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Sort_Order__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+</CustomObject>

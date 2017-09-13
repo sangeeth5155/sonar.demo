@@ -1,0 +1,8 @@
+<apex:page standardController="In_Kind_Donation_Reimbursement__c" tabStyle="In_Kind_Donation_Reimbursement__c" >
+  <cg:AttachmentComponent title="In Kind Donors Attachment Files"
+ inline="true"
+ enableAttachFromSDriveFolders="false" 
+ customObjectName="In_Kind_Donation_Reimbursement__c"
+ customObjectFileName="In_Kind_Donation_Reimbursement_File__c"
+ objectId="{!In_Kind_Donation_Reimbursement__c.Id}" />
+</apex:page>

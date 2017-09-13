@@ -1,0 +1,2795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Absent Parent Form --></label>
+        <name>Absent_Parent_Form__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active Wish Granter --></label>
+        <name>Active_Wish_Granter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Cash --></label>
+        <name>Actual_Cash__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Departure Date --></label>
+        <name>Actual_Departure_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Inkind --></label>
+        <name>Actual_Inkind__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Return Date --></label>
+        <name>Actual_Return_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Total --></label>
+        <name>Actual_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Interview Date1 --></label>
+        <name>Additional_Interview_Date1__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the wish child is interviewed an additional time, if needed --></help>
+        <label><!-- Additional Interview Date2 --></label>
+        <name>Additional_Interview_date2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Requests --></label>
+        <name>Additional_Requests__c</name>
+    </fields>
+    <fields>
+        <label><!-- Adoptable --></label>
+        <name>Adoptable__c</name>
+        <picklistValues>
+            <masterLabel>Check with Wish Manager</masterLabel>
+            <translation><!-- Check with Wish Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dedicated</masterLabel>
+            <translation><!-- Dedicated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold</masterLabel>
+            <translation><!-- Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Adopted By --></label>
+        <name>Adopted_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Adopted --></label>
+        <name>Adopted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Age --></label>
+        <name>Age__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the statement that applies to this wish. --></help>
+        <label><!-- Air Travel Details --></label>
+        <name>Air_Travel_Details__c</name>
+        <picklistValues>
+            <masterLabel>I am fully aware of the medical research regarding air travel and feel it is appropriate for this child. I will make any necessary adjustments to the medical treatment plan prior to their travel dates</masterLabel>
+            <translation><!-- I am fully aware of the medical research regarding air travel and feel it is appropriate for this child. I will make any necessary adjustments to the medical treatment plan prior to their travel dates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I do not support air travel for this child</masterLabel>
+            <translation><!-- I do not support air travel for this child --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>This wish does not involve air travel</masterLabel>
+            <translation><!-- This wish does not involve air travel --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- All Participants Reside With Wish Child --></label>
+        <name>All_requested_wish_participants_reside_w__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>AnticipatedStart_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Approximate date when the wish might occur  (flexible) --></help>
+        <label><!-- Anticipated Start Date --></label>
+        <name>Anticipated_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is there anything on your family’s calendar (upcoming medical treatments, school or work commitments,
+planned vacations, etc.) that might impact your ability to participate in a wish? --></help>
+        <label><!-- Any Impact Your Ability To Join Wish --></label>
+        <name>Any_impact_your_ability_to_join_wish__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The following medical restrictions and needs must be considered when fulfilling the wish. --></help>
+        <label><!-- Appropriate Comments --></label>
+        <name>Appropriate_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date that the volunteers were assigned to the wish child&apos;s file --></help>
+        <label><!-- Assigned Date --></label>
+        <name>Assigned_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Does your automobile insurance provide coverage while using a rental car? --></help>
+        <label><!-- Automobile Insurance Provide Coverage --></label>
+        <name>Automobile_insurance_provide_coverage__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Availability Time Period 2 --></label>
+        <name>Availability2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Availability Time Period 3 --></label>
+        <name>Availability3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Availability Time Period 1 --></label>
+        <name>Availability_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Birthdate --></label>
+        <name>Birthdate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bringing Own Wheelchair --></label>
+        <name>Bringing_Own_Wheel_Chair__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Approval Status --></label>
+        <name>Budget_Approval_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Date the submitted budget is approved --></help>
+        <label><!-- Budget Approved Date --></label>
+        <name>Budget_Approved_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Cash --></label>
+        <name>Budget_Cash__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Inkind --></label>
+        <name>Budget_Inkind__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Notes --></label>
+        <name>Budget_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Status --></label>
+        <name>Budget_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Date the staff submits the budget for approval --></help>
+        <label><!-- Budget Submitted Date --></label>
+        <name>Budget_Submitted_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Total --></label>
+        <name>Budget_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Case Comment --></label>
+        <name>Case_Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Case Member Count --></label>
+        <name>Case_Member_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Case ThreadId --></label>
+        <name>Case_ThreadId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Chapter Name --></label>
+        <name>ChapterName__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Hidden Chapter MACEmail --></label>
+        <name>Chapter_MACEmail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Chapter Medical Advisor Phone --></label>
+        <name>Chapter_Medical_Advisor_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- CheckedInFamily --></label>
+        <name>CheckedInFamily__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child Medical Summary Last Modified Date --></label>
+        <name>Child_MedicalSummary_LastModifiedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child Wish Clearance Last Modified Date --></label>
+        <name>Child_Wish_Clearance_Last_Modified_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child’s Medical Summary Form --></label>
+        <name>Child_s_Medical_Summary_Form__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the staff receives the Child&apos;s Medical Summary from the medical professional --></help>
+        <label><!-- Child&apos;s Medical Summary Received Date --></label>
+        <name>Child_s_Medical_Summary_received_date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the staff submits the Child&apos;s Medical Summary to the medical professional --></help>
+        <label><!-- Child&apos;s Medical Summary Sent --></label>
+        <name>Child_s_Medical_Summary_sent__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the wish is financially closed out --></help>
+        <label><!-- Closed Date --></label>
+        <name>Closed_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- These comments apply to the statement above. --></help>
+        <label><!-- Comment --></label>
+        <name>Comment_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comment --></label>
+        <name>Comment_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comment for PWL Not Met --></label>
+        <name>Comment_for_PWL_Not_Met__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comment --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Communication Profile --></label>
+        <name>Communication_Profile__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the wish is considered granted --></help>
+        <label><!-- Completed Date --></label>
+        <name>Completed_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the chapter reviews and approves the wish concept --></help>
+        <label><!-- Concept Approval Date --></label>
+        <name>Concept_Approval_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 1 - Anticipated Start Date --></label>
+        <name>Copy_1_Anticipated_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 1 - Assigned Date --></label>
+        <name>Copy_1_Assigned_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 1 - Budget Approved Date --></label>
+        <name>Copy_1_Budget_Approved_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 1 - Closed Date --></label>
+        <name>Copy_1_Closed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 1 - Completed Date --></label>
+        <name>Copy_1_Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 1 - Concept Approval Date --></label>
+        <name>Copy_1_Concept_Approval_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 1 - Diagnosis Ver. Rec Date --></label>
+        <name>Copy_1_Diagnosis_Ver_Rec_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 1 - End Date --></label>
+        <name>Copy_1_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 1 - Hold Date --></label>
+        <name>Copy_1_Hold_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 1 - Inactive Date --></label>
+        <name>Copy_1_Inactive_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 1 - Interview Date --></label>
+        <name>Copy_1_Interview_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 1 - Qualified Date --></label>
+        <name>Copy_1_Qualified_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 1 - Ready to Assign Date --></label>
+        <name>Copy_1_Ready_to_Assign_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 1 - Referral Date --></label>
+        <name>Copy_1_Referral_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 1 - Start Date --></label>
+        <name>Copy_1_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 1 - Wish Determined Date --></label>
+        <name>Copy_1_Wish_Determined_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 2 - Anticipated Start Date --></label>
+        <name>Copy_2_Anticipated_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 2 - Assigned Date --></label>
+        <name>Copy_2_Assigned_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 2 - Budget Approved Date --></label>
+        <name>Copy_2_Budget_Approved_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 2 - Closed Date --></label>
+        <name>Copy_2_Closed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 2 - Completed Date --></label>
+        <name>Copy_2_Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 2 - Concept Approval Date --></label>
+        <name>Copy_2_Concept_Approval_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 2 - Diagnosis Ver. Rec Dat --></label>
+        <name>Copy_2_Diagnosis_Ver_Rec_Dat__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 2 - End Date --></label>
+        <name>Copy_2_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 2 - Hold Date --></label>
+        <name>Copy_2_Hold_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 2 - Inactive Date --></label>
+        <name>Copy_2_Inactive_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 2 - Interview Date --></label>
+        <name>Copy_2_Interview_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 2 - Qualified Date --></label>
+        <name>Copy_2_Qualified_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 2 - Ready to Assign Date --></label>
+        <name>Copy_2_Ready_to_Assign_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 2 - Referral Date --></label>
+        <name>Copy_2_Referral_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 2 - Start Date --></label>
+        <name>Copy_2_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 2 - Wish Determined Date --></label>
+        <name>Copy_2_Wish_Determined_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 3 - Anticipated Start Date --></label>
+        <name>Copy_3_Anticipated_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 3 - Assigned Date --></label>
+        <name>Copy_3_Assigned_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 3 - Budget Approved Date --></label>
+        <name>Copy_3_Budget_Approved_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 3 - Closed Date --></label>
+        <name>Copy_3_Closed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 3 - Completed Date --></label>
+        <name>Copy_3_Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 3 - Concept Approval Date --></label>
+        <name>Copy_3_Concept_Approval_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 3 - Diagnosis Ver. Rec Dat --></label>
+        <name>Copy_3_Diagnosis_Ver_Rec_Dat__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 3 - End Date --></label>
+        <name>Copy_3_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 3 - Hold Date --></label>
+        <name>Copy_3_Hold_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 3 - Inactive Date --></label>
+        <name>Copy_3_Inactive_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 3 - Interview Date --></label>
+        <name>Copy_3_Interview_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 3 - Qualified Date --></label>
+        <name>Copy_3_Qualified_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 3 - Ready to Assign Date --></label>
+        <name>Copy_3_Ready_to_Assign_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 3 - Referral Date --></label>
+        <name>Copy_3_Referral_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 3 - Start Date --></label>
+        <name>Copy_3_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 3 - Wish Determined Date --></label>
+        <name>Copy_3_Wish_Determined_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current DOB --></label>
+        <name>CurrentDOB__c</name>
+    </fields>
+    <fields>
+        <label><!-- DNQ Date --></label>
+        <name>DNQ_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date - Liability Release &amp; Authorization --></label>
+        <name>Date_Liability_Release_Authorization__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date - Absent Parent Form --></label>
+        <name>Date_Received_for_Absent_Parent_Form__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date - Child’s Medical Summary Form --></label>
+        <name>Date_Received_for_Child_s_Medical_Summar__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date - Communication Profile --></label>
+        <name>Date_Received_for_Communication_Profile__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date - Entertainment &amp; Sports --></label>
+        <name>Date_Received_for_Entertainment_Sports__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date - Guardianship Document --></label>
+        <name>Date_Received_for_Guardianship_Document__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date - Passports --></label>
+        <name>Date_Received_for_Passports__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date - Single Parent Form --></label>
+        <name>Date_Received_for_Single_Parent_Form__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date  - Visas --></label>
+        <name>Date_Received_for_Visas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date - Safety Auth Wish Clearance Form --></label>
+        <name>Date_Received_for_Wish_Safety_Authorizat__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date - Wish Child Form --></label>
+        <name>Date_Wish_Child_Form__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date - Wish Family Form --></label>
+        <name>Date_Wish_Family_Form__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date - Wish Information Form --></label>
+        <name>Date_Wish_Information_Form__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of Last Visit/Treatment --></label>
+        <name>Date_of_last_visit_treatment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days In Stage --></label>
+        <name>Days_In_Stage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Details about Impact --></label>
+        <name>Details_about_Impact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dev Staff Email --></label>
+        <name>Dev_Staff_Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the Diagosis Verification is received from the child&apos;s medical professional --></help>
+        <label><!-- Diagnosis Verification Received Date --></label>
+        <name>Diagnosis_Verification_Receive_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the Diagosis Verification is sent to child&apos;s medical professional --></help>
+        <label><!-- Diagnosis Verification Sent Date --></label>
+        <name>Diagnosis_Verification_Sent_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Over 18 Have Valid ID? --></label>
+        <name>Does_participant_have_valid_photo_ID__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Credit Card Note --></label>
+        <name>Does_your_family_have_a_credit_card_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Family Have Credit Card? --></label>
+        <name>Does_your_family_have_a_credit_card__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Driver Information --></label>
+        <name>Driver_Information__c</name>
+    </fields>
+    <fields>
+        <label><!-- Driver Names --></label>
+        <name>Driver_Names__c</name>
+    </fields>
+    <fields>
+        <label><!-- Emergency Number --></label>
+        <name>Emergency_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Confirmed date when the wish is completed (arrive home) or revealed --></help>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Entertainment &amp; Sports Wish LOU --></label>
+        <name>Entertainment_Sports_Wish_LOU__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Envelop Id --></label>
+        <name>Envelop_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the family returns home (on their own) after the completion of the wish --></help>
+        <label><!-- Extended End Date --></label>
+        <name>Extended_End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the family leaves early prior to the beginning of the wish --></help>
+        <label><!-- Extended Start Date --></label>
+        <name>Extended_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Any additional requests are at the discretion of the chapter office. If medical supplies are requested, please detail the relevant model number, manufacturer, size, dimensions, and any other pertinent information if needed during travel. --></help>
+        <label><!-- Additional Medical Requests --></label>
+        <name>Fill_wish_participant_name_medical_needs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Form Tracking Notes --></label>
+        <name>Form_Tracking_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Mulesoft --></label>
+        <name>From_Mulesoft__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fund Id --></label>
+        <name>Fund_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date that GKTW confirms the reservation dates (on confirmation form) --></help>
+        <label><!-- GKTW Confirmation Date --></label>
+        <name>GKTW_Confirmation_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Guardianship Document --></label>
+        <name>Guardianship_Document__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accommodation Note --></label>
+        <name>Handicap_accommodations_be_required_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Handicap Accommodations Required? --></label>
+        <name>Handicap_accommodations_be_required__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Flown Before Note --></label>
+        <name>Has_your_family_flown_before_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Family Flown Before? --></label>
+        <name>Has_your_family_flown_before__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Do you have current automobile insurance? --></help>
+        <label><!-- Have Current Automobile Insurance --></label>
+        <name>Have_current_automobile_insurance__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Hidden Anticipated Date --></label>
+        <name>HiddenAnticipatedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden All Primary --></label>
+        <name>Hidden_All_Primary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Chapter Email --></label>
+        <name>Hidden_Chapter_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Chapter Name --></label>
+        <name>Hidden_Chapter_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Chapter Phone --></label>
+        <name>Hidden_Chapter_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Close Sub Case --></label>
+        <name>Hidden_Close_Sub_Case__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Contact County --></label>
+        <name>Hidden_Contact_County__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Contact Gender --></label>
+        <name>Hidden_Contact_Gender__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Diagn Verifi Received Date --></label>
+        <name>Hidden_Diagn_Verifi_Received_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Email List --></label>
+        <name>Hidden_Email_List__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Hold Status Value --></label>
+        <name>Hidden_Hold_Status_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Id --></label>
+        <name>Hidden_Lead_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Lead Name --></label>
+        <name>Hidden_Lead_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Name List --></label>
+        <name>Hidden_Name_List__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Primary Diagnosis --></label>
+        <name>Hidden_Primary_Diagnosis__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Primary Diagnosis. --></label>
+        <name>Hidden_Primary_Diagnosis_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Publicity Notes --></label>
+        <name>Hidden_Publicity_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Publicity OK --></label>
+        <name>Hidden_Publicity_OK__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Referral date --></label>
+        <name>Hidden_Referral_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Secondary Diagnosis 1 --></label>
+        <name>Hidden_Secondary_Diagnosis_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Secondary Diagnosis 2 --></label>
+        <name>Hidden_Secondary_Diagnosis_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Secondary Diagnosis 3 --></label>
+        <name>Hidden_Secondary_Diagnosis_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Secondary Diagnosis --></label>
+        <name>Hidden_Secondary_Diagnosis__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden VOinactive --></label>
+        <name>Hidden_VOinactive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Why do you feel --></label>
+        <name>Hidden_Why_do_you_feel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Child City --></label>
+        <name>Hidden_Wish_Child_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Child Country Code --></label>
+        <name>Hidden_Wish_Child_Country_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Child Full Name --></label>
+        <name>Hidden_Wish_Child_Full_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Child Postalcode --></label>
+        <name>Hidden_Wish_Child_Postalcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Child StateCode --></label>
+        <name>Hidden_Wish_Child_StateCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Child Street --></label>
+        <name>Hidden_Wish_Child_Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Owner Email --></label>
+        <name>Hidden_Wish_Owner_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Owner Manager --></label>
+        <name>Hidden_Wish_Owner_Manager__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Presentation Not Set --></label>
+        <name>Hidden_Wish_Presentation_Not_Set__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the wish is put on hold for medical or elective reasons --></help>
+        <label><!-- Hold Date --></label>
+        <name>Hold_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import Id --></label>
+        <name>Import_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden InActiveWishGranter --></label>
+        <name>InActiveWishGranter__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the wish is determined inactive and closing procedures begin --></help>
+        <label><!-- Inactive Date --></label>
+        <name>Inactive_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the Initial lead from a non-authorized referral source is received --></help>
+        <label><!-- Inquiry Date --></label>
+        <name>Inquiry_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interested In Future Events --></label>
+        <name>Interested_in_Future_events__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Hidden Interview Date Not Set --></label>
+        <name>Interview_Date_Not_Set__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the volunteers met with the wish child and family --></help>
+        <label><!-- Interview Date --></label>
+        <name>Interview_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden IsLocked --></label>
+        <name>IsLocked__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsRushChildSummary --></label>
+        <name>IsRushChildSummary__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsRushWishClearence&amp;ChildSummary Hidden --></label>
+        <name>IsRushWishClearence_ChildSummary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wheelchair Accessible Vehicle Needed? --></label>
+        <name>Is_a_wheelchair_accessible_vehicle_neede__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Wheelchair Collapsible Note --></label>
+        <name>Is_the_wheelchair_collapsible_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is The Wheelchair Collapsible? --></label>
+        <name>Is_the_wheelchair_collapsible__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Wheelchair Power Note (Dry or Wet/Gel) --></label>
+        <name>Is_the_wheelchair_power_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is The Wheelchair Power? --></label>
+        <name>Is_the_wheelchair_power__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is Your Family Comfortable In Rental Car --></label>
+        <name>Is_your_family_comfortable_in_rendal_car__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Knowledge Link --></label>
+        <name>Knowledge_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>Lead__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Hidden LiabilitySignerMapKeyPair --></label>
+        <name>LiabilitySignerMapKeyPair__c</name>
+    </fields>
+    <fields>
+        <label><!-- Liability Release And Authorization  --></label>
+        <name>Liability_Release_and_Authorization__c</name>
+    </fields>
+    <fields>
+        <label><!-- Chapter Medical Advisor --></label>
+        <name>Local_MCA_Team__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Location Address --></label>
+        <name>Location_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Medical Advisor Email --></label>
+        <name>MAC_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- MY WISH IS TO… --></label>
+        <name>MY_WISH_IS_TO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medical Advisor Email --></label>
+        <name>Medical_Advisor_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Diagnosis --></label>
+        <name>Medical_Condition__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medical Summary Attachments --></label>
+        <name>Medical_Summary_Attachments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refrigerated Medication Note --></label>
+        <name>Medication_require_refrigeration_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refrigerated medication required? --></label>
+        <name>Medication_require_refrigeration__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Refrigerated Medication Names --></label>
+        <name>Medication_require_refrigeration_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meet PWL Criteria --></label>
+        <name>Meet_PWL_Criteria__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Migrated Record --></label>
+        <name>Migrated_Record__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name of Location --></label>
+        <name>Name_of_Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Collapsible Wheelchair Names --></label>
+        <name>Name_of_wheelchair_collapsible__c</name>
+    </fields>
+    <fields>
+        <label><!-- Receiving Nursing Care Names --></label>
+        <name>Names_for_receiving_nursing_care__c</name>
+    </fields>
+    <fields>
+        <label><!-- Non-Participant Emergency Number --></label>
+        <name>Non_Participant_Emergency_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Option1 --></label>
+        <name>Option1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Option2 --></label>
+        <name>Option2__c</name>
+    </fields>
+    <fields>
+        <name>Origin</name>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone</masterLabel>
+            <translation><!-- Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Out of Territory --></label>
+        <name>Out_of_Territory__c</name>
+    </fields>
+    <fields>
+        <label><!-- Power Wheelchair Names --></label>
+        <name>Pariticipant_name_havingWheelchair_Power__c</name>
+    </fields>
+    <fields>
+        <label><!-- Part B Received Date --></label>
+        <name>Part_B_received_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Part B Sent Date --></label>
+        <name>Part_B_sent_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dietary Restriction Names --></label>
+        <name>Participant_Name_for_Dietary_Restriction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dietary Restriction Note --></label>
+        <name>Participant_dietary_restrictions_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant  Dietary Restrictions? --></label>
+        <name>Participant_dietary_restrictions__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Participant With Allergy Note --></label>
+        <name>Participant_have_allergies_to_food_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant With Allergy? --></label>
+        <name>Participant_have_allergies_to_food__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Passport Note --></label>
+        <name>Participant_have_valid_passports_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant Have Passports? --></label>
+        <name>Participant_have_valid_passports__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Valid ID Note --></label>
+        <name>Participant_have_valid_photo_ID_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wheelchair Required Note (H,W,D) --></label>
+        <name>Participant_require_a_wheelchair_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant Require A Wheelchair? --></label>
+        <name>Participant_require_a_wheelchair__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Required Medical Supplies Note --></label>
+        <name>Participant_require_medical_suppliesNote__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant Require Medical Supplies? --></label>
+        <name>Participant_require_medical_supplies__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Oxygen Required Note --></label>
+        <name>Participant_require_oxygen_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant Require Oxygen? --></label>
+        <name>Participant_require_oxygen_how_often__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Passports --></label>
+        <name>Passports__c</name>
+    </fields>
+    <fields>
+        <help><!-- Not Appropriate:  I am familiar with the patient&apos;s physical condition and certify the wish is not medically appropriate at this time. --></help>
+        <label><!-- Please Explain --></label>
+        <name>Please_Explain__c</name>
+    </fields>
+    <fields>
+        <label><!-- Potential Driver Expiration Date --></label>
+        <name>Potential_Driver_Expiration_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Potential Driver Name --></label>
+        <name>Potential_Driver_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Potential Driver State --></label>
+        <name>Potential_Driver_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Potential Valid D.L. # --></label>
+        <name>Potential_Valid_D_L__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Driver Expiration Date --></label>
+        <name>Preferred_Driver_Expiration_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Preferred Driver, Name as it appears on license --></help>
+        <label><!-- Preferred Driver Name --></label>
+        <name>Preferred_Driver_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Driver State --></label>
+        <name>Preferred_Driver_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Driver Valid D.L. # --></label>
+        <name>Preferred_Driver_Valid_D_L__c</name>
+    </fields>
+    <fields>
+        <label><!-- Presentation Date --></label>
+        <name>Presentation_Date__c</name>
+    </fields>
+    <fields>
+        <name>Priority</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Projected Status --></label>
+        <name>Projected_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Date the Diagnosis Verification is reviewed and child&apos;s eligibility is confirmed --></help>
+        <label><!-- Qualified Date --></label>
+        <name>Qualified_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Qualifying Medical Professional Email --></label>
+        <name>Qualifying_Medical_Professional_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Qualifying Medical Professional Name --></label>
+        <name>Qualifying_Medical_Professional_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Account ID --></label>
+        <name>RE_Account_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Anticipated Start Date --></label>
+        <name>RE_Anticipated_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Assigned_Date__c --></label>
+        <name>RE_Assigned_Date_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Closed Date --></label>
+        <name>RE_Closed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Created Date --></label>
+        <name>RE_Created_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE DNQ_Date__c --></label>
+        <name>RE_DNQ_Date_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Description --></label>
+        <name>RE_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE End Date --></label>
+        <name>RE_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Extended End Date --></label>
+        <name>RE_Extended_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Extended Start Date --></label>
+        <name>RE_Extended_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE-FE Description --></label>
+        <name>RE_FE_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Hold Date --></label>
+        <name>RE_Hold_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Import Id --></label>
+        <name>RE_Import_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Inactive Date --></label>
+        <name>RE_Inactive_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Qualified Date --></label>
+        <name>RE_Qualified_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Ready_to_Assign_Date__c --></label>
+        <name>RE_Ready_to_Assign_Date_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Rush --></label>
+        <name>RE_Rush__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Status --></label>
+        <name>RE_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Sub Status --></label>
+        <name>RE_Sub_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Wish_Clearance_Received_Date__c --></label>
+        <name>RE_Wish_Clearance_Received_Date_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Wish Determined Date --></label>
+        <name>RE_Wish_Determined_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Wish Type --></label>
+        <name>RE_Wish_Type__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the welcome call/packet task is completed and the family is ready to be met by volunteers --></help>
+        <label><!-- Ready to Assign Date --></label>
+        <name>Ready_to_Assign_Date__c</name>
+    </fields>
+    <fields>
+        <name>Reason</name>
+        <picklistValues>
+            <masterLabel>Complex functionality</masterLabel>
+            <translation><!-- Complex functionality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Existing problem</masterLabel>
+            <translation><!-- Existing problem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Instructions not clear</masterLabel>
+            <translation><!-- Instructions not clear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New problem</masterLabel>
+            <translation><!-- New problem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User didn&apos;t attend training</masterLabel>
+            <translation><!-- User didn&apos;t attend training --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Date the Initial lead from an authorized referral source is received --></help>
+        <label><!-- Referral Date --></label>
+        <name>Referral_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wheelchair Required Names --></label>
+        <name>Requested_Participant_Name_forWheelchair__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participant With Allergy Names --></label>
+        <name>Requested_Participant_Name_for_Allergies__c</name>
+    </fields>
+    <fields>
+        <label><!-- Required Medical Supplies Names --></label>
+        <name>Requested_Participant_Name_for_OtherNeed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Oxygen Required Names --></label>
+        <name>Requested_Participant_Name_for_Oxygen__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rush Explanation --></label>
+        <name>Rush_Explanation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rush Timeframe --></label>
+        <name>Rush_Timeframe__c</name>
+        <picklistValues>
+            <masterLabel>0-30 days</masterLabel>
+            <translation><!-- 0-30 days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>31-90 days</masterLabel>
+            <translation><!-- 31-90 days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>91-180 days</masterLabel>
+            <translation><!-- 91-180 days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ASAP</masterLabel>
+            <translation><!-- ASAP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Rush --></label>
+        <name>Rush__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden SignerMapKeyPair --></label>
+        <name>SignerMapKeyPair__c</name>
+    </fields>
+    <fields>
+        <label><!-- Single Parent Form --></label>
+        <name>Single_Parent_Form__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sit Up Take Off/Landing Note --></label>
+        <name>Sit_up_takeoff_landing_on_airplane_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sit Up Take Off/Landing? --></label>
+        <name>Sit_up_takeoff_landing_on_airplane__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Confirmed date that the wish will begin (departure) --></help>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <name>Status</name>
+        <picklistValues>
+            <masterLabel>Approved - Chapter Medical Advisor</masterLabel>
+            <translation><!-- Approved - Chapter Medical Advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved - Chapter Staff</masterLabel>
+            <translation><!-- Approved - Chapter Staff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved - National Medical Council</masterLabel>
+            <translation><!-- Approved - National Medical Council --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved - National Staff</masterLabel>
+            <translation><!-- Approved - National Staff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Budget Approval - Approved</masterLabel>
+            <translation><!-- Budget Approval - Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Budget Approval - Submitted</masterLabel>
+            <translation><!-- Budget Approval - Submitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DNQ</masterLabel>
+            <translation><!-- DNQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DNQ - Chapter Medical Advisor</masterLabel>
+            <translation><!-- DNQ - Chapter Medical Advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DNQ - Chapter Staff</masterLabel>
+            <translation><!-- DNQ - Chapter Staff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DNQ - National Medical Council</masterLabel>
+            <translation><!-- DNQ - National Medical Council --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DNQ - National Staff</masterLabel>
+            <translation><!-- DNQ - National Staff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denied</masterLabel>
+            <translation><!-- Denied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eligibility Review Pending</masterLabel>
+            <translation><!-- Eligibility Review Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Escalated</masterLabel>
+            <translation><!-- Escalated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Granted</masterLabel>
+            <translation><!-- Granted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold</masterLabel>
+            <translation><!-- Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical</masterLabel>
+            <translation><!-- Medical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Qualified</masterLabel>
+            <translation><!-- Qualified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready to Assign</masterLabel>
+            <translation><!-- Ready to Assign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready to Interview</masterLabel>
+            <translation><!-- Ready to Interview --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Design</masterLabel>
+            <translation><!-- Wish Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Determined</masterLabel>
+            <translation><!-- Wish Determined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Scheduled</masterLabel>
+            <translation><!-- Wish Scheduled --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status  Date --></label>
+        <name>Status_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sub Status --></label>
+        <name>Sub_Status__c</name>
+        <picklistValues>
+            <masterLabel>Abandoned</masterLabel>
+            <translation><!-- Abandoned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Additional Interview</masterLabel>
+            <translation><!-- Additional Interview --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Age</masterLabel>
+            <translation><!-- Age --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Age Expiration</masterLabel>
+            <translation><!-- Age Expiration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assign in Portal</masterLabel>
+            <translation><!-- Assign in Portal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deceased</masterLabel>
+            <translation><!-- Deceased --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elective</masterLabel>
+            <translation><!-- Elective --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Family Delay</masterLabel>
+            <translation><!-- Family Delay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Family Delay Closing</masterLabel>
+            <translation><!-- Family Delay Closing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Loss of Contact</masterLabel>
+            <translation><!-- Loss of Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical</masterLabel>
+            <translation><!-- Medical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moved</masterLabel>
+            <translation><!-- Moved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Need Clarification</masterLabel>
+            <translation><!-- Need Clarification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Response</masterLabel>
+            <translation><!-- No Response --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Viewable</masterLabel>
+            <translation><!-- Non-Viewable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Previous Wish</masterLabel>
+            <translation><!-- Previous Wish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reassigned</masterLabel>
+            <translation><!-- Reassigned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refused</masterLabel>
+            <translation><!-- Refused --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Within Policy</masterLabel>
+            <translation><!-- Within Policy --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Add the email address that should be used for post wish evaluation survey. --></help>
+        <label><!-- Survey Email --></label>
+        <name>Survey_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Record --></label>
+        <name>Test_Record__c</name>
+    </fields>
+    <fields>
+        <label><!-- This Is My Wish Because… --></label>
+        <name>This_is_my_wish_because__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time --></label>
+        <name>Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- To Me,The Most Important Part Of My Wish --></label>
+        <name>To_me_the_most_important_part_of_my_wish__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Hour Spent Hidden --></label>
+        <name>Total_Hour_Spent_Hidden__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Hour Spent --></label>
+        <name>Total_Hour_Spent__c</name>
+    </fields>
+    <fields>
+        <name>Type</name>
+        <picklistValues>
+            <masterLabel>Feature Request</masterLabel>
+            <translation><!-- Feature Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Problem</masterLabel>
+            <translation><!-- Problem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Question</masterLabel>
+            <translation><!-- Question --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unique Wish Record Identifier --></label>
+        <name>UniqueWishRecordIdentifier__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique Wish Record Identifier --></label>
+        <name>Unique_Wish_Record_Identifier__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Update Wish Child Form Info --></label>
+        <name>Update_Wish_Child_Form_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- Volunteer Manager Name --></label>
+        <name>VOlunteer_Manager_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Visas --></label>
+        <name>Visas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Volunteer Manager Email --></label>
+        <name>Volunteer_Manager_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- When I Think About My Wish, I Imagine…. --></label>
+        <name>When_I_think_about_my_wish_I_imagine__c</name>
+    </fields>
+    <fields>
+        <label><!-- When Thinking,Some Of My Wish Ideas Were --></label>
+        <name>When_thinking_some_of_my_wish_ideas_were__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rental Car Seats Note --></label>
+        <name>Will_a_rental_car_seat_s_be_needed_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rental Car Seats Needed? --></label>
+        <name>Will_a_rental_car_seat_s_be_needed__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Rental Stroller Note --></label>
+        <name>Will_a_rental_stroller_be_needed_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rental Stroller Needed? --></label>
+        <name>Will_a_rental_stroller_be_needed__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Interpreter Needed Note --></label>
+        <name>Will_an_interpreter_be_needed_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interpreter Needed? --></label>
+        <name>Will_an_interpreter_be_needed__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Bringing Own Wheelchair Note --></label>
+        <name>Will_your_family_bring_wheelchair_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Family Bringing Own Wheelchair? --></label>
+        <name>Will_your_family_bring_wheelchair__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Wish Assist --></label>
+        <name>Wish_Assist__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish Child Form --></label>
+        <name>Wish_Child_Form__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the staff receives the Wish Clearance Form from the medical professional --></help>
+        <label><!-- Wish Clearance Received Date --></label>
+        <name>Wish_Clearance_Received_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the staff submits the Wish Clearance Form to the medical professional --></help>
+        <label><!-- Wish Clearance Sent Date --></label>
+        <name>Wish_Clearance_Sent_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is this wish appropriate? --></help>
+        <label><!-- Wish Clearance --></label>
+        <name>Wish_Clearance__c</name>
+        <picklistValues>
+            <masterLabel>Appropriate</masterLabel>
+            <translation><!-- Appropriate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Appropriate</masterLabel>
+            <translation><!-- Not Appropriate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Wish Complexity should be rated on a scale of 1 to 9 (9 being the highest). Wish Type, Family Dynamics &amp; Medical Condition needs to be considered for determining the wish complexity. --></help>
+        <label><!-- Wish Complexity --></label>
+        <name>Wish_Complexity__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Date the wish child identifies his wish --></help>
+        <label><!-- Wish Determined Date --></label>
+        <name>Wish_Determined_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish Family Experience --></label>
+        <name>Wish_Family_Experience__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Family Form Submitted --></label>
+        <name>Wish_Family_Form_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish Family Form --></label>
+        <name>Wish_Family_Form__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Granter 1 Cell --></label>
+        <name>Wish_Granter_1_Cell__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Granter 1 --></label>
+        <name>Wish_Granter_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Granter 2 Cell --></label>
+        <name>Wish_Granter_2_Cell__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish Information Form --></label>
+        <name>Wish_Information_Form__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Liability Envolep --></label>
+        <name>Wish_Liability_Envolep__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish Notes… --></label>
+        <name>Wish_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish Presentation Set --></label>
+        <name>Wish_Presentation_Set__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish Receipt Items --></label>
+        <name>Wish_Receipt_Items__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish Safety Auth Wish Clearance Form --></label>
+        <name>Wish_Safety_Authorization_Part_B_Form__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish National Type --></label>
+        <name>Wish_Type__c</name>
+        <picklistValues>
+            <masterLabel>Animal</masterLabel>
+            <translation><!-- Animal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Celebrity-Domestic Travel</masterLabel>
+            <translation><!-- Celebrity-Domestic Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Celebrity-International Travel</masterLabel>
+            <translation><!-- Celebrity-International Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Celebrity-Local</masterLabel>
+            <translation><!-- Celebrity-Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computer</masterLabel>
+            <translation><!-- Computer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction</masterLabel>
+            <translation><!-- Construction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cruise-Celebrity/Royal</masterLabel>
+            <translation><!-- Cruise-Celebrity/Royal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cruise-Disney</masterLabel>
+            <translation><!-- Cruise-Disney --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cruise-Other</masterLabel>
+            <translation><!-- Cruise-Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disney World</masterLabel>
+            <translation><!-- Disney World --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disney-Aulani</masterLabel>
+            <translation><!-- Disney-Aulani --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disneyland</masterLabel>
+            <translation><!-- Disneyland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electronics</masterLabel>
+            <translation><!-- Electronics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I wish to be…</masterLabel>
+            <translation><!-- I wish to be… --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical Bed/Chair/Wheelchair</masterLabel>
+            <translation><!-- Medical Bed/Chair/Wheelchair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Motor Vehicle Customization</masterLabel>
+            <translation><!-- Motor Vehicle Customization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Motorized Vehicle</masterLabel>
+            <translation><!-- Motorized Vehicle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Musical Instrument/Music Related</masterLabel>
+            <translation><!-- Musical Instrument/Music Related --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Party</masterLabel>
+            <translation><!-- Party --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Philanthropic</masterLabel>
+            <translation><!-- Philanthropic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Playhouse/Playset</masterLabel>
+            <translation><!-- Playhouse/Playset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Room Redecoration/Furniture</masterLabel>
+            <translation><!-- Room Redecoration/Furniture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shopping Spree-Local</masterLabel>
+            <translation><!-- Shopping Spree-Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shopping Spree-Travel</masterLabel>
+            <translation><!-- Shopping Spree-Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spa/Hot Tub</masterLabel>
+            <translation><!-- Spa/Hot Tub --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sports-Domestic Travel</masterLabel>
+            <translation><!-- Sports-Domestic Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sports-International Travel</masterLabel>
+            <translation><!-- Sports-International Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sports-Local</masterLabel>
+            <translation><!-- Sports-Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sports/Camping Equipment</masterLabel>
+            <translation><!-- Sports/Camping Equipment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Swimming Pool</masterLabel>
+            <translation><!-- Swimming Pool --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Toys/Books</masterLabel>
+            <translation><!-- Toys/Books --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trailer/Camper</masterLabel>
+            <translation><!-- Trailer/Camper --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel-Hawaii</masterLabel>
+            <translation><!-- Travel-Hawaii --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel-International</masterLabel>
+            <translation><!-- Travel-International --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel-Other</masterLabel>
+            <translation><!-- Travel-Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Nursing Care Note --></label>
+        <name>Wish_child_receive_nursing_care_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Receiving Nursing Care? --></label>
+        <name>Wish_child_receive_nursing_care__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish granter 2 --></label>
+        <name>Wish_granter_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish Participant Have Medical Needs --></label>
+        <name>Wish_participant_have_medical_needs__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- hidden medical physician --></label>
+        <name>hidden_medical_physician__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden isApprove --></label>
+        <name>isApprove__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden isEmailWishGranter --></label>
+        <name>isEmailWishGranter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden isEmail --></label>
+        <name>isEmail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden isNationalReply --></label>
+        <name>isNationalReply__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden isNational --></label>
+        <name>isNational__c</name>
+    </fields>
+    <fields>
+        <label><!-- isWishGrantTasksClosed --></label>
+        <name>isWishGrantTasksClosed__c</name>
+    </fields>
+    <fields>
+        <help><!-- list full name of any requested wish participant that does not reside with the wish child. Please detail living
+arrangements/unique circumstances for any requested wish participant not residing with the wish child. --></help>
+        <label><!-- Living Arrangements/Unique Circumstances --></label>
+        <name>living_arrangements_unique_circumstances__c</name>
+    </fields>
+    <fields>
+        <help><!-- Does this wish involve air travel? --></help>
+        <label><!-- Wish Involves Air Travel --></label>
+        <name>wish_involves_air_travel__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Child Wishes</layout>
+        <sections>
+            <label><!-- Attachments --></label>
+            <section>Attachments</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Volunteer Parent Wishes</layout>
+        <sections>
+            <label><!-- Attachments --></label>
+            <section>Attachments</section>
+        </sections>
+        <sections>
+            <label><!-- Important Date Section --></label>
+            <section>Important Date Section</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Information --></label>
+            <section>Wish Information</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Participants --></label>
+            <section>Wish Participants</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Related Forms --></label>
+            <section>Wish Related Forms</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Status Bar --></label>
+            <section>Wish Status Bar</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Wish Assist</layout>
+        <sections>
+            <label><!-- Wish Status Bar --></label>
+            <section>Wish Status Bar</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Wish Determination</layout>
+        <sections>
+            <label><!-- Driver --></label>
+            <section>Driver</section>
+        </sections>
+        <sections>
+            <label><!-- Emergency Contact --></label>
+            <section>Emergency Contact</section>
+        </sections>
+        <sections>
+            <label><!-- Family Availability --></label>
+            <section>Family Availability</section>
+        </sections>
+        <sections>
+            <label><!-- My Wish --></label>
+            <section>My Wish</section>
+        </sections>
+        <sections>
+            <label><!-- Social media --></label>
+            <section>Social media</section>
+        </sections>
+        <sections>
+            <label><!-- Travel Information --></label>
+            <section>Travel Information</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Information Form Medical Information --></label>
+            <section>Wish Information Form Medical Information</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Paperwork Packet Field Details --></label>
+            <section>Wish Paperwork Packet Field Details</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Status Bar --></label>
+            <section>Wish Status Bar</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Wish Effect</layout>
+        <sections>
+            <label><!-- Progress Bar --></label>
+            <section>Progress Bar</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Summary --></label>
+            <section>Wish Summary</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Wish Granting</layout>
+        <sections>
+            <label><!-- Progress Bar --></label>
+            <section>Progress Bar</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Presentation  Details --></label>
+            <section>Wish Presentation  Details</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Receipt --></label>
+            <section>Wish Receipt</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Wish Impact</layout>
+        <sections>
+            <label><!-- Progress Bar --></label>
+            <section>Progress Bar</section>
+        </sections>
+        <sections>
+            <label><!-- Survey --></label>
+            <section>Survey</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Summary --></label>
+            <section>Wish Summary</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Wish Planning</layout>
+        <sections>
+            <label><!-- Required Forms --></label>
+            <section>Required Forms</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Status Bar --></label>
+            <section>Wish Status Bar</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Wishes</layout>
+        <sections>
+            <label><!-- Attachments --></label>
+            <section>Attachments</section>
+        </sections>
+        <sections>
+            <label><!-- Finance --></label>
+            <section>Finance</section>
+        </sections>
+        <sections>
+            <label><!-- Important Date Section --></label>
+            <section>Important Date Section</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Clearance Medical Information --></label>
+            <section>Wish Clearance Medical Information</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Participants --></label>
+            <section>Wish Participants</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Related Forms --></label>
+            <section>Wish Related Forms</section>
+        </sections>
+        <sections>
+            <label><!-- Wish Status Bar --></label>
+            <section>Wish Status Bar</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Diagnosis Verification Review --></label>
+        <name>Diagnosis_Verification_Review</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Wish --></label>
+        <name>Wish</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Wish Assist --></label>
+        <name>Wish_Assist</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Wish Determination --></label>
+        <name>Wish_Determination</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Wish Impact --></label>
+        <name>Wish_Effect</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Wish Granting --></label>
+        <name>Wish_Granted</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Wish Planning --></label>
+        <name>Wish_Planning_Anticipation</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- There should be value on Date - Absent Parent Form when wish status is Completed. --></errorMessage>
+        <name>Absent_Parent_Form_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Adopted By cannot be Blank when Adopted is checked. --></errorMessage>
+        <name>Case_Adoptable_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- From Budget Approval - Approved, the status can only be changed to Wish Design, On-Hold, Inactive, DNQ or Closed. --></errorMessage>
+        <name>Case_Budget_Approval_Approved</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The status cannot be changed manually from this status.  When the buget is approved, it will automatically update to Budget Approval - Approved status. --></errorMessage>
+        <name>Case_Budget_Approval_Submitted</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot change the owner of the subcase --></errorMessage>
+        <name>Case_ChildCaseOwnerChangeValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only Program Supervisor permission set can change from Closed to the previous status. --></errorMessage>
+        <name>Case_Closed_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The status cannot be changed after the wish is Completed. --></errorMessage>
+        <name>Case_Completed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only Program Supervisor permission set can change from &quot;DNQ&quot; to the previous status. --></errorMessage>
+        <name>Case_DNQ_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- From Granted, the status can only be changed to Completed. --></errorMessage>
+        <name>Case_Granted</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- From Hold, they can only go back to the previous status. --></errorMessage>
+        <name>Case_Hold_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- From Inactive, they can only go back to the previous status. --></errorMessage>
+        <name>Case_Inactive_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter an explanation why &apos;No&apos; is selected for &apos;Meet PWL Criteria&apos; --></errorMessage>
+        <name>Case_Meet_PWL_Criteria_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Presentation date should not be lesser than today --></errorMessage>
+        <name>Case_Presentation_Date_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Wish Presentation Date, Time, Location Address and Name of Location cannot be blank when Wish Presentation Set is checked. --></errorMessage>
+        <name>Case_Presentation_Set_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- From Qualified, the status can only be changed to Ready to Assign, On-Hold, Inactive, DNQ or Closed. --></errorMessage>
+        <name>Case_Prevent_Qualified_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- From Ready To Interview, the status can only be changed to Wish Determined, On-Hold, Inactive, DNQ or Closed. --></errorMessage>
+        <name>Case_Ready_To_Interview_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The status cannot be changed manually from this status.  Once two wish granters are approved, it will automatically update to Ready to Interview status. --></errorMessage>
+        <name>Case_Ready_to_Assign_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You should enter value for sub status when status having values as Ready to Assign --></errorMessage>
+        <name>Case_Ready_to_Assign_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter values to &apos;Rush Explanation &amp; Rush Timeframe&apos;  fields in order  to check Rush. --></errorMessage>
+        <name>Case_Rush_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You do not have the level of access necessary to perform the operation you requested. Please contact the owner of the record or your administrator if access is necessary. --></errorMessage>
+        <name>Case_Subcase_Status_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select valid timeframe --></errorMessage>
+        <name>Case_Timeframe_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- From Wish Design, the status can only be changed to Wish Scheduled, On-Hold, Inactive, DNQ or Closed. --></errorMessage>
+        <name>Case_Wish_Design</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- From Wish Determined, the status can only be changed to Wish Design, On-Hold, Inactive, DNQ or Closed. --></errorMessage>
+        <name>Case_Wish_Determined</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Meet PWL Criteria needs to be present when wish status is Wish Determined --></errorMessage>
+        <name>Case_Wish_Determined_Status_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You should enter value for sub status when the status is Wish Determined. --></errorMessage>
+        <name>Case_Wish_Determined_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- From Wish Scheduled, the status can only be changed to Wish Design, Granted, On-Hold, Inactive, DNQ or Closed. --></errorMessage>
+        <name>Case_Wish_Scheduled</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill the Chapter Medical Advisor Name. --></errorMessage>
+        <name>Chapter_Medical_Advisor_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- There should be value on Date - Child’s Medical Summary Form when wish status is Completed. --></errorMessage>
+        <name>Childs_Medical_Summary_Form_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- There should be value on Date - Communication Profile when wish status is Completed. --></errorMessage>
+        <name>Communication_Profile_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Diagnosis Verification Received Date should not be Blank. --></errorMessage>
+        <name>Diagnosis_Verification_Received_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- There should be value on Date - Entertainment &amp; Sports when wish status is Completed. --></errorMessage>
+        <name>Entertainment_Sports_Wish_LOValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- There should be value on Date - Guardianship Document when wish status is Completed. --></errorMessage>
+        <name>Guardianship_Document_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- There should be value on Date - Liability Release and Authorization when wish status is Completed. --></errorMessage>
+        <name>Liability_Release_and_Authorization_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please reach out to your supervisor to change the wish type and open a new case. --></errorMessage>
+        <name>National_type_editable</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- There should be value on Date - Passports when wish status is Completed. --></errorMessage>
+        <name>Passports_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill the value for  corresponding date fields. --></errorMessage>
+        <name>Planing_Case_Form_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The status cannot be changed manually from this statu --></errorMessage>
+        <name>Prevent_Case_Budget_Approval_Approved</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The status cannot be changed manually from this status. --></errorMessage>
+        <name>Prevent_Case_Budget_Approval_Submitted</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Referral date should not be Blank. --></errorMessage>
+        <name>Referral_date_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You don&apos;t have access to close the wish --></errorMessage>
+        <name>Restrict_Wish_Close</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- There should be value on Date - Single Parent Form when wish status is Completed. --></errorMessage>
+        <name>Single_Parent_Form_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- There should be value on Date - Visas when wish status is Completed. --></errorMessage>
+        <name>Visas_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- There should be value on Date - Wish Child Form when wish status is Completed. --></errorMessage>
+        <name>Wish_Child_Form_Receive_Date_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- There should be a value for End date when wish status is Completed --></errorMessage>
+        <name>Wish_Completed_Status_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- There should be value on Date - Wish Family Form when wish status is Completed. --></errorMessage>
+        <name>Wish_Family_Form_Receive_Date_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- There should be value on Date - Wish Information Form when wish status is Completed. --></errorMessage>
+        <name>Wish_Information_Form_Rece_Date_Validat</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- There should be value on Date - Wish Safety Authorization Part B Form when wish status is Completed. --></errorMessage>
+        <name>Wish_Safety_Authorization_PartB_Form</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- There should be a value for start date when wish status is wish scheduled --></errorMessage>
+        <name>Wish_Scheduled_Status_Validation</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Add_In_Kind_Donor --></label>
+        <name>Add_In_Kind_Donor</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Avis --></label>
+        <name>Avis</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_New_Case --></label>
+        <name>Create_New_Case</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- DailyWISH --></label>
+        <name>DailyWISH</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GKTW_Reservations --></label>
+        <name>GKTW_Reservations</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GKTW_WGO_s --></label>
+        <name>GKTW_WGO_s</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- InKind_Donation_Report --></label>
+        <name>InKind_Donation_Report</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- InKind_Donors_Report --></label>
+        <name>InKind_Donors_Report</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- LOOP --></label>
+        <name>Loop__LOOP</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- LOOP_Merge --></label>
+        <name>Loop__LOOP_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- LOOPlus --></label>
+        <name>Loop__LOOPlus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_LOOP_Merge --></label>
+        <name>Loop__Mass_LOOP_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_LOOPlus --></label>
+        <name>Loop__Mass_LOOPlus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Make_A_Wish_America --></label>
+        <name>Make_A_Wish_America</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Medical_Eligibility_Review --></label>
+        <name>Medical_Eligibility_Review</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Time_Sheet --></label>
+        <name>New_Time_Sheet</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Publicity_Form --></label>
+        <name>Publicity_Form</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Email_to_Chapter_Medical_Advisor --></label>
+        <name>Send_Email_to_Chapter_Medical_Advisor</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Smart_Travelers_Enrollment_Program --></label>
+        <name>Smart_Travelers_Enrollment_Program</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- State_Dep_t_Travel_Warning_List --></label>
+        <name>State_Dep_t_Travel_Warning_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Submit_Wish_Receipt --></label>
+        <name>Submit_Wish_Receipt</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Update_Contact_Info --></label>
+        <name>Update_Contact_Info</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Wish_Bank --></label>
+        <name>Wish_Bank</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Wish_Expense --></label>
+        <name>Wish_Expense</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Wish_Family_Packet --></label>
+        <name>Wish_Family_Packet</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <workflowTasks>
+        <name>Birthday_Task</name>
+        <subject><!-- Wish Child Birthday Reminder --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Budget_is_approved</name>
+        <subject><!-- Budget is approved: Acknowledge Receipt of Approval --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Budget_needs_to_be_revised</name>
+        <subject><!-- Budget needs to be revised --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Case_ET_Abandoned_Wish_Notification</name>
+        <subject><!-- Case ET : Abandoned Wish Notification --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Case_ET_Budget_Approval_Request</name>
+        <subject><!-- Case ET : Budget Approval Request --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Case_ET_Interview_Date_Reminder</name>
+        <subject><!-- Case ET : Interview Date Reminder --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Case_ET_Rush_Wish_Notification</name>
+        <subject><!-- Case ET : Rush Wish Notification --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Case_ET_Wish_Granter_is_now_Inactive</name>
+        <subject><!-- Case ET : Wish Granter is now Inactive --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Case_ET_Wish_Paperwork_Packet_Reminder</name>
+        <subject><!-- Case ET : Wish Paperwork Packet Reminder --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Case_ET_Wish_Presentation_Date_Reminder</name>
+        <subject><!-- Case ET : Wish Presentation Date Reminder --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Case_ET_Wish_Presentation_Details</name>
+        <subject><!-- Case ET : Wish Presentation Details --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Case_ET_Wish_Unassigned_Alert</name>
+        <subject><!-- Case ET : Wish Unassigned Alert --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Case_ET_Your_patient_decided_on_a_wish</name>
+        <subject><!-- Case ET : Your patient decided on a wish! --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Case_ET_Your_patient_s_wish_has_been_fulfilled</name>
+        <subject><!-- Case ET : Your patient&apos;s wish has been fulfilled! --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Follow_up_on_wish_clearance</name>
+        <subject><!-- Follow-up on wish clearance --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Interview_date_not_set</name>
+        <subject><!-- Interview date not set --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Wish_Child_Birthday_Reminder</name>
+        <subject><!-- Wish Child Birthday Reminder --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Wish_Family_Packet_not_submitted</name>
+        <subject><!-- Wish Family Packet not submitted --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

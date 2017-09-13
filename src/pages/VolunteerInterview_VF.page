@@ -1,0 +1,339 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" docType="html-5.0" controller="VolunteerInterview_AC" title="Make-A-Wish Communities | Interview">
+    <head>
+        <apex:include pageName="prospective_head" id="phead" />
+    </head>
+    <style>
+    .messageCell h4{color:#066cb6};
+    </style>
+    <body class="vcp vcpactivelogin">
+        <apex:include pageName="prospective_header" id="pheader" />
+        
+        <main role="main" class="container">
+            <div class="row">
+                <h1 class="col-md-12">Volunteer Interview</h1>
+            </div>
+          <!--  <nav class="row">
+                <ul class="step">
+                    <li><a href="/apex/VolunteerOrientation_VF?bgRequired={!bgTabPermission}&trainingRequired={!trainingTabVisible}">Orientation</a></li>
+                    <li><a href="/apex/Application_VF?bgRequired={!bgTabPermission}&trainingRequired={!trainingTabVisible}">Application</a></li>
+                    <li class="current"><a href="/apex/VolunteerInterview_VF?bgRequired={!bgTabPermission}&trainingRequired={!trainingTabVisible}">Interview</a></li>
+                     <apex:outputPanel rendered="{!bgTabPermission == True}">
+                            <li><a href="/apex/BackgroundCheck_VF?bgRequired={!bgTabPermission}&trainingRequired={!trainingTabVisible}">Background Check</a></li>
+                     </apex:outputpanel>
+                     <apex:outputpanel rendered="{!trainingTabVisible==True}">
+                         <li><a href="/apex/VolunteerTraining_VF?bgRequired={!bgTabPermission}&trainingRequired={!trainingTabVisible}">Training</a></li>
+                     </apex:outputpanel>
+                </ul>
+            </nav> -->
+            
+            <div class="row">
+                <section class="col-md-8">
+                    <apex:form id="frm1" styleClass="vcp-interview">
+
+                        <div class="messages">
+                            <apex:pagemessages />
+                        </div>
+                        
+                        <!-- Form 3 (Interview Confirmation Details -->
+                        <apex:outputpanel rendered="{!displayConfirmTask}">
+                            <fieldset>    
+                                <legend>Interview Details</legend> 
+                                 <p><apex:outputText value="Your confirmed interview date and time is below.If you need to reschedule, please click on the reschedule button and provide new days and times that you will be available." /></p>
+                                <div class="form-group row">
+                                     <label class="col-sm-3" aria-label="Confirmed Date">Confirmed Date:</label>
+                                     <div class="col-sm-6">
+                                        <apex:outputText value="{0,date,MM/dd/yy}">
+                                            <apex:param value="{!volTask[0].Confirmed_Date__c}" /> 
+                                        </apex:outputText>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3" aria-label="Confirmed Time">Confirmed Time:</label>
+                                    <div class="col-sm-6">
+                                       <apex:outputText value="{!volTask[0].Confirmed_Time__c}" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3" aria-label="Location">Venue:</label>
+                                    <div class="col-sm-6">
+                                        <apex:outputText value="{!volTask[0].venue__c}"/>
+                                    </div>
+                                </div>
+                                <apex:commandbutton styleClass="col-xs-12 col-sm-12 col-md-4 col-md-push-8 btn-md" value="Reschedule" action="{!confirmReschedule}" />
+                            </fieldset>
+
+                            <apex:outputPanel id="tstpopup">
+                                <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+                                <apex:outputPanel styleClass="custPopup" layout="block" rendered="{!displayPopUp}">
+                                    <fieldset>                                        
+                                        <div class="form-group row">
+                                            <div class="col-xs-5 col-sm-4 col-xs-push-4 col-sm-push-5 col-md-push-5">
+                                                <label>Are you sure?</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-xs-4 col-sm-3 col-xs-push-2 col-sm-push-3 col-md-push-3">
+                                                <apex:commandButton value="Cancel" styleClass="col-xs-12 col-sm-12 col-md-12 btn-md" action="{!hidePopup}" rerender="frm1"/>
+                                            </div>
+                                            <div class="col-xs-4 col-sm-3 col-xs-push-2 col-sm-push-3 col-md-push-3">
+                                                <apex:commandButton value="Yes" styleClass="col-xs-12 col-sm-12 col-md-12 btn-md" action="{!Reschedule}"/> 
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </apex:outputPanel>
+                            </apex:outputPanel>
+                            
+                        </apex:outputpanel>
+
+                        <!-- Form 1 (Interview Form) -->
+                        <apex:outputpanel rendered="{!((isTaskCreated == false) && (displayConfirmTask == false)) }">
+                            <fieldset>
+                                <legend>Interview Availability<span>Please enter a date and choose a time.</span></legend>
+                                <div class="form-group row">
+                                    <label class="col-sm-3" aria-label="Confirmed Date">Availability 1</label>
+                                    <div class="col-sm-6">
+                                        <apex:inputField value="{!currTask.Available_Date1__c}" styleclass="form-control date1 jqdatepicker" html-placeholder="MM / DD / YYYY"/>
+                                    </div>
+
+                                    <label aria-label="Time Option 1" class="col-sm-3 sr-only">Available Time 1</label>
+                                    <div class="col-sm-6 col-sm-push-3 radio time time1">
+                                        <apex:selectRadio value="{!currTask.Available_Time1__c}" layout="pageDirection">
+                                            <apex:selectOptions value="{!times}"  />
+                                        </apex:selectRadio>
+                                        <apex:inputText styleClass="form-control col-xs-12 other other1" maxlength="50" value="{!currTask.Availability_Time_Other1__c}" html-placeholder="Please enter details here" />
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group row">
+                                    <label class="col-sm-3" aria-label="Confirmed Date">Availability 2</label>
+                                    <div class="col-sm-6">
+                                        <apex:inputField value="{!currTask.Available_Date2__c}" styleclass="form-control date2 jqdatepicker" html-placeholder="MM / DD / YYYY"/>
+                                    </div>
+                                    
+                                    <label aria-label="Time Option 2" class="col-sm-3 sr-only">Available Time 2</label>
+                                    <div class="col-sm-6 col-sm-push-3 radio time time2">
+                                        <apex:selectRadio value="{!currTask.Available_Time2__c}" layout="pageDirection">
+                                            <apex:selectOptions value="{!times}"  />
+                                        </apex:selectRadio>
+                                        <apex:inputText styleClass="form-control col-xs-12 other other2" maxlength="50" value="{!currTask.Availability_Time_Other2__c}" html-placeholder="Please enter details here" />
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group row">
+                                    <label class="col-sm-3" aria-label="Confirmed Date">Availability 3</label>
+                                    <div class="col-sm-6">
+                                        <apex:inputField value="{!currTask.Available_Date3__c}" styleclass="form-control date3 jqdatepicker" html-placeholder="MM / DD / YYYY"/>
+                                    </div>
+
+                                    <label aria-label="Time Option 3" class="col-sm-3 sr-only">Available Time 3</label>
+                                    <div class="col-sm-6 col-sm-push-3 radio time time3">
+                                        <apex:selectRadio value="{!currTask.Available_Time3__c}" layout="pageDirection">
+                                            <apex:selectOptions value="{!times}" />
+                                        </apex:selectRadio>
+                                        <apex:inputText styleClass="form-control col-xs-12 other other3" maxlength="50" value="{!currTask.Availability_Time_Other3__c}" html-placeholder="Please enter details here" />
+                                    </div>
+                                </div>
+                            </fieldset>
+                            
+                            <fieldset styleClass="footer">
+                                <apex:commandbutton styleClass="col-xs-12 col-sm-12 col-md-4 col-md-push-8 btn-md validate validateButton" onclick="return validate();" value="Submit" action="{!submit}" />
+                            </fieldset>                          
+
+                     </apex:outputpanel>
+                        
+                        <!-- Form 2 (Acknowlegement) -->
+                       
+                        <apex:outputpanel rendered="{!(isTaskCreated) && (displayConfirmTask == false)}">
+                            <fieldset>
+                                <div class="form-group row col-xs-12 col-sm-12">
+                                   <p>You have submitted your available interview times. Chapter staff will review your request and send you an email once an interview has been scheduled. </p>
+                                </div>
+                            </fieldset>
+                            
+                        </apex:outputpanel>
+                        
+                    </apex:form>
+                </section>
+                
+                <aside class="col-md-4 page-info" role="page-info">
+                    <h2>Additional Information</h2>
+                    <p><apex:outputText value="{!interviewContent}" escape="false" /> </p>
+                </aside>
+            </div>
+        </main>
+        
+        <apex:include pageName="prospective_footer" id="pfooter" />
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
+        
+        <!-- css fallback -->
+        <script>$.each(document.styleSheets, function(i,sheet){ if(sheet.href=='https://code.jquery.com/ui/1.11.4/themes/flick/jquery-ui.min.css') {var rules = sheet.rules ? sheet.rules : sheet.cssRules; if (rules.length == 0) { $('<apex:stylesheet value="{!URLFOR($Resource.prospective_assets, 'web/css/lib/jquery-ui.min.css')}"/>').appendTo('head');} } });</script>            
+        
+        
+        <script>
+            (function ($, root, undefined) {
+                $('head').prepend('<link rel="stylesheet" src="https://code.jquery.com/ui/1.11.4/themes/flick/jquery-ui.min.css" />');
+                $(".page-info span").css({'font-family':'', 'font-size':''}); // remove auto-generated sf styles
+                
+                //  Start interview ui functions
+                //-----------------------------------------------------------------------------------------------
+                $(".time,.other").hide(); // hide times and other option by default
+                $(".jqdatepicker").datepicker({minDate:+1,inline:true}); // init datepicker
+                $(".jqdatepicker").click(function(){
+                    $(this).attr('onfocus','');
+                });
+                
+                // show/hide times & other(options) based on input clicked
+                $(".date1").hover(function(){
+                    $(".time1").show();
+                    $(".time2, .time3").hide();
+                });
+                $(".date2").hover(function(){
+                    $(".time2").show();
+                    $(".time1, .time3").hide();
+                });
+                $(".date3").hover(function(){
+                    $(".time3").show();
+                    $(".time1, .time2").hide();
+                });
+                
+                //-----------------------------------------------------------------------------------------------
+                //  Important:  The functions below are contigent on the html element's output order generated
+                //              by the apex classes associated with this page that generates the output html 
+                //              radio input fields in a specific order. If the layout changes from the apex
+                //              class, the script below will possibly need to be re-configured.
+                //-----------------------------------------------------------------------------------------------
+                
+                // After submit, on form error and confirmation, rewrites chosen time to relative input span overlay
+                $(document).ready(function(){
+                    var chosenTime1 = $(".time1").find('input[type="radio"]:checked').attr('value');
+                    var chosenTime2 = $(".time2").find('input[type="radio"]:checked').attr('value');
+                    var chosenTime3 = $(".time3").find('input[type="radio"]:checked').attr('value');
+                    
+                    var dateInput1 = $('.date1').closest('div').parents('div').children('div').children('.dateInput');
+                    var dateInput2 = $('.date2').closest('div').parents('div').children('div').children('.dateInput');
+                    var dateInput3 = $('.date3').closest('div').parents('div').children('div').children('.dateInput');
+                    
+                    if (!chosenTime1 ==''){
+                        // creates new span with selected time
+                        $('<span class="timeselected text-muted">' + chosenTime1 + '</span>').insertAfter(dateInput1);
+                    }
+                    if (!chosenTime2 ==''){
+                        // creates new span with selected time
+                        $('<span class="timeselected text-muted">' + chosenTime2 + '</span>').insertAfter(dateInput2);
+                    }
+                    if (!chosenTime3 ==''){
+                        // creates new span with selected time
+                        $('<span class="timeselected text-muted">' + chosenTime3 + '</span>').insertAfter(dateInput3);
+                    }
+                });
+                
+                $("input[type='radio']").click(function(){
+                    var chosenTime = $(this).attr('value');
+                    var dateInput = $(this).closest('div').parents('div').children('div').children('.dateInput');
+                    var timeSelected = $(this).closest('div').parents('div').children('div').children('.timeselected');                    
+                    
+                    // remove default sf datepicker trigger
+                    $('.dateInput input').attr('onfocus',''); 
+                    
+                    // removes prior selected
+                    $(timeSelected).remove();
+                    
+                    // creates new span with selected time
+                    $('<span class="timeselected text-muted">' + chosenTime + '</span>').insertAfter(dateInput);
+                    
+                    console.log(chosenTime);
+                    
+                    // hide "Other" radio input field when other time options are clicked relative to input
+                    if ($(this).not('input[value="other"]')){
+                        $(this).closest('div').children('.other').hide();
+                    }
+                });
+                                 
+                // show hidden "Other" radio input field relatively closest to input
+                $('input[value="Other"]').click(function(){
+                   $(this).closest('div').children('.other').show();
+                });
+                
+            })(jQuery);
+        </script>
+        
+        <script>
+        // form validation
+            $.validator.setDefaults({
+                submitHandler: function () {
+                        form.submit();
+                    }
+                },
+            });
+            
+            $( document ).ready(function() {                
+                $( ".vcp-interview" ).validate({
+                    rules: {
+                        "j_id0:frm1:j_id57": {
+                            required: true,
+                        },
+                        "j_id0:frm1:j_id59:0": {
+                            require_from_group: [1, "j_id0:frm1:j_id59"]
+                        },
+                        "j_id0:frm1:j_id59:1": {
+                            require_from_group: [1, "j_id0:frm1:j_id59"]
+                        },
+                        "j_id0:frm1:j_id59:2": {
+                            require_from_group: [1, "j_id0:frm1:j_id59"]
+                        },
+                        "j_id0:frm1:j_id59:3": {
+                            require_from_group: [1, "j_id0:frm1:j_id59"]
+                        },
+                        "j_id0:frm1:j_id59:4": {
+                            require_from_group: [1, "j_id0:frm1:j_id59"]
+                        },
+                    },
+                    messages: {
+                        "j_id0:frm1:j_id57": {
+                            require: "Oops! Please select a date"
+                        },
+                        "j_id0:frm1:j_id59:0": {
+                            require_from_group: "Oops! A time option must be selected"
+                        },
+                        "j_id0:frm1:j_id59:1": {
+                            require_from_group: "Oops! A time option must be selected"
+                        },
+                        "j_id0:frm1:j_id59:2": {
+                            require_from_group: "Oops! A time option must be selected"
+                        },
+                        "j_id0:frm1:j_id59:3": {
+                            require_from_group: "Oops! A time option must be selected"
+                        },
+                        "j_id0:frm1:j_id59:4": {
+                            require_from_group: "Oops! A time option must be selected"
+                        },
+                    },
+                    errorElement: "em",
+                    errorPlacement: function (error, element) {
+                        // Add the `help-block` class to the error element
+                        error.addClass("help-block");
+                        
+                        if ( element.prop("type") === "radio" ) {
+                            error.insertAfter(element.parent("label") );
+                        } else {
+                            error.insertAfter(element);
+                        }
+                    },
+                    highlight: function ( element, errorClass, validClass ) {
+                        var elementParents = $(element).closest("fieldset");
+                        $(elementParents).addClass("has-error").removeClass("has-success").prev("label").css('color','red');
+                        $(elementParents).children("input").css('border','1px solid red');
+                    },
+                    unhighlight: function ( element, errorClass, validClass ) {
+                        var elementParents = $(element).closest("fieldset");
+                        $(elementParents).removeClass("has-error").prev("label").css('color','');
+                        $(elementParents).children("input").css('border','');
+                        $(elementParents).children(".help-block").remove();
+                    }
+                });
+                
+            });
+        </script>
+
+    </body>
+</apex:page>

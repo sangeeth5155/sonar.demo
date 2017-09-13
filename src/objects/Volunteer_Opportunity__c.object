@@ -1,0 +1,3719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>It holds the related Case, Event, User and Role Name</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Read</externalSharingModel>
+    <fieldSets>
+        <fullName>MyAssignmentsClosedNonWish</fullName>
+        <description>This field set used in MyAssignment_VF page to display the vlounteer closed Non Wish &amp; Event.</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Event_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Event_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Start_Time__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>End_Time__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>NWE_City__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>NWE_Zip__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Location__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Hidden_VolunteerCount_Desc__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>MyAssignmentsClosedNonWish</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>MyAssignmentsClosedWish</fullName>
+        <description>This field set used in MyAssignment_VF page to display the vlounteer closed wishes.</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>About_Me__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Medical_Condition__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Hobbies__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Waiting_Since__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Language__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Age__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Gender__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>City__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Zip__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Non_Verbal__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>MyAssignmentsClosedWish</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>MyAssignmentsNonWish</fullName>
+        <description>This field set used in MyAssignment_VF page</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Event_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Event_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Start_Time__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>End_Time__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>NWE_City__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>NWE_Zip__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Location__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Hidden_VolunteerCount_Desc__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>MyAssignmentsNonWish</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>MyAssignmentsWish</fullName>
+        <description>This field set is used in MyAssignment_VF page.</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>About_Me__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Medical_Condition__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Hobbies__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Waiting_Since__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Language__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Age__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Gender__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>City__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Zip__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Non_Verbal__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>MyAssignmentsWish</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>NonWishEvents</fullName>
+        <description>This set contains fields for Non Wish Event Records</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Event_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Event_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Start_Time__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>End_Time__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>NWE_City__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>NWE_Zip__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Location__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Hidden_VolunteerCount_Desc__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>HiddenVolunteer_Count_Description__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>NWE_Volunteer_Opportunity_Notes__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>NonWishEvents</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>WishEvents</fullName>
+        <description>This set contains fields for Wish Event Records</description>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>First_L_I__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Waiting_Since__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Age__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Gender__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>City__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Zip__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Medical_Condition__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Language__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Non_Verbal__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>WishEvents</label>
+    </fieldSets>
+    <fields>
+        <fullName>About_Me__c</fullName>
+        <description>It will display the details about volunteer contact&apos;s about me filed value</description>
+        <externalId>false</externalId>
+        <formula>Wish__r.Contact.About_Me__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>About Me</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Age__c</fullName>
+        <description>It will display the contact current age of the wish</description>
+        <externalId>false</externalId>
+        <formula>Wish__r.Contact.Current_Age__c</formula>
+        <label>Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Status__c</fullName>
+        <description>It is used to identify the status of the record</description>
+        <externalId>false</externalId>
+        <label>Approval Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Initiated</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejection Notification</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Assigned</fullName>
+                <default>true</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Chapter_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Used for the chapter named of Account</description>
+        <externalId>false</externalId>
+        <label>Chapter Name</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Chapter</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Volunteer Opportunities</relationshipLabel>
+        <relationshipName>Volunteer_Opportunities</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Chapter_Role_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This field look up with Chapter Role</description>
+        <externalId>false</externalId>
+        <label>Chapter Role</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Chapter_Role__c.Chapter_Name__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Chapter_Name__c</valueField>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Chapter_Role__c</referenceTo>
+        <relationshipLabel>Volunteer Opportunities</relationshipLabel>
+        <relationshipName>Volunteer_Opportunities</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <description>It will display city value</description>
+        <externalId>false</externalId>
+        <formula>Wish__r.Contact.MailingCity</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_Time__c</fullName>
+        <description>Date and time for volunteer opportunities</description>
+        <externalId>false</externalId>
+        <label>Date/Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>This field is used to store the description value entered from Add voulnteer role vf page</description>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>End_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>End Time</label>
+        <picklist>
+            <picklistValues>
+                <fullName>12:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Event_Date__c</fullName>
+        <description>Event date indicated when the event started</description>
+        <externalId>false</externalId>
+        <formula>Non_Wish_Event__r.Event_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Event Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Event_Description__c</fullName>
+        <description>Formula field used to know the Event description fields</description>
+        <externalId>false</externalId>
+        <formula>Non_Wish_Event__r.Event_Text__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Event Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Event_Name__c</fullName>
+        <description>This Holds the value of event name</description>
+        <externalId>false</externalId>
+        <formula>Non_Wish_Event__r.Event_Name__c</formula>
+        <label>Non-WIsh/Event Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Event_URL__c</fullName>
+        <description>This field is used to store the value of Event URL from Non wish and event record.</description>
+        <externalId>false</externalId>
+        <formula>Non_Wish_Event__r.Event_URL__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Event URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Event__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It hold the record of each event</description>
+        <externalId>false</externalId>
+        <label>Event</label>
+        <referenceTo>Event__c</referenceTo>
+        <relationshipName>Volunteer_Roles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External Id used for Mulesoft upsert.</description>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>First_L_I__c</fullName>
+        <description>This holds the value of first name and last name initial</description>
+        <externalId>false</externalId>
+        <formula>Wish__r.Contact.First_Last_Initial__c</formula>
+        <label>First + L.I.</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>From_Mulesoft__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>From Mulesoft</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Gender__c</fullName>
+        <description>It will display the gender</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Wish__r.Contact.Gender__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Gender</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HiddenVolunteer_Count_Description__c</fullName>
+        <description>This field is used to store the description of the Role. it is used in Add volunteer role inline visual-force page</description>
+        <externalId>false</externalId>
+        <label>HiddenVolunteer Count Description</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hidden_Chapter_Email__c</fullName>
+        <description>This field is used store the chapter email for sending email purpose.</description>
+        <externalId>false</externalId>
+        <formula>Chapter_Name__r.Email__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hidden Chapter Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hidden_Chapter_Name__c</fullName>
+        <description>This hidden field is used to hold the account name for email purpose.</description>
+        <externalId>false</externalId>
+        <formula>Chapter_Name__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hidden Chapter Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hidden_Chapter_Phone__c</fullName>
+        <description>This field is used to store the Chapter phone number email purpose.</description>
+        <externalId>false</externalId>
+        <formula>Chapter_Name__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hidden Chapter Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hidden_Chapter_Role_Name__c</fullName>
+        <description>This field is used to store the role name of the current volunteer opportunity.</description>
+        <externalId>false</externalId>
+        <formula>Chapter_Role_Opportunity__r.Role_Name__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hidden Chapter Role Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hidden_Non_Wish_Event_Date__c</fullName>
+        <description>This field is used to store the Store the Non - Wish Event Date Value.</description>
+        <externalId>false</externalId>
+        <formula>Non_Wish_Event__r.Event_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hidden Non Wish Event  Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Hidden_Non_Wish_Event_Name__c</fullName>
+        <description>This field is used to store the value for Non-Wish Event Name for email purpose.</description>
+        <externalId>false</externalId>
+        <formula>Non_Wish_Event__r.Event_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hidden Non Wish Event Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hidden_VolunteerCount_Desc__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hidden_Volunteer_Contact_Email__c</fullName>
+        <description>This field is used to store the value of Volunteer contact email for email purpose.</description>
+        <externalId>false</externalId>
+        <label>Hidden Volunteer Contact Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hidden_Volunteer_Contact_Name__c</fullName>
+        <description>This field is used to store the volunteer contact name for sending email purpose.</description>
+        <externalId>false</externalId>
+        <formula>Volunteer_Name__r.FirstName+&apos; &apos;+ Volunteer_Name__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hidden Volunteer Contact Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hobbies__c</fullName>
+        <description>It hold the value of wish child hobby</description>
+        <externalId>false</externalId>
+        <formula>Wish__r.Contact.Hobby__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hobbies</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Inactivated_or_Rejected_Date__c</fullName>
+        <description>Used to hold rejected or inactivated date</description>
+        <externalId>false</externalId>
+        <label>Hidden Inactivated or Rejected Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Inactive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used when the to identify whether the volunteer opportunity is active or not.</description>
+        <externalId>false</externalId>
+        <label>Inactive</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Non_Viewable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field will checked when the volunteer opportunity created via the case status changed to Ready To Assign</description>
+        <externalId>false</externalId>
+        <label>Is Non-Viewable</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Language__c</fullName>
+        <description>It will hold the language from wish child</description>
+        <externalId>false</externalId>
+        <formula>IF(INCLUDES( Wish__r.Contact.Language__c , &quot;American Sign Language&quot;), &quot;American Sign Language&quot;, NULL)  +
+
+IF(INCLUDES( Wish__r.Contact.Language__c , &quot;Arabic&quot;), &quot;Arabic&quot;, NULL)  + &apos; &apos; + 
+
+IF(INCLUDES( Wish__r.Contact.Language__c , &quot;Chinese&quot;), &quot;Chinese&quot;, NULL)  + &apos; &apos; + 
+
+IF(INCLUDES( Wish__r.Contact.Language__c , &quot;English&quot;), &quot;English&quot;, NULL)  + &apos; &apos; + 
+
+IF(INCLUDES( Wish__r.Contact.Language__c , &quot;French and French Creole&quot;), &quot;French and French Creole&quot;, NULL)  + &apos; &apos; + 
+
+IF(INCLUDES( Wish__r.Contact.Language__c , &quot;German&quot;), &quot;German&quot;, NULL)  + &apos; &apos; + 
+
+IF(INCLUDES( Wish__r.Contact.Language__c , &quot;Hindi&quot;), &quot;Hindi&quot;, NULL)  + &apos; &apos; + 
+
+IF(INCLUDES( Wish__r.Contact.Language__c , &quot;Italian&quot;), &quot;Italian&quot;, NULL)  + &apos; &apos; + 
+
+IF(INCLUDES( Wish__r.Contact.Language__c , &quot;Japanese&quot;), &quot;Japanese&quot;, NULL)  + &apos; &apos; + 
+
+IF(INCLUDES( Wish__r.Contact.Language__c , &quot;Korean&quot;), &quot;Korean&quot;, NULL)  + &apos; &apos; + 
+
+IF(INCLUDES( Wish__r.Contact.Language__c , &quot;Polish&quot;), &quot;Polish&quot;, NULL)  + &apos; &apos; + 
+
+IF(INCLUDES( Wish__r.Contact.Language__c , &quot;Portuguese&quot;), &quot;Portuguese&quot;, NULL)  + &apos; &apos; +
+
+IF(INCLUDES( Wish__r.Contact.Language__c , &quot;Russian&quot;), &quot;Russian&quot;, NULL)  + &apos; &apos; +
+
+IF(INCLUDES( Wish__r.Contact.Language__c , &quot;Spanish&quot;), &quot;Spanish&quot;, NULL)  + &apos; &apos; + 
+
+IF(INCLUDES( Wish__r.Contact.Language__c , &quot;Tagalog&quot;), &quot;Tagalog&quot;, NULL)  + &apos; &apos; + 
+
+IF(INCLUDES( Wish__r.Contact.Language__c , &quot;Vietnamese&quot;), &quot;Vietnamese&quot;, NULL)  + &apos; &apos; + 
+
+IF(INCLUDES( Wish__r.Contact.Language__c , &quot;Other&quot;), &quot;Other&quot;, NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Language</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <description>This field is used to store the value of location.</description>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Medical_Condition__c</fullName>
+        <description>It will display the medical condition of the wish</description>
+        <externalId>false</externalId>
+        <formula>Wish__r.Contact.Diagnosis__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Primary Diagnosis</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Migrated_Record__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Flag used to inform the is migrated record or not</description>
+        <externalId>false</externalId>
+        <label>Migrated Record</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>NWE_City__c</fullName>
+        <description>It will display the city value</description>
+        <externalId>false</externalId>
+        <formula>Non_Wish_Event__r.City__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NWE_Date__c</fullName>
+        <description>It will display the event date on volunteer opportunity</description>
+        <externalId>false</externalId>
+        <formula>Non_Wish_Event__r.Event_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>NWE_Day_of_The_Week__c</fullName>
+        <description>Formula to display no of Days in a week or total weeks</description>
+        <externalId>false</externalId>
+        <formula>IF(INCLUDES( Non_Wish_Event__r.Day_of_The_Week__c   , &quot;Sunday&quot;), &quot;Sunday&quot;, NULL)  +BR()+ 
+IF(INCLUDES( Non_Wish_Event__r.Day_of_The_Week__c   , &quot;Monday&quot;), &quot;Monday&quot;, NULL)  + BR()+
+IF(INCLUDES( Non_Wish_Event__r.Day_of_The_Week__c   , &quot;Tuesday&quot;), &quot;Tuesday&quot;, NULL)  + BR()+
+IF(INCLUDES( Non_Wish_Event__r.Day_of_The_Week__c   , &quot;Wednesday&quot;), &quot;Wednesday&quot;, NULL)  + BR()+
+IF(INCLUDES( Non_Wish_Event__r.Day_of_The_Week__c   , &quot;Thursday&quot;), &quot;Thursday&quot;, NULL)  + BR()+
+IF(INCLUDES( Non_Wish_Event__r.Day_of_The_Week__c   , &quot;Friday&quot;), &quot;Friday&quot;, NULL)  + BR()+
+IF(INCLUDES( Non_Wish_Event__r.Day_of_The_Week__c   , &quot;Saturday&quot;), &quot;Saturday&quot;, NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Day of The Week</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NWE_End_Time__c</fullName>
+        <description>It will display the end time value from the Non wish event record</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Non_Wish_Event__r.End_Time__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>End Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NWE_Non_Wish_Event_Title__c</fullName>
+        <description>It will display non wish / event title</description>
+        <externalId>false</externalId>
+        <formula>Non_Wish_Event__r.Non_Wish_Event_Title__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Non Wish/ Event Title</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NWE_Start_Time__c</fullName>
+        <description>It will display start time of the event on the volunteer opportunity</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Non_Wish_Event__r.Start_Time__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Start Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NWE_Volunteer_Opportunity_Notes__c</fullName>
+        <description>It will display volunteer opportunity notes</description>
+        <externalId>false</externalId>
+        <formula>Non_Wish_Event__r.Volunteer_Opportunity_Notes__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volunteer Opportunity Notes</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NWE_Zip__c</fullName>
+        <description>It will display zip value</description>
+        <externalId>false</externalId>
+        <formula>Non_Wish_Event__r.Zip__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Zip</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name__c</fullName>
+        <description>Used to display name of the non wish event</description>
+        <externalId>false</externalId>
+        <formula>Wish__r.Contact.FirstName &amp; &apos; &apos; &amp; Wish__r.Contact.LastName</formula>
+        <label>Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Non_Verbal__c</fullName>
+        <description>Its indicating wish&apos;s facilitating communication.</description>
+        <externalId>false</externalId>
+        <formula>Text(Wish__r.Contact.Non_Verbal__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Non - Verbal</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Non_Wish_Event__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It hold the record of each event</description>
+        <externalId>false</externalId>
+        <label>Name</label>
+        <referenceTo>Non_Wish_Events__c</referenceTo>
+        <relationshipLabel>Volunteer Opportunities</relationshipLabel>
+        <relationshipName>Volunteer_Roles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RE_Created_Date__c</fullName>
+        <description>DATEADDED</description>
+        <externalId>false</externalId>
+        <label>RE Created Date</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RE_Import_Id__c</fullName>
+        <description>This field is used to hold the record Id.</description>
+        <externalId>false</externalId>
+        <label>RE Import Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RE_Last_Modified_Date__c</fullName>
+        <description>DATECHANGED</description>
+        <externalId>false</externalId>
+        <label>RE Last Modified Date</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RE_Role__c</fullName>
+        <description>&quot;VOLUNTEER_TYPE
+RECIP_RELATION_CODE&quot;</description>
+        <externalId>false</externalId>
+        <label>RE Role</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RE_Volunteer_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>RE Volunteer Notes</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RE_Volunteer_Opportunity_Id__c</fullName>
+        <description>IMPORT_ID</description>
+        <externalId>false</externalId>
+        <label>RE Volunteer Opportunity Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reason_Inactive__c</fullName>
+        <description>This field is get the values when the volunteer contact is removed form the volunteer Name field.</description>
+        <externalId>false</externalId>
+        <label>Reason Inactive</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Moved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non-responsive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inactivated</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Requested</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Error</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Required_Forms_for_Volunteers__c</fullName>
+        <description>This pick list is used to differentiate the forms for volunteer</description>
+        <externalId>false</externalId>
+        <label>Required Forms for Volunteers</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Single Day Event Volunteers Fact Sheet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Volunteer Application Fact Sheet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Annual Conflict of Interest &amp; Ethics Assurance Statement Fact Sheet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>First Advantage Fact Sheet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Associates Database: How to Guide</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <description>It will display the role name</description>
+        <externalId>false</externalId>
+        <formula>Chapter_Role_Opportunity__r.Role_Name__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Role</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Start_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Time</label>
+        <picklist>
+            <picklistValues>
+                <fullName>12:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:00 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:30 AM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:00 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:30 PM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>It indicate different status of the volunteer opportunity.</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Out of Compliance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Total_Hours__c</fullName>
+        <description>This filed would be store the sum of the total hours of the time sheet</description>
+        <externalId>false</externalId>
+        <label>Total Hours</label>
+        <summarizedField>Time_sheet__c.Hours_spent__c</summarizedField>
+        <summaryFilterItems>
+            <field>Time_sheet__c.Hours_spent__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </summaryFilterItems>
+        <summaryForeignKey>Time_sheet__c.Volunteer_Opportunity__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Volunteer_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This is used to choose the name of the volunteer contact</description>
+        <externalId>false</externalId>
+        <label>Volunteer Contact</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Volunteer Contact</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Volunteer Opportunities</relationshipLabel>
+        <relationshipName>Volunteer_Opportunities1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Volunteer_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It will lookup to the contact, which record type as volunteer</description>
+        <externalId>false</externalId>
+        <label>Volunteer Name</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Volunteer Contact, Board Member</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Volunteer Opportunities (Volunteer Name)</relationshipLabel>
+        <relationshipName>Volunteer_Opportunities</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Volunteer_Notes__c</fullName>
+        <description>It will capture the volunteer notes information</description>
+        <externalId>false</externalId>
+        <label>Volunteer Notes</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Volunteer_Opportunity_Id_Hidden__c</fullName>
+        <description>Hidden field used to get Volunteer opportunity id</description>
+        <externalId>false</externalId>
+        <formula>Name</formula>
+        <label>Volunteer Opportunity Id Hidden</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Volunteer_Role_Name__c</fullName>
+        <description>This field indicate about  the Volunteer role.</description>
+        <externalId>false</externalId>
+        <label>Volunteer Role Name</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Advisory Committee, non-voting Board Member</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Airport Greeter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Board Member</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Celebrity Host</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fundraising Volunteer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medical Advisor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medical Outreach Volunteer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Office Volunteer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Regional Champion</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Single Day Event Volunteer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Speaker&apos;s Bureau</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Special Events - Committee Member</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Special Events - Day of Volunteer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Translator &amp; Interpreter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Volunteer Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wish Assist Phone Greeter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wish Assist Volunteer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wish Coordinator</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wish Granter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wish Granter Mentor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Waiting_Since__c</fullName>
+        <description>It will display waiting since value</description>
+        <externalId>false</externalId>
+        <formula>Wish__r.Contact.Waiting_Since__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Waiting Since</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Wish_Child__c</fullName>
+        <externalId>false</externalId>
+        <formula>Wish__r.Contact.Hidden_First_Name__c &amp; &quot; &quot; &amp; Wish__r.Contact.Hidden_Last_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Wish Child</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Wish__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It holds the  related Case</description>
+        <externalId>false</externalId>
+        <label>Wish</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipName>Volunteer_Roles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Zip__c</fullName>
+        <description>It will display the zip code value</description>
+        <externalId>false</externalId>
+        <formula>Wish__r.Contact.MailingPostalCode</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Zip</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Volunteer Opportunity</label>
+    <listViews>
+        <fullName>Alabama_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Alabama</label>
+        <queue>Alabama</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Alaska_Washington_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Alaska &amp; Washington</label>
+        <queue>Alaska_Washington</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Arizona_Volunteer_Opportunity</fullName>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Chapter_Name__c</field>
+            <operation>equals</operation>
+            <value>Make-A-Wish Arizona</value>
+        </filters>
+        <label>Arizona</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Central_California_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Central California</label>
+        <queue>Central_California</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Central_New_York_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Central New York</label>
+        <queue>Central_New_York</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Central_Northern_Florida_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Central &amp; Northern Florida</label>
+        <queue>Central_Northern_Florida</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Central_South_Texas_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Central &amp; South Texas</label>
+        <queue>Central_South_Texas</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Central_Western_North_Carolina_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Central &amp; Western North Carolina</label>
+        <queue>Central_Western_North_Carolina</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Colorado_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Colorado</label>
+        <queue>Colorado</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Connecticut_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Connecticut</label>
+        <queue>Connecticut</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>East_Tennessee_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>East Tennessee</label>
+        <queue>East_Tennessee</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Eastern_North_Carolina_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Eastern North Carolina</label>
+        <queue>Eastern_North_Carolina</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Georgia_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Georgia</label>
+        <queue>Georgia</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Greater_Bay_Area_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Greater Bay Area</label>
+        <queue>Greater_Bay_Area</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Greater_Los_Angeles_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Greater Los Angeles</label>
+        <queue>Greater_Los_Angeles</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Greater_Pennsylvania_West_Virginia_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Greater Pennsylvania &amp; West Virginia</label>
+        <queue>Greater_Pennsylvania_West_Virginia</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Greater_Virginia_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Greater Virginia</label>
+        <queue>Greater_Virginia</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Guam_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Guam</label>
+        <queue>Guam</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Hawaii_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Hawaii</label>
+        <queue>Hawaii</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Hudson_Valley_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Hudson Valley</label>
+        <queue>Hudson_Valley</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Idaho_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Idaho</label>
+        <queue>Idaho</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Illinois_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Illinois</label>
+        <queue>Illinois</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Iowa_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Iowa</label>
+        <queue>Iowa</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Kansas_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Kansas</label>
+        <queue>Kansas</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Maine_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Maine</label>
+        <queue>Maine</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Massachusetts_Rhode_Island_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Massachusetts &amp; Rhode Island</label>
+        <queue>Massachusetts_Rhode_Island</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Metro_New_York_Western_New_York_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Metro New York &amp; Western New York</label>
+        <queue>Metro_New_York_Western_New_York</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Michigan_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Michigan</label>
+        <queue>Michigan</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Mid_Atlantic_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Mid-Atlantic</label>
+        <queue>Mid_Atlantic</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Mid_South_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Mid-South</label>
+        <queue>Mid_South</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Middle_Tennessee_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Middle Tennessee</label>
+        <queue>Middle_Tennessee</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Migration</fullName>
+        <columns>NAME</columns>
+        <columns>Chapter_Name__c</columns>
+        <columns>From_Mulesoft__c</columns>
+        <columns>Volunteer_Name__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Migrated_Record__c</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <operation>equals</operation>
+            <value>iuser</value>
+        </filters>
+        <label>Migration</label>
+    </listViews>
+    <listViews>
+        <fullName>Minnesota_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Minnesota</label>
+        <queue>Minnesota</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Mississippi_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Mississippi</label>
+        <queue>Mississippi</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Missouri_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Missouri</label>
+        <queue>Missouri</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Montana_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Montana</label>
+        <queue>Montana</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>NE_California_N_Nevada_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>NE California &amp; N Nevada</label>
+        <queue>NE_California_N_Nevada</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Nebraska_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Nebraska</label>
+        <queue>Nebraska</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>New_Hampshire_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>New Hampshire</label>
+        <queue>New_Hampshire</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>New_Jersey_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>New Jersey</label>
+        <queue>New_Jersey</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>New_Mexico_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>New Mexico</label>
+        <queue>New_Mexico</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Non_Wish_Event</fullName>
+        <columns>NAME</columns>
+        <columns>Date_Time__c</columns>
+        <columns>NWE_Date__c</columns>
+        <columns>NWE_End_Time__c</columns>
+        <columns>NWE_Start_Time__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Volunteer_Opportunity__c.Non_Wish_Event</value>
+        </filters>
+        <label>Non Wish &amp; Event</label>
+    </listViews>
+    <listViews>
+        <fullName>North_Dakota_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>North Dakota</label>
+        <queue>North_Dakota</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>North_Texas_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>North Texas</label>
+        <queue>North_Texas</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Northeast_New_York_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Northeast New York</label>
+        <queue>Northeast_New_York</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Ohio_Kentucky_Indiana_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Ohio, Kentucky &amp; Indiana</label>
+        <queue>Ohio_Kentucky_Indiana</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Oklahoma_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Oklahoma</label>
+        <queue>Oklahoma</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Orange_County_the_Inland_Empire_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Orange County &amp; the Inland Empire</label>
+        <queue>Orange_County_the_Inland_Empire</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Oregon_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Oregon</label>
+        <queue>Oregon</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Philadelphia_N_Delaware_Susquehanna_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Philadelphia, N Delaware &amp; Susquehanna</label>
+        <queue>Philadelphia_N_Delaware_Susquehanna</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Puerto_Rico_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Puerto Rico</label>
+        <queue>Puerto_Rico</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Rio_Grande_Valley_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Rio Grande Valley</label>
+        <queue>Rio_Grande_Valley</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>San_Diego_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>San Diego</label>
+        <queue>San_Diego</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>South_Carolina_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>South Carolina</label>
+        <queue>South_Carolina</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>South_Dakota_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>South Dakota</label>
+        <queue>South_Dakota</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Southern_Florida_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Southern Florida</label>
+        <queue>Southern_Florida</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Southern_Nevada_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Southern Nevada</label>
+        <queue>Southern_Nevada</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Suffolk_County_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Suffolk County</label>
+        <queue>Suffolk_County</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Texas_Gulf_Coast_Louisiana_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Texas Gulf Coast &amp; Louisiana</label>
+        <queue>Texas_Gulf_Coast_Louisiana</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Tri_Counties_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Tri-Counties</label>
+        <queue>Tri_Counties</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Utah_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Utah</label>
+        <queue>Utah</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Vermont_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Vermont</label>
+        <queue>Vermont</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Wisconsin_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Wisconsin</label>
+        <queue>Wisconsin</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Wish</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Volunteer_Opportunity__c.Wish</value>
+        </filters>
+        <label>Wish</label>
+    </listViews>
+    <listViews>
+        <fullName>Wyoming_Volunteer_Opportunity</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Wyoming</label>
+        <queue>Wyoming</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>VR-{00000}</displayFormat>
+        <label>Volunteer Opportunity Id</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Volunteer Opportunities</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Non_Wish_Event</fullName>
+        <active>true</active>
+        <description>This record type would associate the volunteer to non wish and event</description>
+        <label>Non Wish &amp; Event</label>
+        <picklistValues>
+            <picklist>Approval_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initiated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Assigned</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejection Notification</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_Inactive__c</picklist>
+            <values>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactivated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-responsive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requested</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Required_Forms_for_Volunteers__c</picklist>
+            <values>
+                <fullName>Annual Conflict of Interest %26 Ethics Assurance Statement Fact Sheet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associates Database%3A How to Guide</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First Advantage Fact Sheet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Day Event Volunteers Fact Sheet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Volunteer Application Fact Sheet</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Out of Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Volunteer_Role_Name__c</picklist>
+            <values>
+                <fullName>Advisory Committee%2C non-voting Board Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Airport Greeter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Board Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Celebrity Host</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fundraising Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Advisor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Outreach Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Champion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Day Event Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Speaker%27s Bureau</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Events - Committee Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Events - Day of Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Translator %26 Interpreter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Assist Phone Greeter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Assist Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Granter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Granter Mentor</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Volunteer_Registered_Non_Wish</fullName>
+        <active>true</active>
+        <description>This Record type is assigned to volunteer.Who are all registered for the non wish.</description>
+        <label>Volunteer Registered Non Wish</label>
+        <picklistValues>
+            <picklist>Approval_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initiated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Assigned</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejection Notification</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>End_Time__c</picklist>
+            <values>
+                <fullName>1%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_Inactive__c</picklist>
+            <values>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactivated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-responsive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requested</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Required_Forms_for_Volunteers__c</picklist>
+            <values>
+                <fullName>Annual Conflict of Interest %26 Ethics Assurance Statement Fact Sheet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associates Database%3A How to Guide</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First Advantage Fact Sheet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Day Event Volunteers Fact Sheet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Volunteer Application Fact Sheet</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Start_Time__c</picklist>
+            <values>
+                <fullName>1%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Out of Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Volunteer_Role_Name__c</picklist>
+            <values>
+                <fullName>Advisory Committee%2C non-voting Board Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Airport Greeter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Board Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Celebrity Host</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fundraising Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Advisor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Outreach Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Champion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Day Event Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Speaker%27s Bureau</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Events - Committee Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Events - Day of Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Translator %26 Interpreter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Volunteer Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Assist Phone Greeter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Assist Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Granter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Granter Mentor</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Volunteer_Registered_Wish</fullName>
+        <active>true</active>
+        <description>This Record type is assigned to volunteer for who are all registered for the wish.</description>
+        <label>Volunteer Registered Wish</label>
+        <picklistValues>
+            <picklist>Approval_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initiated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Assigned</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejection Notification</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_Inactive__c</picklist>
+            <values>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactivated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-responsive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requested</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Required_Forms_for_Volunteers__c</picklist>
+            <values>
+                <fullName>Annual Conflict of Interest %26 Ethics Assurance Statement Fact Sheet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associates Database%3A How to Guide</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First Advantage Fact Sheet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Day Event Volunteers Fact Sheet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Volunteer Application Fact Sheet</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Out of Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Volunteer_Role_Name__c</picklist>
+            <values>
+                <fullName>Advisory Committee%2C non-voting Board Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Airport Greeter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Board Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Celebrity Host</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fundraising Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Advisor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Outreach Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Champion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Day Event Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Speaker%27s Bureau</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Events - Committee Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Events - Day of Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Translator %26 Interpreter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Volunteer Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Assist Phone Greeter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Assist Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Granter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Granter Mentor</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Wish</fullName>
+        <active>true</active>
+        <description>This record type would associate the volunteer to the wish</description>
+        <label>Wish</label>
+        <picklistValues>
+            <picklist>Approval_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initiated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Assigned</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejection Notification</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_Inactive__c</picklist>
+            <values>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactivated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Moved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-responsive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requested</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Required_Forms_for_Volunteers__c</picklist>
+            <values>
+                <fullName>Annual Conflict of Interest %26 Ethics Assurance Statement Fact Sheet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Associates Database%3A How to Guide</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First Advantage Fact Sheet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Day Event Volunteers Fact Sheet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Volunteer Application Fact Sheet</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Out of Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Volunteer_Role_Name__c</picklist>
+            <values>
+                <fullName>Advisory Committee%2C non-voting Board Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Airport Greeter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Board Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Celebrity Host</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fundraising Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Advisor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Outreach Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional Champion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Day Event Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Speaker%27s Bureau</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Events - Committee Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Events - Day of Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Translator %26 Interpreter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Assist Phone Greeter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Assist Volunteer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Granter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wish Granter Mentor</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Chapter_Role_Opportunity__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Event_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Wish__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Volunteer_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Reason_Inactive__c</customTabListAdditionalFields>
+        <lookupFilterFields>Chapter_Name__c</lookupFilterFields>
+        <lookupFilterFields>Role__c</lookupFilterFields>
+        <lookupFilterFields>Chapter_Role_Opportunity__c</lookupFilterFields>
+        <searchFilterFields>Chapter_Name__c</searchFilterFields>
+        <searchFilterFields>Chapter_Role_Opportunity__c</searchFilterFields>
+        <searchFilterFields>Role__c</searchFilterFields>
+        <searchResultsAdditionalFields>Event_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Chapter_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Chapter_Role_Opportunity__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Role__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+    <sharingReasons>
+        <fullName>Grant_Edit_Access_to_assigned_Volunteer__c</fullName>
+        <label>Grant Edit Access to assigned Volunteer</label>
+    </sharingReasons>
+    <validationRules>
+        <fullName>Vol_Opp_Do_Not_Create_for_Closed_Wish</fullName>
+        <active>true</active>
+        <description>Should not create volunteer opportunity for Closed Wish.</description>
+        <errorConditionFormula>Wish__r.IsClosed=True &amp;&amp; ISNEW() &amp;&amp; $Profile.Name  != &apos;Integration&apos;</errorConditionFormula>
+        <errorMessage>You cannot create volunteer opportunity for closed wish.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Volunteer_Opp_Reason_Inactive</fullName>
+        <active>true</active>
+        <description>This rule will fire if the if Reason Inactive is null when Inactive is checked.</description>
+        <errorConditionFormula>AND(Inactive__c = true,ISBLANK(TEXT(Reason_Inactive__c )))</errorConditionFormula>
+        <errorMessage>Please enter the value for Reason Inactive</errorMessage>
+    </validationRules>
+</CustomObject>

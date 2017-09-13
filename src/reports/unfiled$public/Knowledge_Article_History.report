@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>KnowledgeArticle$ArticleNumber</field>
+    </columns>
+    <columns>
+        <field>KnowledgeArticle$ArticleType</field>
+    </columns>
+    <columns>
+        <field>KnowledgeArticle$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>KnowledgeArticle$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>KnowledgeArticle$Title</field>
+    </columns>
+    <columns>
+        <field>KnowledgeArticle$FirstPublishedDate</field>
+    </columns>
+    <columns>
+        <field>KnowledgeArticle$LastPublishedDate</field>
+    </columns>
+    <columns>
+        <field>KnowledgeArticle$IsLatestVersion</field>
+    </columns>
+    <columns>
+        <field>KnowledgeArticle$VersionNumber</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Knowledge Article History</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Knowledge_Articles__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>KnowledgeArticle$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

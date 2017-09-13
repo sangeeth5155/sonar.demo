@@ -1,0 +1,26 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal"><span style="font-size: 12pt; line-height: 107%; font-family: &quot;Century Gothic&quot;, sans-serif;">Hi&nbsp;{!Target_User.FirstName},<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;"><br>
+Welcome to&nbsp;Wish Volunteer Community! To complete the volunteer
+registration process, please sign in with your username by visiting<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;">
+
+
+
+</p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;"><span style="color:black;
+text-decoration:none;text-underline:none"><a href="http://make-a-wish.force.com/">Make-A-Wish Volunteer Community</a></span>.<br>
+<br>
+Username:&nbsp;{!Target_User.Username}&nbsp;<br>
+<br>
+Should you have any questions please contact&nbsp;chapter staff at the number
+below.<br>
+<br>
+Thanks,<br>
+<br>
+{!Target_User.Account_Name__c}<br>
+{!Target_User.Account_Phone__c}<br>
+{!Target_User.Account_Email__c}<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt;"><o:p></o:p></p>]]></td>
+</tr>
+</table>

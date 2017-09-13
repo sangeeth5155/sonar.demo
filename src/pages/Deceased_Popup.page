@@ -1,0 +1,16 @@
+<!--Whenever Wish Child Record has been loaded, 
+It will display "This child is deceased" if it is deceased.-->
+
+<apex:page standardController="Contact">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<apex:outputPanel rendered="{!(Contact.npsp__Deceased__c==True)}">
+
+    <script>
+    $(function(){
+        alert("This wish child is deceased." );    
+    });
+    
+    </script>
+ </apex:outputPanel>
+
+</apex:page>

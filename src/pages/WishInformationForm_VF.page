@@ -1,0 +1,1302 @@
+<apex:page standardController="case" extensions="WishChildForm_AC" id="wif" title="Wish Information Form | Make-A-Wish Communities" standardStylesheets="false" showHeader="false" applyHtmlTag="false" sidebar="false" docType="html-5.0">
+<apex:include pageName="prospective_head" id="phead" />
+<!--<apex:stylesheet value="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"/>-->
+<style>label.radiowrap{font-family: "FuturaStd", 'Century Gothic', Arial, sans-serif; text-transform: capitalize; line-height: 2rem}.loader {position:absolute; top:1.5rem; right:7.5rem; width:1rem} @media (min-width: 48em) {.loader {right:9.5rem} }.error-show{display:none!important;}</style>
+<apex:include pageName="active_header" id="pheaderActive" rendered="{!if($Profile.Name="Active Volunteer",true,false)}" />
+<apex:include pageName="wishFamilyForm_header_active" id="pheader" rendered="{!if($Profile.Name<>"Active Volunteer",true,false)}" />
+<script>
+function resizeIframe(obj) {
+obj.style.height = 0;
+obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+}
+</script>
+<body class="vcp vcpactivelogin" id="top">
+<main role="main" class="container wif">
+<div class="row">
+  <section class="col-md-12">
+    <div class="row">
+        <h1 class="col-md-12">Wish Information</h1>
+    </div>
+    <apex:form id="frm">
+      <apex:actionFunction action="{!SaveandWishChildExit}" name="callConfirmSave" reRender="test"/>
+      <apex:actionFunction action="{!withOutNavigate}" name="navigatWithoutSave"/>
+      <apex:actionFunction action="{!WishInfotoWishChild}" name="saveWishInfotoChildForm" reRender="ooo"/>
+      <apex:actionFunction action="{!withOutSavetoChild}" name="WithOutsaveWishInfotoChildForm" reRender="oouuo"/>
+      <apex:actionFunction action="{!WishInfotoWishFamily}" name="saveWishInfotoFamilyForm" reRender="ooukkuo"/>
+      <apex:actionFunction action="{!withOutSaveWCCF}" name="WithOutsaveWishInfotoFamilyForm" reRender="ooulluo"/>
+      <apex:actionFunction action="{!RetrunToWish}" name="ReturnToWish" reRender="qquuqq"/>
+      <apex:actionFunction action="{!cancelfunction}" name="ReturnToWishWithOutSave" reRender="qqququu"/>
+      <apex:actionFunction action="{!SignNowmultiEmail}" name="SaveandSignNow" oncomplete="showMyModel();" reRender="popPickVal3" />
+       <apex:actionFunction name="refreshAttachmentSection"  reRender="attachmentSection" />
+      <div class="step-base">
+        <span class="step-tether nav-down">
+          <nav>
+              <ul class="step">
+                  <li><apex:commandLink value="Wish Child" action="{!BackToWCF}" onclick="preventDefault();" html-data-toggle="modal" html-data-target="#wcfooo-alert" /></li>
+                  <li><apex:commandLink value="Wish Family" action="{!SaveAndRedirectInformationForm}" onclick="preventDefault();"  html-data-toggle="modal" html-data-target="#wffmmm-alert" /></li>
+                  <li><apex:commandLink action="{!WFFNext}" value="Wish Information" styleClass="disabled current" />
+                    <ul class="anchor-links"></ul>
+                  </li>
+              </ul>
+
+              <div class="nav-sub-inner hidden-sm-down">
+                  <a href="#top" class="hidden-md-down">&uarr; Back to Top</a>
+                  <!-- <apex:Commandbutton value="Prev" action="{!BackToWCF}" styleClass="col-xs-12 btn-md form-validate" html-data-toggle="modal" html-data-target="#page-exit-alert" /> -->
+                  <apex:commandbutton value="Save" onclick="return false;"  styleClass="btn-md" html-data-toggle="modal" html-data-target="#save-alert" />
+                  <!--<apex:Commandbutton value="Sign Now" action="{!confirmSignNow}" styleClass="btn-md form-validate" html-data-toggle="modal" html-data-target="#signow-alert" reRender="dummyPanel"/>-->
+                  <apex:Commandbutton value="Sign Now" action="{!confirmSignNow}" styleClass="btn-md signModal" reRender="dummyPanel"/>
+                  <!--<apex:Commandbutton value="Send for Signature"  action="{!multiEmail}" styleClass="btn-md form-validate" html-data-toggle="modal" html-data-target="#sendemail-alert" reRender="dummyPanel,popPickVal1"/> -->
+                  <apex:Commandbutton value="Send for Signature"  action="{!multiEmail}" styleClass="btn-md  sendforModal" reRender="dummyPanel,popPickVal1"/>
+                  <!--<apex:Commandbutton value="Generate PDF" styleClass="btn-md form-validate" html-data-toggle="modal" html-data-target="#download-alert"/> -->
+                  <apex:Commandbutton value="Generate PDF" action="{!confirmSignNow}" styleClass="btn-md  generatePdf" reRender="dummyPanel,popPickVal1"/>
+                 <!-- <apex:Commandbutton value="Submit for Approval" styleClass="btn-md form-validate"  html-data-toggle="modal" html-data-target="#submit-alert"/> -->
+                 <apex:Commandbutton value="Submit for Approval" action="{!confirmSignNow}" styleClass="btn-md form-validate submitapproval" reRender="dummyPanel,popPickVal1" />
+
+              </div>
+          </nav>
+        </span>
+      </div>
+
+      <div class="messages"><apex:pagemessages /></div>
+      <div class="row">
+        <apex:actionFunction name="uiLogic" rerender="membAdd" />
+        <apex:pageblock id="membAdd">
+        <div class="container" id="family-info">
+          <!-- wish child -->
+          <fieldset>
+              <legend>Wish Child</legend>
+              <div class="col-md-6">
+                  <div class="form-group row">
+                      <label class="col-sm-3" aria-labelledby="Child Name">Name</label>
+                      <div class="col-sm-6 text-muted">
+                        <apex:outputField value="{!currWishChild.FirstName__c}"/>&nbsp;<apex:outputField value="{!currWishChild.Middle_Name__c}"/>&nbsp;<apex:outputField value="{!currWishChild.LastName__c}"/>
+                      </div>
+                  </div>
+              </div>
+          </fieldset>
+          <!-- scheduling -->
+          <fieldset>
+            <legend>Scheduling the Wish</legend>
+            <span class="info">Please select an option in the optional fields below.</span>
+            <div class="col-xs-12">
+              <div class="form-group row">
+                <label aria-label="availability">Please indicate three time periods in which your family will have the greatest availability for fulfillment of the wish.</label>
+              </div>
+            </div>
+            <div class="col-xs-12 col-lg-6">
+              <div class="form-group row time-one">
+                <div class="col-sm-4"><label for="wif:frm:availability-month-one" aria-label="availability-month-one">Time Period 1</label></div>
+                  <div class="col-xs-6 col-sm-4">
+                    <apex:selectList value="{!wcfUtil.availableMonth1}" id="availability-month-one" multiselect="false" size="1" styleClass="form-control month1 col-xs-12 col-sm-12 c-select mo">
+                      <apex:selectoptions value="{!wcfUtil.Months}" />
+                    </apex:selectList>
+                  </div>
+                  <div class="col-xs-6 col-sm-4">
+                    <apex:selectList value="{!wcfUtil.availableYear1}" id="availability-year-one" multiselect="false" size="1" styleClass="form-control year1 col-xs-12 col-sm-12 c-select yr">
+                      <apex:selectOptions value="{!wcfUtil.Year}" />
+                    </apex:selectList>
+                  </div>
+              </div>
+
+              <div class="form-group row time-two">
+                <div class="col-sm-4"><label for="wif:frm:availability-month-two"  aria-label="availability-month-one">Time Period 2</label></div>
+                  <div class="col-xs-6 col-sm-4">
+                    <apex:selectList value="{!wcfUtil.availableMonth2}" id="availability-month-two" multiselect="false" size="1" styleClass="form-control month2 col-xs-12 col-sm-12 c-select mo">
+                      <apex:selectoptions value="{!wcfUtil.Months}" />
+                    </apex:selectList>
+                  </div>
+                  <div class="col-xs-6 col-sm-4">
+                    <apex:selectList value="{!wcfUtil.availableYear2}"  id="availability-year-two" multiselect="false" size="1" styleClass="form-control year2 col-xs-12 col-sm-12 c-select yr">
+                        <apex:selectOptions value="{!wcfUtil.Year}" />
+                    </apex:selectList>
+                  </div>
+              </div>
+
+              <div class="form-group row time-three">
+                <div class="col-sm-4"><label for="wif:frm:availability-month-three"  aria-label="availability-month-one">Time Period 3</label></div>
+                  <div class="col-xs-6 col-sm-4">
+                    <apex:selectList value="{!wcfUtil.availableMonth3}" id="availability-month-three" multiselect="false" size="1" styleClass="form-control month3 col-xs-12 col-sm-12 c-select mo">
+                      <apex:selectoptions value="{!wcfUtil.Months}" />
+                    </apex:selectList>
+                  </div>
+                  <div class="col-xs-6 col-sm-4">
+                    <apex:selectList value="{!wcfUtil.availableYear3}" id="availability-year-three" multiselect="false" size="1" styleClass="form-control year3 col-xs-12 col-sm-12 c-select yr">
+                        <apex:selectOptions value="{!wcfUtil.Year}" />
+                    </apex:selectList>
+                  </div>
+                  <em class="error-show"><center>The above time periods should be same</center></em>
+              </div>
+
+              <!-- impact wish question -->
+              <div class="form-group row">
+                  <div class="col-sm-12"><label for="wif:frm:impact-wish" aria-labelledby="impact wish">Is there anything on your family’s calendar (upcoming medical treatments, school or work commitments, planned vacations, etc.) that might impact your ability to participate in a wish?</label></div>
+                  <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap">
+                    <apex:inputField value="{!currWishChild.Any_impact_your_ability_to_join_wish__c}" id="impact-wish" styleClass="form-control col-xs-12 col-sm-12 c-select f-impact-wish"/>
+                  </div>
+              </div>
+              <div class="form-group sr-only row impact-details">
+                  <div class="col-sm-12"><label for="wif:frm:impact-details" aria-labelledby="impact details">Details</label></div>
+                  <div class="col-xs-12 col-md-8 col-lg-12">
+                    <apex:inputTextarea value="{!currWishChild.Details_about_Impact__c}" styleClass="form-control impact-textarea Yes" id="impact-details" html-placeholder="Please enter details" />
+                  </div>
+              </div>
+            </div>
+          </fieldset>
+          <!-- driver identification -->
+          <fieldset>
+            <legend>Driver Identification</legend>
+            <span class="info">Many wishes involve the use of a rental vehicle. For this reason, please indicate a preferred and potential driver who may be driving during the course of the wish.<br/>
+              <strong>Please submit a photocopy of valid driver’s license(s)</strong>.</span>
+
+              <apex:outputpanel >
+                <apex:variable value="{!0}" var="part"/>
+                <apex:repeat value="{!wcfUtil.driverWrapperCls}" var="driverContact">
+                <fieldset class="connected-haslegend driver-id fadein-alert" style="border-bottom:none">
+                  <legend>Driver {!part+1}</legend>
+                  <span class="info">Please the fields below.</span>
+                  <apex:commandlink immediate="true" action="{!removeDriver}" reRender="membAdd,uiLogic" styleClass="text-muted remove-block">
+                    - Remove
+                    <apex:param name="driver" value="{!part}"/>
+                    <apex:variable var="part" value="{!part+1}"/>
+                  </apex:commandlink>
+                  <script type="text/javascript">
+                  listSize = {!part};
+                  </script>
+                  <apex:variable var="cnt" value="{!part+1}"/>
+                  <div class="col-lg-6">
+                    <div class="form-group row">
+                        <div class="col-xs-12 col-sm-3"><label aria-label="Name">Name</label></div>
+                        <div class="col-sm-6">
+                          <apex:selectList value="{!driverContact.driverName}" multiselect="false" size="1" styleClass="form-control col-xs-12 col-sm-12 c-select required">
+                              <apex:selectOption itemlabel="Please Select" itemValue=""/>
+                              <apex:selectOptions value="{!wcfUtil.driverNameList}" />
+                          </apex:selectList>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-xs-12 col-sm-3"><label aria-labelledby="Driver's License Number">License Number</label></div>
+                        <div class="col-sm-6">
+                            <apex:inputText value="{!driverContact.licenseNum}" styleClass="form-control required" maxlength="50" html-placeholder="example: F25592150094" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-xs-12 col-sm-3"><label aria-label="State">State</label></div>
+                        <div class="col-sm-6">
+                          <apex:selectList value="{!driverContact.state}" styleClass="form-control col-xs-12 col-sm-12 c-select state" size="1" >
+                            <apex:selectOptions value="{!wcfUtil.states}" />
+                          </apex:selectList>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group row">
+                        <div class="col-xs-12 col-sm-3"><label aria-label="Expiration Date">Expiration Date</label></div>
+                        <div class="col-sm-6">
+                            <apex:inputText value="{!driverContact.expirationDate}" styleClass="form-control date-input dob numbers-only" maxlength="50" html-placeholder="mm/dd/yyyy" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-xs-12 col-sm-3"><label aria-label="Type">Type</label></div>
+                        <div class="col-sm-6">
+                          <apex:selectList value="{!driverContact.type}" size="1" multiselect="false" styleClass="form-control col-xs-12 col-sm-12 c-select">
+                           <apex:selectOption itemlabel="Please Select" itemValue=""/>
+                           <apex:selectOption itemlabel="Potential" itemValue="Potential"/>
+                           <apex:selectOption itemlabel="Preferred" itemValue="Preferred"/>
+                         </apex:selectList>
+                       </div>
+                     </div>
+                   </div>
+                </fieldset>
+                </apex:repeat>
+              </apex:outputpanel>
+          </fieldset>
+          <fieldset class="connected">
+            <div class="form-group row">
+              <div class="col-md-12"><apex:commandLink value="+ Add Driver" action="{!addDriver}" styleClass="text-muted" reRender="membAdd,uiLogic" /></div>
+            </div>
+          </fieldset>
+          <!-- driver info -->
+          <fieldset class="driver-info">
+            <span class="info">Please select an option for each question in the required fields below.</span>
+            <div class="col-lg-6">
+              <div class="form-group row">
+                  <div class="col-md-12"><label for="wif:frm:have-auto-ins">Do you have current automobile insurance?</label></div>
+                  <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap"><apex:inputField value="{!currWishChild.Have_current_automobile_insurance__c}" id="have-auto-ins" styleClass="form-control c-select dvi" /></div>
+              </div>
+              <div class="form-group row">
+                 <div class="col-sm-12"><label for="wif:frm:ins-prov-cov"> Does your automobile insurance provide coverage while using a rental car?</label></div>
+                 <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap"><apex:inputField value="{!currWishChild.Automobile_insurance_provide_coverage__c}" id="ins-prov-cov" styleClass="form-control c-select dvi" /></div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group row">
+                  <div class="col-md-12"><label for="wif:frm:rental-vehicle">Is your family comfortable driving a rental vehicle, if one were recommended for the wish?</label></div>
+                  <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap"><apex:inputField value="{!currWishChild.Is_your_family_comfortable_in_rendal_car__c}" id="rental-vehicle" styleClass="form-control c-select dvi" /></div>
+              </div>
+              <div class="form-group row">
+                  <div class="col-md-12"><label for="wif:frm:whealchair-vehicle"> Is a wheelchair accessible vehicle needed?</label></div>
+                  <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap"><apex:inputField value="{!currWishChild.Is_a_wheelchair_accessible_vehicle_neede__c}" id="whealchair-vehicle" styleClass="form-control c-select dvi" /></div>
+              </div>
+            </div>
+          </fieldset>
+           <!-- medical questions -->
+          <fieldset>
+            <legend>Medical Questions</legend>
+            <span class="info">Please select an option for each question in the optional fields below.<br />If the answer is yes, please supply details/notes and select any participant(s) involved to the pertaining question.</span>
+            <div class="col-lg-6">
+              <div class="form-group row">
+                <div class="col-md-12"><label>Does any requested participant require a wheelchair?</label></div>
+                <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap"><apex:inputField value="{!currWishChild.Participant_require_a_wheelchair__c}" styleClass="form-control col-xs-12 col-sm-12 c-select part-select" /></div>
+                <div class="note sr-only">
+                  <div class="col-xs-12 hidden-lg-up"><label>Notes</label></div>
+                  <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Participant_require_a_wheelchair_Note__c}" styleClass="form-control" html-placeholder="Please provide details about the Height/Width/Length" /></div>
+                </div>
+              </div>
+              <div class="form-group row is-yes sr-only">
+                <div class="col-xs-12"><label class="hidden-lg-up">Participant(s)</label></div>
+                <div class="col-xs-12 col-md-8">
+                  <apex:selectList value="{!tempName}" multiselect="true" size="4" styleclass="form-control col-xs-12 col-sm-12 multi-part" html-data-placeholder="Select Participant(s)">
+                    <apex:selectOption html-disabled="disabled"/>
+                    <apex:selectOptions value="{!DoesParticipantReqWheelchair}" />
+                  </apex:selectList>
+                </div>
+              </div>
+
+             <div class="form-group row">
+                <div class="col-md-12"><label>Will your family bring your own wheelchair?</label></div>
+                <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap"><apex:inputField value="{!currWishChild.Will_your_family_bring_wheelchair__c}" styleClass="form-control col-xs-12 col-sm-12 c-select part-select" /></div>
+                <div class="note sr-only">
+                  <div class="col-xs-12 hidden-lg-up"><label>Notes</label></div>
+                  <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Will_your_family_bring_wheelchair_Note__c}" styleClass="form-control" html-placeholder="Please note here." /></div>
+                </div>
+              </div>
+              <div class="form-group row is-yes sr-only">
+                <div class="col-xs-12"><label class="hidden-lg-up">Participant(s)</label></div>
+                <div class="col-xs-12 col-md-8">
+
+                  <apex:selectList value="{!currentOwnWheelChairList}" multiselect="true" size="4" styleclass="form-control col-xs-12 col-sm-12 multi-part" html-data-placeholder="Select Participant(s)">
+                    <apex:selectOption html-disabled="disabled"/>
+                    <apex:selectOptions value="{!WillYourFamilyBringWheelChair}" />
+                  </apex:selectList>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-12"><label>Is the wheelchair collapsible?</label></div>
+                <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap"><apex:inputField value="{!currWishChild.Is_the_wheelchair_collapsible__c}" styleClass="form-control col-xs-12 col-sm-12 c-select part-select" /></div>
+                <div class="note sr-only">
+                  <div class="col-xs-12 hidden-lg-up"><label>Notes</label></div>
+                  <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Is_the_wheelchair_collapsible_Note__c}" styleClass="form-control" html-placeholder="Please note here." /></div>
+                </div>
+              </div>
+              <div class="form-group row is-yes sr-only">
+                <div class="col-xs-12"><label class="hidden-lg-up">Participant(s)</label></div>
+                <div class="col-xs-12 col-md-8">
+                  <apex:selectList value="{!CurrentWCCollapsibleList}" multiselect="true" size="4" styleclass="form-control col-xs-12 col-sm-12 multi-part" html-data-placeholder="Select Participant(s)">
+                    <apex:selectOption html-disabled="disabled"/>
+                    <apex:selectOptions value="{!WheelChairColapsable}" />
+                  </apex:selectList>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-12"><label>Is the wheelchair power?</label></div>
+                <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap"><apex:inputField value="{!currWishChild.Is_the_wheelchair_power__c}" styleClass="form-control col-xs-12 col-sm-12 c-select part-select" /></div>
+                <div class="note sr-only">
+                  <div class="col-xs-12 hidden-lg-up"><label>Notes</label></div>
+                  <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Is_the_wheelchair_power_Note__c}" styleClass="form-control" html-placeholder="Please provide battery type (Dry Cell or Wet/Gel Cell)" /></div>
+                </div>
+              </div>
+              <div class="form-group row is-yes sr-only">
+                <div class="col-xs-12"><label class="hidden-lg-up">Participant(s)</label></div>
+                <div class="col-xs-12 col-md-8">
+                  <apex:selectList value="{!CurrentWCPowerList}" multiselect="true" size="4" styleclass="form-control col-xs-12 col-sm-12 multi-part" html-data-placeholder="Select Participant(s)">
+                    <apex:selectOption html-disabled="disabled"/>
+                    <apex:selectOptions value="{!wheelChairPower}" />
+                  </apex:selectList>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-12"><label>Does any requested participant require oxygen?</label></div>
+                <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap"><apex:inputField value="{!currWishChild.Participant_require_oxygen_how_often__c}" styleClass="form-control col-xs-12 col-sm-12 c-select part-select" /></div>
+                <div class="note sr-only">
+                  <div class="col-xs-12 hidden-lg-up"><label>Notes</label></div>
+                  <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Participant_require_oxygen_Note__c}" styleClass="form-control" html-placeholder="Please provide how often (day time, night time, 24 hours)" /></div>
+                </div>
+              </div>
+              <div class="form-group row is-yes sr-only">
+                <div class="col-xs-12"><label class="hidden-lg-up">Participant(s)</label></div>
+                <div class="col-xs-12 col-md-8">
+                  <apex:selectList value="{!CurrentOxygenNamesList}" multiselect="true" size="4" styleclass="form-control col-xs-12 col-sm-12 multi-part" html-data-placeholder="Select Participant(s)">
+                    <apex:selectOption html-disabled="disabled"/>
+                    <apex:selectOptions value="{!participantRequireOxygan}" />
+                  </apex:selectList>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+              <div class="form-group row">
+                <div class="col-md-12"><label>Does any requested participant have special dietary restrictions?</label></div>
+                <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap"><apex:inputField value="{!currWishChild.Participant_dietary_restrictions__c}" styleClass="form-control col-xs-12 col-sm-12 c-select part-select" /></div>
+                <div class="note sr-only">
+                  <div class="col-xs-12 hidden-lg-up"><label>Notes</label></div>
+                  <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Participant_dietary_restrictions_Note__c}" styleClass="form-control" html-placeholder="Please note here." /></div>
+                </div>
+              </div>
+              <div class="form-group row is-yes sr-only">
+                <div class="col-xs-12"><label class="hidden-lg-up">Participant(s)</label></div>
+                <div class="col-xs-12 col-md-8">
+                  <apex:selectList value="{!CurrrentDietaryNameList}" multiselect="true" size="4" styleclass="form-control col-xs-12 col-sm-12 multi-part" html-data-placeholder="Select Participant(s)">
+                    <apex:selectOption html-disabled="disabled"/>
+                    <apex:selectOptions value="{!participantHaveSpecialRestrictaion}" />
+                  </apex:selectList>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-12"><label>Does any requested participant have allergies to food or materials?</label></div>
+                <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap"><apex:inputField value="{!currWishChild.Participant_have_allergies_to_food__c}" styleClass="form-control col-xs-12 col-sm-12 c-select part-select" /></div>
+                <div class="note sr-only">
+                  <div class="col-xs-12 hidden-lg-up"><label>Notes</label></div>
+                  <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Participant_have_allergies_to_food_Note__c}" styleClass="form-control" html-placeholder="Please note who and what allergy." /></div>
+                </div>
+              </div>
+              <div class="form-group row is-yes sr-only">
+                <div class="col-xs-12"><label class="hidden-lg-up">Participant(s)</label></div>
+                <div class="col-xs-12 col-md-8">
+                  <apex:selectList value="{!CurrentAllergyNamesList}" multiselect="true" size="4" styleclass="form-control col-xs-12 col-sm-12 multi-part" html-data-placeholder="Select Participant(s)">
+                    <apex:selectOption html-disabled="disabled"/>
+                    <apex:selectOptions value="{!participantHaveSpecialallergies}" />
+                  </apex:selectList>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-12"><label>Does any medication require refrigeration?</label></div>
+                <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap"><apex:inputField value="{!currWishChild.Medication_require_refrigeration__c}" styleClass="form-control col-xs-12 col-sm-12 c-select part-select" /></div>
+                <div class="note sr-only">
+                  <div class="col-xs-12 hidden-lg-up"><label>Notes</label></div>
+                  <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Medication_require_refrigeration_Note__c}" styleClass="form-control" html-placeholder="Please note here." /></div>
+                </div>
+              </div>
+              <div class="form-group row is-yes sr-only">
+                <div class="col-xs-12"><label class="hidden-lg-up">Participant(s)</label></div>
+                <div class="col-xs-12 col-md-8">
+                  <apex:selectList value="{!CurrentMedicationList}" multiselect="true" size="4" styleclass="form-control col-xs-12 col-sm-12 multi-part" html-data-placeholder="Select Participant(s)">
+                    <apex:selectOption html-disabled="disabled"/>
+                    <apex:selectOptions value="{!medicationRequireRefeigeration}" />
+                  </apex:selectList>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-12"><label>Does <apex:outputText value=" {!currWishChild.FirstName__c}"/> currently receive nursing care?</label></div>
+                <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap"><apex:inputField value="{!currWishChild.Wish_child_receive_nursing_care__c}" styleClass="form-control col-xs-12 col-sm-12 c-select part-select" /></div>
+                <div class="note sr-only">
+                  <div class="col-xs-12 hidden-lg-up"><label>Notes</label></div>
+                  <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Wish_child_receive_nursing_care_Note__c}" styleClass="form-control" html-placeholder="Please list the number of hours, agency and phone number." /></div>
+                </div>
+              </div>
+              <div class="form-group row is-yes sr-only">
+                <div class="col-xs-12"><label class="hidden-lg-up">Participant(s)</label></div>
+                <div class="col-xs-12 col-md-8">
+                  <apex:selectList value="{!CurrentNursingCareList}" multiselect="true" size="4" styleclass="form-control col-xs-12 col-sm-12 multi-part" html-data-placeholder="Select Participant(s)">
+                    <apex:selectOption html-disabled="disabled"/>
+                    <apex:selectOptions value="{!currentlyReceiveNursingCare}" />
+                  </apex:selectList>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-12"><label>Does any requested participant require any other medical supplies?</label></div>
+                <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap"><apex:inputField value="{!currWishChild.Participant_require_medical_supplies__c}" styleClass="form-control col-xs-12 col-sm-12 c-select part-select" /></div>
+                <div class="note sr-only">
+                  <div class="col-xs-12 hidden-lg-up"><label>Notes</label></div>
+                  <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Participant_require_medical_suppliesNote__c}" styleClass="form-control" html-placeholder="Please detail what is required." /></div>
+                </div>
+              </div>
+              <div class="form-group row is-yes sr-only">
+                <div class="col-xs-12"><label class="hidden-lg-up">Participant(s)</label></div>
+                <div class="col-xs-12 col-md-8">
+                  <apex:selectList value="{!CurrentOtherNeedsList}" multiselect="true" size="4" styleclass="form-control col-xs-12 col-sm-12 multi-part" html-data-placeholder="Select Participant(s)">
+                    <apex:selectOption html-disabled="disabled"/>
+                    <apex:selectOptions value="{!anyOtherMedicalSupplies}" />
+                  </apex:selectList>
+                </div>
+              </div>
+
+            </div>
+            </fieldset>
+            <!-- travel info -->
+            <fieldset>
+              <legend>Travel Information</legend>
+              <span class="info">Please select an option for each question in the optional fields and fill any fields that appears below.</span>
+              <div class="col-lg-6">
+                <div class="form-group row">
+                  <div class="col-md-12"><label>Has your family flown before?</label></div>
+                  <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap">
+                    <apex:inputField value="{!currWishChild.Has_your_family_flown_before__c}" styleClass="form-control col-xs-12 col-sm-12 c-select travel-select-both flown" />
+                  </div>
+                  <div class="note sr-only">
+                    <div class="col-xs-12 hidden-lg-up"><label>Details</label></div>
+                    <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Has_your_family_flown__c}" styleClass="form-control" html-placeholder="Please enter details here." /></div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-md-12"><label>Will an interpreter be needed?</label></div>
+                  <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap">
+                    <apex:inputField value="{!currWishChild.Will_an_interpreter_be_needed__c}" styleClass="form-control col-xs-12 col-sm-12 c-select travel-select" />
+                  </div>
+                  <div class="note sr-only">
+                    <div class="col-xs-12 hidden-lg-up"><label>Details</label></div>
+                    <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Will_an_interpreter_be_needed_Details__c}" styleClass="form-control" html-placeholder="Please enter details here." /></div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-md-12"><label>Will a rental car seat(s) be needed?</label></div>
+                  <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap">
+                    <apex:inputField value="{!currWishChild.Will_a_rental_car_seat_s_be_needed__c}" styleClass="form-control col-xs-12 col-sm-12 c-select travel-select" />
+                  </div>
+                  <div class="note sr-only">
+                    <div class="col-xs-12 hidden-lg-up"><label>Details</label></div>
+                    <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Will_a_rental_car_seat_s_Details__c}" styleClass="form-control" html-placeholder="Please indicate how many/what type (Infant, Toddler, Booster)." /></div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-md-12"><label>Are all requested participants able to sit up during takeoff/landing on airplane?</label></div>
+                  <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap">
+                    <apex:inputField value="{!currWishChild.Sit_up_takeoff_landing_on_airplane__c}" styleClass="form-control col-xs-12 col-sm-12 c-select travel-select-no" />
+                  </div>
+                  <div class="note sr-only">
+                    <div class="col-xs-12 hidden-lg-up"><label>Details</label></div>
+                    <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Are_all_requested_participants_Details__c}" styleClass="form-control" html-placeholder="Please note who cannot" /></div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-md-12"><label>Will a rental stroller be needed?</label></div>
+                  <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap">
+                    <apex:inputField value="{!currWishChild.Will_a_rental_stroller_be_needed__c}" styleClass="form-control col-xs-12 col-sm-12 c-select travel-select" />
+                  </div>
+                  <div class="note sr-only">
+                    <div class="col-xs-12 hidden-lg-up"><label>Details</label></div>
+                    <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Will_a_rental_stroller_Details__c}" styleClass="form-control" html-placeholder="Please indicate what type (single/double)." /></div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-md-12"><label>Will handicap accessible accommodations be required?</label></div>
+                  <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap">
+                    <apex:inputField value="{!currWishChild.Handicap_accommodations_be_required__c}" styleClass="form-control col-xs-12 col-sm-12 c-select travel-select" />
+                  </div>
+                  <div class="note sr-only">
+                    <div class="col-xs-12 hidden-lg-up"><label>Details</label></div>
+                    <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Will_handicap_accessible_Details__c}" styleClass="form-control" html-placeholder="Please enter details here." /></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="col-lg-6">
+
+                <div class="form-group row">
+                  <div class="col-md-12"><label>Does each requested participant have valid passports?</label></div>
+                  <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap">
+                    <apex:inputField value="{!currWishChild.Participant_have_valid_passports__c}" styleClass="form-control col-xs-12 col-sm-12 c-select travel-select-both passport" />
+                  </div>
+                  <div class="note sr-only">
+                    <div class="col-xs-12 hidden-lg-up"><label>Details</label></div>
+                    <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Does_each_requested_participant_Details__c}" styleClass="form-control" html-placeholder="Please enter details here." /></div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-md-12"><label>Does each requested participant (18 and over) have a valid U.S. federal or state-issued photo ID? Please provide a copy/image.</label></div>
+                  <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap">
+                    <apex:inputField value="{!currWishChild.Does_participant_have_valid_photo_ID__c}" styleClass="form-control col-xs-12 col-sm-12 c-select travel-select-both participant-id" />
+                  </div>
+                  <div class="note sr-only">
+                    <div class="col-xs-12 hidden-lg-up"><label>Details</label></div>
+                    <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Does_each_requested_participan__c}" styleClass="form-control" html-placeholder="Please enter details here." /></div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-md-12"><label>Does your family have a valid major credit card? Typically, a hotel will request a credit card for incidentals that may occur during a stay. If you do not have a creditcard, other arrangements can be made; however, Make-A-Wish does need to know ahead of time.</label></div>
+                  <div class="col-xs-10 col-md-6 col-lg-8 sel-wrap">
+                    <apex:inputField value="{!currWishChild.Does_your_family_have_a_credit_card__c}" styleClass="form-control col-xs-12 col-sm-12 c-select travel-select cc" />
+                  </div>
+                  <div class="note sr-only">
+                    <div class="col-xs-12 hidden-lg-up"><label>Details</label></div>
+                    <div class="col-xs-12 col-md-8"><apex:inputField value="{!currWishChild.Does_your_family_Details__c}" styleClass="form-control" html-placeholder="Please add the expiration date." /></div>
+                  </div>
+                </div>
+
+              </div>
+            </fieldset>
+            <!-- attach documents -->
+            <fieldset>
+              <legend>Attach Documents</legend>
+              <span class="info">You may upload any files you wish to have included for the wish child below.</span>
+              <div class="col-md-12 req-attachments">
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label>Please provide the a photocopy of the required item(s) listed below based on your answers above.</label>
+                    <ol class="col-xs-12 doc-list text-muted">
+                      <li class="has-drivers">A <strong>valid Driver's license for driver(s)</strong>  that you've added in the Driver Identification section above.</li>
+                      <li class="has-passport">A <strong>valid Passport for Participant(s)</strong> that you've added based on your answer in the Travel Information section above.</li>
+                      <li class="has-participant-id">A <strong>valid U.S. Federal or State-Issued Photo ID Participant(s)</strong> that you've requested based on your answer in the Travel Information section above.</li>
+                    </ol>
+                    </div>
+                </div>
+              </div>
+              <apex:outputPanel id="attachmentSection">
+                  <div class="col-xs-12">
+                      <div class="col-xs-12 col-sm-6 upload-loader"></div>
+                      <iframe id="wifupload" width="100%" scrolling="no" onload="resizeIframe(this)" frameborder="0" src="/apex/wifAttachment_VF?id={!currCase.Id}"></iframe>
+                      <!-- <iframe id="wifupload" width="100%" scrolling="no" onload="resizeIframe(this)" frameborder="0" src="/apex/DVMedicalSummaryAttachment_VF?id={!currlead.Id}"></iframe> -->
+                  </div>
+              </apex:outputPanel>
+            </fieldset>
+            <!-- required signatures -->
+            <fieldset>
+              <legend>Required Signatures</legend>
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label>I understand and agree:</label>
+                    <ol class="col-xs-12 text-muted">
+                      <li>That no promises or assurances whatsoever have been made to me by any representative of Make-A-Wish regarding the requested wish;</li>
+                      <li>That the granting of any wish and the participation of any person in the wish is contingent upon approval by Make-A-Wish and the child’s physician, as well as full compliance with all conditions, qualifications, and restrictions designated by Make-A-Wish;</li>
+                      <li>That all individuals with parental or custodial rights for the child must approve the wish before it is granted and must sign all necessary documents; and</li>
+                      <li>That the receipt of a wish may impact the eligibility for public assistance and/or benefits.</li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-xs-12">
+
+                      <label class="c-input c-checkbox" style="color:#747678" arial-label="agree">
+                      <apex:inputcheckbox value="{!currWishChild.Information_Provided__c}" styleClass="required" style="top:-.2rem; border:1px solid #ccc" />
+                      <span class="c-indicator" style="top:-.2rem; border:1px solid #ccc"></span>
+
+                        I promise that the information provided by me is true and complete to the best of my knowledge.
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+        </div>
+        <!-- end /conatiner -->
+        </apex:pageblock>
+      </div>
+
+      <div class="row hidden-md-up nav-btm">
+        <nav class="btm">
+          <ul>
+            <!-- <li><apex:Commandbutton value="Prev" action="{!BackToWCF}" styleClass="btn-md form-validate" html-data-toggle="modal" html-data-target="#page-exit-alert" /></li> -->
+            <li><apex:commandbutton value="Save" onclick="return false;" styleClass="btn-md" html-data-toggle="modal" html-data-target="#save-alert" /></li>
+            <li><apex:Commandbutton value="Sign Now" action="{!confirmSignNow}" styleClass="btn-md  signModal" reRender="dummyPanel"/></li>
+            <li><apex:Commandbutton value="Send for Signature" action="{!multiEmail}" styleClass="btn-md  sendforModal" reRender="dummyPanel,popPickVal1"/></li>
+            <li><apex:Commandbutton value="Generate PDF" action="{!confirmSignNow}" styleClass="btn-md  generatePdf" reRender="dummyPanel,popPickVal1"/></li>
+            <li><apex:Commandbutton value="Submit for Approval" action="{!confirmSignNow}" styleClass="btn-md form-validate submitapproval" reRender="dummyPanel,popPickVal1"/></li>
+            <!-- <apex:Commandbutton value="Exit"  action="{!cancelfunction}" reRender="btpopup" styleClass="col-xs-12 btn-md" immediate="true"/> -->
+          </ul>
+        </nav>
+      </div>
+
+      <!-- sign now step 1 modal -->
+      <div class="modal fade" id="signow-alert" tabindex="-1" role="dialog" aria-labelledby="Sign Now" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="sign-now">Sign Now</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group row">
+                <div class="col-sm-12"><label><b>Are you finished completing the Wish Paperwork Packet and ready to collect electronic signatures?</b></label><span class="text-muted">Please ensure you have uploaded any photos, documents, and IDs before submitting this paperwork for approval. </span></div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+              <apex:commandButton onclick="test7();" value="Sign" styleClass="btn-md" reRender="popPickVal3"/>
+              <apex:commandButton value="Cancel" styleClass="btn-md" html-data-dismiss="modal" style="margin-left:1px" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+      function showMyModel() {
+      $('#exit-alert').modal('hide');
+      $('#signow-alert').modal('hide');
+      if(!{!wcfUtil.displayError}){
+
+        $('#signow-alert2').modal('show');}
+      else{
+      $('#noUsertoSign-alert').modal('show');
+
+      }
+
+      }
+      </script>
+
+      <!-- sign now step 2 modal -->
+      <div class="modal fade" id="signow-alert2" tabindex="-1" role="dialog" aria-labelledby="Sign Now2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="sign-now">Sign Now</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group row">
+                <div class="col-sm-12"><label>Please select the individual(s) whom need to sign.</label></div>
+                  <div class="col-sm-6">
+                      <apex:outputPanel id="popPickVal3">
+                          <apex:selectList value="{!wcfUtil.SignNowName}" multiselect="false" size="1" styleClass="form-control multi sign" html-placeholder="Please select an individual">
+                            <apex:selectOption itemlabel="Please select an individual." itemValue="" />
+                            <apex:selectOptions value="{!wcfUtil.multiPickoptions}" />
+                          </apex:selectList>
+                          <script>
+                          document.addEventListener("DOMContentLoaded", function() {
+                            $('.sign option:nth-child(1)').prop('disabled',true);
+                            $("select.multi").chosen({
+                              placeholder_text_multiple: "Please select all that apply",
+                              width:"100%",
+                              disable_search:true}
+                            );
+                          });
+                         </script>
+                      </apex:outputPanel>
+                  </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <apex:commandButton action="{!SubmitAndSign}" value="Sign" styleClass="btn-md" />
+              <apex:commandButton value="Cancel" styleClass="btn-md" html-data-dismiss="modal" style="margin-left:1px" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!---- Error Message ---->
+      <div class="modal fade" id="errorMessage" tabindex="-1" role="dialog" aria-labelledby="Error Popup" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="sign-now">Sign Now</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group row">
+                <div class="col-sm-12"><label>There is no user to sign</label></div>
+                  <div class="col-sm-6">
+
+                  </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <apex:commandButton action="{!cancelfunction}" value="Ok" styleClass="btn-md" />
+              <apex:commandButton value="Cancel" styleClass="btn-md" html-data-dismiss="modal" style="margin-left:1px" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--- end ----->
+
+      <!-- send email modal -->
+      <div class="modal fade" id="sendemail-alert" tabindex="-1" role="dialog" aria-labelledby="Send Email" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="send-email">Send for Signature</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group row">
+                <div class="col-sm-12"><label>Please select users to send an email.</label></div>
+                <div class="col-sm-6">
+                <apex:outputPanel id="popPickVal1">
+                  <apex:selectList value="{!wcfUtil.emailList}" multiselect="true" size="4" styleClass="form-control multi" html-placeholder="Please All That Apply">
+                    <apex:selectOptions value="{!wcfUtil.multiPickoptions}" />
+                  </apex:selectList>
+                  </apex:outputPanel>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="row">
+                <apex:commandButton action="{!sendpdftoEmail}" value="Send Email" styleClass="btn-md" />
+                <apex:commandButton value="Cancel" styleClass="btn-md" html-data-dismiss="modal" style="margin-left:1px" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     <!-- submitapproval  modal -->
+      <div class="modal fade" id="submit-alert" tabindex="-1" role="dialog" aria-labelledby="Submit Approval" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="submit-approval">Submit for Approval</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group row">
+                <div class="col-sm-12"><label>Are you finished completing the Wish Paperwork Packet and ready to send approval?</label></div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+              <apex:commandButton action="{!submitforApproval}" value="Yes" styleClass="btn-md" />
+              <apex:commandButton value="Cancel" styleClass="btn-md" html-data-dismiss="modal" style="margin-left:1px" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+     <!-- download Pdf  modal -->
+      <div class="modal fade" id="download-alert" tabindex="-1" role="dialog" aria-labelledby="Sign Now" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="sign-now">Download your Wish Paperwork Packets</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group row">
+                <div class="col-sm-12"><label>Are you finished completing the Wish Paperwork Packet ?</label></div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+              <apex:commandButton action="{!generatePDF}" value="Yes" styleClass="btn-md" />
+              <apex:commandButton value="Cancel" styleClass="btn-md" html-data-dismiss="modal" style="margin-left:1px" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+     <!-- wcf1 modal -->
+     <div class="modal fade" id="wcfooo-alert" tabindex="-1" role="dialog" aria-labelledby="Exit Form" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exit-form">Leaving Form</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="text-muted col-xs-12" style="text-align:center">You may save your progress before leaving this form.</p>
+        </div>
+        <div class="modal-footer">
+          <apex:commandButton value="Save" onclick="test4();"  styleClass="btn-md" reRender="hhh"/>
+          <apex:commandButton action="{!withOutSavetoChild}" value="Navigate without Saving" styleClass="btn-md" style="margin-left:1px" reRender="oouuo" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- wff modal -->
+
+    <!-- wcf1 modal -->
+    <div class="modal fade" id="wffmmm-alert" tabindex="-1" role="dialog" aria-labelledby="Exit Form" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="exit-form">Leaving Form</h1>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted col-xs-12" style="text-align:center">You may save your progress before leaving this form.</p>
+          </div>
+          <div class="modal-footer">
+            <apex:commandButton value="Save" onclick="test5();" styleClass="btn-md" reRender="ddd" />
+            <apex:commandButton action="{!withOutSaveWCCF}" value="Navigate without Saving" styleClass="btn-md" style="margin-left:1px" reRender="oouuo"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--- Wish Child Form Required Alert -->
+    <div class="modal fade" id="wishChildReqAlert-alert" tabindex="-1" role="dialog" aria-labelledby="Exit Form" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title" id="exit-form">Leaving Form</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p class="text-muted col-xs-12" style="text-align:center">Please fill the required fields in Wish Child form.</p>
+              </div>
+              <div class="modal-footer">
+
+                <apex:commandButton action="{!NavigatetoWishChildForm}"  value="Ok" styleClass="btn-md" style="margin-left:1px" reRender="iii" />
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- Alert end -->
+
+    <!--- Wish family Form Required Alert -->
+    <div class="modal fade" id="wishfamilyReqAlert-alert" tabindex="-1" role="dialog" aria-labelledby="Exit Form" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="exit-form">Leaving Form</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p class="text-muted col-xs-12" style="text-align:center">Please fill the required fields in Wish Family form.</p>
+            </div>
+            <div class="modal-footer">
+
+            <apex:commandButton action="{!NavigatetoWishFamily}" value="Ok" styleClass="btn-md" style="margin-left:1px" reRender="yyy"/>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Alert end -->
+
+    <!--- No user to Sign alert -->
+    <div class="modal fade" id="noUsertoSign-alert" tabindex="-1" role="dialog" aria-labelledby="Exit Form" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="exit-form">Leaving Form</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p class="text-muted col-xs-12" style="text-align:center">All participants have already signed the form.</p>
+            </div>
+            <div class="modal-footer">
+
+            <apex:commandButton action="{!withOutSavefromWCFtoWIF}" value="Ok" styleClass="btn-md" style="margin-left:1px" reRender="yyy"/>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Alert end -->
+
+
+      <apex:outputPanel id="uiLogic">
+      <script>
+      setIntervalX(function () {
+        commonjs();
+        uiLogic();
+        clearNavList();
+        setWaypoint(); // update
+        // setting a delay in order for other scripts to load first on pageload
+      }, 500, 3);
+      </script>
+      </apex:outputPanel>
+    </apex:form>
+  </section>
+</div>
+</main>
+<apex:include pageName="WishFamilyForm_footer" id="pfooter" />
+<!-- <apex:include pageName="prospective_footer" id="pfooter" /> -->
+<script>
+  function uiLogic(){
+    jQuery(function($) {
+      var objDate,currMonth,currYear,tOneMo,tTwoMo,tThreeMo,tOneYr,tThreeYr,monthsArray,yearsArray;
+      function initialize(){
+          objDate = new Date();
+          currMonth = objDate.getUTCMonth();
+          currYear = objDate.getUTCFullYear();
+          tOneMo = $('.time-one .mo option:selected').index();
+          tTwoMo = $('.time-two .mo option:selected').index();
+          tThreeMo = $('.time-three .mo option:selected').index();
+          tOneYr = $('.time-one .yr option:selected').index();
+          tTwoYr = $('.time-two .yr option:selected').index();
+          tThreeYr = $('.time-three .yr option:selected').index();
+          monthsArray = [tOneMo,tTwoMo,tThreeMo];
+          yearsArray = [tOneYr,tTwoYr,tThreeYr];
+        }
+        initialize();
+        $('.yr').change(function(){
+          initialize();
+          var thisOptSel = $(this).children('option:selected'),
+              relatedMonthSel = $(this).parents('.form-group').find('.mo option:selected');
+
+          // if current year is selected, disable related past month(s)
+          if( $(this).val() == currYear ){
+            $(this).parents('.form-group').find('.mo option').each(function(){
+              // return past months
+              if ($(this).index() > currMonth) return;
+                $(this).prop('disabled',true)
+            });
+            // if past month is already selected
+            if ( $(this).parents('.form-group').find('.mo option:selected').index() <= currMonth ) {
+              $(this).parents('.form-group').find('.mo').prop('selectedIndex',0); // reset
+            }
+            $(this).parents('.form-group').find('.mo option').first().prop('disabled',false); // enable default option
+          } else {
+            $(this).parents('.form-group').find('.mo option').prop('disabled',false)
+          }
+
+          // validate month
+          if( (thisOptSel.index() == 0) && (relatedMonthSel.index() == 0 ) ||
+            ( (thisOptSel.index() >= 0) && (relatedMonthSel.index() > 0  )) ){
+            $(this).parents('.form-group').find('.mo').attr('style','').removeClass('required')
+          } else {
+            $(this).parents('.form-group').find('.mo').css('border','1px solid red').addClass('required')
+          }
+
+          // validate year
+          if( (thisOptSel.index() == 0) && (relatedMonthSel.index() > 0) ){
+            $(this).css('border','1px solid red').addClass('required')
+          } else {
+            $(this).attr('style','').removeClass('required')
+          }
+
+         //validate equal date
+          if((tOneMo == tTwoMo && tOneYr == tTwoYr && tOneMo != 0 ) || (tTwoMo == tThreeMo && tTwoYr == tThreeYr && tTwoMo != 0) || (tOneMo==tThreeMo && tOneYr == tThreeYr && tThreeMo != 0)){
+            $(this).parents('.form-group').find('.mo').prop('selectedIndex',0); // reset
+          }
+
+        }).change();
+
+
+        $('.mo').change(function(){
+          initialize();
+          var thisOptSel = $(this).children('option:selected'),
+              relatedYearOptArray = $(this).parents('.form-group').find('.yr option'),
+              relatedYearSel = $(this).parents('.form-group').find('.yr option:selected');
+
+          // if this reset and related year has selection, re-validate this
+          if ( ( thisOptSel.index() == 0) && (relatedYearSel.index() > 0 ) ){
+            $(this).css('border','1px solid red').addClass('required')
+          } else {
+            // clear validation
+            $(this).attr('style','').removeClass('required');
+            $(this).parents('.form-group').find('.yr').attr('style','').removeClass('required')
+          }
+          // if same month is selected
+          if ( monthsArray.indexOf(thisOptSel.index()) > -1 ){
+            // disable same year options from other time periods
+            console.log('same month has been selected');
+            $(this).parents('.form-group').find('.yr option').each(function(){
+              // return selected yearsArray
+              relatedYearOptArray = yearsArray;
+              if (yearsArray) return;
+              $(this).prop('disabled', true)
+            })
+
+            // $(this).parents('.form-group').find('.yr option').each(function(){
+            //   if ( relatedYearOptArray == yearsArray) return;
+            //   $(this).prop('disabled', true)
+            // })
+
+          } else {
+            // re-enable year options
+          }
+          //validate equal date
+          if((tOneMo == tTwoMo && tOneYr == tTwoYr && tOneMo != 0 ) || (tTwoMo == tThreeMo && tTwoYr == tThreeYr && tTwoMo != 0) || (tOneMo==tThreeMo && tOneYr == tThreeYr && tThreeMo != 0)){
+            $(this).parents('.form-group').find('.yr').prop('selectedIndex',0); // reset
+          }
+
+        }).change();
+
+        jQuery(function($) {
+          // show/hide logic for medical and travel questions
+          $('select.part-select, select.travel-select, select.travel-select-no, select.travel-select-both').each(function(){
+            var tb = $(this).parent('.sel-wrap').next('.note').find('textarea');
+            formValidationRules();
+            $(this).children('option').first().text('Please Select');
+
+           // change functions
+            $(this).change(function () {
+               if($(this).val() != null) {
+                 // only if part-select/travel-select is "yes" or travel-select-no is "no" or travel-select-both is "yes or no"
+                if( ( ( $(this).hasClass('travel-select') || $(this).hasClass('part-select') ) && $(this).val().indexOf('Yes') != -1 ) ||
+                      ( $(this).hasClass('travel-select-no') && $(this).val().indexOf('No') != -1 ) ||
+                      ( $(this).hasClass('travel-select-both') && ( $(this).val().indexOf('Yes') != -1 || $(this).val().indexOf('No') != -1 ) )
+                ) {
+                  $(this).parent('.sel-wrap').next('.note').removeClass('sr-only');
+                  $(this).parents('.form-group').next('.is-yes').removeClass('sr-only');
+                  $(this).parents('.form-group').next('.is-yes').find('select').addClass('required').trigger('chosen:activate'); // makes placeholder visible by triggering focus
+                  if ( $(this).hasClass('part-select') && $(this).val().indexOf('Yes') != -1 ){
+                    $(this).focus(); // unfocus multi select and stops focus on pageload if "no or null" selected
+                  }
+                  //tb.addClass('required');
+                  // apply required fields for flown, passport or participant-id if no
+                  //if ( ($(this).hasClass('flown') || $(this).hasClass('passport') || $(this).hasClass('participant-id') ) && $(this).val().indexOf('No') != -1) {
+                  //  tb.addClass('required')
+                  //} else if ( ( $(this).hasClass('flown') || $(this).hasClass('passport') || $(this).hasClass('participant-id') ) && $(this).val().indexOf('Yes') != -1 ) {
+                  //  tb.removeClass('required');
+                  //  tb.valid();
+                  //}
+                } else {
+                  $(this).parents('.form-group').next('.is-yes').addClass('sr-only').find('select option').prop('selectedIndex',-1); // reset selected option
+                  $(this).parent('.sel-wrap').next('.note').addClass('sr-only').find('textarea').removeClass('required').val('');
+                  $(this).parents('.form-group').next('.is-yes').find('select').removeClass('required'); // remove validation
+                }
+                // showing required list in attachement section
+                if( $('.participant-id').val().indexOf('Yes') != -1 || $('.passport').val().indexOf('Yes') != -1 ) {
+                  $('.req-attachments').prop('hidden',false);
+                } else if ( !$('.driver-id').length && $('.participant-id').val() != null && $('.passport').val() != null ){
+                  // $('.attachments').remove('legend');
+                  $('.req-attachments').prop('hidden',true);
+                }
+                attachmentItemList();
+                formValidationRules();
+                }
+              }).change();
+            });
+          });
+    });
+
+  // --------------------------------------
+  // Create radio inputs from selects
+  // --------------------------------------
+  (function(){
+    var selectParents = '.sel-wrap';
+    $('.part-select, .travel-select, .travel-select-no, .travel-select-both,.dvi,.f-impact-wish').each(function(){
+      // hide original select fields
+      $(this).addClass('sr-only');
+      // if radios doesn't exist
+      if (!$(this).parent(selectParents).find('input:radio').length){
+        // build radio inputs
+        $(this).parent(selectParents).prepend('<div class="col-xs-4"><label class="radiowrap"><input type="radio" value="Yes"/> <span>Yes</span></label></div> <div class="col-xs-4"><label class="radiowrap"><input type="radio" value="No" /> <span>No</span></label></div>');
+      }
+      // set radio buttons to selected options
+      if ( $(this).val().indexOf('Yes') != -1 ) {
+        $(this).parent(selectParents).find(':radio[value="Yes"]').prop('checked', true)
+      } else if ( $(this).val().indexOf('No') != -1 ){
+        $(this).parent(selectParents).find(':radio[value="No"]').prop('checked', true)
+      } else {
+        $(this).parent(selectParents).find(':radio[value=""]').prop('checked', true)
+      }
+    });
+
+    // generate radio id for setting group names based on first id of each radio group.
+    // Required so that each question can have a radio group.
+    // generate uniqueId
+    $(selectParents).find('input:radio').uniqueId();
+    $(selectParents).each(function(){
+      var radioId = $(this).find(':radio').first().attr('id'); // grabs the first id of each question
+      $(this).find(':radio').attr('name',radioId); // sets radio name to group the radio for each question
+    });
+
+    $('.sel-wrap input:radio').click(function(){
+      // Trigger original select change functions
+      if ( $(this).val().indexOf('Yes') != -1 ){
+        $(this).parents(selectParents).find('select option[value="Yes"]').prop('selected', true).change();
+      } else if ($(this).val().indexOf('No') != -1 ){
+        $(this).parents(selectParents).find('select option[value="No"]').prop('selected', true).change();
+      } else {
+        $(this).parents(selectParents).find('select option[value=""]').prop('selected', true).change();
+      }
+    });
+  })();
+  // --------------------------------------
+  // End /Create radio inputs from selects
+  // --------------------------------------
+
+  $('.f-impact-wish').children('option').first().text('Please Select');
+  // has wrapper for showing hidden fields with values onload
+  jQuery(function($) {
+    // show/hide if "Yes" textbox
+    $('.f-impact-wish').change(function() {
+      if($(this).val() != null){
+        if ($(this).val().indexOf('Yes') != -1){
+          $('.impact-details').removeClass('sr-only');
+          $('.impact-textarea').addClass('required');
+        } else {
+          $('.impact-details').addClass('sr-only');
+          $('.impact-textarea').val('').removeClass('required');
+        }
+      }
+    }).change()
+  });
+
+  $('.driver-info').find('select').each(function(){
+    $(this).children('option').first().text('Please Select');
+  });
+  // if driver is added, show driver vehicle info. if passport or participant-id is yes, show attachment fieldset
+  if ( $('.driver-id').length || $('.passport').val().indexOf('Yes') != -1 || $('.participant-id').val().indexOf('Yes') != -1 ) {
+    // show driver information fieldset
+    $('.req-attachments').prop('hidden',false);
+  } else {
+    // hide required attachments list
+    $('.req-attachments').prop('hidden',true);
+  }
+  if( $('.driver-id').length ){
+    // This statement is necessary due to uiLogic firing twice on pageload. It will check if legend exists, if not, it will add one dynamically.
+    // The purpose of dynamically building this particular legend is for the dynamic in-page anchor building in the form menu.
+    if (!$('.driver-info legend').length){
+      $('.driver-info').prepend('<legend>Driver Vehicle Information</legend>');
+    }
+    $('.driver-info').prop('hidden',false);
+    $('.driver-info select').addClass('required');
+  } else {
+    // hide driver information fieldset
+    $('.driver-info').remove('legend');
+    $('.driver-info select').removeClass('required');
+    $('.driver-info').prop('hidden',true);
+  }
+
+  $(".date-input").datepicker({
+    autoclose: true,
+    changeYear: true,
+    yearRange: "c:c+100",
+    endDate: '+0d',
+    onSelect: function() {$(this).valid()}
+  });
+
+   function attachmentItemList(){
+     var hasDrivers = $('.has-drivers'), hasPassport = $('.has-passport'), hasPartId = $('.has-participant-id');
+     // show list items in attachments section
+     hasDrivers = ( $('.driver-id').length ) ? hasDrivers.prop('hidden',false) : hasDrivers.prop('hidden',true);
+     hasPassport = ( $('.passport').val().indexOf('Yes') != -1 ) ? hasPassport.prop('hidden',false) : hasPassport.prop('hidden',true);
+     hasPartId = ( $('.participant-id').val().indexOf('Yes') != -1 ) ? hasPartId.prop('hidden',false) : hasPartId.prop('hidden',true);
+   } attachmentItemList();
+
+   // render chesen multi selects
+   $("select.multi").chosen({placeholder_text_multiple: "Please select all that apply", width:"100%"});
+   $("select.multi-part").chosen({width:"100%"});
+
+  } uiLogic();
+  function loader(){
+    console.log('Test2');
+    $('.upload-loader').html('<img src="{!URLFOR($Resource.WishReferralStyle, "WishReferralStyle/img/loader-circle-blue.gif")}" class="loader">');
+    setIntervalX(function () {
+        $('.loader').fadeOut(500);
+    }, 7000, 1);
+    setIntervalX(function () {
+        $('.loader').remove();
+    }, 3500, 1);
+    setTimeout(refreshGrid, 3500);
+    // alertClass();
+  }
+  function refreshGrid() {
+    refreshAttachmentSection();
+  }
+
+  function test4(){
+          // if ($('#wcf\\:frm, #wff\\:frm, #wif\\:frm').valid()){
+          // console.log('form submitted');
+          saveWishInfotoChildForm();
+
+        // } else {
+        //
+          $('#wcfooo-alert').modal('hide');
+        // }
+      }
+
+
+   function test5(){
+          // if ($('#wcf\\:frm, #wff\\:frm, #wif\\:frm').valid()){
+          // console.log('form submitted');
+          saveWishInfotoFamilyForm();
+
+        // } else {
+        //
+          $('#wffmmm-alert').modal('hide');
+        // }
+      }
+
+   function test7(){
+          if ($('#wcf\\:frm, #wff\\:frm, #wif\\:frm').valid()){
+          console.log('form submitted');
+          SaveandSignNow();
+
+        } else {
+
+          $('#wffmmm-alert').modal('hide');
+        }
+      }
+
+  $('.signModal').click(function(){
+    if ($('#wcf\\:frm, #wff\\:frm, #wif\\:frm').valid()){
+      if ({!isWishchildFormRequired}){
+        $("#wishChildReqAlert-alert").modal()
+      } else if ({!isWishfamilyFormRequired}){
+        $("#wishfamilyReqAlert-alert").modal()
+      } else if ({!wcfUtil.displayError}){
+        $("#noUsertoSign-alert").modal()
+      } else {
+        $("#signow-alert").modal()
+      }
+    }
+  });
+
+  $('.sendforModal').click(function(){
+    if ($('#wcf\\:frm, #wff\\:frm, #wif\\:frm').valid()){
+      if ({!isWishchildFormRequired }){
+        $("#wishChildReqAlert-alert").modal();
+      } else if ({!isWishfamilyFormRequired}){
+        $("#wishfamilyReqAlert-alert").modal();
+      } else if ({!wcfUtil.displayError}){
+        $("#noUsertoSign-alert").modal()
+      } else {
+        $("#sendemail-alert").modal()
+      }
+    }
+  });
+
+  $('.generatePdf').click(function(){
+    if ($('#wcf\\:frm, #wff\\:frm, #wif\\:frm').valid()){
+      if ({!isWishchildFormRequired}){
+        $("#wishChildReqAlert-alert").modal();
+      } else if ({!isWishfamilyFormRequired}){
+        $("#wishfamilyReqAlert-alert").modal();
+      } else {
+        $("#download-alert").modal();
+      }
+    }
+  });
+
+  $('.submitapproval').click(function(){
+    if ($('#wcf\\:frm, #wff\\:frm, #wif\\:frm').valid()){
+      if ({!isWishchildFormRequired}){
+        $("#wishChildReqAlert-alert").modal()
+      } else if ({!isWishfamilyFormRequired}){
+        $("#wishfamilyReqAlert-alert").modal()
+      } else {
+        $("#submit-alert").modal()
+      }
+    }
+  });
+
+
+
+  </script>
+</body>
+</apex:page>

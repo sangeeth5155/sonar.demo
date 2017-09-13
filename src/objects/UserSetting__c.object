@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>This setting holds the list of users to edit the wish records when the status is &quot;Abandoned&quot;</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Abandon_the_Granted_case__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>User can update the Granted Case status as Abandoned.</description>
+        <externalId>false</externalId>
+        <label>Abandon the Granted case</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>All_Closed_Cases_except_Abandoned__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>User can edit  closed cases except abandoned.</description>
+        <externalId>false</externalId>
+        <label>All Closed Cases except Abandoned</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Edit_Abandoned_Cases__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>User can edit abandoned cases</description>
+        <externalId>false</externalId>
+        <label>Edit Abandoned Cases</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Update Abandoned Wishes</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,800 @@
+<apex:page standardController="case" extensions="WishChildForm_AC"  showHeader="false" applyHtmlTag="false" sidebar="false" standardStylesheets="false">
+    <apex:form style="border:none; padding:0; margin:0; min-height:auto">
+      <!-- Global Modals -->
+      <!-- exit modal -->
+
+      <div class="modal fade" id="exit-alert" tabindex="-1" role="dialog" aria-labelledby="Exit Form" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="exit-form">Return to Wish</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p class="text-muted col-xs-12" style="text-align:center">You may save your progress before exiting.</p>
+            </div>
+            <div class="modal-footer">
+               <apex:commandButton value="Save and Exit" styleClass="btn-md" html-data-dismiss="modal" onclick="test6();"/>
+              <apex:commandButton value="Exit without Saving" styleClass="btn-md" html-data-dismiss="modal" onclick="test8();" style="margin-left:1px"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- save modal -->
+      <div class="modal" id="save-alert" tabindex="-1" role="dialog" aria-labelledby="Exit Form" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="save-form">Save Progress</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <!--action="{!SaveandWishChildExit}"-->
+              <!-- <apex:commandButton value="Confirm Save" styleClass="btn-md" html-data-dismiss="modal" onclick="return callConfirmSave()" onComplete="saveMsg();"/> -->
+              <apex:commandButton value="Confirm Save" styleClass="btn-md" html-novalidate="novalidate" html-data-dismiss="modal" onClick="callConfirmSave(); saveMsg();"/>
+              <apex:commandButton value="Cancel" styleClass="btn-md" html-data-dismiss="modal" style="margin-left:1px" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- form nav and save btn modal -->
+      <div class="modal fade" id="exit-alert-page" tabindex="-1" role="dialog" aria-labelledby="Exit Form" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="exit-form">Leaving Form</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p class="text-muted col-xs-12" style="text-align:center">You may save your progress before leaving this form.</p>
+            </div>
+            <div class="modal-footer">
+              <span class="wif1-btn-wrap">
+                <apex:commandButton onclick="test1();" value="Save" styleClass="btn-md "/>
+                <apex:commandButton onclick="tWithoutSaveChildFormToWIF();" value="Navigate without Saving" styleClass="btn-md" style="margin-left:1px" />
+              </span>
+              <span class="wff1-btn-wrap">
+                <apex:commandButton onclick="test2();" value="Save" styleClass="btn-md" />
+                <apex:commandButton onclick="WithoutSaveChildFormToWFF();"  value="Navigate without Saving" styleClass="btn-md" style="margin-left:1px" />
+              </span>
+               <span class="wcf1-btn-wrap">
+                <apex:commandButton onclick="test3();" value="Save" styleClass="btn-md" />
+                <apex:commandButton onclick="WithOutSaveWFFtoChildForm();" value="Navigate without Saving" styleClass="btn-md" style="margin-left:1px" />
+              </span>
+              <span class="wcf11-btn-wrap">
+                <apex:commandButton onclick="test4();" value="Save" styleClass="btn-md" />
+                <apex:commandButton onclick="WithOutsaveWishInfotoChildForm();" value="Navigate without Saving" styleClass="btn-md" style="margin-left:1px" />
+              </span>
+
+               <span class="wff11-btn-wrap">
+                <apex:commandButton onclick="test5();" value="Save" styleClass="btn-md" />
+                <apex:commandButton onclick="WithOutsaveWishInfotoFamilyForm();"  value="Navigate without Saving" styleClass="btn-md" style="margin-left:1px" />
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </apex:form>
+    <!-- /end modals -->
+
+    <footer class="container-fluid" style="margin-top:5%">
+        <div class="container">
+            <section class="row">
+                <div class="col-md-8">
+                    <a href="" class="btn-lg">
+                         <figure class="featured clearfix">
+                            <apex:image styleClass="center-block col-xs-6 col-sm-6" value="{!$Resource.MAWAcommunityfooter}" alt="Make-A-Wish Child Photo"></apex:image>
+                            <p class="col-xs-12 col-sm-6 col-md-6">Every 35 minutes, across the United States, a child’s wish is granted. Behind each one of those wishes are volunteers who donate their time to make that child’s one true wish come true. THANK YOU to all of our volunteers for changing the lives of children in your community!</p>
+                        </figure>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a class="btn-md donate" href="https://secure2.wish.org/site/SPageServer?pagename=donate_now&chid=100-000">Donate</a>
+                    <a class="btn-md cnt" href="https://wish.org/wishes/stay-in-touch">
+                        <div class="col-xs-8 rich-text clearfix" style="padding:0">
+                            <span class="title">Stay In Touch!</span>
+                            <span class="detail">Sign up to receive email from Make-A-Wish.</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="row legal">
+                <span class="col-sm-1 col-md-2 col-lg-1"><a class="bbb" href="http://wish.org/about-us/making-a-difference/managing-funds/better-business-bureau"><span class="sr-only">Better Business Bureau</span></a></span>
+                <div class="col-sm-11 col-md-10 col-lg-11">
+                    <p>&copy;2006-<span class="current-year"></span> Make-A-Wish Foundation of America<br/>
+                        Make-A-Wish Foundation of America is an Arizona nonprofit corporation exempt from federal income tax under Section 501(c)(3) of the Internal Revenue Code.<br/>
+                        <a href="https://wish.org/content/terms-and-policy">Privacy Policy &amp; Terms</a> | <a href="https://wish.org/content/faq">FAQ</a></p>
+                </div>
+            </section>
+        </div>
+    </footer>
+
+    <!-- core js -->
+    <script src="{!URLFOR($Resource.wff_assets, 'wff_assets/js/jquery-2.2.4.min.js')}"></script>
+    <script src="{!URLFOR($Resource.wff_assets, 'wff_assets/js/tether-1.3.7.min.js')}"></script>
+    <script src="{!URLFOR($Resource.wff_assets, 'wff_assets/js/bootstrap-4.0.0-alpha.2.min.js')}"></script>
+
+    <!-- bootstrap css fallback (appends to head) -->
+    <script>$.each(document.styleSheets, function(i,sheet){ if(sheet.href=='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css') {var rules = sheet.rules ? sheet.rules : sheet.cssRules; if (rules.length == 0) { $('<link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.prospective_assets, "css/lib/bootstrap.min.css")}" />').appendTo('head');} } });</script>
+    <!-- jquery-ui -->
+    <script src="{!URLFOR($Resource.wff_assets, 'wff_assets/js/jquery-ui-1.11.3.min.js')}"></script>
+    <script>$('style').before('<link rel="stylesheet" href="{!URLFOR($Resource.prospective_assets, 'web/css/lib/jquery-ui.min.css')}"/>');</script>
+    <!-- chosen select -->
+    <script src="{!URLFOR($Resource.prospective_assets, 'web/js/chosen.jquery.min.js')}"></script>
+    <!-- validate forms -->
+    <script src="{!URLFOR($Resource.prospective_assets, 'web/js/jquery.validate.min.js')}"></script>
+    <script src="{!URLFOR($Resource.prospective_assets, 'web/js/additional-methods.min.js')}"></script>
+    <!-- waypoint -->
+    <script src="{!URLFOR($Resource.wff_assets, 'wff_assets/js/jquery.waypoints-4.0.0.min.js')}"></script>
+    <script src="{!URLFOR($Resource.wff_assets, 'wff_assets/js/inview-4.0.0.min.js')}"></script>
+
+    <script>
+        (function ($, root, undefined) {
+            // prepend meta/link tags before VF head output
+            $('head').prepend('<meta http-equiv="x-ua-compatible" content="ie=edge" /><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta name="HandheldFriendly" content="True" /><meta name="MobileOptimized" content="480" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" /><meta name="description" content="We grant the wishes of children with life-threatening medical conditions to enrich the human experience with hope, strength, and joy." /><meta http-equiv="cleartype" content="on" /><link rel="apple-touch-icon" sizes="57x57" href="https://ssl.wish.org/images/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="114x114" href="https://ssl.wish.org/images/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="72x72" href="https://ssl.wish.org/images/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="144x144" href="https://ssl.wish.org/images/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="60x60" href="https://ssl.wish.org/images/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="120x120" href="https://ssl.wish.org/images/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="76x76" href="https://ssl.wish.org/images/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="152x152" href="https://ssl.wish.org/images/apple-touch-icon-152x152.png"><link rel="icon" type="image/png" href="https://ssl.wish.org/images/favicon-196x196.png" sizes="196x196"><link rel="icon" type="image/png" href="https://ssl.wish.org/images/favicon-160x160.png" sizes="160x160"><link rel="icon" type="image/png" href="https://ssl.wish.org/images/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/png" href="https://ssl.wish.org/images/favicon-16x16.png" sizes="16x16"><link rel="icon" type="image/png" href="https://ssl.wish.org/images/favicon-32x32.png" sizes="32x32"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-TileImage" content="https://ssl.wish.org/images/mstile-144x144.png" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous" />');
+            // write current year
+            var currYear = new Date().getFullYear();
+            $(".current-year").text(currYear);
+        })(jQuery);
+
+        function clearNavList(){
+          var formNavWrap = document.getElementsByClassName("step")[0],
+              formNavUl = formNavWrap.getElementsByTagName("ul")[0];
+          formNavUl.innerHTML = '';
+        }
+
+       document.addEventListener("DOMContentLoaded", function() {
+          setIntervalX(function () {
+            uiLogic();
+            commonjs();
+            clearNavList();
+          }, 900, 1);
+
+          setIntervalX(function () {
+            setWaypoint();
+          }, 1000, 1);
+
+          // on final submit, run validation on pageload
+          setIntervalX(function () {
+            (function(){
+              var topLoc = top.location.href,
+                  urlWCFRequired = /^(http[s]?:\/\/.*\/WishChildForm_VF?).*(&required=true)$/i.test(topLoc),
+                  urlWFFRequired = /^(http[s]?:\/\/.*\/WishFamilyForm_VF?).*(&required=true)$/i.test(topLoc);
+              if (urlWCFRequired || urlWFFRequired){
+                $('#wcf\\:frm, #wff\\:frm').valid()
+              }
+            })()
+          }, 1250, 1)
+        });
+
+        function setWaypoint() {
+          $('#top').waypoint(function (event, direction) {
+              top = false;
+          });
+          $('.nav-sub-inner a').waypoint(function (event, direction) {
+            if(direction === "down") {
+              $('.nav-sub-inner a').hide()
+            } else {
+              $('.nav-sub-inner a').show()
+            }
+          });
+
+          // loop through the legends, creating links, creating waypoints, and assigning the desired functionality
+          $('legend').each(function (idx) {
+            $(this).attr('id', 'waypoint-' + idx);
+            $('.anchor-links').append('<li><a href="#waypoint-' + idx + '" class="down" >' + $(this).text() + '</a></li>');
+            $(this).waypoint(function (event, direction) {
+                $('.anchor-links a').removeClass('active down up');
+
+                for(var i = $('legend').length - 1; i >= 0; i--) {
+                    if(i < idx) {
+                        $('.anchor-links a:eq(' + i + ')').addClass('up');
+                    } else if(i === idx) {
+                        $('.anchor-links a:eq(' + i + ')').addClass('active');
+                    } else {
+                        $('.anchor-links a:eq(' + i + ')').addClass('down');
+                    }
+                    if(direction === "up") {
+                        $('.anchor-links a:eq(' + idx + ')').removeClass('active').addClass('down');
+                        $('.anchor-links a:eq(' + eval(idx - 1) + ')').removeClass('up').addClass('active');
+                    }
+                }
+              });
+
+          });
+          // applying the offset to reveal fieldset legend from tethered page nav
+          function offsetAnchor() {
+              if(location.hash.length !== 0) {
+                  window.scrollTo(window.scrollX, window.scrollY - 70);
+              }
+          }
+          // capture hash changes while on the page
+          window.addEventListener("hashchange", offsetAnchor);
+          // offset page onload if url has hash
+          window.setTimeout(offsetAnchor, 1);
+        }
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            if (scroll > 0) {
+                $(".step-tether").addClass("active");
+            }
+            else {
+                $(".step-tether").removeClass("active");
+            }
+
+        });
+
+        function test1(){
+          // if ($('#wcf\\:frm, #wff\\:frm, #wif\\:frm').valid()){
+            //console.log('form submitted');
+            SaveWishChildtoWInfo();
+            //console.log();
+          // } else {
+            $('#exit-alert-page').modal('hide');
+          // }
+        }
+        function test2(){
+          // if ($('#wcf\\:frm, #wff\\:frm, #wif\\:frm').valid()){
+            // console.log('form submitted');
+            SaveWishChildtoWff();
+          // } else {
+            $('#exit-alert-page').modal('hide');
+          // }
+        }
+        function test3(){
+          // if ($('#wcf\\:frm, #wff\\:frm, #wif\\:frm').valid()){
+          //   console.log('form submitted');
+           SaveWishFFtoWishChild();
+          // } else {
+            $('#exit-alert-page').modal('hide');
+          // }
+        }
+        function test4(){
+          // if ($('#wcf\\:frm, #wff\\:frm, #wif\\:frm').valid()){
+          //   console.log('form submitted');
+            saveWishInfotoChildForm();
+          // } else {
+            $('#exit-alert-page').modal('hide');
+          // }
+        }
+        function test5(){
+          // if ($('#wcf\\:frm, #wff\\:frm, #wif\\:frm').valid()){
+          //   console.log('form submitted');
+            saveWishInfotoFamilyForm();
+          // } else {
+            $('#exit-alert-page').modal('hide');
+          // }
+        }
+        function test6(){
+          // if ($('#wcf\\:frm, #wff\\:frm, #wif\\:frm').valid()){
+          //   console.log('form submitted');
+            ReturnToWish();
+          // } else {
+          //  console.log('form submitted');
+            $('#exit-alert').modal('hide');
+          // }
+        }
+        function test8(){
+          console.log('form submitted');
+          ReturnToWishWithOutSave();
+        }
+
+        function commonjs(){
+          console.log('commonjs has run');
+          $(".phone").attr('type', 'tel');
+          $('.readonly').prop('readonly',true);
+
+          new Tether({
+            element: '.step-tether',
+            target: '.step-base',
+            attachment: 'top left',
+            targetAttachment: 'top left',
+            targetModifier: 'visible',
+          });
+
+          $(".date-input").each(function(){
+            if($(this).val() != ""){
+              var date = formatDate($(this).val());
+              $(this).val(date);
+            }
+          });
+
+          // exiting form alert
+          // window.addEventListener("beforeunload", function (e) {
+          //   var confirmationMessage = "You are leaving the page. Any unsaved changes will be lost.";
+          //   e.returnValue = confirmationMessage;
+          //   return confirmationMessage;
+          // });
+
+          // Disables backspace key on any non-input element.
+          $(function(){
+            var rx = /INPUT|SELECT|TEXTAREA/i;
+            $(document).bind("keydown keypress", function(e){
+              if( e.which == 8 ){ // 8 == backspace
+                if(!rx.test(e.target.tagName) || e.target.disabled || e.target.readOnly ){
+                  e.preventDefault();
+                }
+              }
+            })
+          });
+          // check if inputted value is selected
+          function isTextSelected(input) {
+            if (typeof input.selectionStart == "number") {
+              return input.selectionStart == 0 && input.selectionEnd == input.value.length;
+            } else if (typeof document.selection != "undefined") {
+              input.focus();
+              return document.selection.createRange().text == input.value;
+            }
+          }
+          formValidationRules();
+          $(".numbers-only").keydown(function (e) {
+            // Allow: backspace, delete, tab, escape and enter
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
+                // Allow: Ctrl+A
+                (e.keyCode == 65 && e.ctrlKey === true) ||
+                // Allow: Ctrl+C
+                (e.keyCode == 67 && e.ctrlKey === true) ||
+                // Allow: Ctrl+X
+                (e.keyCode == 88 && e.ctrlKey === true) ||
+                // Allow: home, end, left, right
+                (e.keyCode >= 35 && e.keyCode <= 39)) {
+                // let it happen, don't do anything
+                return;
+            }
+            // Ensure that it is a number and stop the keypress
+            else if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105 || (e.keyCode == 191) )) {
+              e.preventDefault();
+            }
+          });
+          // auto format date
+          $(".dob").keydown(function(e){
+            if (($(this).val().length == 2) && (e.keyCode != 8)){
+              $(this).val($(this).val() + "/");
+            } else if (($(this).val().length == 5)  && (e.keyCode != 8)){
+              $(this).val($(this).val() + "/");
+            }
+            if ( (($(this).val().length == 4) || ($(this).val().length == 7) ) && (e.keyCode == 8) ){
+              // remove dash
+              $(this).val($(this).val().substring(0, $(this).val().length - 1));
+            }
+          });
+          // auto format postal code
+          $(".postalcode").keydown(function(e){
+            if (($(this).val().length == 5) && (e.keyCode != 8) && (e.keyCode != 9)){
+              // auto insert dash on 5th character keypress
+              $(this).val($(this).val() + "-");
+            }
+            if (($(this).val().length == 7) && (e.keyCode == 8)){
+              // remove dash if on 7th character backspace is used
+              $(this).val($(this).val().substring(0, $(this).val().length - 1));
+            }
+          });
+          // auto format phone
+
+          $(".phone").keydown(function(e){
+            if(isTextSelected(this)){
+              $(this).val('');
+            }
+            if (($(this).val().length == 0) && (e.keyCode != 8)){
+              $(this).val($(this).val() + "(");
+            } else if(($(this).val().length == 4) && (e.keyCode != 8)){
+              $(this).val($(this).val() + ") ");
+            } else if (($(this).val().length == 9) && (e.keyCode != 8)){
+              $(this).val($(this).val() + "-");
+            }
+            // if backspace or tab is pressed on certain lengths
+            if ( (($(this).val().length == 2 || $(this).val().length == 11) && e.keyCode == 8) || (($(this).val().length == 2) && e.keyCode == 9) ){
+              // remove dash or parenthesis
+              $(this).val($(this).val().substring(0, $(this).val().length - 1));
+            }
+            // if backspace is pressed on deletion of digit before space
+            if (($(this).val().length == 7) && (e.keyCode == 8)){
+              // remove space and parenthesis
+              $(this).val($(this).val().substring(0, $(this).val().length - 2));
+            }
+            // if full phone number isn't entered and tab is pressed
+            if ( ($(this).val().length) != 14 && (e.keyCode == 9 ) ){
+              $(this).val('')
+            }
+          });
+          $(".phone").attr('maxlength','14');
+        }
+
+        if (window.matchMedia("(max-width: 34em)").matches) {
+          // Hide step nav on on scroll down
+          var didScroll;
+          var lastScrollTop = 0;
+          var delta = 5;
+          var navbarHeight = $('.step-tether').outerHeight();
+
+          $(window).scroll(function(event){
+              didScroll = true;
+          });
+
+          setInterval(function() {
+              if (didScroll) {
+                  hasScrolled();
+                  didScroll = false;
+              }
+          }, 250);
+
+          function hasScrolled() {
+            var st = $(this).scrollTop();
+
+            // Make sure they scroll more than delta
+            if(Math.abs(lastScrollTop - st) <= delta)
+              return;
+
+            // If they scrolled down and are past the navbar, add class .nav-up.
+            // This is necessary so you never see what is "behind" the navbar.
+            if (st > lastScrollTop && st > navbarHeight){
+              // Scroll Down
+              $('.step-tether').removeClass('nav-down').addClass('nav-up');
+            } else {
+              // Scroll Up
+              if(st + $(window).height() < $(document).height()) {
+                $('.step-tether').removeClass('nav-up').addClass('nav-down');
+              }
+            }
+
+            lastScrollTop = st;
+          }
+        }
+
+        function formatDate(date) {
+          var d = new Date(date),
+            month = '' + (d.getUTCMonth() + 1),
+            day = '' + d.getUTCDate(),
+            year = d.getUTCFullYear();
+          if (month.length < 2) month = '0' + month;
+          if (day.length < 2) day = '0' + day;
+          return [month, day, year].join('/');
+        }
+
+        function validateDate(ddate) {
+          var tempDate = $(ddate).val();
+          var temp = tempDate.split('/');
+          var d = new Date(temp[2] + '/' + temp[0] + '/' + temp[1]);
+          return (d && (d.getMonth() + 1) == temp[0] && d.getDate() == Number(temp[1]) && d.getFullYear() == Number(temp[2]));
+        }
+
+        // remove chosen "x" button on ios and android
+        if ( navigator.userAgent.match(/iPad/i) != null || navigator.userAgent.match(/Android/i) != null || navigator.userAgent.match(/iPhone/i) != null ) {
+          window.setInterval(function() {
+            $('.search-choice-close').prop('hidden',true);
+          }, 300);
+        }
+
+        // show/hide modal save & exit buttons
+        $('.modal-footer span').prop('hidden',true);
+        $('.step a, nav .btn-md').on('click', function(){
+          var exitAlertBtn = $(this).attr('data-target') == '#exit-alert-page',
+                      text = $(this).text(),
+                       val = $(this).val(),
+                       wcf = $('#wcf\\:frm').length,
+                       wff = $('#wff\\:frm').length,
+                       wif = $('#wif\\:frm').length;
+
+          $('.modal-footer span').prop('hidden',true);
+
+          if( wcf && exitAlertBtn && text == 'Wish Information' ){ // WCF page (nav)
+            $('.wif1-btn-wrap').prop('hidden', false)
+          } else if( wcf && exitAlertBtn && text == 'Wish Family' ){ // WCF page (nav)
+            $('.wff1-btn-wrap').prop('hidden', false)
+
+          } else if( wff && exitAlertBtn && text == 'Wish Child' ){ // WFF page (nav)
+            $('.wcf1-btn-wrap').prop('hidden', false)
+          } else if( wff && exitAlertBtn && text == 'Wish Information' ){ // WFF page (nav)
+            $('.wif1-btn-wrap').prop('hidden', false)
+
+          } else if( wif && exitAlertBtn && text == 'Wish Child' ){ // WIF page (nav)
+            $('.wcf11-btn-wrap').prop('hidden', false)
+          } else if( wif && exitAlertBtn && text == 'Wish Family' ){ // WIF page (nav)
+            $('.wff11-btn-wrap').prop('hidden', false)
+
+          } else if( wcf && exitAlertBtn && val == 'Next' ){ // WCF page (next btn)
+            $('.wff1-btn-wrap').prop('hidden', false)
+          } else if( wff && exitAlertBtn && val == 'Next' ){ // WFF page (next btn)
+            $('.wif1-btn-wrap').prop('hidden', false)
+          } else {
+            $('.modal-footer span').prop('hidden',true)
+          }
+        });
+
+        // display success message when the form is successfully saved
+        function saveMsg() {
+          $('body').append('<div class="notification"><div><h6>Your form has been successfully saved.</h6></div></div>').fadeIn();
+          $('.notification').delay(4000).fadeOut();
+          setInterval(function() {
+            $('.notification').remove();
+          }, 4500);
+        }
+
+        // validation rules and methods
+        $('form').validate({
+            ignore: ":hidden:not(.multi-part)",
+            focusInvalid: false,
+            invalidHandler: function(form, validator) {
+              if (!validator.numberOfInvalids())
+                return;
+              $('html, body').animate({
+                scrollTop: $(validator.errorList[0].element).offset().top -75
+              }, 1000);
+            },
+            errorElement: "em",
+            errorPlacement: function ( error, element ) {
+                // Add the `help-block` class to the error element
+                error.addClass( "help-block" );
+                // Add `has-feedback` class to the parent div.form-group in order to add icons to inputs
+                element.parents( ".col-xs-6" ).addClass( "has-feedback" );
+
+                if (element.hasClass("multi-part") ){
+                    var selectParent = $( element ).parents(".col-lg-8").children(".chosen-container");
+                    error.insertAfter( selectParent );
+                } else if ( element.prop( "type" ) === "checkbox" ) {
+                    error.insertAfter( element.parent( "label" ) );
+                } else {
+                    error.insertAfter( element )
+                }
+
+            },
+            highlight: function ( element, errorClass, validClass ) {
+              var elementParents = $( element ).parents( "label, .col-sm-6, .col-sm-10, .col-md-4, .col-md-8, .col-lg-8, .col-sm-3, .col-md-9, .col-xs-6, .col-xs-12, .col-md-12, .col-lg-12" );
+              // non-div-wrapped label
+              $(elementParents).removeClass( "has-success" ).addClass( "has-error" ).prev('label').css('color','red');
+              // div wrapped label
+              $(elementParents).removeClass( "has-success" ).addClass( "has-error" ).prev('div').children('label').css('color','red');
+              $(elementParents).children(".chosen-container").children('.chosen-choices, .chosen-single').css('border','1px solid red');
+              $(elementParents).children( "input, select, textarea" ).css('border','1px solid red');
+              $(elementParents).children(".dateInput").children('input').css('border','1px solid red');
+              $(elementParents).children('label').css('border','1px solid red');
+              $(elementParents).children('.c-checkbox').css('border','');
+              $(elementParents).css('color','red');
+            },
+            unhighlight: function ( element, errorClass, validClass ) {
+              var elementParents = $( element ).parents( "label, .col-sm-6, .col-sm-10, .col-md-4, .col-md-8, .col-lg-8, .col-sm-3, .col-md-9, .col-xs-6, .col-xs-12, .col-md-12, .col-lg-12" );
+              $(elementParents).removeClass( "has-error" ).prev( "label" ).css('color','');
+              $(elementParents).removeClass( "has-error" ).prev('div').children( "label" ).css('color','');
+              $(elementParents).children(".chosen-container").children('.chosen-choices, .chosen-single').css('border','');
+              $(elementParents).children( "input, select, label, textarea" ).css('border','');
+              $(elementParents).children(".dateInput").children('input').css('border','');
+              $(elementParents).children( ".help-block" ).remove();
+              $(elementParents).css('color','');
+            }
+        });
+
+        function formValidationRules() {
+          // add validation rules for common fields
+          $("select.relationship").each(function(){
+              $(this).rules("add", {
+                  required: true,
+                  messages: {
+                      required: "Oops! Please select the relationship"
+                  }
+              });
+          });
+          $("input.firstname").each(function(){
+              $(this).rules("add", {
+                  required: true,
+                  minlength: 2,
+                  maxlength: 40,
+                  messages: {
+                      required: "Oops! Please enter a first name",
+                      minlength: "Oops! Your first name must have more than 2 letters",
+                      maxlength: "We're sorry, you've reached the maximum allowed characters"
+                  }
+              });
+          });
+          $("input.lastname").each(function(){
+              $(this).rules("add", {
+                  required: true,
+                  minlength: 2,
+                  maxlength: 40,
+                  messages: {
+                      required: "Oops! Please enter a last name",
+                      minlength: "Oops! Your first name must have more than 2 letters",
+                      maxlength: "We're sorry, you've reached the maximum allowed characters"
+                  }
+              });
+          });
+          $("input.phone-chk").each(function(){
+              $(this).rules("add", {
+                  required: true,
+                  phoneUS: true,
+                  minlength: 14,
+                  maxlength: 14,
+                  messages: {
+                      required: "Oops! Please enter a phone number",
+                      phoneUS: "Oops! A valid US number must be entered and also in the correct format",
+                      number: "Only numbers are accepted",
+                      minlength: "Oops! Please enter at least 10 digits",
+                      maxlength: "We're sorry, you've reached the maximum allowed characters"
+                  }
+              });
+          });
+          $("input.phone").each(function(){
+              $(this).rules("add", {
+                  phoneUS: true,
+                  minlength: 14,
+                  maxlength: 14,
+                  messages: {
+                      phoneUS: "Oops! A valid US number must be entered and also in the correct format",
+                      number: "Only numbers are accepted",
+                      minlength: "Oops! Please enter at least 10 digits",
+                      maxlength: "We're sorry, you've reached the maximum allowed characters"
+                  }
+              });
+          });
+
+          $("input.email").each(function(){
+              $(this).rules("add", {
+                  required: true,
+                  email: true,
+              });
+          });
+          $("input.dob").each(function(){
+            $(this).rules("add", {
+              required: true,
+              date: true,
+              maxlength: 10,
+              messages: {
+                required: "Oops! Please enter the date of birth",
+                date: "Oops! Please enter a valid date in the correct format (mm/dd/yyyy)"
+              }
+            });
+          });
+
+          $("input.city").each(function(){
+              $(this).rules("add", {
+                  required: true,
+                  minlength: 3,
+                  maxlength: 22,
+                  messages: {
+                      required: "Oops! Please enter a US city",
+                      minlength: "Oops! Please enter at least 3 characters",
+                      maxlength: "We're sorry, you've reached the maximum allowed characters"
+                  }
+              });
+          });
+          $("input.postalcode").each(function(){
+              $(this).rules("add", {
+                  required: true,
+                  zipcode: true,
+                  messages: {
+                      //required: "Oops! Please enter a valid US postal code",
+                      minlength: "Oops! Please enter a minimum of 5 digits",
+                      maxlength: "We're sorry, you've reached the maximum allowed characters"
+                  }
+              });
+          });
+          // add rules for all other fields
+          $("input.address").rules("add", {
+              required: true,
+              minlength: 5,
+              maxlength: 40,
+              messages: {
+                  required: "Oops! Please enter an address",
+                  minlength: "Oops! Please enter a minimum of 5 characters",
+                  maxlength: "We're sorry, you've reached the maximum allowed characters"
+              }
+          });
+          $("select.state").rules("add", {
+            required: true,
+            messages: {
+                required: "Oops! Please select a state"
+            }
+          });
+          $("input.reqsig").each(function(){
+            $(this).chosen().change(function(){
+                $(this).valid();
+            });
+            $(this).rules("add", {
+                required: true,
+                messages: {
+                    required: "Oops! Please check this to continue"
+                }
+            });
+          });
+          // wishfamilyform_vf: getting unique number generated by SF in order for input grouping for validation rule that 1 field is required of the 3.
+          $('input.phone-group').each(function(){
+            // This and the next 4 lines are neccessary for proper validation of generated sections
+            var nameNum = $(this).attr('name').substring(27,28);
+            $(this).addClass('phone-group-'+nameNum); // attaching the unique number to the class and adding to input class
+            var phGroupStr = $(this).attr('class').substr($(this).length - 14); // filtering/getting last part of class
+            var phoneGroupClass = "."+phGroupStr; // connotate string to form new class name
+          });
+
+            $('input.phone-group-0').each(function(){
+              $(this).rules("add", {
+                require_from_group: [1, ".phone-group-0"]
+              });
+            });
+            $('input.phone-group-1').each(function(){
+              $(this).rules("add", {
+                require_from_group: [1, ".phone-group-1"]
+              });
+            });
+            $('input.phone-group-2').each(function(){
+              $(this).rules("add", {
+                require_from_group: [1, ".phone-group-2"]
+              });
+            });
+            $('input.phone-group-3').each(function(){
+              $(this).rules("add", {
+                require_from_group: [1, ".phone-group-3"]
+              });
+            });
+            $('input.phone-group-4').each(function(){
+              $(this).rules("add", {
+                require_from_group: [1, ".phone-group-4"]
+              });
+            });
+            $('input.phone-group-5').each(function(){
+              $(this).rules("add", {
+                require_from_group: [1, ".phone-group-5"]
+              });
+            });
+            $('input.phone-group-5').each(function(){
+              $(this).rules("add", {
+                require_from_group: [1, ".phone-group-5"]
+              });
+            });
+            $('input.phone-group-6').each(function(){
+              $(this).rules("add", {
+                require_from_group: [1, ".phone-group-6"]
+              });
+            });
+            $('input.phone-group-7').each(function(){
+              $(this).rules("add", {
+                require_from_group: [1, ".phone-group-7"]
+              });
+            });
+            $('input.phone-group-8').each(function(){
+              $(this).rules("add", {
+                require_from_group: [1, ".phone-group-8"]
+              });
+            });
+            $('input.phone-group-9').each(function(){
+              $(this).rules("add", {
+                require_from_group: [1, ".phone-group-9"]
+              });
+            });
+        }
+        formValidationRules();
+
+        jQuery.extend(jQuery.validator.messages, {
+          required: "Oops! This field is required",
+          email: "Oops! Please enter a valid email address",
+          url: "Oops! Please enter a valid URL",
+          date: "Oops! Please enter a valid date",
+          number: "Oops! Please enter a valid number",
+          digits: "Please enter only digits",
+          require_from_group: "Oops! Please fill at least 1 of these phone fields"
+        });
+        jQuery.validator.addMethod("zipcode", function(value, element) {
+          return this.optional(element) || /^\d{5}(?:-\d{4})?$/.test(value);
+        }, "Oops! Please enter a valid US postal code");
+
+        // trigger validation
+        $('.form-validate').on('click', function() {
+          if ($('#wif\\:frm').valid()){
+            console.log('form submitted');
+            return true;
+          } else {
+            $('#exit-alert-page').modal('hide');
+            return false;
+          }
+        });
+
+    </script>
+</apex:page>

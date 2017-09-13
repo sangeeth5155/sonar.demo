@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case.Volunteer_Roles__r$Name</field>
+    </columns>
+    <columns>
+        <field>Case.Volunteer_Roles__r$Volunteer_Name__c</field>
+    </columns>
+    <columns>
+        <field>Case$Sub_Status__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Case$Migrated_Record__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Status</column>
+            <operator>equals</operator>
+            <value>Ready to Assign</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Cases that need Vol Opp</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cases_with_Volunteer_opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Case.Volunteer_Roles__r$Volunteer_Name__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Case$Actual_Departure_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

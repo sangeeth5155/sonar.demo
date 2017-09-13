@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_CNTC_FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Background_check__c.Date_Requested__c</field>
+    </columns>
+    <columns>
+        <field>Background_check__c.Date_Completed__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Contact.Region_Chapter__c</field>
+    </columns>
+    <columns>
+        <field>Background_check__c.Status__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Vol Background Check</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Background_check__c@Background_check__c.Volunteer__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>FK_CREATED_DATE</dateColumn>
+        <endDate>2017-08-10</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-04-10</startDate>
+    </timeFrameFilter>
+</Report>

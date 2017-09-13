@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>RecordType</field>
+        <field>Wish__c</field>
+        <field>In_Kind_Donor_Name__c</field>
+        <field>Date_of_Gift__c</field>
+        <field>Gift_Type__c</field>
+        <field>Gift_Value__c</field>
+        <field>Documentation__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>adhoc</type>
+            </approver>
+        </assignedApprover>
+        <entryCriteria>
+            <criteriaItems>
+                <field>In_Kind_Donation_Reimbursement__c.RecordType</field>
+                <operation>equals</operation>
+                <value>In-Kind Donation</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>RejectRecord</ifCriteriaNotMet>
+        <label>Approval step1</label>
+        <name>Approval_step1</name>
+    </approvalStep>
+    <description>This approval process will fire when the volunteer fill the all mandatory fields</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>In_Kind_Donation_Reimbursement__c.RecordType</field>
+            <operation>equals</operation>
+            <value>In-Kind Donation</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Update_Approved_By_on_Reimbursement</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Update_Approved_Date_on_Reimbursement</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Uncheck_isSubmitted_Approval_field</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>isSubmitted_for_Approval_field_update</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>In Kind Donation&amp;Reimbursement Approval</label>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

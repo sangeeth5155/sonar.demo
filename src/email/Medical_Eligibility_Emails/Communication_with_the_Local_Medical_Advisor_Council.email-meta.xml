@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Communication with the Local Medical Advisor Council</name>
+    <style>freeForm</style>
+    <subject>Medical condition details [{!Case.Thread_Id}]</subject>
+    <textOnly>Hello,
+
+Wish Child Name: {!Case.Lead_Name__c}
+Primary Diagnosis : {!Case.Hidden_Primary_Diagnosis_del__c}
+Secondary Diagnosis : {!Case.Hidden_Secondary_Diagnosis__c} , {!Case.Hidden_Secondary_Diagnosis_one__c}{!Case.Hidden_Secondary_Diagnosis_2__c}{!Case.Hidden_Secondary_Diagnosis_Three__c}
+Wish do you feel  {!Case.Wish_Child_Name__c} would be eligible wish? : {!Case.00N3600000Pm7vK}</textOnly>
+    <type>html</type>
+</EmailTemplate>

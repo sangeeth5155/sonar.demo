@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Medical Question</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Medical Questions</value>
+    </caseValues>
+    <fields>
+        <label><!-- Condition Description --></label>
+        <name>Condition_Description__c</name>
+        <relationshipLabel><!-- Medical Questions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Current Condition --></label>
+        <name>Current_Condition__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Type --></label>
+        <name>Data_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Epilepsy picklist --></label>
+        <name>Epilepsy_picklist__c</name>
+    </fields>
+    <fields>
+        <label><!-- Picklist values --></label>
+        <name>Picklist_values__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question --></label>
+        <name>Question__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recommendation to Chapter --></label>
+        <name>Recommendation_to_Chapter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sort Order --></label>
+        <name>Sort_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wrapper Variable --></label>
+        <name>Wrapper_Variable__c</name>
+    </fields>
+    <layouts>
+        <layout>Medical Question Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Travel Algorithm</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Medical Questions --></label>
+        <name>Medical_Questions</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Travel Algorithm --></label>
+        <name>Travel_Algorithm</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

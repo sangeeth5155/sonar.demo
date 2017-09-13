@@ -1,0 +1,38 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">Hello {!Case.Local_MCA_Team__c},</span><span style="font-size: 12pt; font-family: Arial, sans-serif;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">This patient has been referred for a wish!<br>
+<br>
+Please review the attached Diagnosis Verification form with your medical
+expertise. Is there enough information provided to make a determination of
+eligibility? If so, can you give us your opinion? If not, what additional
+information would be helpful? Simply reply to this email and your notes will be
+added to the record.</span><span style="font-size: 12pt; font-family: Arial, sans-serif;"><o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-family: &quot;Century Gothic&quot;, sans-serif;">If the qualifying medical professional included a medical summary, it is attached below.</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">
+
+</p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">{!Case.Medical_Summary_Attachments__c}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">Thanks to the support of you and other medical professionals
+around the country, we continue to come closer each year to our vision of
+making every eligible child’s wish come true. &nbsp;Thank you for taking the
+time to help us share the power of a wish<sup>®</sup>.</span><span style="font-size: 12pt; font-family: Arial, sans-serif;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;"><br>
+Thanks,</span><span style="font-size: 12pt; font-family: Arial, sans-serif;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: Arial, sans-serif;">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">{!User.Name}</span><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;, serif;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">{!Case.Hidden_Chapter_Name__c}<br></span><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;, serif;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">{!Case.Hidden_Chapter_Phone__c}</span><span style="font-size: 12pt; font-family: Arial, sans-serif;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">{!Case.Hidden_Chapter_Email__c}<o:p></o:p></span></p>]]></td>
+</tr>
+</table>

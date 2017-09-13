@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>It will be used to send an email alert when the interview is scheduled</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Task:Interview Scheduled Email Template</name>
+    <style>freeForm</style>
+    <subject>Interview scheduled</subject>
+    <textOnly>Hi {!Task.Contact_Name_Hidden__c},
+
+We are excited to speak with you and would like to confirm your interview date and time below.  Please review any comments as it relates to your scheduled interview.
+
+Date: {!Task.Confirmed_Date__c}
+Time:  {!Task.Confirmed_Time__c}
+Venue:  {!Task.Venue__c}
+
+If you need to cancel or change your interview date, please visit the Make-A-Wish Volunteer Center.
+
+Thank you,
+
+{!Task.Account_Name__c}
+{!Task.Account_Phone__c}
+{!Task.Account_Email__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

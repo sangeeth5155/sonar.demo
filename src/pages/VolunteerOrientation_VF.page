@@ -1,0 +1,227 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false"  applyBodyTag="false" docType="html-5.0" controller="VolunteerOrientation_AC" title="Make-A-Wish Communities | Training">
+    <apex:include pageName="prospective_head" id="phead" />
+    <apex:stylesheet value="{!URLFOR($Resource.prospective_assets, 'web/css/lib/jquery.dataTables.min.css')}"/>
+    <style type="text/css">
+        body > main {margin-bottom:4em; margin-bottom:4rem;}
+        .vcpactivelogin .table-maw {border:1px solid #e2e2e2; width:99%; margin:0}
+        .vcpactivelogin .table-maw td {vertical-align:middle}
+        .pad {overflow-x:auto}
+        table.dataTable thead .sorting, table.table thead th {padding-right:1rem}
+        .messageCell h4{color:#066cb6}
+        .dataTables_info {margin-bottom: 2rem; font-size: .75rem;}
+        .messageCell h4 {color: #066cb6}
+        .table-wrap {overflow-x: auto}
+        .modal-header,.modal-footer {border-top:none;}
+        h1.modal-title {text-align: center; padding-bottom: 0}
+        .modal-header .close {margin-top: -4rem}
+        .modal-footer, .modal-footer span {display: flex; justify-content: center;}
+        .modal-footer .btn-md, .nav-sub-inner .btn-md {max-width:10rem}
+        .modal-footer .btn-md {min-width:10rem}
+    </style>
+    <script type="text/javascript">
+
+    function openLMS(ssoLink,courseLink) {
+        if(courseLink.length <= 0){
+            alert('No course registration found in LMS. Please contact the Chapter staff.');
+        }else{
+         newwindow = window.open( ssoLink ,'openLMS');
+         if ((newwindow == null || typeof(newwindow) == 'undefined')) {
+            $('#poppup-alert').modal({backdrop: 'static', keyboard: false});
+           // alert('Please select the radio option "Always allow pop-ups for this domain", in the URL bar(Pop up Blocker options) then click on the Orientation tab again.');
+        }
+         setTimeout(
+            function(){
+                window.newwindow.close();
+                setTimeout(
+                    function(){
+                        window.open(courseLink, '_blank');
+                    }, 10);
+            }, 2000);
+        }
+    }
+    </script>
+
+    <body class="vcp vcpactivelogin">
+        <apex:include pageName="prospective_header" id="pheader" />
+
+        <main role="main" class="container">
+            <div class="row">
+                <section class="col-md-12">
+                    <div class="row">
+                        <h1 class="col-md-12">Orientation</h1>
+                    </div>
+
+                   <!-- <nav>
+                        <ul class="step">
+                            <li class="current"><a href="/VolunteerOrientation_VF?bgRequired={!bgTabPermission}&trainingRequired={!trainingTabVisible}">Orientation</a></li>
+                            <li><a href="/Application_VF?bgRequired={!bgTabPermission}&trainingRequired={!trainingTabVisible}">Application</a></li>
+                            <li><a href="/VolunteerInterview_VF?bgRequired={!bgTabPermission}&trainingRequired={!trainingTabVisible}">Interview</a></li>
+                            <apex:outputpanel rendered="{!bgTabPermission == True}">
+                                <li><a href="/apex/BackgroundCheck_VF?bgRequired={!bgTabPermission}&trainingRequired={!trainingTabVisible}">Background Check</a></li>
+                            </apex:outputpanel>
+
+                            <apex:outputpanel rendered="{!trainingTabVisible==True}">
+                                <li><a href="/VolunteerTraining_VF?bgRequired={!bgTabPermission}&trainingRequired={!trainingTabVisible}">Training</a></li>
+                            </apex:outputpanel>
+                        </ul>
+                    </nav> -->
+
+                    <apex:form id="frm1" styleClass="col-md-12">
+                        <div class="messages"><apex:pagemessages /></div>
+
+                        <apex:pageBlock > <!-- title="Available Orientation Details" -->
+                            <apex:outputPanel rendered="{!(isOrientationExist == True)}">
+                                <h3>Registered</h3>
+                                <p>You have registered for a volunteer orientation. Once you complete the orientation, you will receive an email  to continue the application process. If you need to change your orientation day/time please cancel your existing registration and register for a new orientation.</p>
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!(isCancelled == True)}">
+                                <h3>Cancelled</h3>
+                                <p>You have successfully cancelled your registration for orientation. Please select a new orientation.</p>
+                            </apex:outputPanel>
+
+
+                            <apex:outputPanel rendered="{!If(checkExistProgram == true, false,true)}">
+                               <h2>Registered Orientation Details</h2>
+                                <div class="table-wrap">
+                                    <table id="dataTab1" class="table table-maw table-hover">
+                                        <thead class="thead-default">
+                                            <tr>
+                                              <th title="Volunteer Name">Name</th>
+                                              <th title="Chapter Name">Chapter</th>
+                                              <th title="Orientation Type">Type</th>
+                                              <th title="Orientation Date">Date</th>
+                                              <th title="Start Time">Start</th>
+                                              <th title="End Time">End</th>
+                                              <th title="Orientation Location">Location</th>
+                                              <th title="Max Capacity">Capacity</th>
+                                              <th title="Available Seats">Seats</th>
+                                              <th title="Select Below">Action</th>
+                                              <th>Link</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <apex:repeat value="{!OrientationRecordList}" var="training">
+                                                <apex:outputPanel rendered="{!(AND(training.volOppSize>0,training.status == 'Registered'))}">
+                                                    <tr>
+                                                        <td>{!training.orientationName}</td>
+                                                        <td>{!training.chapterName}</td>
+                                                        <td>{!training.recordType}</td>
+                                                        <td>
+                                                            <apex:outputText value="{0,date,MM'/'dd'/'yyyy}"><apex:param value="{!training.orientationDate}" /></apex:outputText>
+                                                        </td>
+                                                        <td>{!training.startTime}</td>
+                                                        <td>{!training.endTime}</td>
+                                                        <td>{!training.location}</td>
+                                                        <td>{!training.maxCapacity}</td>
+                                                        <td>{!training.avilableSheets}</td>
+                                                        <td>
+                                                            <apex:commandLink action="{!Cancel}">Cancel
+                                                                <apex:param name="trainingId" value="{!training.recordId}" assignTo="{!trainingId}"/>
+                                                            </apex:commandLink>
+                                                        </td>
+                                                        <td>
+                                                            <apex:commandLink action="{!viewLMS}" oncomplete="openLMS('{!ssoURL}','{!courseURL}');"
+                                                                              rendered="{!(training.recordtypeId == classOffereningRecordtypeId)}">Start Course
+                                                                <apex:param name="lMSCourseId" value="{!training.courseId}" assignTo="{!lMSCourseId}"/>
+                                                            </apex:commandLink>
+                                                        </td>
+                                                    </tr>
+                                                </apex:outputPanel>
+                                            </apex:repeat>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </apex:outputPanel>
+
+                            <apex:outputPanel id="myPanel">
+                             <h2>Available Orientation Details</h2>
+                                <div class="table-wrap">
+                                    <table id="dataTab2" class="table table-maw table-hover">
+                                        <thead class="thead-default">
+                                            <tr>
+                                                <th title="Volunteer Name">Name</th>
+                                                <th title="Chapter Name">Chapter</th>
+                                                <th title="Orientation Type">Type</th>
+                                                <th title="Orientation Date">Date</th>
+                                                <th title="Start Time">Start</th>
+                                                <th title="End Time">End</th>
+                                                <th title="Orientation Location">Location</th>
+                                                <th title="Max Capacity">Capacity</th>
+                                                <th title="Available Seats">Seats</th>
+                                                <th title="Select Below">Action</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <apex:repeat value="{!OrientationRecordList}" var="training">
+
+
+                                                  <!--  <apex:outputPanel rendered="{!OR(AND(training.volOppSize == 0),AND(training.volOppSize > 0,training.status == 'Cancelled'))}">-->
+                                                   <apex:outputpanel rendered="{!training.displayRec == True}" >
+                                                    <tr>
+                                                        <td>{!training.orientationName}</td>
+                                                        <td>{!training.chapterName}</td>
+                                                        <td>{!training.recordType}</td>
+                                                        <td>
+                                                            <apex:outputText value="{0,date,MM'/'dd'/'yyyy}"><apex:param value="{!training.orientationDate}" /></apex:outputText>
+                                                        </td>
+                                                        <td>{!training.startTime}</td>
+                                                        <td>{!training.endTime}</td>
+                                                        <td>{!training.location}</td>
+                                                        <td>{!training.maxCapacity}</td>
+                                                        <td>{!training.avilableSheets}</td>
+                                                        <td>
+                                                            <apex:commandLink title="Click to Register" action="{!Register}">Register
+                                                                <apex:param name="trainingId" value="{!training.recordId}" assignTo="{!trainingId}"/>
+                                                            </apex:commandLink>
+                                                        </td>
+                                                    </tr>
+                                                </apex:outputPanel>
+                                            </apex:repeat>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </apex:outputPanel>
+                        </apex:pageBlock>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>Additional Information</h3>
+                                <apex:outputText value="{!orientationContent}" escape="false" />
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="poppup-alert" tabindex="-1" role="dialog" aria-labelledby="poppup-alert" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title">For a Better Experience</h1>
+                              </div>
+                              <div class="modal-body">
+                                <p class="text-muted">Please select the radio option "Always allow pop-ups for this domain", in the URL bar (Pop up Blocker options) then click start course again.</p>
+                              </div>
+                              <div class="modal-footer">
+                                <apex:commandButton html-data-dismiss="modal" html-aria-label="Close" styleClass="btn-md" value="Ok"/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </apex:form>
+                </section>
+            </div>
+        </main>
+
+        <apex:include pageName="prospective_footer" id="pfooter" />
+        <script src="{!URLFOR($Resource.prospective_assets, 'web/js/jquery.dataTables.min.js')}"></script>
+        <script src="{!URLFOR($Resource.prospective_assets, 'web/js/stacktable.min.js')}"></script>
+        <script>
+          $(document).ready(function () {
+            $('head').prepend('<title>Volunteer Orientation | Make-A-Wish \u00AE</title>');
+            $('#dataTab1,#dataTab2').DataTable({"paging": false, "searching": false});
+            $('#dataTab1, #dataTab2').stacktable({myClass: 'mobile-table'});
+            $('.sorting_asc, .sorting').removeAttr('style');
+            $('table.mobile-table.dataTable').css('border-collapse', 'collapse');
+          });
+      </script>
+    </body>
+</apex:page>

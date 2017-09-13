@@ -1,0 +1,111 @@
+<apex:page id="loginPage" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" docType="html-5.0" controller="CommunitiesLoginController" title="Make-A-Wish Communities | Log In">
+<head>
+  	<apex:include pageName="prospective_head" id="phead" />
+</head>
+<body class="vcp vcplogin">  
+  <apex:include pageName="prospective_header" id="pheader" />
+
+  <main role="main" class="container">
+    <div class="row">
+      <h1 class="col-md-12">Volunteer Log In</h1>
+    </div>
+    <div class="row">
+      <section class="col-md-8">
+        <apex:form id="form-vcp-login" styleClass="portal form-vcp-login">
+          <apex:pageMessages />
+          <fieldset>
+            <legend>Log In</legend>
+            <div class="form-group row">
+              <label for="username" class="col-sm-3">Username</label>
+              <div class="col-sm-6">
+                  <apex:inputText styleClass="form-control f-username" maxlength="50" id="username" html-placeholder="Email" required="true" value="{!username}" />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="password" class="col-sm-3">Password</label>
+              <div class="col-sm-6">
+                <apex:inputSecret styleClass="form-control f-password" maxlength="50" id="password" html-placeholder="Password" required="true" value="{!password}" />
+                <small class="text-muted"><apex:outputLink value="{!$Page.ForgotPassword}">{!$Label.site.forgot_your_password_q}</apex:outputLink></small>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="footer">
+              <apex:commandbutton styleClass="col-xs-12 col-sm-12 col-md-4 col-md-push-8 btn-md" id="submit_login" value="Log In" action="{!login}" />
+            <span class="col-xs-12 col-sm-12 col-md-8 col-md-pull-4"><apex:outputLink value="CommunitiesSelfReg">New Volunteer Sign Up</apex:outputLink></span>
+          </fieldset>
+        </apex:form>
+      </section>
+    </div>
+  </main>
+
+  <apex:include pageName="prospective_footer" id="pfooter" />
+  <!-- validate form -->
+  <script src="{!URLFOR($Resource.prospective_assets,'web/js/jquery.validate.min.js')}"></script>
+  <script>
+  		$.validator.setDefaults({
+	  		submitHandler: function () {
+                //alert( "Form validates and will be submitted." );
+            	form.submit();
+			}
+  		});
+    
+    $( document ).ready( function () {
+        // $(".f-username").attr('name','username');
+        // $(".f-password").attr('name','password');
+            
+        $( ".form-vcp-login" ).validate( {
+ 
+            //$(".f-password").rules("add", { 
+            //  required: true,
+            //  messages: {
+            //      required: "Please provide a password"
+            //  }
+            //});
+            
+            rules: {
+                "loginPage:form-vcp-login:username": "required",
+                "loginPage:form-vcp-login:password": "required"
+            },
+            messages: {
+                "loginPage:form-vcp-login:username": {
+                    required: "Please enter a username or email address"
+                },
+                "loginPage:form-vcp-login:password": {
+                    required: "Please provide a password"
+                }
+            },
+            
+            errorElement: "em",
+            errorPlacement: function ( error, element ) {
+                // Add the `help-block` class to the error element
+                error.addClass( "help-block" );
+                
+                // Add `has-feedback` class to the parent div.form-group
+                // in order to add icons to inputs
+                element.parents( ".col-sm-6" ).addClass( "has-feedback" );
+                
+                if ( element.prop( "type" ) === "checkbox" ) {
+                    error.insertAfter( element.parent( "label" ) );
+                } else {
+                    error.insertAfter( element );
+                }
+            },
+            highlight: function ( element, errorClass, validClass ) {
+                var elementParents = $( element ).parents( ".col-sm-6, .col-sm-5" );
+                
+                $(elementParents).addClass( "has-error" ).removeClass( "has-success" ).prev( "label" ).css('color','red');
+                $(elementParents).children( "input, select" ).css('border','1px solid red');
+                $(elementParents).children(".chosen-container-single").children( ".chosen-single" ).css('border','1px solid red')
+            },
+            unhighlight: function ( element, errorClass, validClass ) {
+                var elementParents = $( element ).parents( ".col-sm-6, .col-sm-5, .col-sm-1" );
+                
+                $(elementParents).removeClass( "has-error" ).prev( "label" ).css('color','');
+                $(elementParents).children( "input, select" ).css('border','');
+                $(elementParents).children( ".help-block" ).remove();
+            }
+        });
+    });
+  </script>
+</body>
+</apex:page>

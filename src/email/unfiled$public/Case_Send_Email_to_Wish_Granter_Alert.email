@@ -1,0 +1,21 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span style="color: rgb(0, 0, 0); font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">The following wish granter has been moved to Inactive status for the wish child&nbsp;</span><font face="Century Gothic, sans-serif">{!Case.Contact}</font><span style="color: rgb(0, 0, 0); font-family: &quot;Century Gothic&quot;, sans-serif; font-size: 12pt;">.</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">Wish Granter: &nbsp;{!Case.InActiveWishGranter__c}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">A new wish granter volunteer opportunity will be created.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">{!User.Name}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">{!User.Title}</span><br></p><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;"><font face="Century Gothic, sans-serif">{!Case.Hidden_Chapter_Name__c}</font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Century Gothic&quot;, sans-serif;">{!Case.Hidden_Chapter_Phone__c}<br>
+{!Case.Hidden_Chapter_Email__c}<o:p></o:p></span></p>]]></td>
+</tr>
+</table>

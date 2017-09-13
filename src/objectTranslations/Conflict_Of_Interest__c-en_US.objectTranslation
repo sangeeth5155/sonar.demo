@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Conflict Of Interest</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Conflict Of Interest</value>
+    </caseValues>
+    <fields>
+        <label><!-- Hidden Account Email --></label>
+        <name>Account_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Account Name --></label>
+        <name>Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Account Phone --></label>
+        <name>Account_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current --></label>
+        <name>Current__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expiration Date --></label>
+        <name>Expiration_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Conflict Expire --></label>
+        <name>HiddenConflictExpire__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Volunteer Contact Email --></label>
+        <name>Hidden_Volunteer_Contact_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import Id --></label>
+        <name>Import_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migrated Record --></label>
+        <name>Migrated_Record__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Import Id --></label>
+        <name>RE_Import_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Signed Date --></label>
+        <name>RE_Signed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Signed Date --></label>
+        <name>Signed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Volunteer Contact --></label>
+        <name>Volunteer_Contact__c</name>
+        <relationshipLabel><!-- Conflict Of Interest --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Hidden Volunteer is Inactive --></label>
+        <name>Volunteer_is_Inactive__c</name>
+    </fields>
+    <layouts>
+        <layout>Conflict Of Interest Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <sharingReasons>
+        <label><!-- Chapter_Staff --></label>
+        <name>Chapter_Staff</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+    <workflowTasks>
+        <name>COI_ET_COI_Expired_7_Days</name>
+        <subject><!-- COI ET : COI Expired (7 Days) --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>COI_ET_COI_Expiring_16_Days</name>
+        <subject><!-- COI ET : COI Expiring (16 Days) --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>COI_ET_COI_Expiring_23_Days</name>
+        <subject><!-- COI ET : COI Expiring (23 Days) --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>COI_ET_COI_Expiring_2_Days</name>
+        <subject><!-- COI ET : COI Expiring (2 Days) --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>COI_ET_COI_Expiring_30_Days</name>
+        <subject><!-- COI ET : COI Expiring (30 Days) --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>COI_ET_COI_Expiring_9_Days</name>
+        <subject><!-- COI ET : COI Expiring (9 Days) --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

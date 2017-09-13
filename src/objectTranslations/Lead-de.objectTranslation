@@ -1,0 +1,2418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Additional Parent City --></label>
+        <name>Additional_Parent_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Parent Email --></label>
+        <name>Additional_Parent_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Parent First Name --></label>
+        <name>Additional_Parent_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Parent Last Name --></label>
+        <name>Additional_Parent_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Parent Phone --></label>
+        <name>Additional_Parent_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Parent Postal Code --></label>
+        <name>Additional_Parent_Postal_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Parent Primary Language --></label>
+        <name>Additional_Parent_Primary__c</name>
+        <picklistValues>
+            <masterLabel>American Sign Language</masterLabel>
+            <translation><!-- American Sign Language --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arabic</masterLabel>
+            <translation><!-- Arabic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chinese</masterLabel>
+            <translation><!-- Chinese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>English</masterLabel>
+            <translation><!-- English --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>French and French Creole</masterLabel>
+            <translation><!-- French and French Creole --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>German</masterLabel>
+            <translation><!-- German --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hindi</masterLabel>
+            <translation><!-- Hindi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Italian</masterLabel>
+            <translation><!-- Italian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Japanese</masterLabel>
+            <translation><!-- Japanese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Korean</masterLabel>
+            <translation><!-- Korean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Polish</masterLabel>
+            <translation><!-- Polish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portuguese</masterLabel>
+            <translation><!-- Portuguese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Russian</masterLabel>
+            <translation><!-- Russian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spanish</masterLabel>
+            <translation><!-- Spanish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tagalog</masterLabel>
+            <translation><!-- Tagalog --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vietnamese</masterLabel>
+            <translation><!-- Vietnamese --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Additional Parent Relationship to Child --></label>
+        <name>Additional_Parent_Relationship_to_Child__c</name>
+        <picklistValues>
+            <masterLabel>Aunt</masterLabel>
+            <translation><!-- Aunt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brother</masterLabel>
+            <translation><!-- Brother --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cousin</masterLabel>
+            <translation><!-- Cousin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coworker</masterLabel>
+            <translation><!-- Coworker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Daughter</masterLabel>
+            <translation><!-- Daughter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee</masterLabel>
+            <translation><!-- Employee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employer</masterLabel>
+            <translation><!-- Employer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Family</masterLabel>
+            <translation><!-- Family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Father</masterLabel>
+            <translation><!-- Father --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Friend</masterLabel>
+            <translation><!-- Friend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grandaughter</masterLabel>
+            <translation><!-- Grandaughter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grandfather</masterLabel>
+            <translation><!-- Grandfather --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grandmother</masterLabel>
+            <translation><!-- Grandmother --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grandson</masterLabel>
+            <translation><!-- Grandson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guardian</masterLabel>
+            <translation><!-- Guardian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Half Brother</masterLabel>
+            <translation><!-- Half Brother --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Half Sister</masterLabel>
+            <translation><!-- Half Sister --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Husband</masterLabel>
+            <translation><!-- Husband --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mother</masterLabel>
+            <translation><!-- Mother --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neighbour</masterLabel>
+            <translation><!-- Neighbour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sister</masterLabel>
+            <translation><!-- Sister --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Son</masterLabel>
+            <translation><!-- Son --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stepbrother</masterLabel>
+            <translation><!-- Stepbrother --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stepfather</masterLabel>
+            <translation><!-- Stepfather --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stepmother</masterLabel>
+            <translation><!-- Stepmother --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stepsister</masterLabel>
+            <translation><!-- Stepsister --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Uncle</masterLabel>
+            <translation><!-- Uncle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wife</masterLabel>
+            <translation><!-- Wife --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Additional Parent State --></label>
+        <name>Additional_Parent_State__c</name>
+        <picklistValues>
+            <masterLabel>Alabama</masterLabel>
+            <translation><!-- Alabama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alaska</masterLabel>
+            <translation><!-- Alaska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>American Samoa</masterLabel>
+            <translation><!-- American Samoa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arizona</masterLabel>
+            <translation><!-- Arizona --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arkansas</masterLabel>
+            <translation><!-- Arkansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Armed Forces Americas</masterLabel>
+            <translation><!-- Armed Forces Americas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Armed Forces Europe</masterLabel>
+            <translation><!-- Armed Forces Europe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Armed Forces Pacific</masterLabel>
+            <translation><!-- Armed Forces Pacific --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California</masterLabel>
+            <translation><!-- California --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colorado</masterLabel>
+            <translation><!-- Colorado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connecticut</masterLabel>
+            <translation><!-- Connecticut --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delaware</masterLabel>
+            <translation><!-- Delaware --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>District of Columbia</masterLabel>
+            <translation><!-- District of Columbia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Federated Micronesia</masterLabel>
+            <translation><!-- Federated Micronesia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida</masterLabel>
+            <translation><!-- Florida --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia</masterLabel>
+            <translation><!-- Georgia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guam</masterLabel>
+            <translation><!-- Guam --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hawaii</masterLabel>
+            <translation><!-- Hawaii --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Idaho</masterLabel>
+            <translation><!-- Idaho --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illinois</masterLabel>
+            <translation><!-- Illinois --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indiana</masterLabel>
+            <translation><!-- Indiana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iowa</masterLabel>
+            <translation><!-- Iowa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kansas</masterLabel>
+            <translation><!-- Kansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kentucky</masterLabel>
+            <translation><!-- Kentucky --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louisiana</masterLabel>
+            <translation><!-- Louisiana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maine</masterLabel>
+            <translation><!-- Maine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marshall Islands</masterLabel>
+            <translation><!-- Marshall Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maryland</masterLabel>
+            <translation><!-- Maryland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massachusetts</masterLabel>
+            <translation><!-- Massachusetts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michigan</masterLabel>
+            <translation><!-- Michigan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minnesota</masterLabel>
+            <translation><!-- Minnesota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mississippi</masterLabel>
+            <translation><!-- Mississippi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missouri</masterLabel>
+            <translation><!-- Missouri --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Montana</masterLabel>
+            <translation><!-- Montana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nebraska</masterLabel>
+            <translation><!-- Nebraska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nevada</masterLabel>
+            <translation><!-- Nevada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Hampshire</masterLabel>
+            <translation><!-- New Hampshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey</masterLabel>
+            <translation><!-- New Jersey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Mexico</masterLabel>
+            <translation><!-- New Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York</masterLabel>
+            <translation><!-- New York --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina</masterLabel>
+            <translation><!-- North Carolina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Dakota</masterLabel>
+            <translation><!-- North Dakota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northern Mariana Islands</masterLabel>
+            <translation><!-- Northern Mariana Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio</masterLabel>
+            <translation><!-- Ohio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oklahoma</masterLabel>
+            <translation><!-- Oklahoma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oregon</masterLabel>
+            <translation><!-- Oregon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Palau</masterLabel>
+            <translation><!-- Palau --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania</masterLabel>
+            <translation><!-- Pennsylvania --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Puerto Rico</masterLabel>
+            <translation><!-- Puerto Rico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rhode Island</masterLabel>
+            <translation><!-- Rhode Island --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Carolina</masterLabel>
+            <translation><!-- South Carolina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Dakota</masterLabel>
+            <translation><!-- South Dakota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennessee</masterLabel>
+            <translation><!-- Tennessee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas</masterLabel>
+            <translation><!-- Texas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US Virgin Islands</masterLabel>
+            <translation><!-- US Virgin Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United States Minor Outlying Islands</masterLabel>
+            <translation><!-- United States Minor Outlying Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utah</masterLabel>
+            <translation><!-- Utah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vermont</masterLabel>
+            <translation><!-- Vermont --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virginia</masterLabel>
+            <translation><!-- Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Washington</masterLabel>
+            <translation><!-- Washington --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Virginia</masterLabel>
+            <translation><!-- West Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wisconsin</masterLabel>
+            <translation><!-- Wisconsin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wyoming</masterLabel>
+            <translation><!-- Wyoming --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Additional Parent Street --></label>
+        <name>Additional_Parent_Street__c</name>
+    </fields>
+    <fields>
+        <help><!-- Last time USPS verification was attempted --></help>
+        <label><!-- Address Verification Attempted --></label>
+        <name>AddressVerificationAttempted__c</name>
+    </fields>
+    <fields>
+        <help><!-- USPS Verified --></help>
+        <label><!-- Address Verified --></label>
+        <name>AddressVerified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Angina --></label>
+        <name>Angina__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is there a medical reason why we need to move quickly? --></help>
+        <label><!-- Any Medical Reason For Moving Quickly? --></label>
+        <name>Any_medical_reason_for_moving_quickly__c</name>
+    </fields>
+    <fields>
+        <label><!-- Are Other Diagnosis Eligible For Wish? --></label>
+        <name>Are_Other_Diagnosis_Eligible_For_Wish__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Arrhythmia --></label>
+        <name>Arrhythmia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Best Contact for Physician First Name --></label>
+        <name>Best_Contact_for_Physician_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Best Contact for Physician Last Name --></label>
+        <name>Best_Contact_for_Physician_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Best contact for Physician Email --></label>
+        <name>Best_contact_for_Physician_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Chapter Name --></label>
+        <name>ChapterName__c</name>
+        <relationshipLabel><!-- Leads --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Chapter Name --></label>
+        <name>Chapter_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child Age --></label>
+        <name>Child_Age__c</name>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11</masterLabel>
+            <translation><!-- 11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12</masterLabel>
+            <translation><!-- 12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13</masterLabel>
+            <translation><!-- 13 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>14</masterLabel>
+            <translation><!-- 14 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15</masterLabel>
+            <translation><!-- 15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>16</masterLabel>
+            <translation><!-- 16 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>17</masterLabel>
+            <translation><!-- 17 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>18 &amp; Above</masterLabel>
+            <translation><!-- 18 &amp; Above --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2.5</masterLabel>
+            <translation><!-- 2.5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Under 2.5</masterLabel>
+            <translation><!-- Under 2.5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Child Middle Initial --></label>
+        <name>Child_Middle_Initial__c</name>
+    </fields>
+    <fields>
+        <help><!-- Wish Child has a condition for which there is no reasonable hope of cure and from which children or young people will ultimately die prematurely. (e.g., Duchenne muscular dystrophy or neurodegenerative disease) --></help>
+        <label><!-- Child Will Ultimately Die Prematurely --></label>
+        <name>Child_will_ultimately_die_prematurely__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child&apos;s Qualifying Diagnosis --></label>
+        <name>Childs_Qualifying_Diagnosis__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Chronic Heart Failure --></label>
+        <name>Chronic_Heart_Failure__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Chronic Hepatitis --></label>
+        <name>Chronic_Hepatitis__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the wish is financially closed out. --></help>
+        <label><!-- Closed Date --></label>
+        <name>Closed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Communication --></label>
+        <name>Communication__c</name>
+        <picklistValues>
+            <masterLabel>I am not sure</masterLabel>
+            <translation><!-- I am not sure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>This child functions at a 0-2 year old, Sensorimotor stage</masterLabel>
+            <translation><!-- This child functions at a 0-2 year old, Sensorimotor stage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>This child functions at a 2-7 year old, Preoperational stage</masterLabel>
+            <translation><!-- This child functions at a 2-7 year old, Preoperational stage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>This child functions at a 7-11 year old, Concrete Operational stage</masterLabel>
+            <translation><!-- This child functions at a 7-11 year old, Concrete Operational stage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>This child functions at an 11+ year old, Formal Operational stage</masterLabel>
+            <translation><!-- This child functions at an 11+ year old, Formal Operational stage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>This child is developmentally on target for chronological age</masterLabel>
+            <translation><!-- This child is developmentally on target for chronological age --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>This child is non-verbal</masterLabel>
+            <translation><!-- This child is non-verbal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Hidden Congenita Heart Disease --></label>
+        <name>Congenital_Heart_Disease__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Contact Dup Check --></label>
+        <name>Contact_Dup_Check__c</name>
+        <picklistValues>
+            <masterLabel>Block Contact Dup</masterLabel>
+            <translation><!-- Block Contact Dup --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Hidden Convulsive Disorders --></label>
+        <name>Convulsive_Disorders__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 1 - DNQ Date --></label>
+        <name>Copy_1_DNQ_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copy 1 - Lead Referred Date --></label>
+        <name>Copy_1_Lead_Referred_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- County/Parish/Borough --></help>
+        <label><!-- County --></label>
+        <name>County__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Date/Time --></label>
+        <name>Created_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Condition Label --></label>
+        <name>Current_Condition_Label__c</name>
+    </fields>
+    <fields>
+        <label><!-- Travel Recommendation --></label>
+        <name>Current_Condition__c</name>
+    </fields>
+    <fields>
+        <label><!-- DB Created Date without Time --></label>
+        <name>DB_Created_Date_without_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- DB Lead Age --></label>
+        <name>DB_Lead_Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- DNQ Date --></label>
+        <name>DNQ_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- DOB --></label>
+        <name>DOB__c</name>
+    </fields>
+    <fields>
+        <help><!-- Wish Child has a progressive condition without curative treatment options in which debilitation may extend over many years. (e.g., neurodegenerative, severe treatment resistant epilepsy, metabolic disease) --></help>
+        <label><!-- Debilitation May Extend Over Many Years --></label>
+        <name>Debilitation_may_extend_over_many_years__c</name>
+    </fields>
+    <fields>
+        <label><!-- Diagnosis Pending Days --></label>
+        <name>Diagnosis_Pending_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Dup Check --></label>
+        <name>Dup_Check__c</name>
+        <picklistValues>
+            <masterLabel>Block Lead Dup</masterLabel>
+            <translation><!-- Block Lead Dup --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Mulesoft --></label>
+        <name>From_Mulesoft__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gender --></label>
+        <name>Gender__c</name>
+        <picklistValues>
+            <masterLabel>Female</masterLabel>
+            <translation><!-- Female --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Male</masterLabel>
+            <translation><!-- Male --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Has this child ever received a prior wish from MAW or any other wish granting organization? --></help>
+        <label><!-- Has This Child Ever Received Prior Wish? --></label>
+        <name>Has_this_child_ever_received_prior_wish__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Heart Failure --></label>
+        <name>Heart_Failure__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Additional Parent Id --></label>
+        <name>Hidden_Additional_Parent_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Best Contact Person Id --></label>
+        <name>Hidden_Best_Contact_Person_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden DV form Medical professional Type --></label>
+        <name>Hidden_DV_form_Medical_professional_Type__c</name>
+        <picklistValues>
+            <masterLabel>Best contact for Physician</masterLabel>
+            <translation><!-- Best contact for Physician --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Treating Medical Professional</masterLabel>
+            <translation><!-- Treating Medical Professional --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Hidden Medical Professional Name --></label>
+        <name>Hidden_Medical_Professional_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Question1 --></label>
+        <name>Hidden_Question1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Child Last Initial --></label>
+        <name>Hidden_Wish_Child_Last_Initial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hospital/Treatment Facility --></label>
+        <name>Hospital_Treatment_Facility_Treating__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hospital/Treatment Facility --></label>
+        <name>Hospital_Treatment_Facility__c</name>
+    </fields>
+    <fields>
+        <label><!-- How Did you hear about Make-A-Wish? --></label>
+        <name>How_Did_you_hear_about_Make_A_Wish__c</name>
+        <picklistValues>
+            <masterLabel>Brochure at the Doctor&apos;s Office</masterLabel>
+            <translation><!-- Brochure at the Doctor&apos;s Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Event</masterLabel>
+            <translation><!-- Event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Family Member</masterLabel>
+            <translation><!-- Family Member --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Friend</masterLabel>
+            <translation><!-- Friend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Make-A-Wish Hospital Presence</masterLabel>
+            <translation><!-- Make-A-Wish Hospital Presence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Make-A-Wish Staff/Volunteer</masterLabel>
+            <translation><!-- Make-A-Wish Staff/Volunteer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Newspaper</masterLabel>
+            <translation><!-- Newspaper --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nurse</masterLabel>
+            <translation><!-- Nurse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Make-A-Wish Family</masterLabel>
+            <translation><!-- Other Make-A-Wish Family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physician</masterLabel>
+            <translation><!-- Physician --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Radio</masterLabel>
+            <translation><!-- Radio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School – Kids For Wish Kids</masterLabel>
+            <translation><!-- School – Kids For Wish Kids --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School – Nurse/Teacher</masterLabel>
+            <translation><!-- School – Nurse/Teacher --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Media</masterLabel>
+            <translation><!-- Social Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Worker</masterLabel>
+            <translation><!-- Social Worker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support Group</masterLabel>
+            <translation><!-- Support Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Television</masterLabel>
+            <translation><!-- Television --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web Search</masterLabel>
+            <translation><!-- Web Search --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- I Am Recognized To Practice As A --></label>
+        <name>I_am_Recognized_To_Practice_As_a__c</name>
+        <picklistValues>
+            <masterLabel>Child Life Specialist</masterLabel>
+            <translation><!-- Child Life Specialist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nurse</masterLabel>
+            <translation><!-- Nurse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nurse Practitioner</masterLabel>
+            <translation><!-- Nurse Practitioner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physician</masterLabel>
+            <translation><!-- Physician --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physician Assistant</masterLabel>
+            <translation><!-- Physician Assistant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Worker</masterLabel>
+            <translation><!-- Social Worker --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- I&apos;m Part Of The Treating HealthCare Team --></label>
+        <name>I_m_Part_of_The_Treating_HealthCare_Team__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Import Id --></label>
+        <name>Import_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Wish Child has an irreversible but non-progressive condition with severe disability and is experiencing multiple health complications that increase the probability for premature death. (e.g., anoxic brain injury, severe cerebral palsy) --></help>
+        <label><!-- Increased Probability Of Premature Death --></label>
+        <name>Increased_probability_of_premature_death__c</name>
+    </fields>
+    <fields>
+        <name>Industry</name>
+        <picklistValues>
+            <masterLabel>Agriculture</masterLabel>
+            <translation><!-- Agriculture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Apparel</masterLabel>
+            <translation><!-- Apparel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banking</masterLabel>
+            <translation><!-- Banking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Biotechnology</masterLabel>
+            <translation><!-- Biotechnology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chemicals</masterLabel>
+            <translation><!-- Chemicals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Communications</masterLabel>
+            <translation><!-- Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction</masterLabel>
+            <translation><!-- Construction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consulting</masterLabel>
+            <translation><!-- Consulting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electronics</masterLabel>
+            <translation><!-- Electronics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Energy</masterLabel>
+            <translation><!-- Energy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering</masterLabel>
+            <translation><!-- Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entertainment</masterLabel>
+            <translation><!-- Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environmental</masterLabel>
+            <translation><!-- Environmental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food &amp; Beverage</masterLabel>
+            <translation><!-- Food &amp; Beverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Government</masterLabel>
+            <translation><!-- Government --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthcare</masterLabel>
+            <translation><!-- Healthcare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hospitality</masterLabel>
+            <translation><!-- Hospitality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance</masterLabel>
+            <translation><!-- Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Machinery</masterLabel>
+            <translation><!-- Machinery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manufacturing</masterLabel>
+            <translation><!-- Manufacturing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media</masterLabel>
+            <translation><!-- Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not For Profit</masterLabel>
+            <translation><!-- Not For Profit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recreation</masterLabel>
+            <translation><!-- Recreation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shipping</masterLabel>
+            <translation><!-- Shipping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technology</masterLabel>
+            <translation><!-- Technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telecommunications</masterLabel>
+            <translation><!-- Telecommunications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transportation</masterLabel>
+            <translation><!-- Transportation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities</masterLabel>
+            <translation><!-- Utilities --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Date the Initial lead from a non-authorized referral source is received. --></help>
+        <label><!-- Inquiry Date --></label>
+        <name>Inquiry_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Is Chapter Active --></label>
+        <name>Is_Chapter_Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is We Need To Expedite The Process? --></label>
+        <name>Is_We_Need_To_Expedite_The_Process__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Sure</masterLabel>
+            <translation><!-- Not Sure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is In A Comatose/Vegetative State? --></label>
+        <name>Is_in_a_Comatose_Vegetative_State__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>LeadSource</name>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fax</masterLabel>
+            <translation><!-- Fax --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online</masterLabel>
+            <translation><!-- Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone</masterLabel>
+            <translation><!-- Phone --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Long Description --></label>
+        <name>Long_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Lung Disease --></label>
+        <name>Lung_Disease__c</name>
+    </fields>
+    <fields>
+        <label><!-- MAW Name --></label>
+        <name>MAW_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Medical Professional ContactId --></label>
+        <name>Medical_Professional_ContactId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medical Professional Email --></label>
+        <name>Medical_Professional_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medical Professional First Name --></label>
+        <name>Medical_Professional_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medical Professional Last Name --></label>
+        <name>Medical_Professional_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medical Professional Phone --></label>
+        <name>Medical_Professional_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medical Professional Suffix --></label>
+        <name>Medical_Professional_Suffix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medical Professional Title --></label>
+        <name>Medical_Professional_Title__c</name>
+        <picklistValues>
+            <masterLabel>DR</masterLabel>
+            <translation><!-- DR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MR</masterLabel>
+            <translation><!-- MR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MRS</masterLabel>
+            <translation><!-- MRS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS</masterLabel>
+            <translation><!-- MS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Medical Professional Title --></label>
+        <name>Medical_Professional_Titles__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medical Provider Category --></label>
+        <name>Medical_Provider_Category__c</name>
+        <picklistValues>
+            <masterLabel>Child Life Specialist</masterLabel>
+            <translation><!-- Child Life Specialist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nurse</masterLabel>
+            <translation><!-- Nurse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nurse Practitioner</masterLabel>
+            <translation><!-- Nurse Practitioner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physician</masterLabel>
+            <translation><!-- Physician --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physician Assistant</masterLabel>
+            <translation><!-- Physician Assistant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Worker</masterLabel>
+            <translation><!-- Social Worker --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Medical Questions --></label>
+        <name>Medical_Questions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Middle Name --></label>
+        <name>Middle_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migrated Record --></label>
+        <name>Migrated_Record__c</name>
+    </fields>
+    <fields>
+        <label><!-- Non - Verbal --></label>
+        <name>Non_Verbal__c</name>
+    </fields>
+    <fields>
+        <help><!-- None of these statements describe Wish Child --></help>
+        <label><!-- None Of These Statements Describes Child --></label>
+        <name>None_of_these_statements_describes_Child__c</name>
+    </fields>
+    <fields>
+        <label><!-- # Of Times Email Sent --></label>
+        <name>Of_Times_Email_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Office Referral Email --></label>
+        <name>Office_Referral_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Medical Provider Category --></label>
+        <name>Other_Medical_Provider_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Relationship To Child --></label>
+        <name>Other_Relationship_To_Child__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden No Duplicate Found --></label>
+        <name>Override_Dupe_Check__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden PCD-ICD --></label>
+        <name>PCD_ICD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Diagnosis --></label>
+        <name>PD_Condition_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary ICD-10 Code --></label>
+        <name>PD_ICD_Code__c</name>
+        <relationshipLabel><!-- Leads --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Parent First Name --></label>
+        <name>Parent_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent/Guardian Name --></label>
+        <name>Parent_Guardian_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Last Name --></label>
+        <name>Parent_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Relationship to Child --></label>
+        <name>Parent_Relationship_to_Child__c</name>
+        <picklistValues>
+            <masterLabel>Aunt</masterLabel>
+            <translation><!-- Aunt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brother</masterLabel>
+            <translation><!-- Brother --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cousin</masterLabel>
+            <translation><!-- Cousin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coworker</masterLabel>
+            <translation><!-- Coworker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Daughter</masterLabel>
+            <translation><!-- Daughter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee</masterLabel>
+            <translation><!-- Employee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employer</masterLabel>
+            <translation><!-- Employer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Family</masterLabel>
+            <translation><!-- Family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Father</masterLabel>
+            <translation><!-- Father --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Friend</masterLabel>
+            <translation><!-- Friend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grandaughter</masterLabel>
+            <translation><!-- Grandaughter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grandfather</masterLabel>
+            <translation><!-- Grandfather --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grandmother</masterLabel>
+            <translation><!-- Grandmother --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grandson</masterLabel>
+            <translation><!-- Grandson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guardian</masterLabel>
+            <translation><!-- Guardian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Half Brother</masterLabel>
+            <translation><!-- Half Brother --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Half Sister</masterLabel>
+            <translation><!-- Half Sister --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Husband</masterLabel>
+            <translation><!-- Husband --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mother</masterLabel>
+            <translation><!-- Mother --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neighbor</masterLabel>
+            <translation><!-- Neighbor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sister</masterLabel>
+            <translation><!-- Sister --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Son</masterLabel>
+            <translation><!-- Son --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stepbrother</masterLabel>
+            <translation><!-- Stepbrother --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stepfather</masterLabel>
+            <translation><!-- Stepfather --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stepmother</masterLabel>
+            <translation><!-- Stepmother --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stepsister</masterLabel>
+            <translation><!-- Stepsister --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Uncle</masterLabel>
+            <translation><!-- Uncle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wife</masterLabel>
+            <translation><!-- Wife --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Diagnosis Verification Form Password --></label>
+        <name>Part_A_Form_Password__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the Diagnosis Verification is received from the child&apos;s medical professional. --></help>
+        <label><!-- Diagnosis Verification Received --></label>
+        <name>Part_A_Received__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date the Diagnosis Verification is sent to the child&apos;s medical professional --></help>
+        <label><!-- Diagnosis Verification Sent --></label>
+        <name>Part_A_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Please Explain Condition Deteriorate --></label>
+        <name>Please_Explain_Deteriorate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Please Explain Expedite --></label>
+        <name>Please_Explain__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Name --></label>
+        <name>Preferred_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Provided additional information --></label>
+        <name>Provided_additional_information__c</name>
+    </fields>
+    <fields>
+        <label><!-- Provider Signature --></label>
+        <name>Provider_Signature__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Pulmonary Hypertension --></label>
+        <name>Pulmonary_Hypertension__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Any medical reason for moving quickly --></label>
+        <name>RE_Any_medical_reason_for_moving_quickly__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE City --></label>
+        <name>RE_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Communication --></label>
+        <name>RE_Communication__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Country --></label>
+        <name>RE_Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Created Date --></label>
+        <name>RE_Created_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE DOB --></label>
+        <name>RE_DOB__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Diagnosis Verification Received --></label>
+        <name>RE_Diagnosis_Verification_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Email Opt Out --></label>
+        <name>RE_Email_Opt_Out__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Email --></label>
+        <name>RE_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Family&apos;s primary spoken language --></label>
+        <name>RE_Family_s_primary_spoken_language__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Fax --></label>
+        <name>RE_Fax__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE First Name --></label>
+        <name>RE_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Gender --></label>
+        <name>RE_Gender__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Hospital/Treatment Facility --></label>
+        <name>RE_Hospital_Treatment_Facility__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE ICD-10 Code --></label>
+        <name>RE_ICD_10_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Import Id --></label>
+        <name>RE_Import_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Is We Need To Expedite The Process? --></label>
+        <name>RE_Is_We_Need_To_Expedite_The_Process__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Last Name --></label>
+        <name>RE_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Long Description --></label>
+        <name>RE_Long_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE MAW Name --></label>
+        <name>RE_MAW_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Medical Professional Email --></label>
+        <name>RE_Medical_Professional_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Medical Professional First Name --></label>
+        <name>RE_Medical_Professional_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Medical Professional Last Name --></label>
+        <name>RE_Medical_Professional_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Medical Professional Phone --></label>
+        <name>RE_Medical_Professional_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Medical Professional Suffix --></label>
+        <name>RE_Medical_Professional_Suffix__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Medical Professional Title --></label>
+        <name>RE_Medical_Professional_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Medical Provider Category --></label>
+        <name>RE_Medical_Provider_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Middle Name --></label>
+        <name>RE_Middle_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Mobile Phone --></label>
+        <name>RE_Mobile_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Non - Verbal --></label>
+        <name>RE_Non_Verbal__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Other Relationship To Child --></label>
+        <name>RE_Other_Relationship_To_Child__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE PD Condition Description --></label>
+        <name>RE_PD_Condition_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE PD ICD Code --></label>
+        <name>RE_PD_ICD_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Parent First Name --></label>
+        <name>RE_Parent_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Parent Last Name --></label>
+        <name>RE_Parent_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Phone --></label>
+        <name>RE_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Preferred Name --></label>
+        <name>RE_Preferred_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE PrimaryDiagnosis ConditionDescription --></label>
+        <name>RE_PrimaryDiagnosis_ConditionDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Primary Diagnosis --></label>
+        <name>RE_Primary_Diagnosis__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Qualifying Medical Professional Email --></label>
+        <name>RE_Qualifying_Medical_Professional_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Qualifying Medical Professional Fax --></label>
+        <name>RE_Qualifying_Medical_Professional_Fax__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Qualifying Medical Professional First --></label>
+        <name>RE_Qualifying_Medical_Professional_First__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Qualifying Medical Professional Last --></label>
+        <name>RE_Qualifying_Medical_Professional_Last__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Qualifying Medical Professional Phone --></label>
+        <name>RE_Qualifying_Medical_Professional_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Referred Date --></label>
+        <name>RE_Referred_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Referrer City --></label>
+        <name>RE_Referrer_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Referrer Email --></label>
+        <name>RE_Referrer_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Referrer FirstName --></label>
+        <name>RE_Referrer_FirstName__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Referrer Last Name --></label>
+        <name>RE_Referrer_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Referrer Phone --></label>
+        <name>RE_Referrer_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Referrer Zip --></label>
+        <name>RE_Referrer_Zip__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Relationship to child --></label>
+        <name>RE_Relationship_to_child__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE State/Province --></label>
+        <name>RE_State_Province__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Status --></label>
+        <name>RE_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Street --></label>
+        <name>RE_Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Sub Status --></label>
+        <name>RE_Sub_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE What is the familyâ€™s primary spoken --></label>
+        <name>RE_What_is_the_family_s_primary_spoken__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Zip/Postal Code --></label>
+        <name>RE_Zip_Postal_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- RFI Form Info Hidden --></label>
+        <name>RFI_Form_Info_Hidden__c</name>
+        <picklistValues>
+            <masterLabel>Inquiry</masterLabel>
+            <translation><!-- Inquiry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Qualified</masterLabel>
+            <translation><!-- Not Qualified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Qualified</masterLabel>
+            <translation><!-- Qualified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referred</masterLabel>
+            <translation><!-- Referred --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Rating</name>
+        <picklistValues>
+            <masterLabel>Cold</masterLabel>
+            <translation><!-- Cold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hot</masterLabel>
+            <translation><!-- Hot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warm</masterLabel>
+            <translation><!-- Warm --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Date the Initial lead from an authorized referral source is received. --></help>
+        <label><!-- Referred Date --></label>
+        <name>Referred_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referrer City --></label>
+        <name>Referrer_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referrer Email --></label>
+        <name>Referrer_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referrer First Name --></label>
+        <name>Referrer_FirstName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referrer Last Name --></label>
+        <name>Referrer_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referrer Phone --></label>
+        <name>Referrer_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referrer Zip --></label>
+        <name>Referrer_Zip__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region Code --></label>
+        <name>Region_Code__c</name>
+        <relationshipLabel><!-- Leads --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Relationship To Child --></label>
+        <name>Relationship_to_child__c</name>
+        <picklistValues>
+            <masterLabel>Family Member/Relative</masterLabel>
+            <translation><!-- Family Member/Relative --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical Professional</masterLabel>
+            <translation><!-- Medical Professional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parent/Guardian</masterLabel>
+            <translation><!-- Parent/Guardian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Self</masterLabel>
+            <translation><!-- Self --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Wish Child responds to standard treatment which approximates normal health. --></help>
+        <label><!-- Responds To Treatment With Normal Health --></label>
+        <name>Responds_to_treatment_with_normal_health__c</name>
+    </fields>
+    <fields>
+        <help><!-- Wish Child has an non-progressive condition that may have a risk of complications and/or risk of premature death. --></help>
+        <label><!-- Risk Of Complications &amp; Premature Death --></label>
+        <name>Risk_of_complications_premature_death__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secondary Diagnosis 1 Cond Description --></label>
+        <name>SD1_Condition_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secondary Diagnosis 1 ICD-10 Code --></label>
+        <name>SD1_ICD_Code__c</name>
+        <relationshipLabel><!-- Leads (Diagnosis 1 ICD-10 Code) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Secondary Diagnosis 2 Cond Description --></label>
+        <name>SD2_Condition_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secondary Diagnosis 2 ICD-10 Code --></label>
+        <name>SD2_ICD_Code__c</name>
+        <relationshipLabel><!-- Leads (Secondary Diagnosis 2 ICD-10 Code) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Secondary Diagnosis 3 Cond Description --></label>
+        <name>SD3_Condition_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secondary Diagnosis 3 ICD-10 Code --></label>
+        <name>SD3_ICD_Code__c</name>
+        <relationshipLabel><!-- Leads (Secondary Diagnosis 3 ICD-10 Code) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Secondary Diagnosis 4 Cond Description --></label>
+        <name>SD4_Condition_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secondary Diagnosis 4 ICD-10 Code --></label>
+        <name>SD4_ICD_Code__c</name>
+        <relationshipLabel><!-- Leads (Secondary Diagnosis 4 ICD-10 Code) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Short Description --></label>
+        <name>Short_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sibling Detail --></label>
+        <name>Sibling_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden State --></label>
+        <name>State_Picklist__c</name>
+    </fields>
+    <fields>
+        <name>Status</name>
+        <picklistValues>
+            <masterLabel>DNQ</masterLabel>
+            <translation><!-- DNQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duplicate</masterLabel>
+            <translation><!-- Duplicate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eligibility Review</masterLabel>
+            <translation><!-- Eligibility Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inquiry</masterLabel>
+            <translation><!-- Inquiry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Qualified</masterLabel>
+            <translation><!-- Qualified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referred</masterLabel>
+            <translation><!-- Referred --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Hidden Strokes --></label>
+        <name>Strokes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sub Status --></label>
+        <name>Sub_Status__c</name>
+        <picklistValues>
+            <masterLabel>Age</masterLabel>
+            <translation><!-- Age --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Local</masterLabel>
+            <translation><!-- Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical</masterLabel>
+            <translation><!-- Medical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National</masterLabel>
+            <translation><!-- National --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Response</masterLabel>
+            <translation><!-- No Response --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Diagnosis Verification</masterLabel>
+            <translation><!-- Pending Diagnosis Verification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Previous Wish</masterLabel>
+            <translation><!-- Previous Wish --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test Record --></label>
+        <name>Test_Record__c</name>
+    </fields>
+    <fields>
+        <label><!-- This Statement Describes My Patient --></label>
+        <name>This_Statement_Describes_My_Patient__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Travel algorithm --></label>
+        <name>Travel_algorithm__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Treating Med Prof Contact Id --></label>
+        <name>Treating_Medical_Professional_Contact_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Treating Medical Professional Email --></label>
+        <name>Treating_Medical_Professional_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Treating Medical Professional Fax --></label>
+        <name>Treating_Medical_Professional_Fax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Treating Medical Professional First Name --></label>
+        <name>Treating_Medical_Professional_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Treating Medical Professional Last Name --></label>
+        <name>Treating_Medical_Professional_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Treating Medical Professional Phone --></label>
+        <name>Treating_Medical_Professional_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Treatment Subspecialty --></label>
+        <name>Treatment_Subspecialty__c</name>
+        <relationshipLabel><!-- Leads --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Wish Child has a condition for which curative treatment may be feasible but can fail (e.g., cancer, irreversible organ failure, treatment failure does not include non-compliance) --></help>
+        <label><!-- Treatment May Be Feasible But Can Fail --></label>
+        <name>Treatment_may_be_feasible_but_can_fail__c</name>
+    </fields>
+    <fields>
+        <help><!-- Wish Child has a progressive condition without curative treatment options in which debilitation may extend over many years. (e.g., neurodegenerative, severe treatment resistant epilepsy, metabolic disease) --></help>
+        <label><!-- Treatment May Prolong-Normal Activities --></label>
+        <name>Treatment_may_prolong_normal_activities__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden Ventilator --></label>
+        <name>Ventilator__c</name>
+    </fields>
+    <fields>
+        <label><!-- What is the familyâ€™s primary spoken la --></label>
+        <name>What_is_the_family_s_primary_spoken_la__c</name>
+    </fields>
+    <fields>
+        <label><!-- Family Primary Language --></label>
+        <name>What_is_the_family_s_primary_spoken_lang__c</name>
+        <picklistValues>
+            <masterLabel>American Sign Language</masterLabel>
+            <translation><!-- American Sign Language --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arabic</masterLabel>
+            <translation><!-- Arabic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chinese</masterLabel>
+            <translation><!-- Chinese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>English</masterLabel>
+            <translation><!-- English --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>French and French Creole</masterLabel>
+            <translation><!-- French and French Creole --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>German</masterLabel>
+            <translation><!-- German --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hindi</masterLabel>
+            <translation><!-- Hindi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Italian</masterLabel>
+            <translation><!-- Italian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Japanese</masterLabel>
+            <translation><!-- Japanese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Korean</masterLabel>
+            <translation><!-- Korean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Polish</masterLabel>
+            <translation><!-- Polish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portuguese</masterLabel>
+            <translation><!-- Portuguese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Russian</masterLabel>
+            <translation><!-- Russian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spanish</masterLabel>
+            <translation><!-- Spanish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tagalog</masterLabel>
+            <translation><!-- Tagalog --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vietnamese</masterLabel>
+            <translation><!-- Vietnamese --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Why do you feel  would be eligible Wish? --></label>
+        <name>Why_do_you_feel_would_be_eligible_Wish__c</name>
+    </fields>
+    <fields>
+        <label><!-- Will Child&apos;s Condition Deteriorate? --></label>
+        <name>Will_Child_s_Condition_Deteriorate__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Sure</masterLabel>
+            <translation><!-- Not Sure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Hidden Wish Family ContactId --></label>
+        <name>Wish_Family_ContactId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden isApprove --></label>
+        <name>isApprove__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hidden isSign --></label>
+        <name>isSign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Family Aware Of Referral? --></label>
+        <name>is_Family_Aware_of_Referral__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Preferred Email --></label>
+        <name>npe01__Preferred_Email__c</name>
+        <picklistValues>
+            <masterLabel>Alternate</masterLabel>
+            <translation>Alternativ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal</masterLabel>
+            <translation>Persönlich</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation>Geschäftlich</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Preferred Phone --></label>
+        <name>npe01__Preferred_Phone__c</name>
+        <picklistValues>
+            <masterLabel>Home</masterLabel>
+            <translation>Privat</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile</masterLabel>
+            <translation>Mobil</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Sonstige</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation>Geschäftlich</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Der Batch, aus dem dieser Lead erstellt wurde</help>
+        <label><!-- Batch --></label>
+        <name>npsp__Batch__c</name>
+        <relationshipLabel><!-- Leads --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Company City --></label>
+        <name>npsp__CompanyCity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Country --></label>
+        <name>npsp__CompanyCountry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Zip/Postal Code --></label>
+        <name>npsp__CompanyPostalCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company State/Province --></label>
+        <name>npsp__CompanyState__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Street --></label>
+        <name>npsp__CompanyStreet__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Siblings --></label>
+        <name>of_Siblings__c</name>
+        <picklistValues>
+            <masterLabel>0</masterLabel>
+            <translation><!-- 0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unique Wish Identifier --></label>
+        <name>unique_wish_identifier__c</name>
+    </fields>
+    <layouts>
+        <layout>Lead Layout</layout>
+        <sections>
+            <label><!-- Attachments --></label>
+            <section>Attachments</section>
+        </sections>
+        <sections>
+            <label><!-- Diagnosis Verification --></label>
+            <section>Diagnosis Verification</section>
+        </sections>
+        <sections>
+            <label><!-- Family Information --></label>
+            <section>Family Information</section>
+        </sections>
+        <sections>
+            <label><!-- Important Date --></label>
+            <section>Important Date</section>
+        </sections>
+        <sections>
+            <label><!-- Inquiry/Referral --></label>
+            <section>Inquiry/Referral</section>
+        </sections>
+        <sections>
+            <label><!-- Medical Information --></label>
+            <section>Medical Information</section>
+        </sections>
+        <sections>
+            <label><!-- Medical Professionals --></label>
+            <section>Medical Professionals</section>
+        </sections>
+        <sections>
+            <label><!-- Referral Source Information --></label>
+            <section>Referral Source Information</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Please Enter Full Address (City, State, Street and Postal Code), Phone Number  and Gender. --></errorMessage>
+        <name>Lead_Address_Phone_and_Gender_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Full Address (City, State, Street and Postal Code) --></errorMessage>
+        <name>Lead_Address_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- if users chapter and chapter of lead is not equal then unique wish identifier is required. --></errorMessage>
+        <name>Lead_Chapter_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Child Age --></errorMessage>
+        <name>Lead_Child_Age_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter DOB --></errorMessage>
+        <name>Lead_DOB_Referral_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please provide the ICD Code or Primary Diagnosis. --></errorMessage>
+        <name>Lead_Diagnosis_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill the is Famil Aware of Referral field. --></errorMessage>
+        <name>Lead_Family_Referral_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter First Name --></errorMessage>
+        <name>Lead_FirstName_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter First Name --></errorMessage>
+        <name>Lead_FirstName_Validation_Referred</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Gender --></errorMessage>
+        <name>Lead_Gender_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Hospital_Treatment_Facility --></errorMessage>
+        <name>Lead_Hospital_or_Treartment_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Parent First Name --></errorMessage>
+        <name>Lead_Parent_FirstName_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Parent First Name --></errorMessage>
+        <name>Lead_Parent_FirstName_Validation_Referre</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Parent Last Name --></errorMessage>
+        <name>Lead_Parent_LastName_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Parent Last Name --></errorMessage>
+        <name>Lead_Parent_LastName_Validation_Referred</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Phone numbers should be in this format: (999) 999-9999. --></errorMessage>
+        <name>Lead_Phone_Number_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Treating Medical Professional Last Name --></errorMessage>
+        <name>Lead_Physician_LastName_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Primary Diagnosis --></errorMessage>
+        <name>Lead_Primary_Diagnosis_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Phone --></errorMessage>
+        <name>Lead_Primary_Phone_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Referrer City --></errorMessage>
+        <name>Lead_Referrer_City_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Referrer Email --></errorMessage>
+        <name>Lead_Referrer_Email_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Referrer Email --></errorMessage>
+        <name>Lead_Referrer_Email_Validation_Referred</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Referrer FirstName --></errorMessage>
+        <name>Lead_Referrer_First_Name_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Referrer FirstName --></errorMessage>
+        <name>Lead_Referrer_First_Name_Validation_Ref</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Referrer LastName --></errorMessage>
+        <name>Lead_Referrer_Last_Name_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Referrer LastName --></errorMessage>
+        <name>Lead_Referrer_Last_Name_Validation_Ref</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Referrer Phone --></errorMessage>
+        <name>Lead_Referrer_Phone_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Referrer Phone --></errorMessage>
+        <name>Lead_Referrer_Phone_Validation_Ref</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter Referrer Zip --></errorMessage>
+        <name>Lead_Referrer_PostalCode_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The status can be updated to Eligibility Review or Qualified only when the previous Sub Status is Pending Diagnosis Verification. --></errorMessage>
+        <name>Lead_Status_QualifiedOrEligib_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Enter is Family Aware of Referral? value as Yes --></errorMessage>
+        <name>Lead_Wish_Aware_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please save the record before updating the sub status as Pending Diagnosis Verification. --></errorMessage>
+        <name>Lead_sub_Status_Validation</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Lead_DNQ_Letter --></label>
+        <name>Lead_DNQ_Letter</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Lead_DNQ_Medical_Professional --></label>
+        <name>Lead_DNQ_Medical_Professional</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Lead_DNQ_Spanish_Letter --></label>
+        <name>Lead_DNQ_Spanish_Letter</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- LOOP --></label>
+        <name>Loop__LOOP</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- LOOP_Merge --></label>
+        <name>Loop__LOOP_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- LOOPlus --></label>
+        <name>Loop__LOOPlus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_LOOP_Merge --></label>
+        <name>Loop__Mass_LOOP_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_LOOPlus --></label>
+        <name>Loop__Mass_LOOPlus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Diagnosis_Verification --></label>
+        <name>Send_Diagnosis_Verification</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <workflowTasks>
+        <name>Lead_ET_Chapter_has_been_changed</name>
+        <subject><!-- Lead ET : Chapter has been changed --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Lead_ET_We_ve_Received_your_Referral_Inquiry</name>
+        <subject><!-- Lead ET : We&apos;ve Received your Referral Inquiry --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Lead_ET_Your_patient_is_eligible_for_a_wish</name>
+        <subject><!-- Lead ET : Your patient is eligible for a wish! --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Lead_ET_Your_patient_was_referred_for_a_wish</name>
+        <subject><!-- Lead ET : Your patient was referred for a wish --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Send_DNQ_Notification_to_Qualifying_Medical_Professional</name>
+        <subject><!-- Send DNQ Notification to Qualifying Medical Professional --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

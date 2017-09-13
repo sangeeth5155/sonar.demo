@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Role</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Roles</value>
+    </caseValues>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exclude from Application --></label>
+        <name>Exclude_from_Application__c</name>
+    </fields>
+    <fields>
+        <label><!-- isWishRole --></label>
+        <name>isWishRole__c</name>
+    </fields>
+    <layouts>
+        <layout>Role Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>It will be used to send an email when application is approved</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Volunteer : Application Approved Email Template</name>
+    <style>freeForm</style>
+    <subject>Application Approved</subject>
+    <textOnly>Hi {!Contact.Name},
+
+Your volunteer application has been approved! To continue the application process, please visit the Make-A-Wish Volunteer Center.
+
+Thank you,
+
+{!Contact.Contact_Account_Name__c}
+{!Contact.Account_Phone__c}
+{!Contact.Account_Email__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

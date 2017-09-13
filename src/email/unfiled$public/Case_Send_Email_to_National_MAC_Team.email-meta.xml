@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is used to send replay email to MAC team.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Case: Send Email to National MAC Team</name>
+    <style>freeForm</style>
+    <subject>Make A wish America [{!Case.Thread_Id}]</subject>
+    <textOnly>Attn:  National Medical Advisory Council,
+
+
+
+The wish below was referred and reviewed at the chapter level for medical eligibility. It has been escalated for national review. Wish details are listed below along with any comments made at the chapter level.
+
+
+
+Wish Child Name: {!Case.Hidden_Lead_Name__c}
+
+Primary Diagnosis: {!Case.Hidden_Primary_Diagnosis_del__c}
+
+Additional Diagnosis (if applicable):
+
+{!Case.Hidden_Secondary_Diagnosis__c}
+
+{!Case.Hidden_Secondary_Diagnosis_1__c}
+
+{!Case.Hidden_Secondary_Diagnosis_2__c}
+
+{!Case.Hidden_Secondary_Diagnosis_3__c}
+
+Notes from referring medical professional (if applicable):
+
+{!Case.Hidden_Why_do_you_feel__c}
+
+
+Chapter Level Eligibility Review Notes:  {!Case.Case_Comment__c}
+
+
+
+The below are attachments links, You can download by clicking the links.
+
+
+
+{!Case.Medical_Summary_Attachments__c}
+
+
+
+Thanks,
+
+
+
+{!Case.Hidden_Chapter_Name__c}
+
+{!Case.Hidden_Chapter_Phone__c}
+
+{!Case.Hidden_Chapter_Email__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

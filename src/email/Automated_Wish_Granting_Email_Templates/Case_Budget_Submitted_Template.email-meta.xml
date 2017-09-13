@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Case : Budget Submitted Template</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Make_a_Wish_America</letterhead>
+    <name>Case : Budget Submitted Template</name>
+    <style>freeForm</style>
+    <subject>Budget is submitted for approval.</subject>
+    <textOnly>Hi  {!Case.Hidden_Wish_Owner_Manager__c}</textOnly>
+    <type>html</type>
+</EmailTemplate>

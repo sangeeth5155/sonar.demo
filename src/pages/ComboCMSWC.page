@@ -1,0 +1,70 @@
+<apex:page applyBodyTag="false" cache="false" standardController="case" extensions="ComboCMSWC_AC"  sidebar="false">
+    <apex:stylesheet value="{!URLFOR($Resource.MakeAWishAmericaDesign, 'css/Liability.css')}" /> 
+    <style>
+        .custPopup, .custPopup-main-message{
+        left: -32% !important;
+        padding: 2.5rem;
+        width: 70% !important;
+        font-weight : bold;
+        font-size : 150%;
+        
+        }
+    </style>
+    
+    <apex:form id="clearenceForm">
+        <apex:commandLink action="{!ReturnToWish}" value="Return to Wish" Style="float:right;padding:30px" html-data-toggle="modal" html-data-target="wffsame-alert"/>   
+        <apex:outputPanel id="ReturntoWish">
+            <apex:outputPanel rendered="{!displayReturnToWish}" layout="block">
+                <div class="pop-wrap">
+                    <div class="custPopup">
+                        <div class="container">
+                            <div class="row">
+                                <div class="row" style="padding:10px">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <center> Are you sure you want to exit ? </center>
+                                    </div>
+                                    
+                                    <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:20px">
+                                        <apex:commandButton value="Yes" styleClass="col-xs-12 col-sm-6 col-md-4 btn-md"  action="{!Cancel}" style="height: 2.75rem; margin-left: 5%;"/>
+                                        <apex:commandButton value="No" styleClass="col-xs-12 col-sm-6 col-md-4 btn-md"  action="{!ReturnToComboCMSWCForm}"  style="height: 2.75rem; margin-left: 5%;"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </apex:outputPanel>
+        </apex:outputPanel>
+        
+        <apex:messages />
+        <apex:pageBlock title="Combo CMS & WC">
+            <apex:pageBlockSection title="Combo CMS & WC Form Details" columns="3">
+                <apex:outputPanel >
+                    <apex:outputLabel style="padding: 2% 1%;color: #4a4a56;font-weight: bold;" value="Name:"/>
+                    <apex:selectList value="{!medicalProfContactName}" multiselect="false" size="1" styleClass="form-control multi sign" html-placeholder="Please Select All That Apply">
+                        <apex:selectOption itemlabel="Please select an individual" itemValue="" />
+                        <apex:selectOptions value="{!MedicalProContact}" />
+                        <apex:actionSupport event="onchange" action="{!displayEmail}" reRender="dd"/>
+                    </apex:selectList>        
+                </apex:outputPanel>                    
+                <apex:outputPanel rendered="{!dis}" id="dd">
+                    
+                    <apex:outputLabel style="padding: 2% 1%;color: #4a4a56;font-weight: bold;" value="Email:"/>
+                    <apex:outputText value="{!email }" />
+                    
+                </apex:outputPanel>
+                
+                
+                <apex:InputField label="Wish Involves Air Travel:" value="{!currentParentCase.wish_involves_air_travel__c}" rendered="{!currentParentCase.wish_involves_air_travel__c == Null}" />
+                <apex:OutputField label="Wish Involves Air Travel:" value="{!currentParentCase.wish_involves_air_travel__c}" rendered="{!currentParentCase.wish_involves_air_travel__c != Null}" />
+                
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+        <center>
+            <apex:commandButton value="Send Now" action="{!SendtoDocuSign}"/>
+            <apex:commandButton value="Cancel" action="{!Cancel}" />
+        </center>
+    </apex:form>
+    
+</apex:page>

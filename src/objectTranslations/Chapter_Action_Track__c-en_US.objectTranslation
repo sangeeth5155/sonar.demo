@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Chapter Action Track</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Chapter Action Tracks</value>
+    </caseValues>
+    <fields>
+        <label><!-- Assigned To --></label>
+        <name>Assigned_To__c</name>
+        <picklistValues>
+            <masterLabel>Volunteer Manager</masterLabel>
+            <translation><!-- Volunteer Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Coordinator</masterLabel>
+            <translation><!-- Wish Coordinator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Granter</masterLabel>
+            <translation><!-- Wish Granter --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Case Type/Stage --></label>
+        <name>Case_Type_Stage__c</name>
+        <picklistValues>
+            <masterLabel>Wish Assist</masterLabel>
+            <translation><!-- Wish Assist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Determination</masterLabel>
+            <translation><!-- Wish Determination --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Effect</masterLabel>
+            <translation><!-- Wish Effect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Grant</masterLabel>
+            <translation><!-- Wish Grant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wish Planning &amp; Anticipation</masterLabel>
+            <translation><!-- Wish Planning &amp; Anticipation --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Chapter Name --></label>
+        <name>Chapter_Name__c</name>
+        <relationshipLabel><!-- Chapter Action Tracks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Due Date --></label>
+        <name>Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Due Days --></label>
+        <name>Due_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Months --></label>
+        <name>Months__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recurring Frequency --></label>
+        <name>Recurring_Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recurring --></label>
+        <name>Recurring__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sort Order --></label>
+        <name>Sort_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Name --></label>
+        <name>Task_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weeks --></label>
+        <name>Weeks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish type --></label>
+        <name>Wish_type__c</name>
+        <picklistValues>
+            <masterLabel>Cruise - Celebrity/Royal</masterLabel>
+            <translation><!-- Cruise - Celebrity/Royal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cruise - Disney</masterLabel>
+            <translation><!-- Cruise - Disney --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cruise - Other</masterLabel>
+            <translation><!-- Cruise - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disney World</masterLabel>
+            <translation><!-- Disney World --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shopping Spree - Local</masterLabel>
+            <translation><!-- Shopping Spree - Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shopping Spree - Travel</masterLabel>
+            <translation><!-- Shopping Spree - Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel - Hawai</masterLabel>
+            <translation><!-- Travel - Hawai --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel - International</masterLabel>
+            <translation><!-- Travel - International --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel - Other</masterLabel>
+            <translation><!-- Travel - Other --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Chapter Action Track Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Wish Determination</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Wish Planning</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Wish Determination --></label>
+        <name>Wish_Determination</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Wish Granting --></label>
+        <name>Wish_Granting</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Wish Planning --></label>
+        <name>Wish_Planning</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

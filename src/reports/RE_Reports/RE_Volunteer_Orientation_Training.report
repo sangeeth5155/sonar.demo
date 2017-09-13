@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Volunteer_Orientation_Training__c$RE_Completed_Date__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Orientation_Training__c$RE_Date__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Orientation_Training__c$RE_End_Time__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Orientation_Training__c$RE_ID__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Orientation_Training__c$RE_Start_Time__c</field>
+    </columns>
+    <columns>
+        <field>Volunteer_Orientation_Training__c$RE_Import_Id__c</field>
+    </columns>
+    <description>RE Volunteer Orientation &amp; Training Records</description>
+    <filter>
+        <criteriaItems>
+            <column>Volunteer_Orientation_Training__c$Migrated_Record__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>RE Volunteer Orientation &amp; Training</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Volunteer_Orientation_Training__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Volunteer_Orientation_Training__c$Completed_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

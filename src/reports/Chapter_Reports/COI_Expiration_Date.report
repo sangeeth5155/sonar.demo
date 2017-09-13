@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Conflict_Of_Interest__c$Volunteer_Contact__c</field>
+    </columns>
+    <columns>
+        <field>Conflict_Of_Interest__c$Volunteer_Contact__c.MobilePhone</field>
+    </columns>
+    <columns>
+        <field>Conflict_Of_Interest__c$Volunteer_Contact__c.HomePhone</field>
+    </columns>
+    <columns>
+        <field>Conflict_Of_Interest__c$Volunteer_Contact__c.npe01__Preferred_Email__c</field>
+    </columns>
+    <columns>
+        <field>Conflict_Of_Interest__c$Volunteer_Contact__c.npe01__AlternateEmail__c</field>
+    </columns>
+    <columns>
+        <field>Conflict_Of_Interest__c$Expiration_Date__c</field>
+    </columns>
+    <description>Expiration dates COI - Name and contact info for volunteers who have COI expiring next 30 days</description>
+    <filter>
+        <criteriaItems>
+            <column>Conflict_Of_Interest__c$Volunteer_Contact__c.is_Active_Volunteer__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>COI Expiration Date</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>COI_Record_Type__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Conflict_Of_Interest__c$Expiration_Date__c</dateColumn>
+        <interval>INTERVAL_NEXT30</interval>
+    </timeFrameFilter>
+</Report>

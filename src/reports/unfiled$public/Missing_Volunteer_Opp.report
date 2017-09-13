@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case.Volunteer_Roles__r$Name</field>
+    </columns>
+    <columns>
+        <field>Case$Status</field>
+    </columns>
+    <columns>
+        <field>Case.Volunteer_Roles__r$Status__c</field>
+    </columns>
+    <columns>
+        <field>Case.Volunteer_Roles__r$Reason_Inactive__c</field>
+    </columns>
+    <columns>
+        <field>Case.Volunteer_Roles__r$Inactive__c</field>
+    </columns>
+    <columns>
+        <field>Case.Volunteer_Roles__r$Volunteer_Name__c</field>
+    </columns>
+    <columns>
+        <field>Case.Volunteer_Roles__r$Role__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Case$Status</column>
+            <operator>notEqual</operator>
+            <value>Completed,Closed,Qualified,Ready to Assign,Granted</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$RecordType</column>
+            <operator>equals</operator>
+            <value>Case.Wish</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Contact</column>
+            <operator>equals</operator>
+            <value>A&apos;Leecia George,Adilynn Shook,Adrian Lopez-Rondin,Aidan Shaba,Amber Brown,Andres Cabrera-Anaya,Andres Carreto,Andrew Salazar Munoz,Arturo Pena,Cameron Dennison,Christina Anguelsky,Daniel Ibarra,Dequan Halkini,Destiny Mayberry,Dorian Ball,Drew Boedigheimer,Dylan Aksamit,Francisco Gamez,Gunnarr Ridenour,Hector Ramos,Hunter Castine,Irlanda Revilla-Legglew,Isaac Dorame,Jacquelyn Oropeza,Jaden Graham,Janet Carpenter,Jayton Brown,Julia Boutelle,Justice McNeely,Kasiphya Hakes,Kiana Apodaca,Lenin Maqueda,Liam Kelley,Liana Gold,Lilianna Mendez,Lily Naranjo,Mariana Guzman,Natalie Cleveland,Nataly Gonzalez,Nicholie Tarnowski,Paityn Randall,Richard Loretto,Samuel Duerkop,Sebastian Montano,Sheryn Ybasco,Sofia Zaldana,Sophia Larios,Tristan Black,Uday Grewal,Valian Gwinn,Vihaan Gupta,Virginia Chandler,Wyatt Dougi</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case$Contact</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Missing Volunteer Opp</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cases_with_Volunteer_opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Case$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

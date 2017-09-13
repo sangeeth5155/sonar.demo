@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Wish Expense</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Wish Expenses</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Description --></label>
+        <name>Account_Description__c</name>
+        <picklistValues>
+            <masterLabel>Direct Wish Cash Expense</masterLabel>
+            <translation><!-- Direct Wish Cash Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Wish In-Kind Goods</masterLabel>
+            <translation><!-- Direct Wish In-Kind Goods --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Wish In-kind Service</masterLabel>
+            <translation><!-- Direct Wish In-kind Service --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account Number --></label>
+        <name>Account_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Cash --></label>
+        <name>Actual_Cash__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual In Kind --></label>
+        <name>Actual_In_Kind__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Approval Status --></label>
+        <name>Budget_Approval_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Budget Cash --></label>
+        <name>Budget_Cash__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget In Kind --></label>
+        <name>Budget_In_Kind__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Total --></label>
+        <name>Budget_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>Case__c</name>
+        <relationshipLabel><!-- Wish Expenses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Chapter From --></label>
+        <name>Chapter_From__c</name>
+        <picklistValues>
+            <masterLabel>Chicago</masterLabel>
+            <translation><!-- Chicago --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Los Angeles</masterLabel>
+            <translation><!-- Los Angeles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York</masterLabel>
+            <translation><!-- New York --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Chapter To --></label>
+        <name>Chapter_To__c</name>
+        <picklistValues>
+            <masterLabel>Chicago</masterLabel>
+            <translation><!-- Chicago --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Los Angeles</masterLabel>
+            <translation><!-- Los Angeles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York</masterLabel>
+            <translation><!-- New York --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Department/Division --></label>
+        <name>Department_Division__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expense --></label>
+        <name>Expense__c</name>
+    </fields>
+    <fields>
+        <label><!-- FE Posted Cash --></label>
+        <name>FE_Posted_Cash__c</name>
+    </fields>
+    <fields>
+        <label><!-- FE Posted In Kind --></label>
+        <name>FE_Posted_In_Kind__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import ID --></label>
+        <name>Import_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Journal Reference --></label>
+        <name>Journal_Reference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migrated Record --></label>
+        <name>Migrated_Record__c</name>
+    </fields>
+    <fields>
+        <label><!-- Post Date --></label>
+        <name>Post_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Approval Status --></label>
+        <name>Projected_Approval_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Projected Cash --></label>
+        <name>Projected_Cash__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected In Kind --></label>
+        <name>Projected_In_Kind__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Account Description --></label>
+        <name>RE_Account_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Account number --></label>
+        <name>RE_Account_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Actual Cash --></label>
+        <name>RE_Actual_Cash__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Actual In-Kind --></label>
+        <name>RE_Actual_In_Kind__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Budget Approval Status --></label>
+        <name>RE_Budget_Approval_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Budget Cash --></label>
+        <name>RE_Budget_Cash__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Budget In Kind --></label>
+        <name>RE_Budget_In_Kind__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Case --></label>
+        <name>RE_Case__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Created By --></label>
+        <name>RE_Created_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Department/Division --></label>
+        <name>RE_Department_Division__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE FE Posted Cash --></label>
+        <name>RE_FE_Posted_Cash__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE FE Posted In Kind --></label>
+        <name>RE_FE_Posted_In_Kind__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Import Id --></label>
+        <name>RE_Import_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Journal Reference --></label>
+        <name>RE_Journal_Reference__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Owner --></label>
+        <name>RE_Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Post Date --></label>
+        <name>RE_Post_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Projected Cash --></label>
+        <name>RE_Projected_Cash__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Projected In Kind --></label>
+        <name>RE_Projected_In_Kind__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Transaction Types --></label>
+        <name>RE_Transaction_Types__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Transaction # --></label>
+        <name>RE_Transaction__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Wish Expense Approval Status --></label>
+        <name>RE_Wish_Expense_Approval_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Wish Expense Number --></label>
+        <name>RE_Wish_Expense_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- RE Wish Expense Transaction Code --></label>
+        <name>RE_Wish_Expense_Transaction_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transaction Types --></label>
+        <name>Transaction_Types__c</name>
+        <picklistValues>
+            <masterLabel>Budgeting</masterLabel>
+            <translation><!-- Budgeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Transaction # --></label>
+        <name>Transaction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wish Expense Approval Status --></label>
+        <name>Wish_Expense_Approval_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initiated</masterLabel>
+            <translation><!-- Initiated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Wish Expense Transaction Code --></label>
+        <name>Wish_Expense_Transaction_Code__c</name>
+        <relationshipLabel><!-- Wish Expenses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Wish Expense Type --></label>
+        <name>Wish_Expense_Type__c</name>
+        <picklistValues>
+            <masterLabel>Airfare</masterLabel>
+            <translation><!-- Airfare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car Rental</masterLabel>
+            <translation><!-- Car Rental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hotel</masterLabel>
+            <translation><!-- Hotel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Wish Expense Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Wish Expense Layout - Admin</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Budgeting --></label>
+        <name>Budgeting</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Finance --></label>
+        <name>Finance</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Wish Expense Record Type --></label>
+        <name>Wish_Expense_Record_Type</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Wish Number cannot be updated. --></errorMessage>
+        <name>WE_Do_not_update_case</name>
+    </validationRules>
+</CustomObjectTranslation>
